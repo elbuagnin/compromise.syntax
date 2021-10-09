@@ -1,0 +1,5 @@
+{
+    "toInfinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},
+
+    "toPreposition": {"term": "to", "pattern": "to (#Determiner?+|#Possessive?+) #Adjective?+ (#Pronoun|#Noun)", "tag": "#Preposition", "untag": "Conjunction"}
+}
