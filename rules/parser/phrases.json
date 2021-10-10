@@ -1,0 +1,16 @@
+{ "Phrases":
+  {
+    "order": "1",
+    "rules":
+    {
+      "Noun Phrases":
+      {
+         "pattern": "#Determiner #Noun", "tag": {"all": "NounPhrase", "one": {"term": "#Noun", "termTag": "HeadNoun"}}
+      },
+      "Prepostional Phrases":
+      {
+         "pattern": "#Preposition #Noun", "tag": {"all": "PrepositionPhrase"}
+      }
+    }
+  }
+}

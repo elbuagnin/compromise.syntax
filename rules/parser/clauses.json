@@ -1,0 +1,9 @@
+{ "Clauses":
+  {
+    "order": "2",
+    "rules":
+    {
+      "Introductory Clause": {"pattern": "^*,", "tag": {"all": "IntroductoryClause"}}
+    }
+  }
+}
