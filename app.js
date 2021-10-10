@@ -1,15 +1,17 @@
 import http from 'http';
 import { readFile } from 'fs';
 import nlp from 'compromise';
-import './index.js';
+import syntax from './index.js';
+
+nlp.extend(syntax);
 
 async function test() {
-  readFile('./sample.txt', 'utf8', (err, data) => {
+  await readFile('./sample.txt', 'utf8', (err, data) => {
     if (err) {
       throw new Error(err);
     }
-    const text = data;
-    const doc = nlp(text);
+
+    const doc = nlp(data);
     doc.syntax();
   });
 }

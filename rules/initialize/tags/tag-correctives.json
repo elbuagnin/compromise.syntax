@@ -1,0 +1,10 @@
+{
+  "Possessive": {
+      "isA": "",
+      "notA": ["Noun", "Pronoun"]
+  },
+  "Gerund": {
+      "isA": ["Verbal", "Noun"],
+      "notA": "Verb"
+  }
+}

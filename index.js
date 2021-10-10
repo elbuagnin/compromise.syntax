@@ -1,12 +1,11 @@
 import './local-config.js';
-import nlp from 'compromise';
+import initialize from './initialize.js';
 import parser from './parser.js';
 
-
-   nlp.extend((Doc, world) => { // eslint-disable-line
-
-     Doc.prototype.syntax = function syntax() {  // eslint-disable-line
-      const document = this;
-      parser(document);
-    };
-  });
+export default async function syntax(Doc, world) { // eslint-disable-line
+  Doc.prototype.syntax = async function () {  // eslint-disable-line
+    const document = this;
+    await initialize()
+      .then(parser(document));
+  };
+}

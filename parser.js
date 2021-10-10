@@ -1,49 +1,54 @@
 import * as mfs from './lib/filesystem.js';
 
 export default async function preParser(document) {
-    /* Development Options */
+  /* Development Options */
     let devBlockName = 'preParser'; // eslint-disable-line
     let devInfoOn = true; // eslint-disable-line
-    devBlock('preParser', devInfoOn); // eslint-disable-line
-    /***********************/
+  // devBlock('preParser', devInfoOn); // eslint-disable-line
+  /** ******************** */
 
-    async function loadJSONData(dir) {
-        const fileType = '.json';
+  // devInfo(document, 'before rules', devInfoOn, devBlockName); // eslint-disable-line
 
-        for await (const file of mfs.getFileNames(dir, fileType)) {
-            let dataset = await mfs.loadJSONFile(file);
-            return dataset;
-        }
-    }
-
-    devInfo(document, 'before rules', devInfoOn, devBlockName); // eslint-disable-line
-
-    document.contractions().expand();
-
-    const rulePath = './rules/';
-    let dataset = await loadJSONData (rulePath);
-
-    Object.values(JSON.parse(dataset)).forEach(rule => {
-        let term = rule.term;
-        let pattern = rule.pattern;
-        let tag = '';
-        if (rule.tag) { tag = rule.tag; }
-        let untag = '';
-        if (rule.untag) { untag = rule.untag; }
-
-        if (term && pattern) {
-            if (document.has(pattern)) {
-                let matchedTerm = document.match(pattern).match(term);
-
-                if (untag) {
-                   matchedTerm.untag(untag);
-                }
-                if (tag) {
-                   matchedTerm.tag(tag);
-                }
-            }
-        }
+  async function loadJSONData(dir) {
+    const fileType = '.json';
+    let dataset = {};
+    const files = await mfs.getFileNames(dir, fileType);
+    files.forEach((file) => {
+      dataset = mfs.loadJSONFile(file);
     });
 
-    devInfo(document, 'after rules', devInfoOn, devBlockName); // eslint-disable-line
+    return dataset;
+  }
+
+  function assignValues(data) {
+    Object.values(data).forEach((rule) => {
+      const { term } = rule;
+      const { pattern } = rule;
+      let tag = '';
+      if (rule.tag) { tag = rule.tag; }
+      let untag = '';
+      if (rule.untag) { untag = rule.untag; }
+
+      if (term && pattern) {
+        if (document.has(pattern)) {
+          const matchedTerm = document.match(pattern).match(term);
+
+          if (untag) {
+            matchedTerm.untag(untag);
+          }
+          if (tag) {
+            matchedTerm.tag(tag);
+          }
+        }
+      }
+    });
+  }
+
+  document.contractions().expand();
+  const rulePath = './rules/pre-parser/';
+  let dataset = await loadJSONData(rulePath);
+  dataset = JSON.parse(dataset);
+  assignValues(dataset);
+
+  devInfo(document, 'after rules', devInfoOn, devBlockName); // eslint-disable-line
 }
