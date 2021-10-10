@@ -5,8 +5,8 @@ import syntax from './index.js';
 
 nlp.extend(syntax);
 
-async function test() {
-  await readFile('./sample.txt', 'utf8', (err, data) => {
+function test() {
+  readFile('./sample.txt', 'utf8', (err, data) => {
     if (err) {
       throw new Error(err);
     }
