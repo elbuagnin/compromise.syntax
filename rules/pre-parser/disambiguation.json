@@ -1,5 +1,13 @@
 {
+    "graceNotName": {"term": "grace", "pattern": "grace && !@isUpperCase", "untag": "Person", "tag": "Singular"},
+
+    "sinceIsConjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
+
+    "thatIsConjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
+
     "toIsInfinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},
 
-    "toIsPreposition": {"term": "to", "pattern": "to (#Determiner?+|#Possessive?+) #Adjective?+ (#Pronoun|#Noun)", "tag": "Preposition", "untag": "Conjunction"}
+    "toIsPreposition": {"term": "to", "pattern": "to (#Determiner?+|#Possessive?+) #Adjective?+ (#Pronoun|#Noun)", "tag": "Preposition", "untag": "Conjunction"},
+
+    "untilIsConjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"}
 }

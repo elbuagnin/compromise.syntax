@@ -1,0 +1,5 @@
+{
+      "Noun Phrases": {"batch":"Phrases", "order": "2", "pattern": "(#Determiner?|#Possessive?) #Noun?+ #Noun", "tag": {"all": "NounPhrase", "one": {"term": "#Noun", "termTag": "HeadNoun"}}},
+
+      "Prepostional Phrases": {"batch":"Phrases", "order": "2", "pattern": "#Preposition (#NounPhrase?+|#Pronoun?|#Noun?+ #Noun?|#Noun?)", "tag": {"all": "PrepositionPhrase"}}
+}
