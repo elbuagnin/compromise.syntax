@@ -1,8 +1,19 @@
 {
+    "and": "CoordinatingConjunction",
+    "because": "SubordinatingConjunction",
+    "but": "CoordinatingConjunction",
     "beneath": "Preposition",
     "bony": "Comparable",
     "earring": "Noun",
-    "grace": "Singular",
-    "such as": "Preposition",
-    "traps": "Noun"
+    "if": ["Condition", "SubordinatingConjunction"],
+    "nor": "CoordinatingConjunction",
+    "or": "CoordinatingConjunction",
+    "till": "SubordinatingConjunction",
+    "though": "SubordinatingConjunction",
+    "traps": "Noun",
+    "unless": "SubordinatingConjunction",
+    "yet": "CoordinatingConjunction",
+    "whenever": "SubordinatingConjunction",
+    "wherever": "SubordinatingConjunction",
+    "while": "SubordinatingConjunction"
 }

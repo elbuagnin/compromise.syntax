@@ -1,0 +1,5 @@
+{
+      "Compound Sentence": {"batch":"Gross Phrasing", "order": "1", "pattern": "@hasComma #Conjunction", "tag": {"one": {"term": "#Conjunction", "termTag": "CompoundConjunction"}}},
+
+      "Parentheticals": {"batch":"Gross Phrasing", "order": "1", "pattern": "@hasParenthesis * @hasParenthesis", "tag": {"all": "Parenthetical"}}
+}

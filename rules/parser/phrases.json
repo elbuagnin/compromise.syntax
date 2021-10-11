@@ -1,16 +1,5 @@
-{ "Phrases":
-  {
-    "order": "1",
-    "rules":
-    {
-      "Noun Phrases":
-      {
-         "pattern": "#Determiner #Noun", "tag": {"all": "NounPhrase", "one": {"term": "#Noun", "termTag": "HeadNoun"}}
-      },
-      "Prepostional Phrases":
-      {
-         "pattern": "#Preposition #Noun", "tag": {"all": "PrepositionPhrase"}
-      }
-    }
-  }
+{
+      "Noun Phrases": {"batch":"Phrases", "order": "2", "pattern": "(#Determiner?|#Possessive?) #Noun?+ #Noun", "tag": {"all": "NounPhrase", "one": {"term": "#Noun", "termTag": "HeadNoun"}}},
+
+      "Prepostional Phrases": {"batch":"Phrases", "order": "2", "pattern": "#Preposition (#NounPhrase?+|#Pronoun?|#Noun?+ #Noun?|#Noun?)", "tag": {"all": "PrepositionPhrase"}}
 }

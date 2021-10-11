@@ -1,0 +1,11 @@
+{
+  "byTheTime": {"term":"by the time", "pattern": "by the time", "tag": "SubordinatingConjunction"},
+  "evenIf": {"term": "even if", "pattern": "even if", "tag": "SubordinatingConjunction"},
+  "evenThough": {"term": "even though", "pattern": "even though", "tag": "SubordinatingConjunction"},
+  "inCase": {"term": "in case", "pattern": "in case", "tag": "SubordinatingConjunction"},
+  "inOrderThat": {"term": "in order that", "pattern": "in order that", "tag": "SubordinatingConjunction"},
+  "onlyIf": {"term": "only if", "pattern": "only if", "tag": "SubordinatingConjunction"},
+  "provided that": {"term": "provided that", "pattern": "provided that", "tag": "SubordinatingConjunction"},
+  "soThat": {"term": "so that", "pattern": "so that", "untag": "Preposition", "tag": "SubordinatingConjunction"},
+  "suchAs": {"term": "such as", "pattern": "such as", "untag": ["Adverb", "Preposition"] ,"tag": "SubordinatingConjunction"}
+}

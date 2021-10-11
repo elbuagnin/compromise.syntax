@@ -47,14 +47,6 @@
         "isA": "Phrase",
         "notA": "VerbPhrase"
     },
-    "Verbal": {
-        "isA": "",
-        "notA": "Verb"
-    },
-    "Participle": {
-        "iaA": "Verbal",
-        "notA": ""
-    },
     "Subject": {
         "isA": "",
         "notA": "Object"
@@ -70,5 +62,29 @@
     "IndirectObject": {
         "isA": "Object",
         "notA": "DirectObject"
+    },
+    "Verbal": {
+        "isA": "",
+        "notA": "Verb"
+    },
+    "Participle": {
+        "isA": "Verbal",
+        "notA": ""
+    },
+    "CoordinatingConjunction": {
+        "isA": "Conjunction",
+        "notA": ["SubordinatingConjunction", "CorrelativeConjunction"]
+    },
+    "SubordinatingConjunction": {
+        "isA": "Conjunction",
+        "notA": ["CoordinatingConjunction", "CorrelativeConjunction"]
+    },
+    "CorrelativeConjunction": {
+        "isA": "Conjunction",
+        "notA": ["CoordinatingConjunction", "SubordinatingConjunction"]
+    },
+    "CompoundConjunction": {
+        "isA": "CoordinatingConjunction",
+        "notA": ""
     }
 }

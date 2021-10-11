@@ -35,7 +35,6 @@ nlp.extend((Doc, world) => {
 
     Doc.prototype.syntaxTag = function (item, tag) { // eslint-disable-line
     if (!item) return;
-    console.log(item);
 
     // Tag with syntax tag and unique id.
     const id = generateID(tag).next().value;

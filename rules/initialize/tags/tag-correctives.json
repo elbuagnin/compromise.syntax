@@ -3,6 +3,10 @@
       "isA": "",
       "notA": ["Noun", "Pronoun"]
   },
+  "Pronoun": {
+    "isA": "Pronoun",
+    "notA": "Noun"
+  },
   "Gerund": {
       "isA": ["Verbal", "Noun"],
       "notA": "Verb"
