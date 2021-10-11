@@ -86,5 +86,9 @@
     "CompoundConjunction": {
         "isA": "CoordinatingConjunction",
         "notA": ""
+    },
+    "HeadNoun": {
+        "isA": "Noun",
+        "notA": ""
     }
 }
