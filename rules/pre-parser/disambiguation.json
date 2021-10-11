@@ -1,5 +1,9 @@
 {
-    "graceNotName": {"term": "grace", "pattern": "grace && !@isUpperCase", "untag": "Person", "tag": "Singular"},
+    "beforeIsPreposition": {"term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
+
+    "graceNotName": {"term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
+
+    "graceNotName2": {"term": "grace", "pattern": "(#Verb && !told?) grace", "untag": "ProperNoun", "tag": "Singular"},
 
     "sinceIsConjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
 
