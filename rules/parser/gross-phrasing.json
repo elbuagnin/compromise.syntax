@@ -1,5 +1,5 @@
 {
-      "Compound Sentence": {"batch":"Gross Phrasing", "order": "1", "pattern": "@hasComma #Conjunction", "tag": {"one": {"term": "#Conjunction", "termTag": "CompoundConjunction"}}},
+      "Compound Sentence": {"batch":"Gross Phrasing", "batchOrder": "1",  "order": "2", "pattern": "* #Noun * @hasComma #CoordinatingConjunction * #Verb *", "tag": {"one": {"term": "#CoordinatingConjunction", "termTag": "CompoundConjunction"}}},
 
-      "Parentheticals": {"batch":"Gross Phrasing", "order": "1", "pattern": "@hasParenthesis * @hasParenthesis", "tag": {"all": "Parenthetical"}}
+      "Parentheticals": {"batch":"Gross Phrasing", "batchOrder": "1",  "order": "1", "pattern": "@hasParenthesis * @hasParenthesis", "tag": {"all": "Parenthetical"}}
 }

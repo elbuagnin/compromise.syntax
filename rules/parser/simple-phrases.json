@@ -1,0 +1,11 @@
+{
+      "Lists": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "1", "pattern": "(@hasComma && #Noun)+ #CoordinatingConjunction #Noun", "tag": {"all": "List"}},
+
+      "Noun Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "2", "pattern": "(#Determiner?|#Possessive?) (#Adjective?+ #Adjective|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase", "one": {"term": "#Noun", "termTag": "HeadNoun"}}},
+
+      "Prepostional Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "3", "pattern": "#Preposition (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": {"all": "PrepositionPhrase"}},
+
+      "Gerund Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "4", "pattern": "#Gerund (#PrepositionPhrase?+|#NounPhrase?+|#Noun?+ #Noun|#Noun)", "tag": {"all": "GerundPhrase"}},
+
+      "Compound Phrase": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "5", "pattern": "(#Gerund|PrepositionPhrase?+|#NounPhrase?+|#Noun) #CoordinatingConjunction (#Gerund|PrepositionPhrase?+|#NounPhrase?+|#Noun)", "tag": {"all": "CompoundPhrase"}}
+}

@@ -1,3 +1,3 @@
 {
-   "Introductory Clause": {"batch":"Clauses", "order": "3", "pattern": "^*,", "tag": {"all": "IntroductoryClause"}}
+   "Introductory Clause": {"batch":"Clauses", "batchOrder": "3", "order": "1", "pattern": "^*,", "tag": {"all": "IntroductoryClause"}}
 }

@@ -10,7 +10,7 @@ export default function parser(doc) {
         console.log('we have a match');
         console.log(matchedPattern.text());
         console.log(tag);
-        console.log(tag.all);
+        console.log('\n');
         if (untag) {
           if (untag.all) {
             matchedPattern.untag(untag.all);
@@ -45,7 +45,9 @@ export default function parser(doc) {
     });
   });
 
-  orderedRules.sort((a, b) => ((a.order > b.order) ? 1 : -1));
+  orderedRules.sort((a, b) => a.batchOrder - b.batchOrder || a.order - b.order);
+
+  console.log(orderedRules);
 
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
