@@ -33,14 +33,14 @@ nlp.extend((Doc, world) => {
     yield tag + tagIDs[tag];
   }
 
-    Doc.prototype.syntaxTag = function (item, tag) { // eslint-disable-line
-    if (!item) return;
+    Doc.prototype.tagWithID = function (tag) { // eslint-disable-line
+    if (!tag) return;
 
     // Tag with syntax tag and unique id.
     const id = generateID(tag).next().value;
 
     // Tag original sentence.
-    this.match(item).tag(tag);
-    this.match(item).tag(id);
+    this.tag(tag);
+    this.tag(id);
   };
 });
