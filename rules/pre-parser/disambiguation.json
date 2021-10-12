@@ -11,7 +11,9 @@
 
     "toIsInfinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},
 
-    "toIsPreposition": {"term": "to", "pattern": "to (#Determiner?+|#Possessive?+) #Adjective?+ (#Pronoun|#Noun)", "tag": "Preposition", "untag": "Conjunction"},
+    "toIsPreposition": {"term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
+
+    "to welcome": {"term": "to welcome", "pattern": "to welcome", "tag": ["Infinitive", "PresentTense", "Verb"]},
 
     "untilIsConjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"}
 }

@@ -22,6 +22,12 @@ export default function parser(doc) {
             const matchedTerm = matchedPattern.match(untag.on.term);
             matchedTerm.untag(untag.on.termTag);
           }
+
+          if (untag.each) {
+            untag.each.terms.forEach((term) => {
+              matchedPattern.syntaxTag(term, untag.each.termTag);
+            });
+          }
         }
 
         if (tag) {
@@ -57,6 +63,11 @@ export default function parser(doc) {
 
           if (tag.ending) {
             matchedPattern.lastTerms().syntaxTag(tag.ending.termTag);
+          }
+          if (tag.each) {
+            tag.each.terms.forEach((term) => {
+              matchedPattern.syntaxTag(term, tag.each.termTag);
+            });
           }
         }
 
