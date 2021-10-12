@@ -1,3 +1,5 @@
 {
-   "Introductory Clause": {"batch":"Clauses", "batchOrder": "3", "order": "1", "pattern": "^*,", "tag": {"all": "IntroductoryClause"}}
+   "Compound Sentence": {"batch":"Clauses", "batchOrder": "3", "order": "1", "pattern": "* #CompoundConjunction *", "tag": {"split": {"term": "#CompoundConjunction", "termTag": "Independent"}}},
+
+   "Introductory Clause": {"batch":"Clauses", "batchOrder": "3", "order": "2", "pattern": "^ * #Noun * #Verb * @hasComma", "tag": {"all": "IntroductoryClause"}, "demark": {"beginning": "begin", "ending": "end"}}
 }

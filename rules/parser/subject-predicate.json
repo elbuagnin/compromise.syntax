@@ -1,0 +1,3 @@
+{
+   "Subject": {"batch":"Subject Predicate", "batchOrder": "4", "order": "1", "pattern": "#Noun * #Verb", "tag": {"before": {"term": "#Verb", "termTag": "Subject"}}}
+}
