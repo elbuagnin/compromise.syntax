@@ -7,10 +7,6 @@
 
       "Gerund Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "4", "pattern": "#Gerund (#PrepositionPhrase?+|#NounPhrase?+|#Noun?+ #Noun|#Noun)", "tag": {"all": "GerundPhrase"}},
 
-      "Compound Phrase": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "5", "pattern": "(#Gerund|PrepositionPhrase?+|#NounPhrase?+) #CoordinatingConjunction (#Gerund|PrepositionPhrase?+|#NounPhrase?+|#Noun)", "tag": {"all": "CompoundPhrase"}},
-
-      "Compound Phrase 2": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "6", "pattern": "(#Noun && !#List) #CoordinatingConjunction #Noun", "tag": {"all": "CompoundPhrase"}},
-
       "Verb Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "7", "pattern": "#Auxiliary?+ #Auxiliary #Verb", "tag": {"all": "VerbPhrase"}},
 
       "Verb Phrases 2": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "8", "pattern": "#Adverb? #Verb{2,} #Adverb?", "tag": {"all": "VerbPhrase"}}
