@@ -2,7 +2,9 @@ import * as mfs from './lib/filesystem.js';
 
 export default function parser(doc) {
   function tagMatch(sentence, rule) {
-    const { pattern, tag, untag } = rule;
+    const {
+      pattern, tag, untag, demark,
+    } = rule;
 
     if (pattern) {
       if (sentence.has(pattern)) {
@@ -16,19 +18,58 @@ export default function parser(doc) {
             matchedPattern.untag(untag.all);
           }
 
-          if (untag.one) {
-            const matchedTerm = matchedPattern.match(untag.one.term);
-            matchedTerm.untag(untag.one.termTag);
+          if (untag.on) {
+            const matchedTerm = matchedPattern.match(untag.on.term);
+            matchedTerm.untag(untag.on.termTag);
           }
         }
+
         if (tag) {
           if (tag.all) {
             matchedPattern.syntaxTag(matchedPattern, tag.all);
           }
 
-          if (tag.one) {
-            const matchedTerm = matchedPattern.match(tag.one.term);
-            matchedTerm.tag(tag.one.termTag);
+          if (tag.on) {
+            const matchedTerm = matchedPattern.match(tag.on.term);
+            matchedTerm.syntaxTag(tag.on.term, tag.on.termTag);
+          }
+
+          if (tag.split) {
+            const beforeTerm = matchedPattern.before(tag.split.term);
+            beforeTerm.syntaxTag(beforeTerm, tag.split.termTag);
+            const afterTerm = matchedPattern.after(tag.split.term);
+            afterTerm.syntaxTag(afterTerm, tag.split.termTag);
+          }
+
+          if (tag.before) {
+            const matchedTerm = matchedPattern.before(tag.before.term);
+            matchedTerm.syntaxTag(matchedTerm, tag.before.termTag);
+          }
+
+          if (tag.after) {
+            const matchedTerm = matchedPattern.after(tag.after.term);
+            matchedTerm.syntaxTag(matchedTerm, tag.after.termTag);
+          }
+
+          if (tag.beginning) {
+            matchedPattern.firstTerms().syntaxTag(tag.beginning.termTag);
+          }
+
+          if (tag.ending) {
+            matchedPattern.lastTerms().syntaxTag(tag.ending.termTag);
+          }
+        }
+
+        if (demark) {
+          if (demark.on) {
+            const matchedTerm = matchedPattern.match(demark.on.term);
+            matchedTerm.tag(demark.on.term, demark.on.termTag);
+          }
+          if (demark.beginning) {
+            matchedPattern.firstTerms().tag(demark.beginning.termTag);
+          }
+          if (demark.ending) {
+            matchedPattern.lastTerms().tag(demark.ending.termTag);
           }
         }
       }
