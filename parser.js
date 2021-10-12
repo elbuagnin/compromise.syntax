@@ -3,7 +3,7 @@ import * as mfs from './lib/filesystem.js';
 export default function parser(doc) {
   function tagMatch(sentence, rule) {
     const {
-      pattern, tag, untag, demark,
+      pattern, tag, untag, demark, tagID,
     } = rule;
 
     if (pattern) {
@@ -36,6 +36,57 @@ export default function parser(doc) {
         }
 
         if (tag) {
+          if (tag.all) {
+            matchedPattern.tag(tag.all);
+          }
+
+          if (tag.on) {
+            const matchedTerm = matchedPattern.match(tag.on.term);
+            matchedTerm.tag(tag.on.termTag);
+          }
+
+          if (tag.split) {
+            const beforeTerm = matchedPattern.before(tag.split.term);
+            beforeTerm.tag(tag.split.termTag);
+            const afterTerm = matchedPattern.after(tag.split.term);
+            afterTerm.tag(tag.split.termTag);
+          }
+
+          if (tag.before) {
+            const matchedTerm = matchedPattern.before(tag.before.term);
+            matchedTerm.tag(tag.before.termTag);
+          }
+
+          if (tag.after) {
+            const matchedTerm = matchedPattern.after(tag.after.term);
+            matchedTerm.tag(tag.after.termTag);
+          }
+
+          if (tag.beginning) {
+            matchedPattern.firstTerms().tag(tag.beginning.termTag);
+          }
+
+          if (tag.ending) {
+            matchedPattern.lastTerms().tag(tag.ending.termTag);
+          }
+          if (tag.each) {
+            tag.each.forEach((item) => {
+              const { term } = item;
+              const { termTag } = item;
+              const matchedTerm = matchedPattern.match(term);
+
+              matchedTerm.tag(termTag);
+            });
+          }
+          if (tag.eachTheSame) {
+            tag.eachTheSame.terms.forEach((term) => {
+              const matchedTerm = matchedPattern.match(term);
+              matchedTerm.tag(tag.eachTheSame.termTag);
+            });
+          }
+        }
+
+        if (tagID) {
           if (tag.all) {
             matchedPattern.tagWithID(tag.all);
           }
