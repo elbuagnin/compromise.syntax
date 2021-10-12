@@ -24,49 +24,64 @@ export default function parser(doc) {
           }
 
           if (untag.each) {
-            untag.each.terms.forEach((term) => {
-              matchedPattern.syntaxTag(term, untag.each.termTag);
+            untag.each.forEach((item) => {
+              const { term } = item;
+              const { termTag } = item;
+              const matchedTerm = matchedPattern.match(term);
+              if (matchedTerm.has(termTag)) {
+                matchedTerm.untag(termTag);
+              }
             });
           }
         }
 
         if (tag) {
           if (tag.all) {
-            matchedPattern.syntaxTag(matchedPattern, tag.all);
+            matchedPattern.tagWithID(tag.all);
           }
 
           if (tag.on) {
             const matchedTerm = matchedPattern.match(tag.on.term);
-            matchedTerm.syntaxTag(tag.on.term, tag.on.termTag);
+            matchedTerm.tagWithID(tag.on.termTag);
           }
 
           if (tag.split) {
             const beforeTerm = matchedPattern.before(tag.split.term);
-            beforeTerm.syntaxTag(beforeTerm, tag.split.termTag);
+            beforeTerm.tagWithID(tag.split.termTag);
             const afterTerm = matchedPattern.after(tag.split.term);
-            afterTerm.syntaxTag(afterTerm, tag.split.termTag);
+            afterTerm.tagWithID(tag.split.termTag);
           }
 
           if (tag.before) {
             const matchedTerm = matchedPattern.before(tag.before.term);
-            matchedTerm.syntaxTag(matchedTerm, tag.before.termTag);
+            matchedTerm.tagWithID(tag.before.termTag);
           }
 
           if (tag.after) {
             const matchedTerm = matchedPattern.after(tag.after.term);
-            matchedTerm.syntaxTag(matchedTerm, tag.after.termTag);
+            matchedTerm.tagWithID(tag.after.termTag);
           }
 
           if (tag.beginning) {
-            matchedPattern.firstTerms().syntaxTag(tag.beginning.termTag);
+            matchedPattern.firstTerms().tagWithID(tag.beginning.termTag);
           }
 
           if (tag.ending) {
-            matchedPattern.lastTerms().syntaxTag(tag.ending.termTag);
+            matchedPattern.lastTerms().tagWithID(tag.ending.termTag);
           }
           if (tag.each) {
-            tag.each.terms.forEach((term) => {
-              matchedPattern.syntaxTag(term, tag.each.termTag);
+            tag.each.forEach((item) => {
+              const { term } = item;
+              const { termTag } = item;
+              const matchedTerm = matchedPattern.match(term);
+
+              matchedTerm.tagWithID(termTag);
+            });
+          }
+          if (tag.eachTheSame) {
+            tag.eachTheSame.terms.forEach((term) => {
+              const matchedTerm = matchedPattern.match(term);
+              matchedTerm.tagWithID(tag.eachTheSame.termTag);
             });
           }
         }
@@ -74,7 +89,13 @@ export default function parser(doc) {
         if (demark) {
           if (demark.on) {
             const matchedTerm = matchedPattern.match(demark.on.term);
-            matchedTerm.tag(demark.on.term, demark.on.termTag);
+            matchedTerm.tag(demark.on.termTag);
+          }
+          if (demark.eachTheSame) {
+            demark.eachTheSame.terms.forEach((term) => {
+              const matchedTerm = matchedPattern.match(term);
+              matchedTerm.tag(demark.eachTheSame.termTag);
+            });
           }
           if (demark.beginning) {
             matchedPattern.firstTerms().tag(demark.beginning.termTag);
