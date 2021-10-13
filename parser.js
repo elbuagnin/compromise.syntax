@@ -67,11 +67,11 @@ export default function parser(doc) {
           }
 
           if (tag.beginning) {
-            matchedPattern.firstTerms().tag(tag.beginning.termTag);
+            matchedPattern.firstTerms().tag(tag.beginning);
           }
 
           if (tag.ending) {
-            matchedPattern.lastTerms().tag(tag.ending.termTag);
+            matchedPattern.lastTerms().tag(tag.ending);
           }
           if (tag.each) {
             tag.each.forEach((item) => {
@@ -118,11 +118,11 @@ export default function parser(doc) {
           }
 
           if (tag.beginning) {
-            matchedPattern.firstTerms().tagWithID(tag.beginning.termTag);
+            matchedPattern.firstTerms().tagWithID(tag.beginning);
           }
 
           if (tag.ending) {
-            matchedPattern.lastTerms().tagWithID(tag.ending.termTag);
+            matchedPattern.lastTerms().tagWithID(tag.ending);
           }
           if (tag.each) {
             tag.each.forEach((item) => {
@@ -153,10 +153,10 @@ export default function parser(doc) {
             });
           }
           if (demark.beginning) {
-            matchedPattern.firstTerms().tag(demark.beginning.termTag);
+            matchedPattern.firstTerms().tag(demark.beginning);
           }
           if (demark.ending) {
-            matchedPattern.lastTerms().tag(demark.ending.termTag);
+            matchedPattern.lastTerms().tag(demark.ending);
           }
         }
       }
