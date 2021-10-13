@@ -53,12 +53,20 @@ export default function preParser(document) {
       const sentences = document.sentences();
       sentences.forEach((sentence) => {
         const dashedWords = sentence.match('@hasDash');
+        const totalDashes = dashedWords.length;
+
         dashedWords.forEach((word, i) => {
-          console.log(word);
-          console.log(i);
           if ((i % 2) === 0) {
-            const segment = sentence.splitAfter(word).last();
-            console.log(segment);
+            let segment = sentence.splitAfter(word).last();
+
+            if (i < totalDashes) {
+              const nextDash = segment.match('@hasDash');
+
+              if (nextDash.next().found) {
+                segment = segment.before(nextDash.next());
+              }
+            }
+
             segment.firstTerms().tag('BEGIN');
             segment.lastTerms().tag('END');
             segment.tag('DashGroup');
