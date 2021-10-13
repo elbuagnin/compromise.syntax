@@ -31,37 +31,41 @@ export default function preParser(document) {
   }
 
   function tagParentheses() {
-    const sentenceEndPunctuation = '(@hasPeriod|@hasQuestionMark|@hasExclamation)';
-    document.sentences().forEach((sentence) => {
-      if (sentence.parentheses().found) {
-        console.log('p found');
-        const parentheticals = sentence.parentheses();
-        parentheticals.forEach((segment) => {
-          console.log(`segment:${segment}`);
-          sentence.replace(segment, '');
-          if (!sentence.has(sentenceEndPunctuation)) {
-            console.log('no punct');
-            if (segment.has(sentenceEndPunctuation)) {
-              console.log('segment has punct');
-              const punctuation = segment.match(sentenceEndPunctuation);
-              console.log(`==> ${punctuation} <==`);
-              console.log(punctuation.text());
-              sentence.post(punctuation);
-            } else {
-              console.log('using period');
-              sentence.post('.');
-            }
-          }
-        });
-      }
-    });
+    const parenthesesGroups = document.parentheses();
+    if (parenthesesGroups.found) {
+      parenthesesGroups.firstTerms().tag('BEGIN');
+      parenthesesGroups.lastTerms().tag('END');
+      parenthesesGroups.tag('parenthesesGroup');
+    }
   }
 
   function tagQuotations() {
     const quotationGroups = document.quotations();
-    quotationGroups.firstTerms().tag('BEGIN');
-    quotationGroups.lastTerms().tag('END');
-    quotationGroups.tag('QuotationGroup');
+    if (quotationGroups.found) {
+      quotationGroups.firstTerms().tag('BEGIN');
+      quotationGroups.lastTerms().tag('END');
+      quotationGroups.tag('QuotationGroup');
+    }
+  }
+
+  function tagDashGroups() {
+    if (document.has('@hasDash')) {
+      const sentences = document.sentences();
+      sentences.forEach((sentence) => {
+        const dashedWords = sentence.match('@hasDash');
+        dashedWords.forEach((word, i) => {
+          console.log(word);
+          console.log(i);
+          if ((i % 2) === 0) {
+            const segment = sentence.splitAfter(word).last();
+            console.log(segment);
+            segment.firstTerms().tag('BEGIN');
+            segment.lastTerms().tag('END');
+            segment.tag('DashGroup');
+          }
+        });
+      });
+    }
   }
 
   // Custom tags & words
@@ -75,5 +79,5 @@ export default function preParser(document) {
   document.lists().tag('List');
   tagParentheses();
   tagQuotations();
-  document.if('@hasDash').tag('SPLIT');
+  tagDashGroups();
 }
