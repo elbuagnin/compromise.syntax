@@ -5,6 +5,8 @@
 
     "graceNotName2": {"term": "grace", "pattern": "(#Verb && !told?) grace", "untag": "ProperNoun", "tag": "Singular"},
 
+    "or not": {"term": "or not", "pattern": "or not", "tag": ["Conjunction", "Negative"]},
+
     "sinceIsConjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
 
     "thatIsConjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},

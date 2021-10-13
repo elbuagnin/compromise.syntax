@@ -1,3 +1,15 @@
 {
-"both and": {"batch": "Simple Correlative Conjunctions", "batchOrder": "3",  "order": "1", "pattern": "both (#Noun+|#Noun) and (#Noun+|#Noun)", "untag": {"each": [{"term": "both", "termTag": "Determiner"}, {"term": "and", "termTag": "CoordinatingConjunction"}]}, "demark": {"eachTheSame": {"terms": ["both", "and"], "termTag": "CorrelativeConjunction"}}}
+    "both and": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "both  #Nouns and  #Nouns", "untag": {"each": [{"term": "both", "termTag": "Determiner"}, {"term": "and", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["both", "and"], "termTag": "CorrelativeConjunction"}}},
+
+    "either or": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "either #Nouns or #Nouns", "untag": {"each": [{"term": "either", "termTag": "Determiner"}, {"term": "or", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["either", "or"], "termTag": "CorrelativeConjunction"}}},
+
+    "neither nor": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "neither #Nouns nor #Nouns", "untag": {"each": [{"term": "neither", "termTag": "Determiner"}, {"term": "nor", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["neither", "nor"], "termTag": "CorrelativeConjunction"}}},
+
+    "whether or (nouns)": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "whether #Nouns or not? #Nouns", "untag": {"each": [{"term": "whether", "termTag": "Determiner"}, {"term": "or", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["whether", "or"], "termTag": "CorrelativeConjunction"}}},
+
+    "whether or (verbs)": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "whether #Verbs or #Verbs", "untag": {"each": [{"term": "whether", "termTag": "Determiner"}, {"term": "or", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["whether", "or"], "termTag": "CorrelativeConjunction"}}},
+
+    "whether or (verbs)": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "whether #Verbs or not #Verbs", "untag": {"each": [{"term": "whether", "termTag": "Determiner"}, {"term": "or", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["whether", "or"], "termTag": "CorrelativeConjunction"}}},
+
+    "not only but also": {"batch": "Simple Correlative Conjunctions", "batchOrder": "4",  "order": "1", "pattern": "not only #Nouns but also #Nouns", "untag": {"each": [{"term": "not only", "termTag": "Determiner"}, {"term": "but also", "termTag": "CoordinatingConjunction"}]}, "tag": {"eachTheSame": {"terms": ["not only", "but also"], "termTag": "CorrelativeConjunction"}}}
 }

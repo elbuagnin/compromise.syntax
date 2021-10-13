@@ -1,13 +1,15 @@
 {
-      "Lists": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "1", "pattern": "(@hasComma)+ #CoordinatingConjunction #Noun", "tag": {"all": "List"}},
+      "Lists": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "1", "pattern": "(@hasComma)+ #CoordinatingConjunction #Nouns", "tag": {"all": "List"}},
 
-      "Noun Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "2", "pattern": "(#Determiner?|#Possessive?) (#Adjective?+ #Adjective|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}},
+      "Noun Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "2", "pattern": "(#Determiner?|#Possessive?) #Adjectives? #Nouns", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
 
-      "Prepostional Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "3", "pattern": "#Preposition (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": {"all": "PrepositionPhrase"}},
+      "Prepostional Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "3", "pattern": "#Preposition (#NounPhrase?+|#Nouns|#Pronoun)", "tag": {"all": "PrepositionPhrase"}},
 
-      "Gerund Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "4", "pattern": "#Gerund (#PrepositionPhrase?+|#NounPhrase?+|#Noun?+ #Noun|#Noun)", "tag": {"all": "GerundPhrase"}},
+      "Gerund Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "4", "pattern": "#Gerund (#PrepositionPhrase?+|#NounPhrase?+|#Nouns)", "tag": {"all": "GerundPhrase"}},
 
-      "Verb Phrases": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "7", "pattern": "#Auxiliary?+ #Auxiliary #Verb", "tag": {"all": "VerbPhrase"}},
+      "Auxiliary Verb Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "7", "pattern": "#AuxiliaryVerbs? #Verb", "tag": {"all": "VerbPhrase"}},
 
-      "Verb Phrases 2": {"batch":"Simple Phrases", "batchOrder": "2",  "order": "8", "pattern": "#Adverb? #Verb{2,} #Adverb?", "tag": {"all": "VerbPhrase"}}
+      "Adverb Verb Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "8", "pattern": "#Adverbs? #Verb{2,} #Adverbs?", "tag": {"all": "VerbPhrase"}},
+
+      "Not to": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "9", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}}
 }

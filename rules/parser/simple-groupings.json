@@ -1,3 +1,11 @@
 {
-    
+    "Nouns": {"batch": "Simple Groupings", "batchOrder": "2",  "order": "1", "pattern": "#Noun?+ #Noun", "tag": {"all": "Nouns"}},
+
+    "Adjectives": {"batch": "Simple Groupings", "batchOrder": "2",  "order": "2", "pattern": "#Adjective?+ #Adjective", "tag": {"all": "Adjectives"}},
+
+    "Auxiliary Verbs": {"batch": "Simple Groupings", "batchOrder": "2", "order": "3", "pattern": "#Auxiliary?+ #Auxiliary", "tag": {"all": "AuxiliaryVerbs"}},
+
+    "Verbs": {"batch": "Simple Groupings", "batchOrder": "2",  "order": "4", "pattern": "#Verb?+ #Verb", "tag": {"all": "Verbs"}},
+
+    "Adverbs": {"batch": "Simple Groupings", "batchOrder": "2",  "order": "5", "pattern": "#Adverb?+ #Adverb", "tag": {"all": "Adverbs"}}
 }
