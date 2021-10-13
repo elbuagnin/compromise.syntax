@@ -10,6 +10,7 @@
     "nor": ["CoordinatingConjunction", "Negative"],
     "or": "CoordinatingConjunction",
     "till": "SubordinatingConjunction",
+    "to": "Preposition",
     "though": "SubordinatingConjunction",
     "traps": "Noun",
     "unless": "SubordinatingConjunction",

@@ -1,10 +1,22 @@
 {
-    "Clause": {
+    "SyntaxMeta": {
         "isA": "",
+        "notA": ""
+    },
+    "ParenthesesGroup": {
+        "isA": "SyntaxMeta",
+        "notA": ""
+    },
+    "QuotationGroup": {
+        "isA": "SyntaxMeta",
+        "notA": ""
+    },
+    "Clause": {
+        "isA": "SyntaxMeta",
         "notA": "Phrase"
     },
     "Phrase": {
-        "isA": "",
+        "isA": "SyntaxMeta",
         "notA": ""
     },
     "Independent": {
@@ -48,11 +60,11 @@
         "notA": "VerbPhrase"
     },
     "Subject": {
-        "isA": "",
+        "isA": "SyntaxMeta",
         "notA": "Object"
     },
     "Object": {
-        "isA": "",
+        "isA": "SyntaxMeta",
         "notA": "Subject"
     },
     "DirectObject": {
@@ -64,7 +76,7 @@
         "notA": "DirectObject"
     },
     "Verbal": {
-        "isA": "",
+        "isA": "SyntaxMeta",
         "notA": "Verb"
     },
     "Participle": {
@@ -73,22 +85,22 @@
     },
     "CoordinatingConjunction": {
         "isA": "Conjunction",
-        "notA": ["SubordinatingConjunction", "CorrelativeConjunction"]
+        "notA": ["SubordinatingConjunction", "CorrelativeConjunction", "Determiner"]
     },
     "SubordinatingConjunction": {
         "isA": "Conjunction",
-        "notA": ["CoordinatingConjunction", "CorrelativeConjunction"]
+        "notA": ["CoordinatingConjunction", "CorrelativeConjunction", "Determiner"]
     },
     "CorrelativeConjunction": {
         "isA": "Conjunction",
-        "notA": ["CoordinatingConjunction", "SubordinatingConjunction"]
+        "notA": ["CoordinatingConjunction", "SubordinatingConjunction", "Determiner"]
     },
     "CompoundConjunction": {
         "isA": "CoordinatingConjunction",
         "notA": ""
     },
     "HeadNoun": {
-        "isA": "Noun",
+        "isA": "SyntaxMeta",
         "notA": ""
     }
 }

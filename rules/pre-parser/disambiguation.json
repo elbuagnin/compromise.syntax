@@ -1,9 +1,13 @@
 {
     "beforeIsPreposition": {"term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
 
+    "but also": {"term": "but also", "pattern": "but also", "tag": "CorrelativeConjunction"},
+
     "graceNotName": {"term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
 
     "graceNotName2": {"term": "grace", "pattern": "(#Verb && !told?) grace", "untag": "ProperNoun", "tag": "Singular"},
+
+    "not only": {"term": "not only", "pattern": "not only", "tag": "CorrelativeConjunction"},
 
     "or not": {"term": "or not", "pattern": "or not", "tag": ["Conjunction", "Negative"]},
 
