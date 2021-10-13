@@ -31,10 +31,30 @@ export default function preParser(document) {
   }
 
   function tagParentheses() {
-    const parenthesesGroups = document.parentheses();
-    parenthesesGroups.firstTerms().tag('BEGIN');
-    parenthesesGroups.lastTerms().tag('END');
-    parenthesesGroups.tag('ParenthesesGroup');
+    const sentenceEndPunctuation = '(@hasPeriod|@hasQuestionMark|@hasExclamation)';
+    document.sentences().forEach((sentence) => {
+      if (sentence.parentheses().found) {
+        console.log('p found');
+        const parentheticals = sentence.parentheses();
+        parentheticals.forEach((segment) => {
+          console.log(`segment:${segment}`);
+          sentence.replace(segment, '');
+          if (!sentence.has(sentenceEndPunctuation)) {
+            console.log('no punct');
+            if (segment.has(sentenceEndPunctuation)) {
+              console.log('segment has punct');
+              const punctuation = segment.match(sentenceEndPunctuation);
+              console.log(`==> ${punctuation} <==`);
+              console.log(punctuation.text());
+              sentence.post(punctuation);
+            } else {
+              console.log('using period');
+              sentence.post('.');
+            }
+          }
+        });
+      }
+    });
   }
 
   function tagQuotations() {
