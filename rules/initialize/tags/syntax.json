@@ -1,87 +1,115 @@
 {
     "SyntaxMeta": {
         "isA": "",
-        "notA": ""
+        "notA": "",
+        "color": "yellow"
+    },
+    "BoundariesMeta": {
+        "isA": "",
+        "notA": "",
+        "color": "black"
     },
     "ParenthesesGroup": {
-        "isA": "SyntaxMeta",
+        "isA": "BoundariesMeta",
         "notA": ""
     },
     "QuotationGroup": {
-        "isA": "SyntaxMeta",
+        "isA": "BoundariesMeta",
+        "notA": ""
+    },
+    "DashGroup": {
+        "isA": "BoundariesMeta",
         "notA": ""
     },
     "Clause": {
         "isA": "SyntaxMeta",
-        "notA": "Phrase"
+        "notA": "Phrase",
+        "color": "yellow"
     },
     "Phrase": {
         "isA": "SyntaxMeta",
-        "notA": ""
+        "notA": "",
+        "color": "yellow"
     },
     "Independent": {
         "isA": "Clause",
-        "notA": "Dependent"
+        "notA": "Subordinate",
+        "color": "yellow"
     },
-    "Dependent": {
+    "Subordinate": {
         "isA": "Clause",
-        "notA": "Independent"
+        "notA": "Independent",
+        "color": "yellow"
     },
     "NounPhrase": {
         "isA": "Phrase",
-        "notA": "VerbPhrase"
+        "notA": "VerbPhrase",
+        "color": "blue"
     },
     "VerbPhrase": {
         "isA": "Phrase",
-        "notA": "NounPhrase"
+        "notA": "NounPhrase",
+        "color": "green"
     },
     "VerbalPhrase": {
         "isA": "NounPhrase",
-        "notA": "VerbPhrase"
+        "notA": "VerbPhrase",
+        "color": "blue"
     },
     "InfinitivePhrase": {
         "isA": "VerbPhrase",
-        "notA": "NounPhrase"
+        "notA": "NounPhrase",
+        "color": "green"
     },
     "AdverbPhrase": {
         "isA": "Phrase",
-        "notA": ""
+        "notA": "",
+        "color": "green"
     },
     "PrepositionPhrase": {
         "isA": "Phrase",
-        "notA": ""
+        "notA": "",
+        "color": "cyan"
     },
     "GerundPhrase": {
         "isA": "VerbalPhrase",
-        "notA": ""
+        "notA": "",
+        "color": "blue"
     },
     "List": {
         "isA": "Phrase",
-        "notA": "VerbPhrase"
+        "notA": "VerbPhrase",
+        "color": "blue"
     },
     "Subject": {
         "isA": "SyntaxMeta",
-        "notA": "Object"
+        "notA": "Object",
+        "color": "blue"
     },
     "Object": {
         "isA": "SyntaxMeta",
-        "notA": "Subject"
+        "notA": "Subject",
+        "color": "blue"
     },
     "DirectObject": {
         "isA": "Object",
-        "notA": "IndirectObject"
+        "notA": "IndirectObject",
+        "color": "blue"
     },
     "IndirectObject": {
         "isA": "Object",
-        "notA": "DirectObject"
+        "notA": "DirectObject",
+        "color": "blue"
     },
     "Verbal": {
         "isA": "SyntaxMeta",
-        "notA": "Verb"
+        "notA": "Verb",
+        "color": "blue"
     },
     "Participle": {
         "isA": "Verbal",
-        "notA": ""
+        "notA": "",
+        "color": "blue"
     },
     "CoordinatingConjunction": {
         "isA": "Conjunction",
@@ -101,6 +129,7 @@
     },
     "HeadNoun": {
         "isA": "SyntaxMeta",
-        "notA": ""
+        "notA": "",
+        "color": "blue"
     }
 }
