@@ -12,7 +12,7 @@ export default function initialize(doc) {
 
   doc.addCustomTags(tags);
   doc.addCustomWords(words);
-  doc.contractions().expand();
+
   doc.tagger();
   preParser(doc);
 }
