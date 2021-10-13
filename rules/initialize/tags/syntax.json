@@ -11,15 +11,18 @@
     },
     "ParenthesesGroup": {
         "isA": "BoundariesMeta",
-        "notA": ""
+        "notA": "",
+        "color": "black"
     },
     "QuotationGroup": {
         "isA": "BoundariesMeta",
-        "notA": ""
+        "notA": "",
+        "color": "black"
     },
     "DashGroup": {
         "isA": "BoundariesMeta",
-        "notA": ""
+        "notA": "",
+        "color": "black"
     },
     "Clause": {
         "isA": "SyntaxMeta",
