@@ -159,6 +159,8 @@ export default function parser(doc) {
     }
   }
 
+  // Load the parsing rules and sort them by batch and withing batch.
+  // Rule order is critical for correct assignments.
   const rulePath = './rules/parser/';
   const list = true;
   const ruleSets = mfs.loadJSONDir(rulePath, list);
@@ -170,9 +172,9 @@ export default function parser(doc) {
   });
 
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder || a.order - b.order);
-
   console.log(orderedRules);
 
+  // Process the document by sentences and then basic punctuated phrasing.
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
     orderedRules.forEach((rule) => {
