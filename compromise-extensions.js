@@ -1,6 +1,8 @@
 import nlp from 'compromise';
 
 nlp.extend((Doc, world) => {
+  const nothing = nlp('');
+
   Doc.prototype.addCustomTags = function (tagData) { // eslint-disable-line
     const obj = {};
     Object.keys(tagData).forEach((k) => {
@@ -33,7 +35,7 @@ nlp.extend((Doc, world) => {
     yield tag + tagIDs[tag];
   }
 
-    Doc.prototype.tagWithID = function (tag) { // eslint-disable-line
+  Doc.prototype.tagWithID = function (tag) { // eslint-disable-line
     if (!tag) return;
 
     // Tag with syntax tag and unique id.
@@ -42,5 +44,23 @@ nlp.extend((Doc, world) => {
     // Tag original sentence.
     this.tag(tag);
     this.tag(id);
+  };
+
+  Doc.prototype.previous = function () { // eslint-disable-line
+    const precedingWords = this.all().before(this);
+    const precedingWord = precedingWords.lastTerms();
+
+    if (precedingWord.found) {
+      return precedingWord;
+    } return this.match(nothing);
+  };
+
+    Doc.prototype.next = function () { // eslint-disable-line
+    const succeedingWords = this.all().after(this);
+    const succeedingWord = succeedingWords.firstTerms();
+
+    if (succeedingWord.found) {
+      return succeedingWord;
+    } return this.match(nothing);
   };
 });
