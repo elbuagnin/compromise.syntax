@@ -10,5 +10,8 @@
   "Gerund": {
       "isA": ["Verbal", "Noun"],
       "notA": "Verb"
+  },
+  "Auxiliary": {
+      "color": "green"
   }
 }
