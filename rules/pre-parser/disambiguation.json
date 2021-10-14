@@ -13,6 +13,8 @@
 
     "sinceIsConjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
 
+    "#Cardinal is Determiner": {"term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+
     "thatIsConjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
 
     "toIsInfinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},

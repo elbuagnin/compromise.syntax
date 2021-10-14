@@ -1,5 +1,5 @@
 {
    "Compound Sentence": {"batch":"Clauses", "batchOrder": "6", "order": "1", "pattern": "* #CompoundConjunction *", "tag": {"split": {"term": "#CompoundConjunction", "termTag": "Independent"}}},
 
-   "Introductory Clause": {"batch":"Clauses", "batchOrder": "6", "order": "2", "pattern": "^ * #Noun * #Verb * @hasComma", "tag": {"all": "SubordinateClause"}, "demark": {"beginning": "begin", "ending": "end"}}
+   "Introductory Clause": {"batch":"Clauses", "batchOrder": "6", "order": "2", "pattern": "^ * #Noun * #Verb * @hasComma", "tag": {"all": "SubordinateClause"}, "demark": {"beginning": "BEGIN", "ending": "END"}}
 }
