@@ -1,36 +1,26 @@
 {
-    "SyntaxMeta": {
+    "ParenthesesGroup": {
         "isA": "",
         "notA": "",
         "color": "yellow"
     },
-    "BoundariesMeta": {
+    "QuotationGroup": {
         "isA": "",
         "notA": "",
-        "color": "black"
-    },
-    "ParenthesesGroup": {
-        "isA": "BoundariesMeta",
-        "notA": "",
-        "color": "black"
-    },
-    "QuotationGroup": {
-        "isA": "BoundariesMeta",
-        "notA": "",
-        "color": "black"
+        "color": "yellow"
     },
     "DashGroup": {
-        "isA": "BoundariesMeta",
+        "isA": "",
         "notA": "",
-        "color": "black"
+        "color": "yellow"
     },
     "Clause": {
-        "isA": "SyntaxMeta",
+        "isA": "",
         "notA": "Phrase",
         "color": "yellow"
     },
     "Phrase": {
-        "isA": "SyntaxMeta",
+        "isA": "",
         "notA": "",
         "color": "yellow"
     },
@@ -85,12 +75,12 @@
         "color": "blue"
     },
     "Subject": {
-        "isA": "SyntaxMeta",
+        "isA": "",
         "notA": "Object",
         "color": "blue"
     },
     "Object": {
-        "isA": "SyntaxMeta",
+        "isA": "",
         "notA": "Subject",
         "color": "blue"
     },
@@ -105,7 +95,7 @@
         "color": "blue"
     },
     "Verbal": {
-        "isA": "SyntaxMeta",
+        "isA": "",
         "notA": "Verb",
         "color": "blue"
     },
@@ -131,7 +121,7 @@
         "notA": ""
     },
     "HeadNoun": {
-        "isA": "SyntaxMeta",
+        "isA": "",
         "notA": "",
         "color": "blue"
     }
