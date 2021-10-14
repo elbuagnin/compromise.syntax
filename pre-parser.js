@@ -76,6 +76,18 @@ export default function preParser(document) {
     }
   }
 
+  function tagPunctuation() {
+    document.sentences().forEach((sentence) => {
+      sentence.if('@hasPeriod').lastTerms().tag('Period');
+      sentence.if('@hasQuestionMark').lastTerms().tag('QuestionMark');
+      sentence.if('@hasExclamation').lastTerms().tag('ExclamationMark');
+
+      sentence.match('@hasComma').tag('Comma');
+      sentence.match('@hasSemicolon').tag('Semicolon');
+      // sentence.match('@hasColon').tag('Colon'); // implement?
+    });
+  }
+
   // Custom tags & words
   const rulePath = './rules/pre-parser/';
   const dataset = mfs.loadJSONDir(rulePath);
@@ -88,4 +100,5 @@ export default function preParser(document) {
   tagParentheses();
   tagQuotations();
   tagDashGroups();
+  tagPunctuation();
 }
