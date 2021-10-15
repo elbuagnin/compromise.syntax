@@ -178,24 +178,22 @@ export default function parser(doc) {
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder || a.order - b.order);
   console.log(orderedRules);
 
-  // Process the document by sentences and then by assigned phrasing.
+  // Process the document by sentences and then by non-list commas.
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
+    let chunks = sentence;
     orderedRules.forEach((rule) => {
       if (sentence.has('#Comma')) {
-        const chunks = sentence.splitAfter('#Comma');
-
-        // if (sentence.has('#SPLIT') || sentence.has('#BEGIN') || sentence.has('#END')) {
-        //   let chunks = sentence.split('#SPLIT');
-        //   chunks = chunks.splitBefore('#BEGIN');
-        //   chunks = chunks.splitAfter('#END');
-
-        chunks.forEach((chunk) => {
-          tagMatch(chunk, rule);
+        const commas = sentence.match('#Comma');
+        commas.forEach((comma) => {
+          if (comma.ifNo('#List').found) {
+            chunks = chunks.splitAfter(comma);
+          }
         });
-      } else {
-        tagMatch(sentence, rule);
       }
+      chunks.forEach((chunk) => {
+        tagMatch(chunk, rule);
+      });
     });
   });
 }
