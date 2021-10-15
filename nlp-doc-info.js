@@ -1,16 +1,18 @@
-'use strict';
 import nlp from 'compromise';
 import readline from 'readline';
 
-var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
 });
 
-
-rl.question('Enter some text for NLP to parse:', (text) => {
-
+function recursiveAsyncReadLine() {
+  rl.question('Enter some text for NLP to parse: ', (text) => {
+    if (text === 'exit') { return rl.close(); } // Got to break free
     nlp(text).debug();
+    recursiveAsyncReadLine(); // rinse, repeat
+    return true;
+  });
+}
 
-    rl.close();
-});
+recursiveAsyncReadLine();
