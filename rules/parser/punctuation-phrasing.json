@@ -1,5 +1,0 @@
-{
-      "Simple Lists": {"batch":"Punctuated Phrasing", "batchOrder": "1",  "order": "1", "pattern": "#Comma+ #Comma", "tag": {"all": "List"}},
-
-      "Phrasing Commas": {"batch": "Punctuated Phrasing", "batchOrder": "1", "order": "2", "pattern": "(#Comma && !#List)", "demark": {"on": "Phrasing"}}
-}
