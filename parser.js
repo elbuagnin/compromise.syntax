@@ -182,10 +182,14 @@ export default function parser(doc) {
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
     orderedRules.forEach((rule) => {
-      if (sentence.has('#SPLIT') || sentence.has('#BEGIN') || sentence.has('#END')) {
-        let chunks = sentence.split('#SPLIT');
-        chunks = chunks.splitBefore('#BEGIN');
-        chunks = chunks.splitAfter('#END');
+      if (sentence.has('#Comma')) {
+        const chunks = sentence.splitAfter('#Comma');
+
+        // if (sentence.has('#SPLIT') || sentence.has('#BEGIN') || sentence.has('#END')) {
+        //   let chunks = sentence.split('#SPLIT');
+        //   chunks = chunks.splitBefore('#BEGIN');
+        //   chunks = chunks.splitAfter('#END');
+
         chunks.forEach((chunk) => {
           tagMatch(chunk, rule);
         });
