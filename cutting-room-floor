@@ -1,0 +1,2 @@
+"Compound Sentence": {"batch": "Punctuated Phrasing", "batchOrder": "1",  "order": "1", "pattern": "* #Noun * #Verb * #Comma #CoordinatingConjunction * #Noun * #Verb *", "demark": {"on": {"term": "#CoordinatingConjunction", "termTag": "CompoundConjunction"}}},
+- from punctuated phrasing
