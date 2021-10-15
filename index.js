@@ -7,6 +7,7 @@ export default function syntax(Doc, world) { // eslint-disable-line
     const document = this;
     initialize(document);
     parser(document);
+    console.log(document.text());
     document.debug();
   };
 }
