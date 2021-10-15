@@ -102,7 +102,7 @@
     "Participle": {
         "isA": "Verbal",
         "notA": "",
-        "color": "blue"
+        "color": "magenta"
     },
     "CoordinatingConjunction": {
         "isA": "Conjunction",

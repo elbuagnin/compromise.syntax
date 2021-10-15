@@ -1,4 +1,5 @@
 {
+    "although": "SubordinatingConjunction",
     "and": "CoordinatingConjunction",
     "because": "SubordinatingConjunction",
     "but": "CoordinatingConjunction",
@@ -6,9 +7,11 @@
     "bony": "Comparable",
     "earring": "Noun",
     "if": ["Condition", "SubordinatingConjunction"],
+    "lest": ["Condition", "SubordinatingConjunction"],
     "neither": ["Determiner", "Negative"],
     "nor": ["CoordinatingConjunction", "Negative"],
     "or": "CoordinatingConjunction",
+    "supposing": "SubordinatingConjunction",
     "till": "SubordinatingConjunction",
     "to": "Preposition",
     "though": "SubordinatingConjunction",
@@ -16,6 +19,7 @@
     "unless": "SubordinatingConjunction",
     "yet": "CoordinatingConjunction",
     "whenever": "SubordinatingConjunction",
+    "whereas": "SubordinatingConjunction",
     "wherever": "SubordinatingConjunction",
     "while": "SubordinatingConjunction"
 }

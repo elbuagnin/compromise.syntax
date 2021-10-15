@@ -1,27 +1,19 @@
 {
-    "beforeIsPreposition": {"term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
+    "as if Is Expression": {"term": "as if", "pattern": "^as if$", "tag": "Expression"},
 
-    "but also": {"term": "but also", "pattern": "but also", "tag": "CorrelativeConjunction"},
+    "before Is Preposition": {"term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
 
-    "graceNotName": {"term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
+    "grace IS Not a Name": {"term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
 
-    "graceNotName2": {"term": "grace", "pattern": "(#Verb && !told?) grace", "untag": "ProperNoun", "tag": "Singular"},
-
-    "not only": {"term": "not only", "pattern": "not only", "tag": "CorrelativeConjunction"},
-
-    "or not": {"term": "or not", "pattern": "or not", "tag": ["Conjunction", "Negative"]},
-
-    "sinceIsConjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
+    "since Is Conjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
 
     "#Cardinal is Determiner": {"term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
-    "thatIsConjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
+    "that Is Conjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
 
-    "toIsInfinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},
+    "to Is Infinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},
 
-    "toIsPreposition": {"term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
+    "to Is Preposition": {"term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
 
-    "to welcome": {"term": "to welcome", "pattern": "to welcome", "tag": ["Infinitive", "PresentTense", "Verb"]},
-
-    "untilIsConjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"}
+    "until Is Conjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) #Comma", "untag": "Preposition", "tag": "SubordinatingConjunction"}
 }

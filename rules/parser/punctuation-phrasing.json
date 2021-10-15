@@ -1,5 +1,5 @@
 {
-      "Compound Sentence": {"batch": "Punctuated Phrasing", "batchOrder": "1",  "order": "1", "pattern": "* #Noun * #Verb * #Comma #CoordinatingConjunction * #Noun * #Verb *", "demark": {"on": {"term": "#CoordinatingConjunction", "termTag": "CompoundConjunction"}}},
+      "Simple Lists": {"batch":"Punctuated Phrasing", "batchOrder": "1",  "order": "1", "pattern": "#Comma+ #Comma", "tag": {"all": "List"}},
 
-      "Phrasing Commas": {"batch": "Punctuated Phrasing", "batchOrder": "1", "order": "2", "pattern": "* #Comma", "demark": {"beginning": "BEGIN", "ending": "END"}}
+      "Phrasing Commas": {"batch": "Punctuated Phrasing", "batchOrder": "1", "order": "2", "pattern": "(#Comma && !#List)", "demark": {"on": "Phrasing"}}
 }

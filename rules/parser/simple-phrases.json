@@ -1,6 +1,4 @@
 {
-      "Lists": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "1", "pattern": "@hasComma @hasComma and (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "List"}},
-
       "Noun Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "2", "pattern": "(#Determiner?|#Possessive?) (#Adjective?+|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
 
       "Prepostional Phrases": {"batch":"Simple Phrases", "batchOrder": "3",  "order": "3", "pattern": "#Preposition (#NounPhrase?+|#Noun?+ #Noun|#Pronoun)", "tag": {"all": "PrepositionPhrase"}},
