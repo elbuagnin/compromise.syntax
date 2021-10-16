@@ -8,6 +8,7 @@
   "by the time": {"term":"by the time", "pattern": "by the time", "tag": "SubordinatingConjunction"},
   "even if": {"term": "even if", "pattern": "even if", "tag": "SubordinatingConjunction"},
   "even though": {"term": "even though", "pattern": "even though", "tag": "SubordinatingConjunction"},
+  "having been": {"term": "having been", "pattern": "having been", "tag": "PerfectParticiple"},
   "in case": {"term": "in case", "pattern": "in case", "tag": "SubordinatingConjunction"},
   "if only": {"term": "if only", "pattern": "if only", "tag": ["Condition", "SubordinatingConjunction"]},
   "in the event that": {"term": "in the event that", "pattern": "in the event that", "tag": "SubordinatingConjunction"},

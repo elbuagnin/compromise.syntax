@@ -1,0 +1,4 @@
+{
+     "Present Participle": {"batch":"Verbals", "batchOrder": "2",  "order": "1", "pattern": "#Gerund #PrepositionPhrase+ #Pronoun #Verb", "tag": {"on": {"term": "#Gerund", "termType": "PresentParticiple"}}}
+
+}
