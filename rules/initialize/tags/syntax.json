@@ -37,7 +37,7 @@
     "VerbalPhrase": {
         "isA": "",
         "notA": "VerbPhrase",
-        "color": "blue"
+        "color": "yellow"
     },
     "InfinitivePhrase": {
         "isA": "",
@@ -56,12 +56,12 @@
     },
     "GerundPhrase": {
         "isA": "VerbalPhrase",
-        "notA": "",
+        "notA": "ParticiplePhrase",
         "color": "blue"
     },
     "ParticiplePhrase": {
         "isA": "VerbalPhrase",
-        "notA": "",
+        "notA": "GerundPhrase",
         "color": "magenta"
     },
     "List": {
@@ -95,22 +95,22 @@
         "color": "yellow"
     },
     "Participle": {
-        "isA": ["Verbal", "Transitive"],
-        "notA": "",
+        "isA": "Verbal",
+        "notA": ["Verb", "Noun"],
         "color": "magenta"
     },
     "PresentParticiple": {
-        "isA": "Pariciple",
+        "isA": "Participle",
         "notA": ["PastParticiple", "PerfectParticiple"],
         "color": "magenta"
     },
     "PastParticiple": {
-      "isA": "Pariciple",
+      "isA": "Participle",
       "notA": ["PresentParticiple", "PerfectParticiple"],
       "color": "magenta"
     },
     "PerfectParticiple": {
-      "isA": "Pariciple",
+      "isA": "Participle",
       "notA": ["PresentParticiple", "PastParticiple"],
       "color": "magenta"
     },
