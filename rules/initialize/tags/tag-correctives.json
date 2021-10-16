@@ -1,6 +1,6 @@
 {
   "Possessive": {
-      "isA": "",
+      "isA": "Possessive",
       "notA": ["Noun", "Pronoun"]
   },
   "Pronoun": {
@@ -8,7 +8,7 @@
     "notA": "Noun"
   },
   "Gerund": {
-      "isA": ["Verbal", "Noun"],
+      "isA": ["Verbal", "Uncountable"],
       "notA": "Verb"
   },
   "Auxiliary": {
