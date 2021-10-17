@@ -73,6 +73,17 @@ export default function parser(doc) {
           if (tag.ending) {
             matchedPattern.lastTerms().tag(tag.ending);
           }
+
+          if (tag.first) {
+            const matchedTerm = matchedPattern.match(tag.first.term).first();
+            matchedTerm.tag(tag.first.termTag);
+          }
+
+          if (tag.last) {
+            const matchedTerm = matchedPattern.match(tag.last.term).last();
+            matchedTerm.tag(tag.last.termTag);
+          }
+
           if (tag.each) {
             tag.each.forEach((item) => {
               const { term } = item;
@@ -82,6 +93,7 @@ export default function parser(doc) {
               matchedTerm.tag(termTag);
             });
           }
+
           if (tag.eachTheSame) {
             tag.eachTheSame.terms.forEach((term) => {
               const matchedTerm = matchedPattern.match(term);
@@ -115,6 +127,16 @@ export default function parser(doc) {
           if (tagID.after) {
             const matchedTerm = matchedPattern.after(tagID.after.term);
             matchedTerm.tagWithID(tagID.after.termTag);
+          }
+
+          if (tagID.first) {
+            const matchedTerm = matchedPattern.match(tagID.first.term).first();
+            matchedTerm.tagWithID(tag.first.termTag);
+          }
+
+          if (tagID.last) {
+            const matchedTerm = matchedPattern.match(tagID.last.term).last();
+            matchedTerm.tagWithID(tag.last.termTag);
           }
 
           if (tagID.beginning) {
