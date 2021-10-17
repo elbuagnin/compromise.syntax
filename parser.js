@@ -178,22 +178,27 @@ export default function parser(doc) {
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder || a.order - b.order);
   console.log(orderedRules);
 
-  // Process the document by sentences and then by non-list commas.
+  // Process the document by sentences and then by non-list commas for intra-phrase...
+  // Process by entire sentence for inter-phrase.
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
-    let chunks = sentence;
     orderedRules.forEach((rule) => {
-      if (sentence.has('#Comma')) {
-        const commas = sentence.match('#Comma');
-        commas.forEach((comma) => {
-          if (comma.ifNo('#List').found) {
-            chunks = chunks.splitAfter(comma);
-          }
+      if (rule.type === 'intra-phrase') {
+        let chunks = sentence;
+        if (sentence.has('#Comma')) {
+          const commas = sentence.match('#Comma');
+          commas.forEach((comma) => {
+            if (comma.ifNo('#List').found) {
+              chunks = chunks.splitAfter(comma);
+            }
+          });
+        }
+        chunks.forEach((chunk) => {
+          tagMatch(chunk, rule);
         });
+      } else {
+        tagMatch(sentence, rule);
       }
-      chunks.forEach((chunk) => {
-        tagMatch(chunk, rule);
-      });
     });
   });
 }
