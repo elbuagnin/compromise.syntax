@@ -1,7 +1,11 @@
 {
     "Simple Lists": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1",  "order": "1", "type": "intra-phrase", "pattern": "#Comma+ #Comma", "tag": {"all": "List"}},
 
-    "Noun Phrases": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#Adjective?+|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
+    "Adjective Phrases 1": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "#Determiner? #Adverb?+ #Adjective?+ #Adjective #Adjective", "tag": {"all": "AdjectivePhrase", "last": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
 
-    "Linking Verb Phrases": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1", "order": "3", "type": "intra-phrase", "pattern": "#AuxiliaryVerbs? #Verb", "tag": {"all": "LinkingVerbPhrase"}}
+    "Adjective Phrases 2": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "#Determiner? #Adverb?+ #Adverb #Adjective?+ #Adjective", "tag": {"all": "AdjectivePhrase", "last": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
+
+    "Noun Phrases 1": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
+
+    "Noun Phrases 2": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "1",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? (#AdjectivePhrase?+|#Adjective?) #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}}
 }
