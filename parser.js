@@ -2,8 +2,6 @@ import * as mfs from './lib/filesystem.js';
 
 export default function parser(doc) {
   function tagMatch(sentence, rule) {
-    console.log('------------------------------');
-    console.log(sentence.text());
     const {
       pattern, tag, untag, demark, tagID, replace,
     } = rule;
@@ -12,8 +10,13 @@ export default function parser(doc) {
       if (sentence.has(pattern)) {
         const matchedPattern = sentence.match(pattern);
 
+        console.log('------------------------------------------------------------');
+        console.log(sentence.text());
         console.log('we have a match');
+        console.log(JSON.stringify(rule));
+        console.log('\n');
         console.log(matchedPattern.text());
+        console.log('\n');
         console.log(tag || untag || replace);
         console.log('\n');
 
@@ -196,6 +199,8 @@ export default function parser(doc) {
             matchedPattern.lastTerms().tag(demark.ending);
           }
         }
+        console.log(sentence.debug());
+        console.log('\n\n');
       }
     }
   }
