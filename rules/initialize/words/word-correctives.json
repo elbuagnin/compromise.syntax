@@ -13,6 +13,7 @@
     "nor": ["CoordinatingConjunction", "Negative"],
     "or": "CoordinatingConjunction",
     "supposing": "SubordinatingConjunction",
+    "tactic": "Noun",
     "till": "SubordinatingConjunction",
     "to": "Preposition",
     "though": "SubordinatingConjunction",

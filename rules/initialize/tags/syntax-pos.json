@@ -39,7 +39,17 @@
         "notA": "",
         "color": "green"
     },
-    "PrepositionPhrase": {
+    "AdjectivePhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "magenta"
+    },
+    "AdjectivalPhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "magenta"
+    },
+    "PrepositionalPhrase": {
         "isA": "",
         "notA": "",
         "color": "cyan"

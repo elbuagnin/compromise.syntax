@@ -5,7 +5,7 @@ export default function parser(doc) {
     console.log('------------------------------');
     console.log(sentence.text());
     const {
-      pattern, tag, untag, demark, tagID,
+      pattern, tag, untag, demark, tagID, replace,
     } = rule;
 
     if (pattern) {
@@ -14,7 +14,7 @@ export default function parser(doc) {
 
         console.log('we have a match');
         console.log(matchedPattern.text());
-        console.log(tag);
+        console.log(tag || untag || replace);
         console.log('\n');
 
         if (untag) {
@@ -73,6 +73,17 @@ export default function parser(doc) {
           if (tag.ending) {
             matchedPattern.lastTerms().tag(tag.ending);
           }
+
+          if (tag.first) {
+            const matchedTerm = matchedPattern.match(tag.first.term).first();
+            matchedTerm.tag(tag.first.termTag);
+          }
+
+          if (tag.last) {
+            const matchedTerm = matchedPattern.match(tag.last.term).last();
+            matchedTerm.tag(tag.last.termTag);
+          }
+
           if (tag.each) {
             tag.each.forEach((item) => {
               const { term } = item;
@@ -82,6 +93,7 @@ export default function parser(doc) {
               matchedTerm.tag(termTag);
             });
           }
+
           if (tag.eachTheSame) {
             tag.eachTheSame.terms.forEach((term) => {
               const matchedTerm = matchedPattern.match(term);
@@ -91,41 +103,52 @@ export default function parser(doc) {
         }
 
         if (tagID) {
-          if (tag.all) {
+          if (tagID.all) {
             matchedPattern.tagWithID(tag.all);
           }
 
-          if (tag.on) {
-            const matchedTerm = matchedPattern.match(tag.on.term);
-            matchedTerm.tagWithID(tag.on.termTag);
+          if (tagID.on) {
+            const matchedTerm = matchedPattern.match(tagID.on.term);
+            matchedTerm.tagWithID(tagID.on.termTag);
           }
 
-          if (tag.split) {
-            const beforeTerm = matchedPattern.before(tag.split.term);
-            beforeTerm.tagWithID(tag.split.termTag);
-            const afterTerm = matchedPattern.after(tag.split.term);
-            afterTerm.tagWithID(tag.split.termTag);
+          if (tagID.split) {
+            const beforeTerm = matchedPattern.before(tagID.split.term);
+            beforeTerm.tagWithID(tagID.split.termTag);
+            const afterTerm = matchedPattern.after(tagID.split.term);
+            afterTerm.tagWithID(tagID.split.termTag);
           }
 
-          if (tag.before) {
-            const matchedTerm = matchedPattern.before(tag.before.term);
-            matchedTerm.tagWithID(tag.before.termTag);
+          if (tagID.before) {
+            const matchedTerm = matchedPattern.before(tagID.before.term);
+            matchedTerm.tagWithID(tagID.before.termTag);
           }
 
-          if (tag.after) {
-            const matchedTerm = matchedPattern.after(tag.after.term);
-            matchedTerm.tagWithID(tag.after.termTag);
+          if (tagID.after) {
+            const matchedTerm = matchedPattern.after(tagID.after.term);
+            matchedTerm.tagWithID(tagID.after.termTag);
           }
 
-          if (tag.beginning) {
-            matchedPattern.firstTerms().tagWithID(tag.beginning);
+          if (tagID.first) {
+            const matchedTerm = matchedPattern.match(tagID.first.term).first();
+            matchedTerm.tagWithID(tag.first.termTag);
           }
 
-          if (tag.ending) {
-            matchedPattern.lastTerms().tagWithID(tag.ending);
+          if (tagID.last) {
+            const matchedTerm = matchedPattern.match(tagID.last.term).last();
+            matchedTerm.tagWithID(tag.last.termTag);
           }
-          if (tag.each) {
-            tag.each.forEach((item) => {
+
+          if (tagID.beginning) {
+            matchedPattern.firstTerms().tagWithID(tagID.beginning);
+          }
+
+          if (tagID.ending) {
+            matchedPattern.lastTerms().tagWithID(tagID.ending);
+          }
+
+          if (tagID.each) {
+            tagID.each.forEach((item) => {
               const { term } = item;
               const { termTag } = item;
               const matchedTerm = matchedPattern.match(term);
@@ -133,11 +156,25 @@ export default function parser(doc) {
               matchedTerm.tagWithID(termTag);
             });
           }
-          if (tag.eachTheSame) {
-            tag.eachTheSame.terms.forEach((term) => {
+
+          if (tagID.eachTheSame) {
+            tagID.eachTheSame.terms.forEach((term) => {
               const matchedTerm = matchedPattern.match(term);
-              matchedTerm.tagWithID(tag.eachTheSame.termTag);
+              matchedTerm.tagWithID(tagID.eachTheSame.termTag);
             });
+          }
+        }
+
+        if (replace) {
+          if (replace.on) {
+            const matchedTerm = matchedPattern.match(replace.on.term);
+            if (matchedTerm.found) {
+              const tags = matchedTerm.json({ terms: { bestTag: true } })[0].terms;
+              const { bestTag } = tags[0];
+
+              matchedTerm.untag(bestTag);
+              matchedTerm.tag(replace.on.termTag);
+            }
           }
         }
 
@@ -178,22 +215,27 @@ export default function parser(doc) {
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder || a.order - b.order);
   console.log(orderedRules);
 
-  // Process the document by sentences and then by non-list commas.
+  // Process the document by sentences and then by non-list commas for intra-phrase...
+  // Process by entire sentence for inter-phrase.
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
-    let chunks = sentence;
     orderedRules.forEach((rule) => {
-      if (sentence.has('#Comma')) {
-        const commas = sentence.match('#Comma');
-        commas.forEach((comma) => {
-          if (comma.ifNo('#List').found) {
-            chunks = chunks.splitAfter(comma);
-          }
+      if (rule.type === 'intra-phrase') {
+        let chunks = sentence;
+        if (sentence.has('#Comma')) {
+          const commas = sentence.match('#Comma');
+          commas.forEach((comma) => {
+            if (comma.ifNo('#List').found) {
+              chunks = chunks.splitAfter(comma);
+            }
+          });
+        }
+        chunks.forEach((chunk) => {
+          tagMatch(chunk, rule);
         });
+      } else {
+        tagMatch(sentence, rule);
       }
-      chunks.forEach((chunk) => {
-        tagMatch(chunk, rule);
-      });
     });
   });
 }
