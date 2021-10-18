@@ -17,12 +17,6 @@
 
     "until Is Conjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) #Comma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
 
-    "Gerund as Object": {"term": "#Gerund", "pattern": "(#Verb|#Pronoun|#Possessive|#Preposition) #Gerund", "untag": "Verb", "tag": "Gerund"},
-
-    "Gerund as Subject": {"term": "#Gerund", "pattern": "#Gerund #Adverb? #Verb", "untag": "PresentParticiple", "tag": "Gerund"},
-
-    "Gerund as Subject Complement": {"term": "#Gerund", "pattern": "#Cupola #Adverb? #Gerund", "untag": "Verb", "tag": "Gerund"},
-
     "Solitary Present Participle": {"term": "#Gerund", "pattern": "^#Gerund$", "tag": "PresentParticiple"},
 
     "Perfect Participle Active": {"term": "having #PastTense", "pattern": "having #PastTense", "untag": "Gerund", "tag": ["PerfectParticiple", "Active"]},

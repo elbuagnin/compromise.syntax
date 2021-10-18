@@ -14,16 +14,6 @@
         "notA": "",
         "color": "yellow"
     },
-    "Independent": {
-        "isA": "",
-        "notA": "Subordinate",
-        "color": "yellow"
-    },
-    "Subordinate": {
-        "isA": "",
-        "notA": "Independent",
-        "color": "yellow"
-    },
     "NounPhrase": {
         "isA": "",
         "notA": "VerbPhrase",
@@ -134,45 +124,5 @@
         "isA": "",
         "notA": "",
         "color": "blue"
-    },
-    "Transitive": {
-        "isA": "",
-        "notA": "Intransitive",
-        "color": "yellow"
-    },
-    "Intransitive": {
-        "isA": "",
-        "notA": "Transitive",
-        "color": "yellow"
-    },
-    "Accusative": {
-        "isA": "",
-        "notA": "Unaccusative",
-        "color": "yellow"
-    },
-    "Unaccusative": {
-        "isA": "",
-        "notA": "Accusative",
-        "color": "yellow"
-    },
-    "Active": {
-        "isA": "",
-        "notA": "Passive",
-        "color": "yellow"
-    },
-    "Passive": {
-        "isA": "",
-        "notA": "Active",
-        "color": "yellow"
-    },
-    "Subjective": {
-        "isA": "",
-        "notA": "Objective",
-        "color": "yellow"
-    },
-    "Objective": {
-        "isA": "",
-        "notA": "Subjective",
-        "color": "yellow"
     }
 }
