@@ -7,7 +7,5 @@
 
       "Perfect Participle Phrase": {"batch":"Simple Phrases, 2nd Pass", "batchOrder": "3",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": "PerfectParticiplePhrase"}},
 
-      "Not to": {"batch":"Simple Phrases, 2nd Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
-
       "VerbalPhrase 2": {"batch":"Simple Phrases, 2nd Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "#Gerund #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}}
 }

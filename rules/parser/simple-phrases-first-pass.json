@@ -9,5 +9,9 @@
 
     "Noun Phrases 2": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "2",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? (#AdjectivePhrase?+|#Adjective?) #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
 
-    "Infinitive Phrase": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "2",  "order": "6", "type": "intra-phrase", "pattern": "to #Infinitive (#NounPhrase+|#Noun)", "tag": {"all": "InfinitivePhrase"}}
+    "Do not": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "2",  "order": "6", "type": "intra-phrase", "pattern": "do not", "tag": {"all": ["Infinitive", "Negative"]}},
+
+    "Not to": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "2",  "order": "7", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+
+    "Infinitive Phrase": {"batch":"Simple Phrases, 1st Pass", "batchOrder": "2",  "order": "8", "type": "intra-phrase", "pattern": "not? to #Infinitive (#NounPhrase+|#Noun)", "tag": {"all": "InfinitivePhrase"}}
 }
