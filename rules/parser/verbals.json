@@ -1,8 +1,8 @@
 {
-     "Present Participle 1": {"batch":"Verbals", "batchOrder": "4",  "order": "1", "type": "inter-phrase", "pattern": "#VerbalPhrase+ (#Pronoun|#Person|#Determiner #Noun) #Verb", "replace": {"on": {"term": "#Gerund", "termTag": "PresentParticiple"}}, "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "ParticiplePhrase"}}},
+     "Present Participle 1": {"batch":"Verbals", "batchOrder": "5",  "order": "1", "type": "inter-phrase", "pattern": "#VerbalPhrase+ (#Pronoun|#Person|#Determiner #Noun) #Verb", "replace": {"on": {"term": "#Gerund", "termTag": "PresentParticiple"}}, "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "ParticiplePhrase"}}},
 
-     "Present Participle 2": {"batch":"Verbals", "batchOrder": "4",  "order": "2", "type": "inter-phrase", "pattern": "#SubordinatingConjunction #VerbalPhrase+", "tag": {"on": {"replace": "#Gerund", "termTag": "PresentParticiple"}}, "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "ParticiplePhrase"}}},
+     "Present Participle 2": {"batch":"Verbals", "batchOrder": "5",  "order": "2", "type": "inter-phrase", "pattern": "#SubordinatingConjunction #VerbalPhrase+", "tag": {"on": {"replace": "#Gerund", "termTag": "PresentParticiple"}}, "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "ParticiplePhrase"}}},
 
-     "Gerund Phrase": {"batch":"Verbals", "batchOrder": "4",  "order": "4", "type": "inter-phrase", "pattern": "#VerbalPhrase+ #PrepositionalPhrase?+ #Verb", "tag": {"on": {"term": "#Gerund", "termTag": "Gerund"}}, "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "GerundPhrase"}}}
+     "Gerund Phrase": {"batch":"Verbals", "batchOrder": "5",  "order": "4", "type": "inter-phrase", "pattern": "#VerbalPhrase+ #PrepositionalPhrase?+ #Verb", "tag": {"on": {"term": "#Gerund", "termTag": "Gerund"}}, "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "GerundPhrase"}}}
 
 }
