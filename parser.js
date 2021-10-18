@@ -168,11 +168,13 @@ export default function parser(doc) {
         if (replace) {
           if (replace.on) {
             const matchedTerm = matchedPattern.match(replace.on.term);
-            const tags = matchedTerm.json({ terms: { bestTag: true } })[0].terms;
-            const { bestTag } = tags[0];
+            if (matchedTerm.found) {
+              const tags = matchedTerm.json({ terms: { bestTag: true } })[0].terms;
+              const { bestTag } = tags[0];
 
-            matchedTerm.untag(bestTag);
-            matchedTerm.tag(replace.on.termTag);
+              matchedTerm.untag(bestTag);
+              matchedTerm.tag(replace.on.termTag);
+            }
           }
         }
 
