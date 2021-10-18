@@ -12,7 +12,7 @@ export default function parser(doc) {
 
         console.log('------------------------------------------------------------');
         console.log(sentence.text());
-        console.log('we have a match');
+        console.log('we have a match:\n');
         console.log(JSON.stringify(rule));
         console.log('\n');
         console.log(matchedPattern.text());
@@ -170,12 +170,11 @@ export default function parser(doc) {
 
         if (replace) {
           if (replace.on) {
-            const matchedTerm = matchedPattern.match(replace.on.term);
+            const matchedTerm = matchedPattern.match(replace.on.termUnTag);
+            console.log(matchedTerm);
             if (matchedTerm.found) {
-              const tags = matchedTerm.json({ terms: { bestTag: true } })[0].terms;
-              const { bestTag } = tags[0];
-
-              matchedTerm.untag(bestTag);
+              console.log('found');
+              matchedTerm.untag(replace.on.termUnTag);
               matchedTerm.tag(replace.on.termTag);
             }
           }
