@@ -1,0 +1,22 @@
+{
+  "Subjective": {
+      "isA": "",
+      "notA": "Objective",
+      "color": "yellow"
+  },
+  "Objective": {
+      "isA": "",
+      "notA": "Subjective",
+      "color": "yellow"
+  },
+  "FirstPerson": {
+      "isA": "",
+      "notA": "SecondPerson",
+      "color": "yellow"
+  },
+  "SecondPerson": {
+      "isA": "",
+      "notA": "FirstPerson",
+      "color": "yellow"
+  }
+}
