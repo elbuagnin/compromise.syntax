@@ -1,0 +1,3 @@
+{
+   "Compound Sentence": {"batch":"Clauses", "batchOrder": "5", "order": "1", "type": "inter-phrase", "pattern": "* #CompoundConjunction *", "tag": {"split": {"term": "#CompoundConjunction", "termTag": "Independent"}}}
+}

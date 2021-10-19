@@ -1,5 +1,0 @@
-{
-   "Compound Sentence": {"batch":"Clauses", "batchOrder": "9", "order": "1", "type": "inter-phrase", "pattern": "* #CompoundConjunction *", "tag": {"split": {"term": "#CompoundConjunction", "termTag": "Independent"}}},
-
-   "Introductory Clause": {"batch":"Clauses", "batchOrder": "9", "order": "2", "type": "inter-phrase", "pattern": "^ * #Noun * #Verb * Comma", "tag": {"all": "SubordinateClause"}, "demark": {"beginning": "BEGIN", "ending": "END"}}
-}
