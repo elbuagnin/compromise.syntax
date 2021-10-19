@@ -1,74 +1,4 @@
 {
-    "ParenthesesGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "QuotationGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "DashGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "NounPhrase": {
-        "isA": "",
-        "notA": "VerbPhrase",
-        "color": "blue"
-    },
-    "VerbPhrase": {
-        "isA": "",
-        "notA": "NounPhrase",
-        "color": "green"
-    },
-    "VerbalPhrase": {
-        "isA": "",
-        "notA": "VerbPhrase",
-        "color": "yellow"
-    },
-    "InfinitivePhrase": {
-        "isA": "",
-        "notA": "",
-        "color": "green"
-    },
-    "AdverbPhrase": {
-        "isA": "",
-        "notA": "",
-        "color": "green"
-    },
-    "AdjectivePhrase": {
-        "isA": "",
-        "notA": "",
-        "color": "magenta"
-    },
-    "AdjectivalPhrase": {
-        "isA": "",
-        "notA": "",
-        "color": "magenta"
-    },
-    "PrepositionalPhrase": {
-        "isA": "",
-        "notA": "",
-        "color": "cyan"
-    },
-    "GerundPhrase": {
-        "isA": "VerbalPhrase",
-        "notA": "ParticiplePhrase",
-        "color": "blue"
-    },
-    "ParticiplePhrase": {
-        "isA": "VerbalPhrase",
-        "notA": "GerundPhrase",
-        "color": "magenta"
-    },
-    "List": {
-        "isA": "",
-        "notA": "VerbPhrase",
-        "color": "blue"
-    },
     "Subject": {
         "isA": "",
         "notA": "Object",
@@ -88,6 +18,11 @@
         "isA": "Object",
         "notA": "DirectObject",
         "color": "blue"
+    },
+    "FiniteVerb": {
+        "isA": "Verb",
+        "notA": "Infinitive",
+        "color": "green"
     },
     "Verbal": {
         "isA": "",

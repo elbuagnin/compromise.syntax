@@ -1,0 +1,102 @@
+{
+    "ParenthesesGroup": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "QuotationGroup": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "DashGroup": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "NounPhrase": {
+        "isA": "",
+        "notA": "VerbPhrase",
+        "color": "blue"
+    },
+    "List": {
+        "isA": "",
+        "notA": "VerbPhrase",
+        "color": "blue"
+    },
+    "PrepositionalPhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "cyan"
+    },
+    "VerbPhrase": {
+        "isA": "",
+        "notA": "NounPhrase",
+        "color": "green"
+    },
+    "InfinitivePhrase": {
+        "isA": "VerbalPhrase",
+        "notA": "VerbPhrase",
+        "color": "yellow"
+    },
+    "AdverbPhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "green"
+    },
+    "AdjectivePhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "magenta"
+    },
+    "AdjectivalPhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "magenta"
+    },
+    "VerbalPhrase": {
+        "isA": "",
+        "notA": "VerbPhrase",
+        "color": "yellow"
+    },
+    "GerundPhrase": {
+        "isA": "VerbalPhrase",
+        "notA": "ParticiplePhrase",
+        "color": "blue"
+    },
+    "ParticiplePhrase": {
+        "isA": "VerbalPhrase",
+        "notA": "GerundPhrase",
+        "color": "magenta"
+    },
+    "PresentParticiplePhrase": {
+        "isA": "ParticiplePhrase",
+        "notA": ["PastParticiple", "PerfectParticiple"],
+        "color": "magenta"
+    },
+    "PastParticiplePhrase": {
+        "isA": "ParticiplePhrase",
+        "notA": ["PresentParticiple", "PerfectParticiple"],
+        "color": "magenta"
+    },
+    "PerfectParticiplePhrase": {
+        "isA": "ParticiplePhrase",
+        "notA": ["PresentParticiple", "PastParticiple"],
+        "color": "magenta"
+    },
+    "VerbalClause": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
+    "ParticipleClause": {
+        "isA": "VerbalClause",
+        "notA": "",
+        "color": "magenta"
+    },
+    "PresentParticipleClause": {
+        "isA": "ParticipleClause",
+        "notA": "",
+        "color": "magenta"
+    }
+}

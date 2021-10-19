@@ -9,7 +9,13 @@
   },
   "Gerund": {
       "isA": ["Verbal", "Uncountable"],
-      "notA": "Verb"
+      "notA": "Verb",
+      "color": "blue"
+  },
+  "Infinitive": {
+      "isA": "Verbal",
+      "notA": "Verb",
+      "color": "yellow"
   },
   "Auxiliary": {
       "color": "green"
