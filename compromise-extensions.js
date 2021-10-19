@@ -5,16 +5,18 @@ nlp.extend((Doc, world) => {
 
   Doc.prototype.fix = function () { // eslint-disable-line
     const expandedContractions = this;
-    const initialTags = nlp(expandedContractions.text()).out('tags');
-    const expandedTags = expandedContractions.out('tags');
+    if (expandedContractions.found) {
+      const initialTags = nlp(expandedContractions.text()).out('tags');
+      const expandedTags = expandedContractions.out('tags');
 
-    if (initialTags !== expandedTags) {
-      const words = expandedContractions.text().split(' ');
+      if (initialTags !== expandedTags) {
+        const words = expandedContractions.text().split(' ');
 
-      words.forEach((word) => {
-        const tags = initialTags[0][word];
-        expandedContractions.match(word).tag(tags);
-      });
+        words.forEach((word) => {
+          const tags = initialTags[0][word];
+          expandedContractions.match(word).tag(tags);
+        });
+      }
     }
   };
 
