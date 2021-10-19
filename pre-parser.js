@@ -30,13 +30,22 @@ export default function preParser(document) {
   }
 
   function compromiseInfinitivesToSyntaxFiniteVerbs() {
+    console.log('Infinitives to Finite Verbs:');
+    console.log('Starting Infinitives:');
+    console.log(document.match('#Infinitive').debug());
     document.match('#Infinitive').tag('#FiniteVerb').untag('#Infinitive');
     document.match('to #FiniteVerb').tag('#Infinitive').untag(['#Verb', '#FiniteVerb', '#PresentTense']);
+    console.log('Infinitives left:');
+    console.log(document.match('#Infinitive').debug());
+    console.log('Finite Verbs converted:');
+    console.log(document.match('#FiniteVerb').debug());
   }
 
   function tagHyphenatedTerms() {
     const hyphenatedTerms = document.hyphenated();
     hyphenatedTerms.tag(['#Noun', 'Singular', 'Hyphenated']);
+    console.log('Hyphenated:');
+    console.log(hyphenatedTerms.debug());
   }
 
   function tagParentheses() {
@@ -45,6 +54,8 @@ export default function preParser(document) {
       parenthesesGroups.firstTerms().tag('BEGIN');
       parenthesesGroups.lastTerms().tag('END');
       parenthesesGroups.tag('parenthesesGroup');
+      console.log('Parentheses:');
+      console.log(parenthesesGroups.debug());
     }
   }
 
@@ -54,6 +65,8 @@ export default function preParser(document) {
       quotationGroups.firstTerms().tag('BEGIN');
       quotationGroups.lastTerms().tag('END');
       quotationGroups.tag('QuotationGroup');
+      console.log('Quotations:');
+      console.log(quotationGroups.debug());
     }
   }
 
@@ -79,6 +92,8 @@ export default function preParser(document) {
             segment.firstTerms().tag('BEGIN');
             segment.lastTerms().tag('END');
             segment.tag('DashGroup');
+            console.log('Dashes:');
+            console.log(word.debug());
           }
         });
       });
@@ -110,10 +125,10 @@ export default function preParser(document) {
   });
 
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder);
-  console.log(orderedRules);
 
   // Normalize the document for parsing.
-  document.contractions().expand();
+  console.log('Contractions:');
+  document.contractions().expand().debug();
   tagHyphenatedTerms();
   compromiseInfinitivesToSyntaxFiniteVerbs();
   assignValues(orderedRules);

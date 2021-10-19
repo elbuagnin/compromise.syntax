@@ -10,8 +10,6 @@ export default function parser(doc) {
       if (sentence.has(pattern)) {
         const matchedPattern = sentence.match(pattern);
 
-        console.log('------------------------------------------------------------');
-        console.log(sentence.text());
         console.log('we have a match:\n');
         console.log(JSON.stringify(rule));
         console.log('\n');
@@ -217,12 +215,15 @@ export default function parser(doc) {
   });
 
   orderedRules.sort((a, b) => a.batchOrder - b.batchOrder || a.order - b.order);
-  console.log(orderedRules);
 
   // Process the document by sentences and then by non-list commas for intra-phrase...
   // Process by entire sentence for inter-phrase.
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
+    console.log('------------------------------------------------------------');
+    console.log('Sentence post pre-parser:\n');
+    console.log(sentence.text());
+    console.log(sentence.debug());
     orderedRules.forEach((rule) => {
       if (rule.type === 'intra-phrase') {
         let chunks = sentence;
