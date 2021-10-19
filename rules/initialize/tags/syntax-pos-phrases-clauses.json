@@ -98,5 +98,10 @@
         "isA": "ParticipleClause",
         "notA": "",
         "color": "magenta"
+    },
+    "SubordinateClause": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
     }
 }
