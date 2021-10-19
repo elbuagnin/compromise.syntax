@@ -204,7 +204,7 @@ export default function parser(doc) {
     }
   }
 
-  // Load the parsing rules and sort them by batch and withing batch.
+  // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
   const rulePath = './rules/parser/';
   const list = true;
