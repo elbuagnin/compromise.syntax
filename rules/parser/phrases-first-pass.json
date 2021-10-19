@@ -1,0 +1,17 @@
+{
+    "Simple Lists": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "1", "type": "intra-phrase", "pattern": "#Comma+ #Comma", "tag": {"all": "List"}},
+
+    "Adjective Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "2", "type": "intra-phrase", "pattern": "#Determiner? #Adverb?+ #Adjective?+ #Adjective #Adjective", "tag": {"all": "AdjectivePhrase", "last": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
+
+    "Adjective Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "3", "type": "intra-phrase", "pattern": "#Determiner? #Adverb?+ #Adverb #Adjective?+ #Adjective", "tag": {"all": "AdjectivePhrase", "last": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
+
+    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
+
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? (#AdjectivePhrase?+|#Adjective?) #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
+
+    "Do not": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "6", "type": "intra-phrase", "pattern": "do not", "tag": {"all": ["Infinitive", "Negative"]}},
+
+    "Not to": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "7", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+
+    "Infinitive Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "8", "type": "intra-phrase", "pattern": "not? to #Infinitive (#NounPhrase+|#Noun)", "tag": {"all": "InfinitivePhrase"}}
+}

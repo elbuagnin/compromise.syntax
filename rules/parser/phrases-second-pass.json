@@ -1,0 +1,11 @@
+{
+      "Prepostional Phrases": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "1", "type": "intra-phrase", "pattern": "#Preposition (#NounPhrase?+|#Noun|#Pronoun)", "tag": {"all": "PrepositionalPhrase"}},
+
+      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Verbal (#PrepositionalPhrase+|#NounPhrase+)", "tag": {"all": "VerbalPhrase"}},
+
+      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": "PerfectParticiplePhrase"}},
+
+      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}},
+
+      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}}
+}

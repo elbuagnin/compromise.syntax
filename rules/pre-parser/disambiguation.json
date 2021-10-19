@@ -11,8 +11,6 @@
 
     "that Is Conjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
 
-    "to Is Infinitive": {"term": "to", "pattern": "to #Adverb?+ #Infinitive", "tag": "#Infinitive"},
-
     "to Is Preposition": {"term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
 
     "until Is Conjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) #Comma", "untag": "Preposition", "tag": "SubordinatingConjunction"},

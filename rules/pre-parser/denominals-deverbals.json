@@ -1,0 +1,6 @@
+{
+    "to welcome": {"term": "to welcome", "pattern": "to welcome", "tag": "Infinitive"},
+    "welcome": {"term": "welcome", "pattern": "!to? welcome", "tag": "Adjective"},
+    "to work": {"term": "to work", "pattern": "to work", "tag": "Infinitive"},
+    "work": {"term": "work", "pattern": "!to? work", "tag": "Noun"}
+}

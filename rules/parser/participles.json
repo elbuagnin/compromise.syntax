@@ -1,0 +1,11 @@
+{
+     "Present Participle 1": {"batch":"Verbals", "batchOrder": "5",  "order": "1", "type": "inter-phrase", "pattern": "#NounPhrase+ (#Verbal && !#PerfectParticiple && !#Infinitive && !#Gerund) #VerbalPhrase+", "tag": {"each": [{"term": "#Verbal", "termTag": ["Participle", "PresentParticiple"]}, {"term": "#VerbalPhrase+", "termTag": "PresentParticiplePhrase"}]}},
+
+     "Present Participle 2": {"batch":"Verbals", "batchOrder": "5",  "order": "2", "type": "inter-phrase", "pattern": "(#Verbal && !#PerfectParticiple && !#Infinitive && !#Gerund) #VerbalPhrase+ (#Pronoun|#Person|#Determiner #Noun) #Verb", "tag": {"each": [{"term": "#Verbal", "termTag": ["Participle", "PresentParticiple"]}, {"term": "#VerbalPhrase+", "termTag": "PresentParticiplePhrase"}]}},
+
+     "Present Participle 3": {"batch":"Verbals", "batchOrder": "5",  "order": "3", "type": "inter-phrase", "pattern": "#SubordinatingConjunction (#Verbal && !#PerfectParticiple && !#Infinitive && !#Gerund) #VerbalPhrase+", "tag": {"each": [{"term": "#Verbal", "termTag": ["Participle", "PresentParticiple"]}, {"term": "#VerbalPhrase+", "termTag": "PresentParticiplePhrase"}]}},
+
+     "Present Participle 4": {"batch":"Verbals", "batchOrder": "5",  "order": "4", "type": "inter-phrase", "pattern": "#Noun (#Verbal && !#PerfectParticiple && !#Infinitive && !#Gerund) #VerbalPhrase+ (#AdjectivePhrase|#Adjective)", "tag": {"each": [{"term": "#Verbal", "termTag": ["Participle", "PresentParticiple"]}, {"term": "#VerbalPhrase+", "termTag": "PresentParticiplePhrase"}]}},
+
+     "Present Participle 5": {"batch":"Verbals", "batchOrder": "5",  "order": "5", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/) #Adverb? #Copula #Adjective", "tag": {"on": {"term": "#Verbal", "termTag": ["Participle", "PresentParticiple"]}, "all": "PresentParticipleClause"}}
+}

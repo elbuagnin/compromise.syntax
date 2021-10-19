@@ -1,6 +1,0 @@
-{
-    "Adjective Phrases with Preposition": {"batch":"Phrases", "batchOrder": "4",  "order": "1", "type": "intra-phrase", "pattern": "#Adjective #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": "AdjectivePhrase", "first": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
-
-    "Prepostional Phrase with Gerund as Object": {"batch":"Phrases", "batchOrder": "4",  "order": "2", "type": "intra-phrase", "pattern": "#Preposition #VerbalPhrase+", "tag": {"all": "PrepositionalPhrase"}}
-
-}

@@ -23,6 +23,5 @@
   "provided that": {"term": "provided that", "pattern": "provided that", "tag": "SubordinatingConjunction"},
   "so that": {"term": "so that", "pattern": "so that", "untag": "Preposition", "tag": "SubordinatingConjunction"},
   "such as": {"term": "such as", "pattern": "such as", "untag": ["Adverb", "Preposition"] ,"tag": "SubordinatingConjunction"},
-  "to welcome": {"term": "to welcome", "pattern": "to welcome", "tag": ["Infinitive", "PresentTense", "Verb"]},
   "whether or not": {"term": "whether or not", "pattern": "whether or not", "tag": "SubordinatingConjunction"}
 }

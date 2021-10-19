@@ -1,0 +1,11 @@
+{
+    "Gerund": {"batch":"Verbals", "batchOrder": "6",  "order": "1", "type": "inter-phrase", "pattern": "(#Verbal && !#Participle && !#Infinitive)", "tag": {"on": {"term": "#Verbal", "termTag": "Gerund"}}},
+
+    "Gerund Phrase 1": {"batch":"Verbals", "batchOrder": "6",  "order": "2", "type": "inter-phrase", "pattern": "#Gerund #VerbalPhrase+ #PrepositionalPhrase?+ #Verb", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "GerundPhrase"}}},
+
+    "Gerund Phrase 2": {"batch":"Verbals", "batchOrder": "6",  "order": "3", "type": "inter-phrase", "pattern": "#Verb #Possessive? #Gerund #VerbalPhrase+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": "GerundPhrase"}}},
+
+    "Gerund Phrase 3": {"batch":"Verbals", "batchOrder": "6",  "order": "4", "type": "inter-phrase", "pattern": "#Gerund #InfinitivePhrase+", "tag": {"on": {"term": "#InfinitivePhrase+", "termTag": "GerundPhrase"}}},
+
+    "Gerund Phrase 4": {"batch":"Verbals", "batchOrder": "6",  "order": "5", "type": "inter-phrase", "pattern": "#Gerund #Infinitive+", "tag": {"all": "GerundPhrase"}}
+}
