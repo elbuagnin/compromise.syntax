@@ -128,7 +128,7 @@ export default function preParser(document) {
 
   // Normalize the document for parsing.
   console.log('Contractions:');
-  document.contractions().expand().debug();
+  document.contractions().expand().fix();
   tagHyphenatedTerms();
   compromiseInfinitivesToSyntaxFiniteVerbs();
   assignValues(orderedRules);
