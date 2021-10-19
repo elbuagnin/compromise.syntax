@@ -13,19 +13,23 @@ export default function preParser(document) {
       if (term && pattern) {
         if (document.has(pattern)) {
           const matchedTerm = document.match(pattern).match(term);
+          console.log('\nPreparser:');
+          console.log(matchedTerm.text());
 
           if (untag) {
             matchedTerm.untag(untag);
+            console.log(`Removing tag: ${untag}`);
           }
           if (tag) {
             matchedTerm.tag(tag);
+            console.log(`Assigning tag: ${tag}`);
           }
         }
       }
     });
   }
 
-  function compromiseInfinitivesToSyntaxBaseVerbs() {
+  function compromiseInfinitivesToSyntaxFiniteVerbs() {
     document.match('#Infinitive').tag('#FiniteVerb').untag('#Infinitive');
     document.match('to #FiniteVerb').tag('#Infinitive').untag(['#Verb', '#FiniteVerb', '#PresentTense']);
   }
@@ -93,15 +97,26 @@ export default function preParser(document) {
     });
   }
 
-  // Custom tags & words
+  // Custom tags & words & disambiguation
+  // Rule order is critical for correct assignments.
   const rulePath = './rules/pre-parser/';
-  const dataset = mfs.loadJSONDir(rulePath);
+  const list = true;
+  const ruleSets = mfs.loadJSONDir(rulePath, list);
+  const orderedRules = [];
+  Object.values(ruleSets).forEach((ruleSet) => {
+    Object.values(ruleSet).forEach((rule) => {
+      orderedRules.push(rule);
+    });
+  });
+
+  orderedRules.sort((a, b) => a.batchOrder - b.batchOrder);
+  console.log(orderedRules);
 
   // Normalize the document for parsing.
   document.contractions().expand();
   tagHyphenatedTerms();
-  compromiseInfinitivesToSyntaxBaseVerbs();
-  assignValues(dataset);
+  compromiseInfinitivesToSyntaxFiniteVerbs();
+  assignValues(orderedRules);
   document.lists().tag('List');
   tagParentheses();
   tagQuotations();

@@ -1,23 +1,17 @@
 {
-    "as if Is Expression": {"term": "as if", "pattern": "^as if$", "tag": "Expression"},
+    "as if Is Expression": {"batchOrder": "3", "term": "as if", "pattern": "^as if$", "tag": "Expression"},
 
-    "before Is Preposition": {"term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
+    "before Is Preposition": {"batchOrder": "3", "term": "before", "pattern": "before (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "untag": "Conjunction", "tag": "Preposition"},
 
-    "grace IS Not a Name": {"term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
+    "grace IS Not a Name": {"batchOrder": "3", "term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
 
-    "since Is Conjunction": {"term": "since", "pattern": "since (#Pronoun|#Noun) (#Verb) @hasComma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
+    "#Cardinal is Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
-    "#Cardinal is Determiner": {"term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+    "to Is Preposition": {"batchOrder": "3", "term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
 
-    "that Is Conjunction": {"term": "that", "pattern": "that (#Pronoun|#Noun) (#Verb)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
+    "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "^#Verbal$", "tag": "PresentParticiple"},
 
-    "to Is Preposition": {"term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
+    "Perfect Participle Active": {"batchOrder": "3", "term": "having #PastTense", "pattern": "having #PastTense", "tag": ["PerfectParticiple", "Active"]},
 
-    "until Is Conjunction": {"term": "until", "pattern": "until (#Pronoun|#Noun) (#Verb) #Comma", "untag": "Preposition", "tag": "SubordinatingConjunction"},
-
-    "Solitary Present Participle": {"term": "#Gerund", "pattern": "^#Gerund$", "tag": "PresentParticiple"},
-
-    "Perfect Participle Active": {"term": "having #PastTense", "pattern": "having #PastTense", "untag": "Gerund", "tag": ["PerfectParticiple", "Active"]},
-
-    "Perfect Participle Passive": {"term": "having been #PastTense", "pattern": "having been #PastTense", "untag": "Gerund", "tag": ["PerfectParticiple", "Passive"]}
+    "Perfect Participle Passive": {"batchOrder": "3", "term": "having been #PastTense", "pattern": "having been #PastTense", "tag": ["PerfectParticiple", "Passive"]}
 }

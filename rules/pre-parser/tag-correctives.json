@@ -1,3 +1,3 @@
 {
-    "Unset #Gerunds": {"term": "#Gerund", "pattern": "#Gerund", "untag": "#Gerund", "tag": "Verbal"}
+    "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": "#Gerund", "tag": "Verbal"}
 }
