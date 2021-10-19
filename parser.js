@@ -221,7 +221,7 @@ export default function parser(doc) {
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
     console.log('------------------------------------------------------------');
-    console.log('Sentence post pre-parser:\n');
+    console.log('Sentence after pre-parser:\n');
     console.log(sentence.text());
     console.log(sentence.debug());
     orderedRules.forEach((rule) => {
@@ -242,5 +242,8 @@ export default function parser(doc) {
         tagMatch(sentence, rule);
       }
     });
+    console.log('Sentence post parser:\n');
+    console.log(sentence.text());
+    console.log(sentence.debug());
   });
 }
