@@ -25,6 +25,11 @@ export default function preParser(document) {
     });
   }
 
+  function compromiseInfinitivesToSyntaxBaseVerbs() {
+    document.match('#Infinitive').tag('#FiniteVerb').untag('#Infinitive');
+    document.match('to #FiniteVerb').tag('#Infinitive').untag(['#Verb', '#FiniteVerb', '#PresentTense']);
+  }
+
   function tagHyphenatedTerms() {
     const hyphenatedTerms = document.hyphenated();
     hyphenatedTerms.tag(['#Noun', 'Singular', 'Hyphenated']);
@@ -95,6 +100,7 @@ export default function preParser(document) {
   // Normalize the document for parsing.
   document.contractions().expand();
   tagHyphenatedTerms();
+  compromiseInfinitivesToSyntaxBaseVerbs();
   assignValues(dataset);
   document.lists().tag('List');
   tagParentheses();
