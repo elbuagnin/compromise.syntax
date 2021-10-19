@@ -3,6 +3,21 @@ import nlp from 'compromise';
 nlp.extend((Doc, world) => {
   const nothing = nlp('');
 
+  Doc.prototype.fix = function () { // eslint-disable-line
+    const expandedContractions = this;
+    const initialTags = nlp(expandedContractions.text()).out('tags');
+    const expandedTags = expandedContractions.out('tags');
+
+    if (initialTags !== expandedTags) {
+      const words = expandedContractions.text().split(' ');
+
+      words.forEach((word) => {
+        const tags = initialTags[0][word];
+        expandedContractions.match(word).tag(tags);
+      });
+    }
+  };
+
   Doc.prototype.addCustomTags = function (tagData) { // eslint-disable-line
     const obj = {};
     Object.keys(tagData).forEach((k) => {
