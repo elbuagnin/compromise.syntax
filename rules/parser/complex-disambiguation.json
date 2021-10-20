@@ -1,3 +1,9 @@
 {
-  "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "untag": {"ending": "finiteVerb"}, "tag": {"ending": "Noun"}}
+  "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "untag": {"ending": "finiteVerb"}, "tag": {"ending": "Noun"}},
+
+  "Do not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "do not", "tag": {"all": ["Infinitive", "Negative"]}},
+
+  "Not to": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+
+  "Infinitive Phrase": {"batch":"Disambiguation", "batchOrder": "1",  "order": "9", "type": "intra-phrase", "pattern": "not? to #Infinitive (#NounPhrase+|#Noun)", "tag": {"all": "InfinitivePhrase"}}
 }

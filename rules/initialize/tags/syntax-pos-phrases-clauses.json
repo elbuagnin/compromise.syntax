@@ -14,14 +14,24 @@
         "notA": "",
         "color": "yellow"
     },
+    "CompoundPhrase": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
+    },
     "NounPhrase": {
         "isA": "",
         "notA": "VerbPhrase",
         "color": "blue"
     },
+    "CompoundNouns": {
+        "isA": "NounPhrase",
+        "notA": "",
+        "color": "blue"
+    },
     "List": {
-        "isA": "",
-        "notA": "VerbPhrase",
+        "isA": "NounPhrase",
+        "notA": "",
         "color": "blue"
     },
     "PrepositionalPhrase": {
@@ -32,6 +42,11 @@
     "VerbPhrase": {
         "isA": "",
         "notA": "NounPhrase",
+        "color": "green"
+    },
+    "CompoundVerbs": {
+        "isA": "VerbPhrase",
+        "notA": "",
         "color": "green"
     },
     "InfinitivePhrase": {
@@ -49,6 +64,21 @@
         "notA": "",
         "color": "magenta"
     },
+    "CompoundAdjectives": {
+        "isA": "AdjectivePhrase",
+        "notA": "",
+        "color": "magenta"
+    },
+    "CoordinatingAdjectives": {
+        "isA": "AdjectivePhrase",
+        "notA": "CumulativeAdjectives",
+        "color": "magenta"
+    },
+    "CumulativeAdjectives": {
+        "isA": "AdjectivePhrase",
+        "notA": "CoordinatingAdjectives",
+        "color": "magenta"
+    },
     "AdjectivalPhrase": {
         "isA": "",
         "notA": "",
@@ -61,12 +91,12 @@
     },
     "GerundPhrase": {
         "isA": "VerbalPhrase",
-        "notA": "ParticiplePhrase",
+        "notA": ["ParticiplePhrase", "InfinitivePhrase"],
         "color": "blue"
     },
     "ParticiplePhrase": {
         "isA": "VerbalPhrase",
-        "notA": "GerundPhrase",
+        "notA": ["GerundPhrase", "InfinitivePhrase"],
         "color": "magenta"
     },
     "PresentParticiplePhrase": {
