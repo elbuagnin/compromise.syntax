@@ -1,5 +1,5 @@
 {
-    "Compound Noun Phrase": {"batch":"Complex Compound Phrases", "batchOrder": "9",  "order": "1", "type": "intra-phrase", "pattern": "(#Noun && !#Comma) #CoordinatingConjunction #Noun", "tag": {"all": "CompoundPhrase"}},
+    "Compound Noun Phrase": {"batch":"Complex Compound Phrases", "batchOrder": "10",  "order": "1", "type": "intra-phrase", "pattern": "(#Noun && !#Comma) #CoordinatingConjunction #Noun", "tag": {"all": "CompoundPhrase"}},
 
-    "Compound Phrase 3": {"batch":"Complex Compound Phrases", "batchOrder": "9",  "order": "2", "type": "intra-phrase", "pattern": "#VerbalPhrase #CoordinatingConjunction #VerbalPhrase+", "tag": {"all": "CompoundPhrase"}}
+    "Compound Phrase 3": {"batch":"Complex Compound Phrases", "batchOrder": "10",  "order": "2", "type": "intra-phrase", "pattern": "#VerbalPhrase #CoordinatingConjunction #VerbalPhrase+", "tag": {"all": "CompoundPhrase"}}
 }
