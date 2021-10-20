@@ -1,0 +1,17 @@
+{
+    "Simple Noun Lists": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "1", "type": "inter-phrase", "pattern": "#Comma{2,} and #Noun", "tag": {"all": "List"}},
+
+    "Coordinate Adjectives 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "2", "type": "inter-phrase", "pattern": "(#Comma && #Adjective)+ #Adjective", "tag": {"all": "CoordinatingAdjectives"}},
+
+    "Coordinate Adjectives 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "3", "type": "inter-phrase", "pattern": "(#Comma && #Adjective)+ (and|but) #Adjective", "tag": {"all": "CoordinatingAdjectives"}},
+
+    "Cumulative Adjectives": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "4", "type": "inter-phrase", "pattern": "(#Adjective && !#Comma){2,}", "tag": {"all": "CumulativeAdjectives"}},
+
+    "Compound Sentence": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "* #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
+
+    "Compound Noun Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "6", "type": "intra-phrase", "pattern": "(#Noun && !#List && !Comma) #CoordinatingConjunction #Noun", "tag": {"all": "CompoundPhrase"}},
+
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "7", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": "CompoundPhrase"}},
+
+    "Compound Adjective Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "8", "type": "intra-phrase", "pattern": "(#Adjective && !#Comma) #CoordinatingConjunction #Adjective", "tag": {"all": "CompoundPhrase"}}
+}

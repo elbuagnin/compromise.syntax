@@ -7,9 +7,11 @@
 
     "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? (#AdjectivePhrase?+|#Adjective?) #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
 
-    "Do not": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "do not", "tag": {"all": ["Infinitive", "Negative"]}},
+    "Noun Phrases 3": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? #CompoundPhrase+ #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
 
-    "Not to": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+    "Do not": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "do not", "tag": {"all": ["Infinitive", "Negative"]}},
 
-    "Infinitive Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "8", "type": "intra-phrase", "pattern": "not? to #Infinitive (#NounPhrase+|#Noun)", "tag": {"all": "InfinitivePhrase"}}
+    "Not to": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "8", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+
+    "Infinitive Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "9", "type": "intra-phrase", "pattern": "not? to #Infinitive (#NounPhrase+|#Noun)", "tag": {"all": "InfinitivePhrase"}}
 }

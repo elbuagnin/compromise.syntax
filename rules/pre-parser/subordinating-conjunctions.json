@@ -1,7 +1,6 @@
 {
   "after #Participle": {"batchOrder": "4", "term": "after", "pattern": "after (#Verbal && /ing$/)", "untag": "Preposition", "tag": "SubordinatingConjunction"},
   "after #Subjectival": {"batchOrder": "4", "term": "after", "pattern": "after (#Possessive|#Pronoun|#Noun)", "untag": "Preposition", "tag": "SubordinatingConjunction"},
-  "as": {"batchOrder": "4", "term": "as", "pattern": "as", "tag": "SubordinatingConjunction"},
   "as long as": {"batchOrder": "4", "term": "as long as", "pattern": "as long as", "tag": "SubordinatingConjunction"},
   "as much as": {"batchOrder": "4", "term": "as much as", "pattern": "as much as", "tag": "SubordinatingConjunction"},
   "as soon as": {"batchOrder": "4", "term": "as soon as", "pattern": "as soon as", "tag": "SubordinatingConjunction"},
