@@ -7,5 +7,7 @@
 
     "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}}
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}},
+
+    "Verb Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb", "tag": {"all": "VerbPhrase", "last": {"term": "#Verb", "termTag": "HeadVerb"}}}
 }
