@@ -1,5 +1,5 @@
 {
-    "Simple Lists": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "1", "type": "intra-phrase", "pattern": "#Comma+ #Comma", "tag": {"all": "List"}},
+    "Simple Lists": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "1", "type": "intra-phrase", "pattern": "#Comma+ #CoordinatingConjunction #Noun", "tag": {"all": "List"}},
 
     "Adjective Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "2",  "order": "2", "type": "intra-phrase", "pattern": "#Determiner? #Adverb?+ #Adjective?+ #Adjective #Adjective", "tag": {"all": "AdjectivePhrase", "last": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
 
