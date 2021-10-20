@@ -224,13 +224,14 @@ export default function parser(doc) {
     console.log('Sentence after pre-parser:\n');
     console.log(sentence.text());
     console.log(sentence.debug());
+
     orderedRules.forEach((rule) => {
       if (rule.type === 'intra-phrase') {
         let chunks = sentence;
         if (sentence.has('#Comma')) {
           const commas = sentence.match('#Comma');
           commas.forEach((comma) => {
-            if (comma.ifNo('#List').found) {
+            if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
               chunks = chunks.splitAfter(comma);
             }
           });
