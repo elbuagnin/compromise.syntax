@@ -1,0 +1,10 @@
+{
+    "FiniteVerb": {
+        "isA": "Verb",
+        "notA": "Infinitive",
+        "color": "green"
+    },
+    "Auxiliary": {
+        "color": "green"
+    }
+}

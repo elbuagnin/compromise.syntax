@@ -1,0 +1,37 @@
+{
+  "Verbal": {
+      "isA": "",
+      "notA": "Verb",
+      "color": "yellow"
+  },
+  "Infinitive": {
+      "isA": "Verbal",
+      "notA": ["Participle", "Gerund"],
+      "color": "yellow"
+  },
+  "Gerund": {
+      "isA": ["Verbal"],
+      "notA": ["Infinitive", "Participle"],
+      "color": "blue"
+  },
+  "Participle": {
+      "isA": "Verbal",
+      "notA": ["Infinitive", "Gerund"],
+      "color": "magenta"
+  },
+  "PresentParticiple": {
+      "isA": "Participle",
+      "notA": ["PastParticiple", "PerfectParticiple"],
+      "color": "magenta"
+  },
+  "PastParticiple": {
+    "isA": "Participle",
+    "notA": ["PresentParticiple", "PerfectParticiple"],
+    "color": "magenta"
+  },
+  "PerfectParticiple": {
+    "isA": "Participle",
+    "notA": ["PresentParticiple", "PastParticiple"],
+    "color": "magenta"
+  }
+}

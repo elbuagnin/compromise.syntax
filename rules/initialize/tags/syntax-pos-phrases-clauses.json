@@ -49,11 +49,6 @@
         "notA": "",
         "color": "green"
     },
-    "InfinitivePhrase": {
-        "isA": "VerbalPhrase",
-        "notA": "VerbPhrase",
-        "color": "yellow"
-    },
     "AdverbPhrase": {
         "isA": "",
         "notA": "",
@@ -89,14 +84,19 @@
         "notA": "VerbPhrase",
         "color": "yellow"
     },
+    "InfinitivePhrase": {
+        "isA": "VerbalPhrase",
+        "notA": "",
+        "color": "yellow"
+    },
     "GerundPhrase": {
         "isA": "VerbalPhrase",
-        "notA": ["ParticiplePhrase", "InfinitivePhrase"],
+        "notA": "",
         "color": "blue"
     },
     "ParticiplePhrase": {
         "isA": "VerbalPhrase",
-        "notA": ["GerundPhrase", "InfinitivePhrase"],
+        "notA": "",
         "color": "magenta"
     },
     "PresentParticiplePhrase": {

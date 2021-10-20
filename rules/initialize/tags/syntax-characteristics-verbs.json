@@ -2,41 +2,41 @@
     "Independent": {
         "isA": "",
         "notA": "Subordinate",
-        "color": "yellow"
+        "color": "green"
     },
     "Subordinate": {
         "isA": "",
         "notA": "Independent",
-        "color": "yellow"
+        "color": "green"
     },
     "Transitive": {
         "isA": "",
         "notA": "Intransitive",
-        "color": "yellow"
+        "color": "green"
     },
     "Intransitive": {
         "isA": "",
         "notA": "Transitive",
-        "color": "yellow"
+        "color": "green"
     },
     "Accusative": {
         "isA": "",
         "notA": "Unaccusative",
-        "color": "yellow"
+        "color": "green"
     },
     "Unaccusative": {
         "isA": "",
         "notA": "Accusative",
-        "color": "yellow"
+        "color": "green"
     },
     "Active": {
         "isA": "",
         "notA": "Passive",
-        "color": "yellow"
+        "color": "green"
     },
     "Passive": {
         "isA": "",
         "notA": "Active",
-        "color": "yellow"
+        "color": "green"
     }
 }

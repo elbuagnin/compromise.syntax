@@ -1,0 +1,18 @@
+{
+  "CoordinatingConjunction": {
+      "isA": "Conjunction",
+      "notA": ["SubordinatingConjunction", "CorrelativeConjunction", "Determiner"]
+  },
+  "SubordinatingConjunction": {
+      "isA": "Conjunction",
+      "notA": ["CoordinatingConjunction", "CorrelativeConjunction", "Determiner"]
+  },
+  "CorrelativeConjunction": {
+      "isA": "Conjunction",
+      "notA": ["CoordinatingConjunction", "SubordinatingConjunction", "Determiner"]
+  },
+  "CompoundConjunction": {
+      "isA": "CoordinatingConjunction",
+      "notA": ""
+  }
+}

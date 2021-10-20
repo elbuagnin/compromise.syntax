@@ -1,0 +1,27 @@
+{
+    "Subject": {
+        "isA": "",
+        "notA": ["Object", "Predicate"],
+        "color": "blue"
+    },
+    "Object": {
+        "isA": "",
+        "notA": "Subject",
+        "color": "blue"
+    },
+    "DirectObject": {
+        "isA": "Object",
+        "notA": "IndirectObject",
+        "color": "blue"
+    },
+    "IndirectObject": {
+        "isA": "Object",
+        "notA": "DirectObject",
+        "color": "blue"
+    },
+    "Predicate": {
+        "isA": "",
+        "notA": ["Subject", "Object"],
+        "color": "green"
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "HeadNoun": {
+      "isA": "",
+      "notA": "",
+      "color": "blue"
+  },
+  "Possessive": {
+      "isA": "Possessive",
+      "notA": ["Noun", "Pronoun"]
+  },
+  "Pronoun": {
+    "isA": "Pronoun",
+    "notA": "Noun"
+  }
+}
