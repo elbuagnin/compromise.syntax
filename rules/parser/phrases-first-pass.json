@@ -3,11 +3,9 @@
 
     "Adjective Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Adverb?+ #Adverb #Adjective?+ #Adjective", "tag": {"all": "AdjectivePhrase", "last": {"term": "#Adjective", "termTag": "HeadAdjective"}}},
 
-    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
+    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun","tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? (#AdjectivePhrase?+|#Adjective?) #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? #AdjectivePhrase?+ #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}},
-
-    "Noun Phrases 3": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?)? #CompoundPhrase+ #Noun?+ #Noun", "tag": {"all": "NounPhrase"}, "on": {"Noun": "HeadNoun"}}
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}}
 }
