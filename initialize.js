@@ -10,9 +10,13 @@ export default function initialize(doc) {
   const tags = mfs.loadJSONDir(tagDir, 'tags');
   const words = mfs.loadJSONDir(wordDir, 'words');
 
+  console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+  console.log('$$ Initialization');
   doc.addCustomTags(tags);
   doc.addCustomWords(words);
 
-  doc.tagger();
+  console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+  console.log('$$ Pre-Parser');
+
   preParser(doc);
 }
