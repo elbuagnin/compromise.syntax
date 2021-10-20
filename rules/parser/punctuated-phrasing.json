@@ -1,0 +1,5 @@
+{
+    "Simple Lists": {"batch":"Punctuated Phrasing", "batchOrder": "2",  "order": "1", "type": "inter-phrase", "pattern": "#Comma+ #CoordinatingConjunction #Noun", "tag": {"all": "List"}},
+
+    "Compound Sentence": {"batch":"Punctuated Phrasing", "batchOrder": "2", "order": "3", "type": "inter-phrase", "pattern": "* #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}, "split": {"term": "#CoordinatingConjunction", "termTag": "Independent"}}}
+}

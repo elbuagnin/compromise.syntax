@@ -1,3 +1,3 @@
 {
-    "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "untag": {"ending": "finiteVerb"}, "tag": {"ending": "Noun"}}
+  "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "untag": {"ending": "finiteVerb"}, "tag": {"ending": "Noun"}}
 }
