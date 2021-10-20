@@ -6,10 +6,12 @@
   },
   "Possessive": {
       "isA": "Possessive",
-      "notA": ["Noun", "Pronoun"]
+      "notA": ["Noun", "Pronoun"],
+      "color": "blue"
   },
   "Pronoun": {
     "isA": "Pronoun",
-    "notA": "Noun"
+    "notA": "Noun",
+    "color": "blue"
   }
 }
