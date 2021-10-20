@@ -132,7 +132,6 @@ export default function preParser(document) {
   tagHyphenatedTerms();
   compromiseInfinitivesToSyntaxFiniteVerbs();
   assignValues(orderedRules);
-  document.lists().tag('List');
   tagParentheses();
   tagQuotations();
   tagDashGroups();
