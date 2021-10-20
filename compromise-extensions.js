@@ -27,6 +27,8 @@ nlp.extend((Doc, world) => {
       obj[k] = tag;
     });
 
+    console.log('Custom Tags:');
+    console.log(obj);
     world.addTags(obj);
   };
 
@@ -37,6 +39,8 @@ nlp.extend((Doc, world) => {
       obj[k] = word;
     });
 
+    console.log('Custom Words:');
+    console.log(obj);
     world.addWords(obj);
   };
 
