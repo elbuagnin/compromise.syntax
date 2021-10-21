@@ -1,4 +1,14 @@
 {
+  "Independent": {
+      "isA": "",
+      "notA": "Subordinate",
+      "color": "yellow"
+  },
+  "Subordinate": {
+      "isA": "",
+      "notA": "Independent",
+      "color": "yellow"
+  },
     "ParenthesesGroup": {
         "isA": "",
         "notA": "",
