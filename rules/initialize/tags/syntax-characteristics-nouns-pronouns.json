@@ -22,11 +22,11 @@
   "Restrictive": {
       "isA": "",
       "notA": "NonRestrictive",
-      "color": "blue"
+      "color": "magenta"
   },
   "NonRestrictive": {
       "isA": "",
       "notA": "Restrictive",
-      "color": "blue"
+      "color": "magenta"
   }
 }

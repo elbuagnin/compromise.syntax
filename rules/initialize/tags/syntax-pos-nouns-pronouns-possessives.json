@@ -16,7 +16,7 @@
   },
   "RelativePronoun": {
     "isA": "Pronoun",
-    "notA": "",
-    "color": "blue"
+    "notA": "QuestionWord",
+    "color": "magenta"
   }
 }

@@ -11,5 +11,7 @@
 
   "Relative Clause 6": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "6", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? (#Adverb?|#Preposition?|#Date?)", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 7": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "7", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? #NounPhrase+", "tag": {"all": "RelativeClause"}}
+  "Relative Clause 7": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "7", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? #NounPhrase+", "tag": {"all": "RelativeClause"}},
+
+  "Relative Clause 8": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "8", "type": "intra-phrase", "pattern": "#RelativePronoun #VerbPhrase+ #VerbalPhrase+", "tag": {"all": "RelativeClause"}}
 }
