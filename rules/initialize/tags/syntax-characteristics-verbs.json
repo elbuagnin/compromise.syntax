@@ -1,14 +1,4 @@
 {
-    "Independent": {
-        "isA": "",
-        "notA": "Subordinate",
-        "color": "green"
-    },
-    "Subordinate": {
-        "isA": "",
-        "notA": "Independent",
-        "color": "green"
-    },
     "Transitive": {
         "isA": "",
         "notA": "Intransitive",
