@@ -11,19 +11,21 @@
 
     "#Cardinal is Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
-    "that As Relative Pronoun": {"batchOrder": "3", "term": "that", "pattern": "that #Verb", "tag": ["RelativePronoun", "Restrictive"]},
-
     "to Is Preposition": {"batchOrder": "3", "term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
 
     "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "^#Verbal$", "tag": "PresentParticiple"},
 
-    "Store as Noun": {"batchOrder": "3", "term": "store", "pattern": "(#Determiner|#Possessive)", "tag": "#Noun"},
+    "Store as Noun": {"batchOrder": "3", "term": "store", "pattern": "(#Determiner|#Possessive) store", "tag": "#Noun"},
+
+    "one as Pronoun 1": {"batchOrder": "3", "term": "one", "pattern": "(#Pronoun|#Person) #Copula #Article one", "tag": "#Pronoun"},
+
+    "one as Pronoun 2": {"batchOrder": "3", "term": "one", "pattern": "#Article one (who|whom)", "tag": "#Pronoun"},
+
+    "#Ordinal #Noun": {"batchOrder": "3", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
 
     "Perfect Participle Active": {"batchOrder": "3", "term": "having #PastTense", "pattern": "having #PastTense", "tag": ["PerfectParticiple", "Active"]},
 
     "Perfect Participle Passive": {"batchOrder": "3", "term": "having been #PastTense", "pattern": "having been #PastTense", "tag": ["PerfectParticiple", "Passive"]},
 
-    "which As NonRestrictive Relative Pronoun": {"batchOrder": "3", "term": "which", "pattern": "which #Verb", "tag": ["RelativePronoun", "NonRestrictive"]},
-
-    "that As Restrictive Relative Pronoun": {"batchOrder": "3", "term": "which", "pattern": "#Preposition which #Verb", "tag": ["RelativePronoun", "Restrictive"]}
+    "#Verb #Negative #Verb": {"batchOrder": "3", "term": "#Verb #Negative #Verb", "pattern": "#Verb #Negative #Verb", "tag": "#VerbPhrase"}
 }

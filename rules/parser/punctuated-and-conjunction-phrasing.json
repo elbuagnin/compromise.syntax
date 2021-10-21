@@ -19,11 +19,13 @@
 
     "Cumulative Adjectives": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "8", "type": "inter-phrase", "pattern": "(#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)+ (#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)", "tag": {"all": "CumulativeAdjectives"}},
 
-    "Compound Sentence": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "9", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
+    "Compound Sentence 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "9", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
 
-    "Compound Noun Phrases 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "10", "type": "intra-phrase", "pattern": "(#Noun && !#List && !#Comma) #CoordinatingConjunction #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns"]}},
+    "Compound Sentence 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "10", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction{2,2} *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
 
-    "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "11", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns"]}},
+    "Compound Noun Phrases 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "11", "type": "intra-phrase", "pattern": "(#Noun && !#List && !#Comma) #CoordinatingConjunction #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns"]}},
 
-    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "12", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs"]}}
+    "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns"]}},
+
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs"]}}
 }

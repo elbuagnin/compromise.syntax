@@ -133,5 +133,10 @@
         "isA": "",
         "notA": "",
         "color": "yellow"
+    },
+    "RelativeClause": {
+        "isA": "",
+        "notA": "",
+        "color": "magenta"
     }
 }
