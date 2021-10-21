@@ -1,8 +1,8 @@
 {
-  "that": {"batchOrder": "3", "term": "that", "pattern": "that #Verb", "tag": ["RelativePronoun", "Restrictive"]},
-  "which NonRestrictive": {"batchOrder": "3", "term": "which", "pattern": "which #Verb", "tag": ["RelativePronoun", "NonRestrictive"]},
-  "which Restrictive": {"batchOrder": "3", "term": "which", "pattern": "#Preposition which #Verb", "tag": ["RelativePronoun", "Restrictive"]},
-  "who Restrictive": {"batchOrder": "3", "term": "who", "pattern": "who #Adverb? (#Verb && !#Copula) not?", "tag": ["RelativePronoun", "Restrictive"]},
-  "who NonRestrictive 1": {"batchOrder": "3", "term": "who", "pattern": "who #Copula not?", "tag": ["RelativePronoun", "NonRestrictive"]},
-  "who NonRestrictive 2": {"batchOrder": "3", "term": "who", "pattern": "who (#Pronoun|#Person) #Verb not?", "tag": ["RelativePronoun", "NonRestrictive"]}
+  "that": {"batchOrder": "5", "term": "that", "pattern": "that #Verb", "tag": ["RelativePronoun", "Restrictive"]},
+  "which NonRestrictive": {"batchOrder": "5", "term": "which", "pattern": "which #Verb", "tag": ["RelativePronoun", "NonRestrictive"]},
+  "which Restrictive": {"batchOrder": "5", "term": "which", "pattern": "#Preposition which #Verb", "tag": ["RelativePronoun", "Restrictive"]},
+  "who Restrictive": {"batchOrder": "5", "term": "who", "pattern": "who #Adverb? (#Verb && !#Copula) not?", "tag": ["RelativePronoun", "Restrictive"]},
+  "who NonRestrictive": {"batchOrder": "5", "term": "who", "pattern": "who #Copula not?", "tag": ["RelativePronoun", "NonRestrictive"]},
+  "who Restrictive 2": {"batchOrder": "5", "term": "who", "pattern": "who (#Pronoun|#Person) #Verb not?", "tag": ["RelativePronoun", "Restrictive"]}
 }
