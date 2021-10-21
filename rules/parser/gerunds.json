@@ -7,5 +7,11 @@
 
     "Gerund Phrase 3": {"batch":"Gerunds", "batchOrder": "7",  "order": "4", "type": "inter-phrase", "pattern": "#Gerund #InfinitivePhrase+", "tag": {"on": {"term": "#InfinitivePhrase+", "termTag": "GerundPhrase"}}},
 
-    "Gerund Phrase 4": {"batch":"Gerunds", "batchOrder": "7",  "order": "5", "type": "inter-phrase", "pattern": "#Gerund #Infinitive+", "tag": {"all": "GerundPhrase"}}
+    "Gerund Phrase 4": {"batch":"Gerunds", "batchOrder": "7",  "order": "5", "type": "inter-phrase", "pattern": "#Gerund #Infinitive+", "tag": {"all": "GerundPhrase"}},
+
+    "Gerund List 1": {"batch":"Gerunds", "batchOrder": "7",  "order": "6", "type": "inter-phrase", "pattern": "#Gerund+ #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "List"]}},
+
+    "Gerund List 2": {"batch":"Gerunds", "batchOrder": "7",  "order": "7", "type": "inter-phrase", "pattern": "#Gerund #Gerund+ #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "List"]}},
+
+    "Gerund Compound Phrase": {"batch":"Gerunds", "batchOrder": "7",  "order": "8", "type": "inter-phrase", "pattern": "(#Gerund && !#Comma && !#List) #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "CompoundPhrase"]}}
 }

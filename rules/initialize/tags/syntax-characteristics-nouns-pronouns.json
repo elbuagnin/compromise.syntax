@@ -18,5 +18,15 @@
       "isA": "",
       "notA": "FirstPerson",
       "color": "blue"
+  },
+  "Restrictive": {
+      "isA": "",
+      "notA": "NonRestrictive",
+      "color": "blue"
+  },
+  "NonRestrictive": {
+      "isA": "",
+      "notA": "Restrictive",
+      "color": "blue"
   }
 }

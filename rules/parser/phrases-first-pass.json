@@ -9,5 +9,7 @@
 
     "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": "NounPhrase", "on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Verb Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb", "tag": {"all": "VerbPhrase", "last": {"term": "#Verb", "termTag": "HeadVerb"}}}
+    "Verb Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb", "tag": {"all": "VerbPhrase", "last": {"term": "#Verb", "termTag": "HeadVerb"}}},
+
+    "Infinitive Phrase 3": {"batch":"Disambiguation", "batchOrder": "3",  "order": "8", "type": "intra-phrase", "pattern": "not? to #Infinitive (#NounPhrase)", "tag": {"all": "InfinitivePhrase"}}
 }

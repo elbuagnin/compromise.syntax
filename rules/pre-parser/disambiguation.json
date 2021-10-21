@@ -1,5 +1,5 @@
 {
-    "all Is Noun": {"batchOrder": "3", "term": "all", "pattern": "all !(#Noun|#Adjective)?", "tag": "Noun"},
+    "all As Determiner": {"batchOrder": "3", "term": "all", "pattern": "all #Adjective?+ #Noun", "tag": "Determiner"},
 
     "as if Is Expression": {"batchOrder": "3", "term": "as if", "pattern": "^as if$", "tag": "Expression"},
 
@@ -7,13 +7,23 @@
 
     "grace IS Not a Name": {"batchOrder": "3", "term": "grace", "pattern": "#Determiner grace", "untag": "Person", "tag": "Singular"},
 
+    "grace IS Not a Name 2": {"batchOrder": "3", "term": "grace", "pattern": "(grace && !@isUpperCase)", "untag": "Person", "tag": "Singular"},
+
     "#Cardinal is Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+
+    "that As Relative Pronoun": {"batchOrder": "3", "term": "that", "pattern": "that #Verb", "tag": ["RelativePronoun", "Restrictive"]},
 
     "to Is Preposition": {"batchOrder": "3", "term": "to", "pattern": "to #Determiner? (#NounPhrase?+|#Noun?+ #Noun|#Noun|#Pronoun)", "tag": "Preposition", "untag": "Conjunction"},
 
     "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "^#Verbal$", "tag": "PresentParticiple"},
 
+    "Store as Noun": {"batchOrder": "3", "term": "store", "pattern": "(#Determiner|#Possessive)", "tag": "#Noun"},
+
     "Perfect Participle Active": {"batchOrder": "3", "term": "having #PastTense", "pattern": "having #PastTense", "tag": ["PerfectParticiple", "Active"]},
 
-    "Perfect Participle Passive": {"batchOrder": "3", "term": "having been #PastTense", "pattern": "having been #PastTense", "tag": ["PerfectParticiple", "Passive"]}
+    "Perfect Participle Passive": {"batchOrder": "3", "term": "having been #PastTense", "pattern": "having been #PastTense", "tag": ["PerfectParticiple", "Passive"]},
+
+    "which As NonRestrictive Relative Pronoun": {"batchOrder": "3", "term": "which", "pattern": "which #Verb", "tag": ["RelativePronoun", "NonRestrictive"]},
+
+    "that As Restrictive Relative Pronoun": {"batchOrder": "3", "term": "which", "pattern": "#Preposition which #Verb", "tag": ["RelativePronoun", "Restrictive"]}
 }

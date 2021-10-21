@@ -6,5 +6,8 @@
     },
     "Auxiliary": {
         "color": "green"
+    },
+    "HeadVerb": {
+        "color": "green"
     }
 }

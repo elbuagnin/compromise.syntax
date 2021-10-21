@@ -13,5 +13,10 @@
     "isA": "Pronoun",
     "notA": "Noun",
     "color": "blue"
+  },
+  "RelativePronoun": {
+    "isA": "Pronoun",
+    "notA": "",
+    "color": "blue"
   }
 }
