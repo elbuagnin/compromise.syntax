@@ -1,0 +1,14 @@
+{
+  "#Cardinal is Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+  "#Ordinal #Noun": {"batchOrder": "3", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
+
+  "Perfect Participle Active": {"batchOrder": "3", "term": "having #PastTense", "pattern": "having #PastTense", "tag": ["PerfectParticiple", "Active"]},
+
+  "Perfect Participle Passive": {"batchOrder": "3", "term": "having been #PastTense", "pattern": "having been #PastTense", "tag": ["PerfectParticiple", "Passive"]},
+
+  "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "^#Verbal$", "tag": "PresentParticiple"},
+
+  "#Verb #Negative #Verb": {"batchOrder": "3", "term": "#Verb #Negative #Verb", "pattern": "#Verb #Negative #Verb", "tag": "#VerbPhrase"},
+
+  "#FiniteVerb as #Noun": {"batchOrder": "3", "term": "#FiniteVerb", "pattern": "(#Determiner|#Possessive) #FiniteVerb", "tag": "#Noun"}
+}
