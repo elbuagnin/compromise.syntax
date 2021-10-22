@@ -1,5 +1,5 @@
 {
-  "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "FiniteVerb"}}},
+  "#FiniteVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #FiniteVerb #FiniteVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "FiniteVerb"}}},
 
   "Do not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "(do|did|does) not", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"]}},
 
