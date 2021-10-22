@@ -1,17 +1,19 @@
 {
-  "Relative Clause 1": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "1", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? (#Adjective|#Noun|#Gerund)", "tag": {"all": "RelativeClause"}},
+  "Double Relative Clause": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "1", "type": "inter-phrase", "pattern": "#RelativePronoun *  #RelativePronoun", "replace": {"first": {"term": "#RelativePronoun", "termUnTag": ["#RelativePronoun", "#Restrictive", "NonRestrictive"], "termTag": "Determiner"}}},
 
-  "Relative Clause 2": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? #NounPhrase?+", "tag": {"all": "RelativeClause"}},
+  "Relative Clause 1": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? (#Adjective|#Noun|#Gerund)", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 3": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "3", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? #GerundPhrase+", "tag": {"all": "RelativeClause"}},
+  "Relative Clause 2": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "3", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? #NounPhrase?+", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 4": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "4", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb (#Adjective|#Noun|#Gerund)", "tag": {"all": "RelativeClause"}},
+  "Relative Clause 3": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "4", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? #GerundPhrase+", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 5": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "5", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? #PrepositionalPhrase+", "tag": {"all": "RelativeClause"}},
+  "Relative Clause 4": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "5", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb (#Adjective|#Noun|#Gerund)", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 6": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "6", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? (#Adverb?|#Preposition?|#Date?)", "tag": {"all": "RelativeClause"}},
+  "Relative Clause 5": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "6", "type": "intra-phrase", "pattern": "#RelativePronoun #Verb not? #PrepositionalPhrase+", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 7": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "7", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? #NounPhrase+", "tag": {"all": "RelativeClause"}},
+  "Relative Clause 6": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "7", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? (#Adverb?|#Preposition?|#Date?)", "tag": {"all": "RelativeClause"}},
 
-  "Relative Clause 8": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "8", "type": "intra-phrase", "pattern": "#RelativePronoun #VerbPhrase+ #VerbalPhrase+", "tag": {"all": "RelativeClause"}}
+  "Relative Clause 7": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "8", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) #Verb not? #NounPhrase+", "tag": {"all": "RelativeClause"}},
+
+  "Relative Clause 8": {"batch":"Phrases, 3rd Pass", "batchOrder": "10",  "order": "9", "type": "intra-phrase", "pattern": "#RelativePronoun #VerbPhrase+ #VerbalPhrase+", "tag": {"all": "RelativeClause"}}
 }
