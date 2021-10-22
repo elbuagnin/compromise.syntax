@@ -1,6 +1,20 @@
 import * as mfs from './lib/filesystem.js';
 
 export default function parser(doc) {
+  function remove(term, untag) {
+    if (typeof untag === 'string') {
+      if (term.match(untag).found) {
+        term.untag(untag);
+      }
+    } else if (untag.constructor === Array) {
+      untag.forEach((oneTag) => {
+        if (term.match(oneTag).found) {
+          term.untag(oneTag);
+        }
+      });
+    }
+  }
+
   function tagMatch(sentence, rule) {
     const {
       pattern, tag, untag, demark, tagID, replace,
@@ -17,28 +31,6 @@ export default function parser(doc) {
         console.log('\n');
         console.log(tag || untag || replace);
         console.log('\n');
-
-        if (untag) {
-          if (untag.all) {
-            matchedPattern.untag(untag.all);
-          }
-
-          if (untag.on) {
-            const matchedTerm = matchedPattern.match(untag.on.term);
-            matchedTerm.untag(untag.on.termTag);
-          }
-
-          if (untag.each) {
-            untag.each.forEach((item) => {
-              const { term } = item;
-              const { termTag } = item;
-              const matchedTerm = matchedPattern.match(term);
-              if (matchedTerm.has(termTag)) {
-                matchedTerm.untag(termTag);
-              }
-            });
-          }
-        }
 
         if (tag) {
           if (tag.all) {
@@ -105,7 +97,7 @@ export default function parser(doc) {
 
         if (tagID) {
           if (tagID.all) {
-            matchedPattern.tagWithID(tag.all);
+            matchedPattern.tagWithID(tagID.all);
           }
 
           if (tagID.on) {
@@ -166,18 +158,6 @@ export default function parser(doc) {
           }
         }
 
-        if (replace) {
-          if (replace.on) {
-            const matchedTerm = matchedPattern.match(replace.on.termUnTag);
-            console.log(matchedTerm);
-            if (matchedTerm.found) {
-              console.log('found');
-              matchedTerm.untag(replace.on.termUnTag);
-              matchedTerm.tag(replace.on.termTag);
-            }
-          }
-        }
-
         if (demark) {
           if (demark.on) {
             const matchedTerm = matchedPattern.match(demark.on.term);
@@ -196,6 +176,45 @@ export default function parser(doc) {
             matchedPattern.lastTerms().tag(demark.ending);
           }
         }
+
+        if (replace) {
+          if (replace.on) {
+            const matchedTerm = matchedPattern.match(replace.on.term);
+            remove(matchedTerm, replace.on.termUnTag);
+            matchedTerm.tag(replace.on.termTag);
+          }
+          if (replace.first) {
+            const matchedTerm = matchedPattern.match(replace.first.term).first();
+            remove(matchedTerm, replace.first.termUnTag);
+            matchedTerm.tag(replace.first.termTag);
+          }
+          if (replace.last) {
+            const matchedTerm = matchedPattern.match(replace.last.term).last();
+            remove(matchedTerm, replace.last.termUnTag);
+            matchedTerm.tag(replace.last.termTag);
+          }
+        }
+
+        if (untag) {
+          if (untag.all) {
+            remove(matchedPattern, untag.all);
+          }
+
+          if (untag.on) {
+            const matchedTerm = matchedPattern.match(untag.on.term);
+            remove(matchedTerm, untag.on.termUnTag);
+          }
+
+          if (untag.each) {
+            untag.each.forEach((item) => {
+              const { term } = item;
+              const { termUnTag } = item;
+              const matchedTerm = matchedPattern.match(term);
+              remove(matchedTerm, termUnTag);
+            });
+          }
+        }
+
         console.log(sentence.debug());
         console.log('\n\n');
       }
