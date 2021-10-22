@@ -1,9 +1,15 @@
 {
-  "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "untag": {"ending": "finiteVerb"}, "tag": {"ending": "Noun"}},
+  "#Infinitive is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #finiteVerb #finiteVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "FiniteVerb"}}},
 
-  "Do not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "do not", "tag": {"all": ["FiniteVerb", "Negative", "Auxiliary"]}},
+  "Do not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "(do|did|does) not", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"]}},
 
-  "Not to": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+  "Do not #FiniteVerb": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "(do|did|does) not #FiniteVerb", "tag": {"last": {"term": "#finiteVerb", "termTag": ["Negative", "VerbPhrase", "Verbial"]}}},
 
-  "Infinitive Phrase 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "9", "type": "intra-phrase", "pattern": "not? to #Infinitive (#Noun|#Preposition)", "tag": {"all": "InfinitivePhrase"}}
+  "#Modal not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "type": "intra-phrase", "pattern": "#Modal not", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"]}},
+
+  "Not to": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+
+  "Not Gerund/Present Pariciple": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "type": "intra-phrase", "pattern": "(not && !#Verbial) (#Verbal && /ing$/)", "tag": {"all": ["Negative", "VerbalPhrase"]}},
+
+  "Infinitive Phrase 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "6", "type": "intra-phrase", "pattern": "#Infinitive+ (#Noun|#Preposition)", "tag": {"all": "InfinitivePhrase"}}
 }

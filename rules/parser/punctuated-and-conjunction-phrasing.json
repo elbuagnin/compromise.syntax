@@ -1,31 +1,31 @@
 {
-    "Noun Lists 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "1", "type": "inter-phrase", "pattern": "#Comma+ #Comma #CoordinatingConjunction #Noun", "tag": {"all": "List"}},
+    "Noun Lists 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "1", "type": "inter-phrase", "pattern": "#Comma+ #Comma #CoordinatingConjunction #Noun", "tag": {"all": ["List", "Nominal"]}},
 
-    "Noun Lists 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "2", "type": "inter-phrase", "pattern": "#Comma #Comma+ #Comma #CoordinatingConjunction #Noun", "tag": {"all": "List"}},
+    "Noun Lists 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "2", "type": "inter-phrase", "pattern": "#Comma #Comma+ #Comma #CoordinatingConjunction #Noun", "tag": {"all": ["List", "Nominal"]}},
 
-    "Noun Lists 3": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "3", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": "List"}},
+    "Noun Lists 3": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "3", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["List", "Nominal"]}},
 
-    "Noun Lists 4": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "4", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma #Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": "List"}},
+    "Noun Lists 4": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "4", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma #Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["List", "Nominal"]}},
 
-    "Noun Lists 5": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "3", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #NounPhrase #Noun", "tag": {"all": "List"}},
+    "Noun Lists 5": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "3", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #NounPhrase #Noun", "tag": {"all": ["List", "Nominal"]}},
 
-    "Noun Lists 6": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "4", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma #Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #NounPhrase #Noun", "tag": {"all": "List"}},
+    "Noun Lists 6": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "4", "type": "inter-phrase", "pattern": "#Adjective?+ #Comma #Adjective?+ #Comma+ #Adjective?+ #Comma #CoordinatingConjunction #NounPhrase #Noun", "tag": {"all": ["List", "Nominal"]}},
 
-    "Compound Adjective Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "5", "type": "intra-phrase", "pattern": "(#Adjective && !#Comma) #CoordinatingConjunction #Adjective", "tag": {"all": ["CompoundPhrase", "CompoundAdjectives"]}},
+    "Compound Adjective Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "5", "type": "intra-phrase", "pattern": "(#Adjective && !#Comma) #CoordinatingConjunction #Adjective", "tag": {"all": ["CompoundPhrase", "CompoundAdjectives", "Adjectival"]}},
 
-    "Coordinate Adjectives 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "6", "type": "inter-phrase", "pattern": "#Adjective (#Adjective && #Comma)+ (#Adjective && !#Comma)", "tag": {"all": "CoordinatingAdjectives"}},
+    "Coordinate Adjectives 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "6", "type": "inter-phrase", "pattern": "#Adjective (#Adjective && #Comma)+ (#Adjective && !#Comma)", "tag": {"all": ["CoordinatingAdjectives", "Adjectival"]}},
 
-    "Coordinate Adjectives 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "7", "type": "inter-phrase", "pattern": "#Adjective (#Adjective && #Comma)+ (and|but) (#Adjective && !#Comma)", "tag": {"all": "CoordinatingAdjectives"}},
+    "Coordinate Adjectives 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "7", "type": "inter-phrase", "pattern": "#Adjective (#Adjective && #Comma)+ (and|but) (#Adjective && !#Comma)", "tag": {"all": ["CoordinatingAdjectives", "Adjectival"]}},
 
-    "Cumulative Adjectives": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "8", "type": "inter-phrase", "pattern": "(#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)+ (#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)", "tag": {"all": "CumulativeAdjectives"}},
+    "Cumulative Adjectives": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "8", "type": "inter-phrase", "pattern": "(#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)+ (#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)", "tag": {"all": ["CumulativeAdjectives", "Adjectival"]}},
 
     "Compound Sentence 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "9", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
 
     "Compound Sentence 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "10", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction{2,2} *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
 
-    "Compound Noun Phrases 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "11", "type": "intra-phrase", "pattern": "(#Noun && !#List && !#Comma) #CoordinatingConjunction #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns"]}},
+    "Compound Noun Phrases 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "11", "type": "intra-phrase", "pattern": "(#Noun && !#List && !#Comma) #CoordinatingConjunction #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "Nominal"]}},
 
-    "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns"]}},
+    "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "Nominal"]}},
 
-    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs"]}}
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "Verbial"]}}
 }

@@ -1,17 +1,17 @@
 {
       "Prepostional Phrases": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "1", "type": "intra-phrase", "pattern": "#Preposition (#NounPhrase?+|#Noun|#Pronoun)", "tag": {"all": "PrepositionalPhrase"}},
 
-      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "2", "type": "intra-phrase", "pattern": "#NounPhrase+ #PrepositionalPhrase+", "tag": {"on": {"term": "#PrepositionalPhrase", "termTag": "NounPhrase"}}},
+      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "2", "type": "intra-phrase", "pattern": "#NounPhrase+ #PrepositionalPhrase+", "tag": {"on": {"term": "#PrepositionalPhrase+", "termTag": ["NounPhrase", "Nominal"]}}},
 
-      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "3", "type": "intra-phrase", "pattern": "not? to #Infinitive #NounPhrase+", "tag": {"all": "InfinitivePhrase"}},
+      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "3", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ #NounPhrase+", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#Nominal"}},
 
-      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "4", "order": "4", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+)", "tag": {"all": "VerbalPhrase"}},
+      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "4", "order": "4", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
 
-      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "5", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": "PerfectParticiplePhrase"}},
+      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "5", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": ["PerfectParticiplePhrase", "Adjectival"]}, "untag": {"all": "#Nominal"}},
 
-      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "6", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}},
+      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "6", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
 
-      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "7", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}},
+      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "7", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
 
       "VerbalPhrase 4": {"batch":"Phrases, 2nd Pass", "batchOrder": "4",  "order": "8", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "VerbalPhrase"}}
 }
