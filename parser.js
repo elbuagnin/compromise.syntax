@@ -193,18 +193,34 @@ export default function parser(doc) {
             remove(matchedTerm, replace.last.termUnTag);
             matchedTerm.tag(replace.last.termTag);
           }
+          if (replace.beginning) {
+            const matchedTerm = matchedPattern.firstTerms();
+            remove(matchedTerm, replace.beginning.termUnTag);
+            matchedTerm.tag(replace.beginning.termTag);
+          }
+          if (replace.ending) {
+            const matchedTerm = matchedPattern.lastTerms();
+            remove(matchedTerm, replace.ending.termUnTag);
+            matchedTerm.tag(replace.ending.termTag);
+          }
         }
 
         if (untag) {
           if (untag.all) {
             remove(matchedPattern, untag.all);
           }
-
           if (untag.on) {
             const matchedTerm = matchedPattern.match(untag.on.term);
             remove(matchedTerm, untag.on.termUnTag);
           }
-
+          if (untag.beginning) {
+            const matchedTerm = matchedPattern.firstTerms();
+            remove(matchedTerm, untag.beginning);
+          }
+          if (untag.ending) {
+            const matchedTerm = matchedPattern.lastTerms();
+            remove(matchedTerm, untag.ending);
+          }
           if (untag.each) {
             untag.each.forEach((item) => {
               const { term } = item;
