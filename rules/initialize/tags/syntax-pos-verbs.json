@@ -1,5 +1,5 @@
 {
-    "FiniteVerb": {
+    "BaseVerb": {
         "isA": "Verb",
         "notA": "Infinitive",
         "color": "green"

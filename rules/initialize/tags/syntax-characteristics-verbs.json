@@ -21,12 +21,92 @@
     },
     "Active": {
         "isA": "",
-        "notA": "Passive",
+        "notA": ["Passive", "Stative"],
         "color": "green"
     },
     "Passive": {
         "isA": "",
-        "notA": "Active",
+        "notA": ["Active", "Stative"],
+        "color": "green"
+    },
+    "Stative": {
+        "isA": "",
+        "notA": ["Active", "Passive"],
+        "color": "green"
+    },
+    "Past": {
+        "isA": "",
+        "notA": ["Present", "Future"],
+        "color": "green"
+    },
+    "Present": {
+        "isA": "",
+        "notA": ["Past", "Future"],
+        "color": "green"
+    },
+    "Future": {
+        "isA": "",
+        "notA": ["Past", "Present"],
+        "color": "green"
+    },
+    "PastSimple": {
+        "isA": ["Past", "Active"],
+        "notA": ["Present", "Future", "Completed", "Continuous", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PastPerfect": {
+        "isA": ["Past", "Completed", "Active"],
+        "notA": ["Present", "Future", "Passive", "PastTense", "PresentTense", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PastProgressive": {
+        "isA": ["Past", "Continuous", "Active"],
+        "notA": ["Present", "Future", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PastPerfectProgressive": {
+        "isA": ["Past", "Continuous", "Completed", "Active"],
+        "notA": ["Present", "Future", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PresentSimple": {
+        "isA": ["Present", "Active"],
+        "notA": ["Past", "Future", "Completed", "Continuous", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PresentPerfect": {
+        "isA": ["Present", "Completed", "Active"],
+        "notA": ["Past", "Future", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PresentProgressive": {
+        "isA": ["Present", "Continuous", "Active"],
+        "notA": ["Past", "Future", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "PresentPerfectProgressive": {
+        "isA": ["Present", "Continuous", "Completed", "Active"],
+        "notA": ["Past", "Future", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "FutureSimple": {
+        "isA": ["Future", "Active"],
+        "notA": ["Past", "Present", "Completed", "Continuous", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "FuturePerfect": {
+        "isA": ["Future", "Completed", "Active"],
+        "notA": ["Past", "Present", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FutureProgressive", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "FutureProgressive": {
+        "isA": ["Future", "Continuous", "Active"],
+      "notA": ["Past", "Present", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FuturePerfectProgressive"],
+        "color": "green"
+    },
+    "FuturePerfectProgressive": {
+        "isA": ["Future", "Continuous", "Completed", "Active"],
+        "notA": ["Past", "Present", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive"],
         "color": "green"
     }
 }

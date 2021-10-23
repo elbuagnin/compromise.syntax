@@ -29,16 +29,16 @@ export default function preParser(document) {
     });
   }
 
-  function compromiseInfinitivesToSyntaxFiniteVerbs() {
+  function compromiseInfinitivesToSyntaxBaseVerbs() {
     console.log('Infinitives to Finite Verbs:');
     console.log('Starting Infinitives:');
     console.log(document.match('#Infinitive').debug());
-    document.match('#Infinitive').tag('#FiniteVerb').untag('#Infinitive');
-    document.match('to #FiniteVerb').tag('#Infinitive').untag(['#Verb', '#FiniteVerb', '#PresentTense']);
+    document.match('#Infinitive').tag('#BaseVerb').untag('#Infinitive');
+    document.match('to #BaseVerb').tag('#Infinitive').untag(['#Verb', '#BaseVerb', '#PresentTense']);
     console.log('Infinitives left:');
     console.log(document.match('#Infinitive').debug());
     console.log('Finite Verbs converted:');
-    console.log(document.match('#FiniteVerb').debug());
+    console.log(document.match('#BaseVerb').debug());
   }
 
   function tagHyphenatedTerms() {
@@ -130,7 +130,7 @@ export default function preParser(document) {
   console.log('Contractions:');
   document.contractions().expand().fix();
   tagHyphenatedTerms();
-  compromiseInfinitivesToSyntaxFiniteVerbs();
+  compromiseInfinitivesToSyntaxBaseVerbs();
   assignValues(orderedRules);
   tagParentheses();
   tagQuotations();

@@ -1,13 +1,13 @@
 {
-  "#FiniteVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #FiniteVerb #FiniteVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "FiniteVerb"}}},
+  "#BaseVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "BaseVerb"}}},
 
   "Do not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "(do|did|does) not !#Verb", "tag": {"all": ["Negative", "Implied", "VerbPhrase", "Verbial"]}},
 
-  "Do not #FiniteVerb": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "(do|did|does) not #FiniteVerb", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"], "eachTheSame": {"terms": ["do", "did", "does"], "termTag": "Auxiliary"}}},
+  "Do not #BaseVerb": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "(do|did|does) not #BaseVerb", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"], "eachTheSame": {"terms": ["do", "did", "does"], "termTag": "Auxiliary"}}},
 
   "#Modal not": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "type": "intra-phrase", "pattern": "#Modal not !#Verb", "tag": {"all": ["Negative", "Implied", "VerbPhrase", "Verbial"]}},
 
-  "#Modal not #FiniteVerb": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "type": "intra-phrase", "pattern": "#Modal not #FiniteVerb", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"]}},
+  "#Modal not #BaseVerb": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "type": "intra-phrase", "pattern": "#Modal not #BaseVerb", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"]}},
 
   "never #PresentTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "type": "intra-phrase", "pattern": "#Modal? never #PresentTense", "tag": {"all": ["Negative", "VerbPhrase", "Verbial"]}},
 
