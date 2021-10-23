@@ -11,5 +11,5 @@
 
   "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "^#Verbal$", "tag": "PresentParticiple"},
 
-  "#FiniteVerb as #Noun": {"batchOrder": "3", "term": "#FiniteVerb", "pattern": "(#Determiner|#Possessive) #FiniteVerb", "tag": "#Noun"}
+  "#BaseVerb as #Noun": {"batchOrder": "3", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"}
 }
