@@ -7,9 +7,5 @@
 
     "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
-
-    "Auxiliary Verb Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"term": "#Verb", "termTag": "HeadVerb"}}},
-
-    "Model Verb Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "8", "type": "intra-phrase", "pattern": "#Model+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"term": "#Verb", "termTag": "HeadVerb"}}}
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}}
 }

@@ -1,0 +1,19 @@
+{
+  "Auxiliary Verb Phrases": {"batch":"Verbs", "batchOrder": "3",  "order": "1", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"term": "#Verb", "termTag": "HeadVerb"}}},
+
+  "Modal Verb Phrases": {"batch":"Verbs", "batchOrder": "3",  "order": "2", "type": "intra-phrase", "pattern": "#Modal+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"term": "#Verb", "termTag": "HeadVerb"}}},
+
+  "Linking Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Copula", "tag": {"all": "Linking"}},
+
+  "Being Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Modal?+ (be|am|is|are|was|were)", "tag": {"all": "Being"}},
+
+  "Interrogative 1": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Being+ (#Pronoun|#People|#Determiner #Noun) #FiniteVerb", "tag": {"all": "Interrogative"}},
+
+  "Doing Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Modal?+ not? (do|does|did) not? #Verb?+", "tag": {"all": "Doing"}},
+
+  "Interrogative 2": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Doing+ (#Pronoun|#People|#Determiner #Noun) #FiniteVerb", "tag": {"all": "Interrogative"}},
+
+  "Having Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Modal?+ (have|has|had) #Verb?+", "tag": {"all": "Having"}},
+
+  "Single Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "9", "type": "inter-phrase", "pattern": "(#Verb && !#Phrase)", "tag": {"on": {"term": "#Verb", "termTag": "Verbial"}}}
+}

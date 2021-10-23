@@ -1,0 +1,15 @@
+{
+  "Present Perfect Simple Active": {"batchOrder": "3", "term": "have #PastTense", "pattern": "have #PastTense", "tag": ["PerfectParticiple", "Active"]},
+
+  "Present Perfect Simple Active": {"batchOrder": "3", "term": "have been #PastTense", "pattern": "have been #PastTense", "tag": ["PerfectParticiple", "Passive"]},
+
+  "Present Perfect Simple Active": {"batchOrder": "3", "term": "has #PastTense", "pattern": "has #PastTense", "tag": ["PerfectParticiple", "Active"]},
+
+  "Present Perfect Simple Active": {"batchOrder": "3", "term": "has been #PastTense", "pattern": "has been #PastTense", "tag": ["PerfectParticiple", "Active"]},
+
+  "Perfect Participle Active": {"batchOrder": "3", "term": "having #PastTense", "pattern": "having #PastTense", "tag": ["PerfectParticiple", "Active"]},
+
+  "Perfect Participle Passive": {"batchOrder": "3", "term": "having been #PastTense", "pattern": "having been #PastTense", "tag": ["PerfectParticiple", "Passive"]},
+
+  "#Verb #Negative #Verb": {"batchOrder": "3", "term": "#Verb #Negative #Verb", "pattern": "#Verb #Negative #Verb", "tag": "#VerbPhrase"}
+}
