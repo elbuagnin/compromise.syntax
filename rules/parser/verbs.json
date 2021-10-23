@@ -1,7 +1,7 @@
 {
   "Past Perfect": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "had #PastTense", "tag": {"all": "PastPerfect"}},
 
-  "Past Progressive": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "had #PastTense", "tag": {"all": "PastPerfect"}},
+  "Past Progressive": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "was (#Verbal && /ing$/)", "tag": {"all": ["PastProgressive", "1st Person"]}},
 
   "Present Perfect Simple Active": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "have #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
 
