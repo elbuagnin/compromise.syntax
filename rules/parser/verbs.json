@@ -1,7 +1,25 @@
 {
-  "Auxiliary Verb Phrases": {"batch":"Verbs", "batchOrder": "3",  "order": "1", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"term": "#Verb", "termTag": "HeadVerb"}}},
+  "Past Perfect": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "had #PastTense", "tag": {"all": "PastPerfect"}},
 
-  "Modal Verb Phrases": {"batch":"Verbs", "batchOrder": "3",  "order": "2", "type": "intra-phrase", "pattern": "#Modal+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"term": "#Verb", "termTag": "HeadVerb"}}},
+  "Past Progressive": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "had #PastTense", "tag": {"all": "PastPerfect"}},
+
+  "Present Perfect Simple Active": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "have #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
+
+  "Present Perfect Simple Active": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "have been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}},
+
+  "Present Perfect Simple Active": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "has #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
+
+  "Present Perfect Simple Active": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "has been #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
+
+  "Perfect Participle Active": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
+
+  "Perfect Participle Passive": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}},
+
+  "#Verb #Negative #Verb": {"batch": "Verbs", "batchOrder": "3", "type": "intra-phrase", "pattern": "#Verb #Negative #Verb", "tag": {"all": "#VerbPhrase"}},
+
+  "Auxiliary Verb Phrases": {"batch":"Verbs", "batchOrder": "3",  "order": "1", "type": "intra-phrase", "pattern": "#Auxiliary+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"type": "intra-phrase", "termTag": "HeadVerb"}}},
+
+  "Modal Verb Phrases": {"batch":"Verbs", "batchOrder": "3",  "order": "2", "type": "intra-phrase", "pattern": "#Modal+ #Verb+", "tag": {"all": ["VerbPhrase", "Verbial"], "last": {"type": "intra-phrase", "termTag": "HeadVerb"}}},
 
   "Linking Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Copula", "tag": {"all": "Linking"}},
 
@@ -9,11 +27,17 @@
 
   "Interrogative 1": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Being+ (#Pronoun|#People|#Determiner #Noun) #FiniteVerb", "tag": {"all": "Interrogative"}},
 
+  "Passive was" : {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "was #PastTense", "tag": {"all": ["PastTense", "Passive"]}},
+
+  "Passive are": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "are #PastTense", "tag": {"all": ["PresentTense", "Passive"]}},
+
   "Doing Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Modal?+ not? (do|does|did) not? #Verb?+", "tag": {"all": "Doing"}},
 
   "Interrogative 2": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Doing+ (#Pronoun|#People|#Determiner #Noun) #FiniteVerb", "tag": {"all": "Interrogative"}},
 
+  "Imperative": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "do #FiniteVerb", "tag": {"all": "Imperative"}},
+
   "Having Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "3", "type": "intra-phrase", "pattern": "#Modal?+ (have|has|had) #Verb?+", "tag": {"all": "Having"}},
 
-  "Single Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "9", "type": "inter-phrase", "pattern": "(#Verb && !#Phrase)", "tag": {"on": {"term": "#Verb", "termTag": "Verbial"}}}
+  "Single Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "9", "type": "inter-phrase", "pattern": "(#Verb && !#Phrase)", "tag": {"on": {"type": "intra-phrase", "termTag": "Verbial"}}}
 }
