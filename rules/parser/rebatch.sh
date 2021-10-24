@@ -113,6 +113,11 @@ do
   then
     ((new=$old+1))
     sed -r -i "s/\"batchOrder\": \"[0-9]+\"/\"batchOrder\": \"$new\"/g" $editfile
+    echo "$editfile has batchOrder # of $old. Changing to $new."
   fi
 ((last++))
 done
+
+echo $bold
+echo "Finished"
+echo $normal
