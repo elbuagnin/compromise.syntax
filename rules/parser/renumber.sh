@@ -30,5 +30,5 @@ while IFS= read -r line; do
     ((i=i+1))
   fi
 
-  sed -r -i.bak "$linenum s/\"order\": \"[0-9]+\"/\"order\": \"$i\"/" $1
+  sed -r -i "$linenum s/\"order\": \"[0-9]+\"/\"order\": \"$i\"/" $1
 done < $1
