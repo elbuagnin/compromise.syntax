@@ -19,8 +19,16 @@ confirm() {
 
 confirm "Renumber the rules order in file: $1 ?" || exit 0
 
-i=0
+linenum=0
+i=1
+
 while IFS= read -r line; do
-  ((i=i+1))
-  sed -ir 's#"order": "[0-9]+"#"order": "$i"#g' $1
+  ((linenum=linenum+1))
+
+  if [[ "$line" =~ ^$ ]]
+  then
+    ((i=i+1))
+  fi
+
+  sed -r -i.bak "$linenum s/\"order\": \"[0-9]+\"/\"order\": \"$i\"/" $1
 done < $1
