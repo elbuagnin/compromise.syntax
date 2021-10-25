@@ -1,10 +1,15 @@
 {
   "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": "#Gerund", "tag": "Verbal"},
-  "Nouns that are Verbs 1": {"batchOrder": "1", "term": "#Noun", "pattern": "(#Modal|will|do|does|did) #Negative? #Noun", "tag": ["BaseVerb", "PresentTense"]},
-  "Nouns that are Verbs 2": {"batchOrder": "1", "term": "#Noun", "pattern": "#Pronoun #Noun", "tag": ["Verb", "PresentTense"]},
-  "Adjectives that are Verbs 2": {"batchOrder": "1", "term": "#Adjective", "pattern": "#Pronoun #Adjective", "untag": "#Adjective", "tag": ["BaseVerb", "PresentTense"]},
 
-  "#Cardinal is Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+  "Nouns that are Verbs 1": {"batchOrder": "1", "term": "#Noun", "pattern": "(#Modal|will|do|does|did) #Negative? #Noun", "tag": ["BaseVerb", "PresentTense"]},
+
+  "Nouns that are Verbs 2": {"batchOrder": "1", "term": "#Noun", "pattern": "#Pronoun #Noun", "tag": ["Verb", "PresentTense"]},
+
+  "Adjectives that are Verbs": {"batchOrder": "1", "term": "#Adjective", "pattern": "#Pronoun #Adjective", "untag": "#Adjective", "tag": ["BaseVerb", "PresentTense"]},
+
+  "Adjectives that are Infinitives": {"batchOrder": "1", "term": "to #Adjective", "pattern": "to #Adjective #Determiner", "untag": "#Adjective", "tag": "Infinitive"},
+
+  "#Cardinal as Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
   "#Cardinal as Pronoun": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
 
