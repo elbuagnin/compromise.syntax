@@ -43,26 +43,6 @@ find . -type f -name '*.json' -print0 | while IFS= read -r -d '' file; do
   fi
 done
 
-# Check to see if the batchOrders need to be renumbered.
-min=${orderNumbers[0]}
-for value in "${orderNumbers[@]}"; do
-  (( value < min )) && min=$value
-done
-
-if [ $min -ne $targetNumber ]
-then
-  echo $bold
-  echo 'All batchOrder numbers are greater than Target file.'
-  echo 'No need to renumber.'
-  echo 'Exiting.'
-  echo $normal
-  echo "Target batchOrder# is $targetNumber"
-  echo "Lowest batchOrder number in other files is $min"
-  echo ''
-
-  exit 0
-fi
-
 # Make sure remaining file batchOrder numbers are unique. Otherwise, this will not work.
 IFS=$'\n' uniq=($(sort -n -u <<<"${orderNumbers[*]}"))
 unset IFS
@@ -104,18 +84,26 @@ do
 done
 
 # Now update the batchOrder #'s
-last=$min
+last=$targetNumber
+
 for ((i=0; i<${#sortedFiles[*]}; i++));
 do
   editfile=${sortedFiles[$i]}
   old=${sortedOrderedNumbers[$i]}
-  if [ $last -eq $old ]
+  diff=$(( old-last ))
+  case "$diff" in
+    0) new=$(($old+1));;
+    1) new=$(($old));;
+    *) new=$(($old-($diff-1)))
+  esac
+
+  if [ $new -ne $old ]
   then
-    ((new=$old+1))
     sed -r -i "s/\"batchOrder\": \"[0-9]+\"/\"batchOrder\": \"$new\"/g" $editfile
     echo "$editfile has batchOrder # of $old. Changing to $new."
+    ((last++))
   fi
-((last++))
+
 done
 
 echo $bold
