@@ -1,4 +1,0 @@
-{
-    "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": "#Gerund", "tag": "Verbal"},
-    "Nouns that are Verbs": {"batchOrder": "1", "term": "#Noun", "pattern": "(#Modal|will|do|does|did) #Negative? #Noun", "tag": ["Verb", "PresentTense"]}
-}
