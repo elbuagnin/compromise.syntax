@@ -35,11 +35,11 @@
 
   "Past Simple": {"batch": "Verbs", "batchOrder": "3", "order": "17", "type": "intra-phrase", "pattern": "!#Verb #PastTense !#Verb?", "tag": {"all": "PastSimple"}},
 
+  "Present Simple": {"batch": "Verbs", "batchOrder": "3", "order": "17", "type": "intra-phrase", "pattern": "!#Verb #PresentTense !#Verb?", "tag": {"all": "PresentSimple"}},
+
   "#Negative #VerbPhrase": {"batch": "Verbs", "batchOrder": "3", "order": "17", "type": "intra-phrase", "pattern": "#Verb #Negative (#Verb|#Verbal)+", "tag": {"all": "#Negative"}},
 
   "Linking Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "18", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Copula", "tag": {"all": "Linking"}},
-
-  "Being Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "19", "type": "intra-phrase", "pattern": "#Modal?+ (be|am|is|are|was|were)", "tag": {"all": "Being"}},
 
   "Single Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "20", "type": "inter-phrase", "pattern": "(#Verb && !#Phrase)", "tag": {"on": {"term": "#Verb", "termTag": "Verbial"}}}
 }
