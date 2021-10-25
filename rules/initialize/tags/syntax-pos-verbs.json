@@ -4,7 +4,19 @@
         "notA": "Infinitive",
         "color": "green"
     },
+    "VerbedPastParticiple": {
+        "isA": "Verb",
+        "notA": "VerbedPresentParticiple",
+        "color": "green"
+    },
+    "VerbedPresentParticiple": {
+        "isA": "Verb",
+        "notA": "VerbedPastParticiple",
+        "color": "green"
+    },
     "Auxiliary": {
+        "isA": "Verb",
+        "notA": "BaseVerb",
         "color": "green"
     },
     "HeadVerb": {
