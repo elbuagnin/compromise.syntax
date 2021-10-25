@@ -5,6 +5,8 @@ export default function preParser(document) {
     Object.values(data).forEach((rule) => {
       const { term } = rule;
       const { pattern } = rule;
+      const { batchOrder } = rule;
+
       let tag = '';
       if (rule.tag) { tag = rule.tag; }
       let untag = '';
@@ -14,6 +16,7 @@ export default function preParser(document) {
         if (document.has(pattern)) {
           const matchedTerm = document.match(pattern).match(term);
           console.log('\nPreparser:');
+          console.log(`Batch: ${batchOrder}`);
           console.log(matchedTerm.text());
 
           if (untag) {
