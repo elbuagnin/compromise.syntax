@@ -1,11 +1,11 @@
 {
-    "Adjective Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#Adverb?+ #Adjective?+ #Adjective #Adjective", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
+    "Adjective Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#Adverb?+ #Adjective?+ #Adjective #Adjective", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
 
-    "Adjective Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "#Adverb?+ #Adverb #Adjective?+ #Adjective", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
+    "Adjective Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#Adverb?+ #Adverb #Adjective?+ #Adjective", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
 
-    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun","tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
+    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun","tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}}
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}}
 }
