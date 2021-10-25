@@ -33,7 +33,7 @@ export default function preParser(document) {
     console.log('Infinitives to Finite Verbs:');
     console.log('Starting Infinitives:');
     console.log(document.match('#Infinitive').debug());
-    document.match('#Infinitive').tag('#BaseVerb').untag('#Infinitive');
+    document.match('#Infinitive').tag(['#BaseVerb', '#PresentTense']).untag('#Infinitive');
     document.match('to #BaseVerb').tag('#Infinitive').untag(['#Verb', '#BaseVerb', '#PresentTense']);
     console.log('Infinitives left:');
     console.log(document.match('#Infinitive').debug());
