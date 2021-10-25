@@ -10,15 +10,16 @@ function verbVerbalCorrecter(doc) {
   // Untagged Verbs
   const emptyTag = doc.not('(#Noun|#Verb|#Value|#Date|#Adjective|#Contraction|#Adverb|#Currency|#Determiner|#Conjunction|#Preposition|#QuestionWord|#Pronoun|#Expression|#Abbreviation|#Url|#HashTag|#PhoneNumber|#AtMention|#Emoji|#Emoticon|#Email|#Auxiliary|#Negative|#Acronym|#Verbal)');
 
-  if (emptyTag.found) {
-    console.log('Here is a tagless word:');
-    console.log(JSON.stringify(emptyTag));
+  emptyTag.tag(['#BaseVerb', 'PresentTense']);
 
-    emptyTag.tag(['#BaseVerb', 'PresentTense']);
-  }
+  // Verbs with no tense
+  const noTenseVerbs = doc.match('(#Verb && !#PresentTense && !#Infinitive && !#Gerund && !#PastTense && !#PerfectTense && !#FuturePerfect && !#Pluperfect && !#Copula && !#Modal && !#Participle && !#Particle && !#PhrasalVerb)');
+
+  noTenseVerbs.tag('#PresentTense');
 
   // Gerunds turned into Auxiliary Verbs, but need to be Verbals
   const gerunds = doc.match('(#Auxiliary && #Verb && /ing$/)');
+
   gerunds.tag('#Verbal');
 }
 
