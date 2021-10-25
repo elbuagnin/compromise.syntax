@@ -3,7 +3,7 @@
 
   "Nouns that are Verbs 1": {"batchOrder": "1", "term": "#Noun", "pattern": "(#Modal|will|do|does|did) #Negative? #Noun", "tag": ["BaseVerb", "PresentTense"]},
 
-  "Nouns that are Verbs 2": {"batchOrder": "1", "term": "#Noun", "pattern": "#Pronoun #Noun", "tag": ["Verb", "PresentTense"]},
+  "Nouns that are Verbs 2": {"batchOrder": "1", "term": "#Noun", "pattern": "(#Pronoun && !#Possessive) #Noun", "tag": ["Verb", "PresentTense"]},
 
   "Adjectives that are Verbs": {"batchOrder": "1", "term": "#Adjective", "pattern": "#Pronoun #Adjective", "untag": "#Adjective", "tag": ["BaseVerb", "PresentTense"]},
 

@@ -1,5 +1,7 @@
 {
-  "Perfect Participle Active": {"batch": "Verbs", "batchOrder": "4", "order": "7", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
+  "Perfect Participle Active": {"batch": "Verbals", "batchOrder": "4", "order": "7", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
 
-  "Perfect Participle Passive": {"batch": "Verbs", "batchOrder": "4", "order": "8", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}}
+  "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "4", "order": "8", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}},
+
+  "Past Participle": {"batch": "Verbals", "batchOrder": "4", "order": "8", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": "#PastParticiple"}}}
 }
