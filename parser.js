@@ -33,10 +33,6 @@ export default function parser(doc) {
         console.log('\n');
 
         if (tag) {
-          if (tag.all) {
-            matchedPattern.tag(tag.all);
-          }
-
           if (tag.on) {
             const matchedTerm = matchedPattern.match(tag.on.term);
             matchedTerm.tag(tag.on.termTag);
@@ -93,13 +89,12 @@ export default function parser(doc) {
               matchedTerm.tag(tag.eachTheSame.termTag);
             });
           }
+          if (tag.all) {
+            matchedPattern.tag(tag.all);
+          }
         }
 
         if (tagID) {
-          if (tagID.all) {
-            matchedPattern.tagWithID(tagID.all);
-          }
-
           if (tagID.on) {
             const matchedTerm = matchedPattern.match(tagID.on.term);
             matchedTerm.tagWithID(tagID.on.termTag);
@@ -156,6 +151,9 @@ export default function parser(doc) {
               matchedTerm.tagWithID(tagID.eachTheSame.termTag);
             });
           }
+          if (tagID.all) {
+            matchedPattern.tagWithID(tagID.all);
+          }
         }
 
         if (demark) {
@@ -206,9 +204,6 @@ export default function parser(doc) {
         }
 
         if (untag) {
-          if (untag.all) {
-            remove(matchedPattern, untag.all);
-          }
           if (untag.on) {
             const matchedTerm = matchedPattern.match(untag.on.term);
             remove(matchedTerm, untag.on.termUnTag);
@@ -228,6 +223,9 @@ export default function parser(doc) {
               const matchedTerm = matchedPattern.match(term);
               remove(matchedTerm, termUnTag);
             });
+          }
+          if (untag.all) {
+            remove(matchedPattern, untag.all);
           }
         }
 
