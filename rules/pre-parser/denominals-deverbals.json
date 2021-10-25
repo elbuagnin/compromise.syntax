@@ -1,6 +1,0 @@
-{
-    "to welcome": {"batchOrder": "2", "term": "to welcome", "pattern": "to welcome", "tag": "Infinitive"},
-    "welcome": {"batchOrder": "2", "term": "welcome", "pattern": "!to? welcome", "tag": "Adjective"},
-    "to work": {"batchOrder": "2", "term": "to work", "pattern": "to work", "tag": "Infinitive"},
-    "work": {"batchOrder": "2", "term": "work", "pattern": "!to? work", "tag": "Noun"}
-}
