@@ -66,7 +66,7 @@
     },
     "PastSimple": {
         "isA": ["Past", "Simple"],
-        "notA": ["Present", "Future", "Completed", "Continuous", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "notA": ["Present", "Future", "Completed", "Continuous", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
         "color": "green"
     },
     "PastPerfect": {
@@ -86,7 +86,7 @@
     },
     "PresentSimple": {
         "isA": ["Present", "Simple"],
-        "notA": ["Past", "Future", "Completed", "Continuous", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "notA": ["Past", "Future", "Completed", "Continuous", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
         "color": "green"
     },
     "PresentPerfect": {
@@ -106,7 +106,7 @@
     },
     "FutureSimple": {
         "isA": ["Future", "Simple"],
-        "notA": ["Past", "Present", "Completed", "Continuous", "Passive", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
+        "notA": ["Past", "Present", "Completed", "Continuous", "PastTense", "PresentTense", "PastPerfect", "PastProgressive", "PastPerfectProgressive", "PresentPerfect", "PresentProgressive", "PresentPerfectProgressive", "FuturePerfect", "FutureProgressive", "FuturePerfectProgressive"],
         "color": "green"
     },
     "FuturePerfect": {
