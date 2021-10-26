@@ -1,6 +1,4 @@
 {
-    "Gerund": {"batch":"Gerunds", "batchOrder": "11",  "order": "1", "type": "inter-phrase", "pattern": "(#Verbal && !#Participle && !#Infinitive)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "Nominal"]}}},
-
     "Gerund Phrase 1": {"batch":"Gerunds", "batchOrder": "11",  "order": "2", "type": "inter-phrase", "pattern": "#Gerund #VerbalPhrase+ #PrepositionalPhrase?+ #Verbial+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}, "untag": {"all": "#Verbial"}},
 
     "Gerund Phrase 2": {"batch":"Gerunds", "batchOrder": "11",  "order": "3", "type": "inter-phrase", "pattern": "#Verbial+ #Possessive? #Gerund #VerbalPhrase+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}, "untag": {"all": "#Verbial"}},
