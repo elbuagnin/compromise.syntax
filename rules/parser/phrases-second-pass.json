@@ -1,7 +1,7 @@
 {
       "Prepostional Phrases": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "1", "type": "intra-phrase", "pattern": "#Preposition (#NounPhrase?+|#Noun|#Pronoun)", "tag": {"all": "PrepositionalPhrase"}},
 
-      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#NounPhrase+ #PrepositionalPhrase+", "tag": {"on": {"term": "#PrepositionalPhrase+", "termTag": ["NounPhrase", "Nominal"]}}},
+      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "(#Noun|#NounPhrase+) #PrepositionalPhrase+", "tag": {"all": ["NounPhrase", "Nominal"]}},
 
       "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "3", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#NounPhrase+|#PrepositionalPhrase+)", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#Nominal"}},
 
