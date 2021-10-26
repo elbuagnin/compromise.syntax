@@ -9,19 +9,25 @@
 
   "Adjectives that are Infinitives": {"batchOrder": "1", "term": "to #Adjective", "pattern": "to #Adjective #Determiner", "untag": "#Adjective", "tag": "Infinitive"},
 
-  "#Cardinal as Determiner": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
+  "#Cardinal as Determiner": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
-  "#Cardinal as Pronoun": {"batchOrder": "3", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
+  "#Cardinal as Pronoun": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
 
-  "#Ordinal #Noun": {"batchOrder": "3", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
+  "#Ordinal #Noun": {"batchOrder": "1", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
 
-  "a #Cardinal": {"batchOrder": "3", "term": "a", "pattern": "a #Cardinal", "tag": "#Determiner"},
+  "a #Cardinal": {"batchOrder": "1", "term": "a", "pattern": "a #Cardinal", "tag": "#Determiner"},
 
-  "a #Ordinal #Noun": {"batchOrder": "3", "term": "a", "pattern": "a #Ordinal #Noun", "tag": "#Determiner"},
+  "a #Ordinal #Noun": {"batchOrder": "1", "term": "a", "pattern": "a #Ordinal #Noun", "tag": "#Determiner"},
 
-  "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "(^#Verbal && #Comma)", "tag": "PresentParticiple"},
+  "Solitary Present Participle": {"batchOrder": "1", "term": "#Verbal", "pattern": "(^#Verbal && #Comma)", "tag": "PresentParticiple"},
 
-  "#BaseVerb as #Noun": {"batchOrder": "3", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"},
+  "#BaseVerb as #Noun": {"batchOrder": "1", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"},
 
-  "#Preposition #Verb": {"batchOrder": "3", "term": "#Verb", "pattern": "#Preposition #Verb", "tag": "#Noun"}
+  "#Preposition #Verb": {"batchOrder": "1", "term": "#Verb", "pattern": "#Preposition #Verb", "tag": "#Noun"},
+
+  "#Verb #Noun #Verb 1": {"batchOrder": "1", "term": "#Noun", "pattern": "(is|am|are) (#Noun && !#Pronoun) #Verb", "tag": "#Adverb"},
+
+  "#Verb #Noun #Verb 2": {"batchOrder": "1", "term": "#Plural", "pattern": "has (#Plural && !#Pronoun) #Verb", "tag": "#Adverb"},
+
+  "#Verb #Noun #Verb 3": {"batchOrder": "1", "term": "#Singular", "pattern": "have (#Singular && !#Person && !#Pronoun) #Verb", "tag": "#Adverb"}
 }

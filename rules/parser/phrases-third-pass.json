@@ -7,7 +7,7 @@
 
     "Infinitive Phrase as as Subject Nominal": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "4", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#Verb|#Verbial+)", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
 
-    "Infinitive Phrase as as Object/Subject Complement Nominal": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "5", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) (#Verb|#Verbial+) #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
+    "Infinitive Phrase as as Object/Subject Complement Nominal": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "5", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) #Verbial+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
 
     "Infinitive Phrase as as Adjectival": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "6", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adjectival"}}},
 
