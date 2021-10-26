@@ -19,11 +19,6 @@
         "notA": "Accusative",
         "color": "green"
     },
-    "Interrogative": {
-        "isA": "",
-        "notA": "",
-        "color": "green"
-    },
     "Active": {
         "isA": "",
         "notA": ["Passive", "Stative"],
@@ -37,6 +32,31 @@
     "Stative": {
         "isA": "",
         "notA": ["Active", "Passive"],
+        "color": "green"
+    },
+    "Linking": {
+        "isA": "",
+        "notA": ["Active", "Passive"],
+        "color": "green"
+    },
+    "Interrogative": {
+        "isA": "",
+        "notA": "",
+        "color": "green"
+    },
+    "Information": {
+        "isA": "Interrogative",
+        "notA": "",
+        "color": "green"
+    },
+    "YesNo": {
+        "isA": "Interrogative",
+        "notA": "",
+        "color": "green"
+    },
+    "who": {
+        "isA": "Interrogative",
+        "notA": "",
         "color": "green"
     }
 }
