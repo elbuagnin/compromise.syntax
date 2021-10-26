@@ -27,5 +27,5 @@
 
   "#Verb #Noun #Verb 3": {"batchOrder": "1", "term": "#Singular", "pattern": "have (#Singular && !#Person && !#Pronoun) #Verb", "tag": "#Adverb"},
 
-  "which #Verb": {"batchOrder": "1", "term": "#PresentTense", "pattern": "which #PresentTense", "tag": "#Noun"}
+  "which #Verb": {"batchOrder": "1", "term": "#PresentTense", "pattern": "which (#Verb && !(do|does|did) && !#Copula && !#Modal && !#Auxiliary)", "tag": "#Noun"}
 }
