@@ -1,4 +1,5 @@
 {
+  "which": {"batchOrder": "5", "term": "which", "pattern": "which", "tag": "RelativePronoun"},
   "that": {"batchOrder": "5", "term": "that", "pattern": "that #Verb", "tag": ["RelativePronoun", "Restrictive"]},
   "which NonRestrictive": {"batchOrder": "5", "term": "which", "pattern": "which #Verb", "tag": ["RelativePronoun", "NonRestrictive"]},
   "which Restrictive": {"batchOrder": "5", "term": "which", "pattern": "#Preposition which #Verb", "tag": ["RelativePronoun", "Restrictive"]},
