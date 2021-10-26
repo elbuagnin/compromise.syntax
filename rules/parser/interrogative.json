@@ -43,9 +43,9 @@
 
   "Interrogative Information Present Simple Stative": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "22", "type": "inter-phrase", "pattern": "^#QuestionWord (is|are) * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple", "Stative"]}}},
 
-  "Interrogative Information Present Simple": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) #Entity #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
+  "Interrogative Information Present Simple": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) (#Entity|#Noun) #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
 
-  "Interrogative Information Present Simple test": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) #Entity #Present #Copula? * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
+  "Interrogative Information Present Simple test": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) (#Entity|#Noun) #Present #Copula? * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
 
   "Interrogative Information Present Perfect": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "24", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (has|have) (#Pronoun|#People|#Determiner #Noun) #PastTense * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentPerfect"]}}},
 
@@ -91,5 +91,9 @@
 
   "Subjunctive Interrogative 3": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "45", "type": "inter-phrase", "pattern": "^#QuestionWord #Noun #Modal #Entity #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
 
-  "Remove Restrictive, etc. from #RelativePronoun": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#RelativePronoun #Interrogative", "untag": {"on": {"term": "#RelativePronoun", "termUnTag": ["#Restrictive", "#NonRestrictive"]}}}
+  "Tag Question Phrase 1": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Comma", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#Nominal", "#Verbial", "#Adjectival", "#Adverbial"]}},
+
+  "Tag Question Phrase 2": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Interrogative", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#Nominal", "#Verbial", "#Adjectival", "#Adverbial"]}},
+
+  "Remove Restrictive, etc. from #RelativePronoun": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "47", "type": "inter-phrase", "pattern": "#RelativePronoun #Interrogative", "untag": {"on": {"term": "#RelativePronoun", "termUnTag": ["#Restrictive", "#NonRestrictive"]}}}
 }
