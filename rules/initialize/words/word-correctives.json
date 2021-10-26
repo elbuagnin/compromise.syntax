@@ -30,5 +30,6 @@
     "whenever": "SubordinatingConjunction",
     "whereas": "SubordinatingConjunction",
     "wherever": "SubordinatingConjunction",
+    "which": "RelativePronoun",
     "while": "SubordinatingConjunction"
 }
