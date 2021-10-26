@@ -7,5 +7,7 @@
 
   "Enities 1": {"batch": "Disambiguation", "batchOrder": "1", "order": "4", "type": "intra-Phrase", "pattern": "(#Person|#Determiner #Noun)", "tag": {"all": "Entity"}},
 
-  "Enities 2": {"batch": "Disambiguation", "batchOrder": "1", "order": "5", "type": "intra-Phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Entity"}}
+  "Enities 2": {"batch": "Disambiguation", "batchOrder": "1", "order": "5", "type": "intra-phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Entity"}},
+
+  "NounPhrase": {"batch": "Disambiguation", "batchOrder": "1", "order": "6", "type": "intra-phrase", "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)", "tag": {"all": "NounPhrase"}}
 }

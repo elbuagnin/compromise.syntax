@@ -9,7 +9,9 @@
 
   "#Cardinal as Determiner": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal (#Preposition|#Noun)", "tag": "Determiner"},
 
-  "#Cardinal as Pronoun": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
+  "#Cardinal as Pronoun 1": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Cardinal #Verb", "tag": "Pronoun"},
+
+  "#Cardinal as Pronoun 2": {"batchOrder": "1", "term": "#Cardinal", "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)", "tag": "Pronoun"},
 
   "#Ordinal #Noun": {"batchOrder": "1", "term": "#Ordinal", "pattern": "#Ordinal #Noun", "tag": "#Adjective"},
 

@@ -27,5 +27,8 @@
 
     "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "Nominal"]}},
 
-    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "Verbial"]}}
+    "Implied Noun in Compound Noun Phrase": {"batch": "Punctuated and Conjunction Phrasing", "batchOrder": "2", "order": "13", "type": "intra-phrase", "pattern": "#Determiner #Adjective #CoordinatingConjunction #Determiner? #Adjective (#Noun|one)", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "Nominal"]}},
+
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "2",  "order": "14", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "Verbial"]}}
+
 }

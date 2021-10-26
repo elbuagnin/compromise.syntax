@@ -15,5 +15,5 @@
 
     "one as Pronoun 1": {"batchOrder": "3", "term": "one", "pattern": "(#Pronoun|#Person) #Copula #Article one", "tag": "#Pronoun"},
 
-    "one as Pronoun 2": {"batchOrder": "3", "term": "one", "pattern": "#Article one (who|whom)", "tag": "#Pronoun"}
+    "one as Pronoun 2": {"batchOrder": "3", "term": "one", "pattern": "#Article one #Adjective? (who|whom)", "tag": "#Pronoun"}
 }
