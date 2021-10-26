@@ -9,7 +9,7 @@
 
   "Past Participle 3": {"batch": "Verbals", "batchOrder": "4", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": "#Verbial"}}},
 
-  "Gerund": {"batch":"Verbals", "batchOrder": "4",  "order": "6", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/ && !#Participle)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "Nominal"]}}},
+  "Gerund": {"batch":"Verbals", "batchOrder": "4",  "order": "6", "type": "intra-phrase", "pattern": "(#Verbal && !#Participle && !#Infinitive)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "Nominal"]}}},
 
   "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "4",  "order": "7", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastSimple", "Verbial"]}}},
 
