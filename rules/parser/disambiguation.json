@@ -3,5 +3,9 @@
 
   "Not to": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
 
-  "Infinitive": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "#Infinitive+", "tag": {"all": "InfinitivePhrase"}}
+  "Infinitive": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "#Infinitive+", "tag": {"all": "InfinitivePhrase"}},
+
+  "Enities 1": {"batch": "Disambiguation", "batchOrder": "1", "order": "4", "type": "intra-Phrase", "pattern": "(#Person|#Determiner #Noun)", "tag": {"all": "Entity"}},
+
+  "Enities 2": {"batch": "Disambiguation", "batchOrder": "1", "order": "5", "type": "intra-Phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Entity"}}
 }
