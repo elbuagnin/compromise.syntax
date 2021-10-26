@@ -27,9 +27,13 @@
     "unless": "SubordinatingConjunction",
     "unsafe": "Adjective",
     "yet": "CoordinatingConjunction",
+    "whatever": "RelativePronoun",
     "whenever": "SubordinatingConjunction",
     "whereas": "SubordinatingConjunction",
     "wherever": "SubordinatingConjunction",
+    "whichever": "RelativePronoun",
+    "whoever": "RelativePronoun",
+    "whomever": "RelativePronoun",
     "which": "RelativePronoun",
     "while": "SubordinatingConjunction"
 }
