@@ -1,15 +1,15 @@
 {
-    "Gerund Phrase 1": {"batch":"Gerunds", "batchOrder": "11",  "order": "2", "type": "inter-phrase", "pattern": "#Gerund #VerbalPhrase+ #PrepositionalPhrase?+ #Verbial+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}, "untag": {"all": "#Verbial"}},
+    "Gerund Phrase 1": {"batch":"Gerunds", "batchOrder": "11",  "order": "1", "type": "inter-phrase", "pattern": "#Gerund #VerbalPhrase+ #PrepositionalPhrase?+ #Verbial+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}, "untag": {"all": "#Verbial"}},
 
-    "Gerund Phrase 2": {"batch":"Gerunds", "batchOrder": "11",  "order": "3", "type": "inter-phrase", "pattern": "#Verbial+ #Possessive? #Gerund #VerbalPhrase+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}, "untag": {"all": "#Verbial"}},
+    "Gerund Phrase 2": {"batch":"Gerunds", "batchOrder": "11",  "order": "2", "type": "inter-phrase", "pattern": "#Verbial+ #Possessive? #Gerund #VerbalPhrase+", "tag": {"on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}, "untag": {"all": "#Verbial"}},
 
-    "Gerund Phrase 3": {"batch":"Gerunds", "batchOrder": "11",  "order": "4", "type": "inter-phrase", "pattern": "#Gerund #InfinitivePhrase+", "tag": {"on": {"term": "#InfinitivePhrase+", "termTag": ["GerundPhrase", "Nominal"]}}},
+    "Gerund Phrase 3": {"batch":"Gerunds", "batchOrder": "11",  "order": "3", "type": "inter-phrase", "pattern": "#Gerund #InfinitivePhrase+", "tag": {"on": {"term": "#InfinitivePhrase+", "termTag": ["GerundPhrase", "Nominal"]}}},
 
-    "Gerund Phrase 4": {"batch":"Gerunds", "batchOrder": "11",  "order": "5", "type": "inter-phrase", "pattern": "#Gerund #Infinitive+", "tag": {"all": ["GerundPhrase", "Nominal"]}},
+    "Gerund Phrase 4": {"batch":"Gerunds", "batchOrder": "11",  "order": "4", "type": "inter-phrase", "pattern": "#Gerund #Infinitive+", "tag": {"all": ["GerundPhrase", "Nominal"]}},
 
-    "Gerund List 1": {"batch":"Gerunds", "batchOrder": "11",  "order": "6", "type": "inter-phrase", "pattern": "#Gerund+ #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "List", "Nominal"]}},
+    "Gerund List 1": {"batch":"Gerunds", "batchOrder": "11",  "order": "5", "type": "inter-phrase", "pattern": "#Gerund+ #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "List", "Nominal"]}},
 
-    "Gerund List 2": {"batch":"Gerunds", "batchOrder": "11",  "order": "7", "type": "inter-phrase", "pattern": "#Gerund #Gerund+ #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "List", "Nominal"]}},
+    "Gerund List 2": {"batch":"Gerunds", "batchOrder": "11",  "order": "6", "type": "inter-phrase", "pattern": "#Gerund #Gerund+ #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "List", "Nominal"]}},
 
-    "Gerund Compound Phrase": {"batch":"Gerunds", "batchOrder": "11",  "order": "8", "type": "inter-phrase", "pattern": "(#Gerund && !#Comma && !#List) #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "CompoundPhrase", "Nominal"]}}
+    "Gerund Compound Phrase": {"batch":"Gerunds", "batchOrder": "11",  "order": "7", "type": "inter-phrase", "pattern": "(#Gerund && !#Comma && !#List) #CoordinatingConjunction #Gerund", "tag": {"all": ["GerundPhrase", "CompoundPhrase", "Nominal"]}}
 }
