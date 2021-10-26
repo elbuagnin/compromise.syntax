@@ -21,8 +21,6 @@
 
   "Solitary Present Participle": {"batchOrder": "1", "term": "#Verbal", "pattern": "(^#Verbal && #Comma)", "tag": "PresentParticiple"},
 
-  "#BaseVerb as #Noun": {"batchOrder": "1", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"},
-
   "#Preposition #Verb": {"batchOrder": "1", "term": "#Verb", "pattern": "#Preposition #Verb", "tag": "#Noun"},
 
   "#Verb #Noun #Verb 1": {"batchOrder": "1", "term": "#Noun", "pattern": "(is|am|are) (#Noun && !#Pronoun) #Verb", "tag": "#Adverb"},

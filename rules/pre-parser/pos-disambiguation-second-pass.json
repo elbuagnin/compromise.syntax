@@ -1,0 +1,3 @@
+{
+  "#BaseVerb as #Noun": {"batchOrder": "2", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"}
+}
