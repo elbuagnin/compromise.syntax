@@ -69,6 +69,11 @@
         "notA": "",
         "color": "green"
     },
+    "QuestionPhrase": {
+        "isA": "Phrase",
+        "notA": "",
+        "color": "green"
+    },
     "AdverbPhrase": {
         "isA": "Phrase",
         "notA": "",
