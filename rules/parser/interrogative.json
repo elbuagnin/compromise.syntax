@@ -1,5 +1,5 @@
 {
-  "Interrogative yes/no Past Stative": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "1", "type": "intra-phrase", "pattern": "(was|were) (#Pronoun|#People|#Determiner #Noun)", "tag": {"all": ["Interrogative", "YesNo", "PastSimple", "Stative"]}},
+  "Interrogative yes/no Past Simple Stative": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "1", "type": "intra-phrase", "pattern": "^(was|were) (#Pronoun|#People|#Determiner #Noun)", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "YesNo", "PastSimple", "Stative"]}}},
 
   "Interrogative yes/no Past Simple Active": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "2", "type": "intra-phrase", "pattern": "did (#Pronoun|#People|#Determiner #Noun) #PresentTense", "tag": {"all": ["Interrogative", "YesNo", "PastSimple", "Active"]}},
 
@@ -11,7 +11,7 @@
 
   "Interrogative yes/no Past Perfect Progressive": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "6", "type": "intra-phrase", "pattern": "had (#Pronoun|#People|#Determiner #Noun) been (#Verbal && /ing$/)", "tag": {"all": ["Interrogative", "YesNo", "PastPerfectProgressive"]}},
 
-  "Interrogative yes/no Present Simple Stative": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "7", "type": "intra-phrase", "pattern": "(am|is|are) (#Pronoun|#People|#Determiner #Noun)", "tag": {"all": ["Interrogative", "YesNo", "PresentSimple", "Stative"]}},
+  "Interrogative yes/no Present Simple Stative": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "7", "type": "intra-phrase", "pattern": "^(am|is|are) (#Pronoun|#People|#Determiner #Noun)", "tag": {"all": ["Interrogative", "YesNo", "PresentSimple", "Stative"]}},
 
   "Interrogative yes/no Present Simple": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "8", "type": "intra-phrase", "pattern": "(do|does) (#Pronoun|#People|#Determiner #Noun) #PresentTense", "tag": {"all": ["Interrogative", "YesNo", "PresentSimple"]}},
 
