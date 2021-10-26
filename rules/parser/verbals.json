@@ -9,7 +9,9 @@
 
   "Past Participle 3": {"batch": "Verbals", "batchOrder": "4", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": "#Verbial"}}},
 
-  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "4",  "order": "6", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastSimple", "Verbial"]}}},
+  "Gerund": {"batch":"Verbals", "batchOrder": "4",  "order": "6", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/ && !#Participle)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "Nominal"]}}},
 
-  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "4",  "order": "7", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "Verbial"]}}}
+  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "4",  "order": "7", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastSimple", "Verbial"]}}},
+
+  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "4",  "order": "8", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "Verbial"]}}}
 }
