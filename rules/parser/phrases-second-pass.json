@@ -11,7 +11,5 @@
 
       "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
 
-      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
-
-      "VerbalPhrase 4": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "VerbalPhrase"}}
+      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}}
 }
