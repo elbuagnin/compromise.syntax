@@ -3,5 +3,7 @@
 
   "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "4", "order": "8", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}},
 
-  "Past Participle": {"batch": "Verbals", "batchOrder": "4", "order": "8", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": "#PastParticiple"}}}
+  "Past Participle 1": {"batch": "Verbals", "batchOrder": "4", "order": "8", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": "#PastParticiple"}}},
+
+  "Past Participle 2": {"batch": "Verbals", "batchOrder": "4", "order": "9", "type": "intra-phrase", "pattern": "^#PastTense (* && !#Verb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}}
 }

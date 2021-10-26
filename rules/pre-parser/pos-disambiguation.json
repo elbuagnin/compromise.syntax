@@ -21,5 +21,7 @@
 
   "Solitary Present Participle": {"batchOrder": "3", "term": "#Verbal", "pattern": "(^#Verbal && #Comma)", "tag": "PresentParticiple"},
 
-  "#BaseVerb as #Noun": {"batchOrder": "3", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"}
+  "#BaseVerb as #Noun": {"batchOrder": "3", "term": "#BaseVerb", "pattern": "(#Determiner|#Possessive) #BaseVerb", "tag": "#Noun"},
+
+  "#Preposition #Verb": {"batchOrder": "3", "term": "#Verb", "pattern": "#Preposition #Verb", "tag": "#Noun"}
 }
