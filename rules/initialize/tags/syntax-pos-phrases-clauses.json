@@ -144,9 +144,14 @@
         "notA": "",
         "color": "magenta"
     },
+    "PastParticipleClause": {
+      "isA": "ParticipleClause",
+      "notA": "PresentParticipleClause",
+      "color": "magenta"
+    },
     "PresentParticipleClause": {
         "isA": "ParticipleClause",
-        "notA": "",
+        "notA": "PastParticipleClause",
         "color": "magenta"
     },
     "SubordinateClause": {
