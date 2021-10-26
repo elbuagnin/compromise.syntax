@@ -25,5 +25,7 @@
 
   "#Verb #Noun #Verb 2": {"batchOrder": "1", "term": "#Plural", "pattern": "has (#Plural && !#Pronoun) #Verb", "tag": "#Adverb"},
 
-  "#Verb #Noun #Verb 3": {"batchOrder": "1", "term": "#Singular", "pattern": "have (#Singular && !#Person && !#Pronoun) #Verb", "tag": "#Adverb"}
+  "#Verb #Noun #Verb 3": {"batchOrder": "1", "term": "#Singular", "pattern": "have (#Singular && !#Person && !#Pronoun) #Verb", "tag": "#Adverb"},
+
+  "which #Verb": {"batchOrder": "1", "term": "#PresentTense", "pattern": "which #PresentTense", "tag": "#Noun"}
 }
