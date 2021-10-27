@@ -17,7 +17,7 @@ export default function parser(doc) {
 
   function tagMatch(sentence, rule) {
     const {
-      pattern, tag, untag, demark, tagID, replace,
+      pattern, tag, untag, demark, tagID, replace, modified,
     } = rule;
 
     if (pattern) {
@@ -29,8 +29,22 @@ export default function parser(doc) {
         console.log('\n');
         console.log(matchedPattern.text());
         console.log('\n');
-        console.log(tag || untag || replace);
+        console.log(`${('Tag: ' && JSON.stringify(tag)) || ''}\n${('Untag: ' && JSON.stringify(untag)) || ''}\n${('Demark: ' && JSON.stringify(demark)) || ''}\n${('Replace: ' && JSON.stringify(replace)) || ''}\n${('Modified: ' && JSON.stringify(modified)) || ''}`);
         console.log('\n');
+
+        if (modified) {
+          const modifier = matchedPattern.match(modified.modifier);
+          console.log('------------');
+          console.log('modifier:');
+          console.log(modifier);
+          const modifies = matchedPattern.match(modified.modifies);
+          const modTag = modifies.list[0].start;
+
+          console.log('modifies:');
+          console.log(modTag);
+          console.log('------------');
+          modifier.tag(modTag);
+        }
 
         if (tag) {
           if (tag.on) {
