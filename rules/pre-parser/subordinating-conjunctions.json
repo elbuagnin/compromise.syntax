@@ -35,7 +35,7 @@
   "so that": {"batchOrder": "4", "term": "so that", "pattern": "so that", "untag": ["Preposition", "Expression"
 ], "tag": "SubordinatingConjunction"},
   "such as": {"batchOrder": "4", "term": "such as", "pattern": "such as", "untag": ["Adverb", "Preposition"] ,"tag": "SubordinatingConjunction"},
-  "that #Nominal": {"batchOrder": "4", "term": "that", "pattern": "that (#Possessive|#Pronoun|#Noun)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
+  "that #Nominal": {"batchOrder": "4", "term": "that", "pattern": "that (#Possessive|#Pronoun|#Determiner #Noun)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
   "until Is Conjunction": {"batchOrder": "4", "term": "until", "pattern": "until (#Possessive|#Pronoun|#Noun)", "untag": "Preposition", "tag": "SubordinatingConjunction"},
   "whether or not": {"batchOrder": "4", "term": "whether or not", "pattern": "whether or not", "tag": "SubordinatingConjunction"},
   "who then": {"batchOrder": "4", "term": "who then", "pattern": "who then", "untag": ["QuestionWord", "Adverb", "RelativePronoun", "Restrictive"], "tag": "SubordinatingConjunction"}
