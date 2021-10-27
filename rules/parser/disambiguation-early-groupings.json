@@ -1,0 +1,19 @@
+{
+  "#BaseVerb is #Noun": {"batch":"Disambiguation & Early Groupings", "batchOrder": "1",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "BaseVerb"}}},
+
+  "Not to": {"batch":"Disambiguation & Early Groupings", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
+
+  "Infinitive": {"batch":"Disambiguation & Early Groupings", "batchOrder": "1",  "order": "3", "type": "intra-phrase", "pattern": "#Infinitive+", "tag": {"all": "InfinitivePhrase"}},
+
+  "Enities 1": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "4", "type": "intra-Phrase", "pattern": "(#Person|#Determiner #Noun)", "tag": {"all": "Entity"}},
+
+  "Enities 2": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "5", "type": "intra-phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Entity"}},
+
+  "Compound Proper Noun": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Entity", "NounPhrase"]}},
+
+  "Compound Noun": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": "NounPhrase"}},
+
+  "NounPhrase": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)", "tag": {"all": "NounPhrase"}},
+
+  "Prepositional Phrases": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "9", "type": "intra-Phrase", "pattern": "#Preposition #Adjective? #Noun", "tag": {"all": "PrepositionalPhrase"}}
+}
