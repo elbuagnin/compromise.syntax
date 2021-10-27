@@ -1,9 +1,9 @@
 {
-  "Nouns": {"batch":"Primitives Sentence Role Assignments", "batchOrder": "9",  "order": "1", "type": "inter-phrase", "pattern": "(#Noun && !#Phrase)", "tag": {"on": {"term": "#Noun", "termTag": "Nominal"}}},
+
 
   "Pronouns": {"batch":"Primitives Sentence Role Assignments", "batchOrder": "9",  "order": "2", "type": "inter-phrase", "pattern": "(#Pronoun && !#Phrase)", "tag": {"on": {"term": "#Pronoun", "termTag": "Nominal"}}},
 
-  "Adjectives": {"batch":"Primitives Sentence Role Assignments", "batchOrder": "9",  "order": "4", "type": "inter-phrase", "pattern": "(#Adjective && !#Phrase)", "tag": {"on": {"term": "#Adjective", "termTag": "Adjectival"}}},
+  
 
   "Adverbs": {"batch":"Primitives Sentence Role Assignments", "batchOrder": "9",  "order": "5", "type": "inter-phrase", "pattern": "(#Adverb && !#Phrase)", "tag": {"on": {"term": "#Adverb", "termTag": "Adverbial"}}}
 }

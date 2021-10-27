@@ -1,5 +1,5 @@
 {
-      "Prepostional Phrases": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "1", "type": "intra-phrase", "pattern": "#Preposition (#NounPhrase?+|#Noun|#Pronoun)", "tag": {"all": "PrepositionalPhrase"}},
+
 
       "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "(#Noun|#NounPhrase+) #PrepositionalPhrase+", "tag": {"all": ["NounPhrase", "Nominal"]}},
 
@@ -15,7 +15,5 @@
 
       "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "#Adjective #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}, "untag": {"all": "#Nominal"}},
 
-      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "9", "type": "intra-phrase", "pattern": "#Adjective #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
-
-      "Prepositional Phrase with Gerund as Object": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "10", "type": "intra-phrase", "pattern": "#Preposition #Verbal #VerbalPhrase+", "tag": {"all": "PrepositionalPhrase", "each": [{"term": "#Verbal && /ing$/", "termTag": "Gerund"}, {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}]}}
+      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "9", "type": "intra-phrase", "pattern": "#Adjective #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}}
 }

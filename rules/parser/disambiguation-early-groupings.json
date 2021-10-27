@@ -9,13 +9,9 @@
 
   "Enities 2": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "5", "type": "intra-phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Entity"}},
 
-  "Compound Proper Noun": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Entity", "NounPhrase"]}},
+  "Proper Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Entity", "NounPhrase"]}},
 
-  "Compound Noun": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": "NounPhrase"}},
+  "Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": "NounPhrase"}},
 
-  "Counted Noun": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "(#Cardinal && #TextValue) #Adjective? #Plural", "tag": {"on": {"term": "#TextValue", "termTag": "#Determiner"}}},
-
-  "NounPhrase with Number as Pronoun": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "#Determiner #Adjective? (#Cardinal && #TextValue)", "tag": {"all": "NounPhrase"}},
-
-  "Prepositional Phrases": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "9", "type": "intra-phrase", "pattern": "#Preposition #Adjective? #Noun+", "tag": {"all": "PrepositionalPhrase", "on": {"term": "#Noun", "termTag": "#ObjectOfPreposition"}}, "modified": {"modifier": "#Noun+", "modifies": "#Preposition"}}
+  "Adverb String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "#Adverb{2,}", "tag": {"all": "AdverbPhrase"}}
 }

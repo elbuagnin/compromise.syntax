@@ -1,15 +1,25 @@
 {
-    "Adjective Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#Adverb?+ #Adjective?+ #Adjective #Adjective", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
+    "Adjective Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "(#Adverb|#AdverbPhrase+) (#Adjective|#Adjectival+)", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
 
-    "Adjective Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#Adverb?+ #Adverb #Adjective?+ #Adjective", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}},
+    "Adjective Primitives": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "2", "type": "inter-phrase", "pattern": "(#Adjective && !#Phrase)", "tag": {"on": {"term": "#Adjective", "termTag": "Adjectival"}}},
 
-    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "(#Determiner?|#Possessive?) (#AdjectivePhrase?+|#Adjective?)? #Noun?+ #Noun","tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
+    "Gerund Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "#Gerund (#Determiner #Noun|#Plural)", "tag": {"all": ["GerundPhrase", "Nominal"]}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
+    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive) (#AdjectivePhrase?+|#Adjective?)? (#Noun|#NounPhrase+|#GerundPhrase+)","tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) (#Noun|#NounPhrase+|#GerundPhrase+)", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
 
     "Simple Relative Noun Clauses": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "6", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "Nominal"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
-    "Prepositional Phrases 2": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #Nominal+", "tag": {"all": "PrepositionalPhrase"}, "untag": {"all": "#Nominal"}}
+    "Noun Primitives": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "7", "type": "inter-phrase", "pattern": "(#Noun && !#Nominal)", "tag": {"on": {"term": "#Noun", "termTag": "Nominal"}}},
+
+    "Prepositional Phrases 1": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "8", "type": "intra-phrase", "pattern": "#Preposition (#Adjective|#Adjectival+)? #Nominal+", "tag": {"all": "PrepositionalPhrase", "on": {"term": "#Nominal", "termTag": "#ObjectOfPreposition"}}, "modified": {"modifier": "#Noun+", "modifies": "#Preposition"}},
+
+    "Prepositional Phrases 2": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "9", "type": "intra-phrase", "pattern": "#Preposition #Nominal+", "tag": {"all": "PrepositionalPhrase", "on": {"term": "#Noun", "termTag": "#ObjectOfPreposition"}}, "untag": {"all": "#Nominal"}},
+
+    "Prepostional Phrases 3": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "10", "type": "intra-phrase", "pattern": "#Preposition (#NounPhrase?+|#Noun|#Pronoun)", "tag": {"all": "PrepositionalPhrase"}},
+
+    "Prepositional Phrase with Gerund as Object 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "11", "type": "intra-phrase", "pattern": "#Preposition #Gerund #VerbalPhrase+", "tag": {"all": "PrepositionalPhrase", "on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}},
+
+    "Prepositional Phrase with Gerund as Object 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "12", "type": "intra-phrase", "pattern": "#Preposition #Gerund (#Noun|#Nominal+)", "tag": {"all": "PrepositionalPhrase", "on": {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}}}
 }
