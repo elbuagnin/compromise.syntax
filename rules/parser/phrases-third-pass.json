@@ -5,11 +5,21 @@
 
     "Prepositional Phrase with Gerund as Object": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "3", "type": "intra-phrase", "pattern": "#Preposition #Verbal #VerbalPhrase+", "tag": {"all": "PrepositionalPhrase", "each": [{"term": "#Verbal && /ing$/", "termTag": "Gerund"}, {"term": "#VerbalPhrase+", "termTag": ["GerundPhrase", "Nominal"]}]}},
 
-    "Infinitive Phrase as as Subject Nominal": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "4", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#Verb|#Verbial+)", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
+    "Infinitive Phrase as as Subject": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "4", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#Verb|#Verbial+)", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
 
-    "Infinitive Phrase as as Object/Subject Complement Nominal": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "5", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) #Verbial+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
+    "Infinitive Phrase as as Direct Object": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "5", "type": "intra-phrase", "pattern": "#Verbial+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
 
-    "Infinitive Phrase as as Adjectival": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "6", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adjectival"}}},
+    "Infinitive Phrase as as Subject Complement Nominal": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "6", "type": "intra-phrase", "pattern": "(#Copula|#Linking|#Stative) #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
 
-    "Infinitive Phrase as as Adjectival": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "7", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) #Intransitive+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adverbial"}}}
+    "Infinitive Phrase as as Adjectival": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "7", "type": "intra-phrase", "pattern": "(#Noun|#Nominal+) #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adjectival"}}},
+
+    "Infinitive Phrase as as Adverbial 1": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "8", "type": "intra-phrase", "pattern": "#Past #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adverbial"}}},
+
+    "Infinitive Phrase as as Adverbial 2": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "9", "type": "intra-phrase", "pattern": "(who|whom) #Present #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adverbial"}}},
+
+    "Infinitive Phrase as as Adverbial 3": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "10", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adverbial"}}},
+
+    "Infinitive Phrase after Gerund": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "11", "type": "intra-phrase", "pattern": "#Gerund+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Nominal"}}},
+
+    "Infinitive Phrase after Pariciple": {"batch":"Phrases, 3rd Pass", "batchOrder": "7",  "order": "12", "type": "intra-phrase", "pattern": "#Participle+ #InfinitivePhrase+", "tag": {"on":{"term": "#InfinitivePhrase", "termTag": "Adverbial"}}}
 }
