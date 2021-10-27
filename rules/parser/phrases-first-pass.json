@@ -7,5 +7,9 @@
 
     "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? (#AdjectivePhrase+|#Adjective) #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}}
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #AdjectivePhrase+ #Noun?+ #Noun", "tag": {"all": ["NounPhrase", "Nominal"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#Adjectival"}},
+
+    "Simple Relative Noun Clauses": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "6", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "Nominal"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
+
+    "Prepositional Phrases 2": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #Nominal+", "tag": {"all": "PrepositionalPhrase"}, "untag": {"all": "#Nominal"}}
 }
