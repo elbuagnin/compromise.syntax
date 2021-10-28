@@ -1,9 +1,0 @@
-{
-
-
-  "Pronouns": {"batch":"Primitives Sentence Role Assignments", "batchOrder": "9",  "order": "2", "type": "inter-phrase", "pattern": "(#Pronoun && !#Phrase)", "tag": {"on": {"term": "#Pronoun", "termTag": "nn"}}},
-
-
-
-  "Adverbs": {"batch":"Primitives Sentence Role Assignments", "batchOrder": "9",  "order": "5", "type": "inter-phrase", "pattern": "(#Adverb && !#Phrase)", "tag": {"on": {"term": "#Adverb", "termTag": "av"}}}
-}
