@@ -41,9 +41,9 @@ export default function parser(doc) {
             termTag = modifier.termTag;
           }
 
-          let modTag = modifies.list[0].start;
-          modTag = modTag.substring(0, modTag.indexOf('-'));
-          modTag = `${termTag}-${modTag}`;
+          let modTag = modifies.text();
+          modTag = modTag.replace(' ', '-');
+          modTag = `${termTag}:${modTag}`;
 
           term.tag(modTag);
         }
