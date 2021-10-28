@@ -43,9 +43,9 @@
 
   "Interrogative Information Present Simple Stative": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "22", "type": "inter-phrase", "pattern": "^#QuestionWord (is|are) * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple", "Stative"]}}},
 
-  "Interrogative Information Present Simple": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) (#Entity|#Noun) #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
+  "Interrogative Information Present Simple": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) (#Agent|#Noun) #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
 
-  "Interrogative Information Present Simple test": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) (#Entity|#Noun) #Present #Copula? * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
+  "Interrogative Information Present Simple test": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "23", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (do|does) (#Agent|#Noun) #Present #Copula? * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentSimple"]}}},
 
   "Interrogative Information Present Perfect": {"batch":"Interrogative Verbs", "batchOrder": "8",  "order": "24", "type": "inter-phrase", "pattern": "^(#QuestionWord && !who) (has|have) (#Pronoun|#People|#Determiner #Noun) #PastTense * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information", "PresentPerfect"]}}},
 
@@ -85,11 +85,11 @@
 
   "Interrogative Who Future Perfect Progressive": {"batch":"Interrogative Verbs", "batchOrder": "8", "order": "42", "type": "inter-phrase", "pattern": "^who will have been (#Verbal && /ing$/) * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Who", "FuturePerfectProgressive"]}}},
 
-  "Subjunctive Interrogative 1": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "43", "type": "inter-phrase", "pattern": "^#QuestionWord #Modal #Entity #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
+  "Subjunctive Interrogative 1": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "43", "type": "inter-phrase", "pattern": "^#QuestionWord #Modal #Agent #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
 
-  "Subjunctive Interrogative 2": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "44", "type": "inter-phrase", "pattern": "^#QuestionWord #Modal #Entity (#Present && #QuestionMark)", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
+  "Subjunctive Interrogative 2": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "44", "type": "inter-phrase", "pattern": "^#QuestionWord #Modal #Agent (#Present && #QuestionMark)", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
 
-  "Subjunctive Interrogative 3": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "45", "type": "inter-phrase", "pattern": "^#QuestionWord #Noun #Modal #Entity #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
+  "Subjunctive Interrogative 3": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "45", "type": "inter-phrase", "pattern": "^#QuestionWord #Noun #Modal #Agent #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
 
   "Tag Question Phrase 1": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Comma", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#Nominal", "#Verbial", "#Adjectival", "#Adverbial"]}},
 

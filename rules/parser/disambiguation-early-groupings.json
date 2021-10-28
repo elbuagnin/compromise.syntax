@@ -3,21 +3,25 @@
 
   "Not to": {"batch":"Disambiguation & Early Groupings", "batchOrder": "1",  "order": "2", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
 
-  "Nouns": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "inter-phrase", "pattern": "#Noun", "tag": {"all": "nn"}},
+  "Nouns": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "3", "type": "inter-phrase", "pattern": "(#Noun|#Pronoun|#Gerund)", "tag": {"all": "nn"}},
 
-  "Verbs": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "inter-phrase", "pattern": "#Verb", "tag": {"all": "vb"}},
+  "Verbs": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "4", "type": "inter-phrase", "pattern": "#Verb", "tag": {"all": "vb"}},
 
-  "Adjectives": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "ad"}},
+  "Adjectives": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "5", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "aj"}},
 
-  "Adverbs": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "inter-phrase", "pattern": "#Noun", "tag": {"all": "av"}},
+  "Adverbs": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "inter-phrase", "pattern": "#Adverb", "tag": {"all": "av"}},
 
-  "Enities 1": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "4", "type": "inter-phrase", "pattern": "(#Person|#Determiner #Noun)", "tag": {"all": ["Entity", "nn"]}},
+  "Agents 1": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "inter-phrase", "pattern": "(#Person|#Determiner #Noun)", "tag": {"all": "Agent"}},
 
-  "Enities 2": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "5", "type": "intra-phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": ["Entity", "nn"]}},
+  "Agents 2": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Agent"}},
 
-  "Proper Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Entity", "Nouns", "nn"]}},
+  "Proper Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "9", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Agent", "Nouns"]}},
 
-  "Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": ["Nouns", "nn"]}},
+  "Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "10", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": "Nouns"}},
 
-  "Adverb String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "#Adverb{2,}", "tag": {"all": ["Adverbs", "av"]}}
+  "Adjective String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "11", "type": "intra-phrase", "pattern": "#Adjective{2,}", "tag": {"all": "Adjectives"}},
+
+  "Adverb String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "12", "type": "intra-phrase", "pattern": "#Adverb{2,}", "tag": {"all": "Adverbs"}},
+
+  "Verb String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "13", "type": "intra-phrase", "pattern": "#Verb{2,}", "tag": {"all": "Verbs"}}
 }
