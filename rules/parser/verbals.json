@@ -3,11 +3,11 @@
 
   "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "3", "order": "2", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}, "untag": {"all": ["#Verbs", "#vb"]}},
 
-  "Past Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": "#PastParticiple"}}},
+  "Past Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "(#Participle && !#PerfectParticiple)", "termTag": "#PastParticiple"}}},
 
-  "Past Participle 2": {"batch": "Verbals", "batchOrder": "3", "order": "4", "type": "intra-phrase", "pattern": "^#PastTense (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"all": "vb"}},
+  "Past Participle 2": {"batch": "Verbals", "batchOrder": "3", "order": "4", "type": "intra-phrase", "pattern": "^(#PastTense && !#PerfectParticiple) (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"all": "vb"}},
 
-  "Past Participle 3": {"batch": "Verbals", "batchOrder": "3", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
+  "Past Participle 3": {"batch": "Verbals", "batchOrder": "3", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma && !#PerfectParticiple)", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
 
   "Present Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "6", "type": "intra-phrase", "pattern": "^(#Verbal && /ing$/ && #Comma)", "tag": {"on": {"term": "#Verbal", "termTag": ["#PresentParticiple", "aj"]}}},
 

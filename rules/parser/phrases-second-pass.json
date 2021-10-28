@@ -9,7 +9,7 @@
 
     "Prepositional Phrase as Adjective 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "4", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-    "Prepositional Phrase as Adjective 2": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "5", "type": "intra-phrase", "pattern": "#nn+ (#pp+ && !#av)", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+    "Prepositional Phrase as Adjective 2": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "5", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
     "Infinitive Phrase as as Subject": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#iv+ #vb+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 

@@ -5,9 +5,9 @@
 
      "Gerund Compound Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "3", "type": "inter-phrase", "pattern": "(#gd && !#Comma && !#List) #CoordinatingConjunction #gd", "tag": {"all": ["GerundPhrase", "CompoundPhrase", "nn"]}},
 
-     "Perfect Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #nn+", "tag": {"all": ["PerfectParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
+     "Perfect Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ (#nn+|#pp+)", "tag": {"all": ["PerfectParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
 
-     "Past Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "5", "type": "intra-phrase", "pattern": "#PastParticiple+ #nn+", "tag": {"all": ["PastParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PastParticiple+", "termTag": "ObjectOfPastParticiple"}},
+     "Past Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "5", "type": "intra-phrase", "pattern": "#PastParticiple+ (#nn+|#pp+)", "tag": {"all": ["PastParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#PastParticiple+", "termTag": "ObjectOfPastParticiple"}},
 
      "Present Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "6", "type": "intra-phrase", "pattern": "#PresentParticiple+ #nn+", "tag": {"all": ["PresentParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PresentParticiple+", "termTag": "ObjectOfPresentParticiple"}},
 
