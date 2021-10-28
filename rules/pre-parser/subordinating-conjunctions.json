@@ -29,13 +29,13 @@
   "not only": {"batchOrder": "4", "term": "not only", "pattern": "not only", "tag": "CorrelativeConjunction"},
   "or not": {"batchOrder": "4", "term": "or not", "pattern": "or not", "tag": ["Conjunction", "Negative"]},
   "provided that": {"batchOrder": "4", "term": "provided that", "pattern": "provided that", "tag": "SubordinatingConjunction"},
-  "since #Nominal": {"batchOrder": "4", "term": "since", "pattern": "since (#Possessive|#Pronoun|#Noun)", "untag": "Preposition", "tag": "SubordinatingConjunction"},
+  "since #nn": {"batchOrder": "4", "term": "since", "pattern": "since (#Possessive|#Pronoun|#Noun)", "untag": "Preposition", "tag": "SubordinatingConjunction"},
   "so": {"batchOrder": "4", "term": "so", "pattern": "so (#Possessive|#Pronoun|#Noun)", "untag": ["Preposition", "Expression"
 ], "tag": "SubordinatingConjunction"},
   "so that": {"batchOrder": "4", "term": "so that", "pattern": "so that", "untag": ["Preposition", "Expression"
 ], "tag": "SubordinatingConjunction"},
   "such as": {"batchOrder": "4", "term": "such as", "pattern": "such as", "untag": ["Adverb", "Preposition"] ,"tag": "SubordinatingConjunction"},
-  "that #Nominal": {"batchOrder": "4", "term": "that", "pattern": "that (#Possessive|#Pronoun|#Determiner #Noun)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
+  "that #nn": {"batchOrder": "4", "term": "that", "pattern": "that (#Possessive|#Pronoun|#Determiner #Noun)", "untag": "Determiner", "tag": "SubordinatingConjunction"},
   "until Is Conjunction": {"batchOrder": "4", "term": "until", "pattern": "until (#Possessive|#Pronoun|#Noun)", "untag": "Preposition", "tag": "SubordinatingConjunction"},
   "whether or not": {"batchOrder": "4", "term": "whether or not", "pattern": "whether or not", "tag": "SubordinatingConjunction"},
   "who then": {"batchOrder": "4", "term": "who then", "pattern": "who then", "untag": ["QuestionWord", "Adverb", "RelativePronoun", "Restrictive"], "tag": "SubordinatingConjunction"}

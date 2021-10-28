@@ -1,19 +1,17 @@
 {
+      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "1", "type": "intra-phrase", "pattern": "(#Noun|#NounPhrase+) #PrepositionalPhrase+", "tag": {"all": ["NounPhrase", "nn"]}},
 
+      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#NounPhrase+|#PrepositionalPhrase+)", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#nn"}},
 
-      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "(#Noun|#NounPhrase+) #PrepositionalPhrase+", "tag": {"all": ["NounPhrase", "Nominal"]}},
+      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
 
-      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "3", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#NounPhrase+|#PrepositionalPhrase+)", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#Nominal"}},
+      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": ["PerfectParticiplePhrase", "aj"]}, "untag": {"all": "#nn"}},
 
-      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "4", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
+      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "5", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
 
-      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "5", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": ["PerfectParticiplePhrase", "Adjectival"]}, "untag": {"all": "#Nominal"}},
+      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
 
-      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
+      "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#Adjective #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#nn"}},
 
-      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#Nominal"}},
-
-      "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "#Adjective #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}, "untag": {"all": "#Nominal"}},
-
-      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "9", "type": "intra-phrase", "pattern": "#Adjective #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "Adjectival"]}}
+      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "#Adjective #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "aj"]}}
 }

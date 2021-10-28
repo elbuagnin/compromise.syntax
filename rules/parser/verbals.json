@@ -1,13 +1,13 @@
 {
-  "Perfect Participle Active": {"batch": "Verbals", "batchOrder": "3", "order": "1", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}},
+  "Perfect Participle Active": {"batch": "Verbals", "batchOrder": "3", "order": "1", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active", "aj"]}},
 
-  "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "3", "order": "2", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}},
+  "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "3", "order": "2", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive", "aj"]}},
 
-  "Past Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": "#PastParticiple"}}},
+  "Past Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": ["#PastParticiple", "aj"]}}},
 
-  "Past Participle 2": {"batch": "Verbals", "batchOrder": "3", "order": "4", "type": "intra-phrase", "pattern": "^#PastTense (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}},
+  "Past Participle 2": {"batch": "Verbals", "batchOrder": "3", "order": "4", "type": "intra-phrase", "pattern": "^#PastTense (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}},
 
-  "Past Participle 3": {"batch": "Verbals", "batchOrder": "3", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
+  "Past Participle 3": {"batch": "Verbals", "batchOrder": "3", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
 
   "Infinitive Phrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "#ObjectOfInfinitive"}},
 
