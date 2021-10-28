@@ -99,7 +99,7 @@
         "notA": "CoordinatingAdjectives",
         "color": "magenta"
     },
-    "AdjectivalPhrase": {
+    "ajPhrase": {
         "isA": "Phrase",
         "notA": "",
         "color": "magenta"

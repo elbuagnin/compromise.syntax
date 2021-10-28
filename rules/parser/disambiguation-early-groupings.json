@@ -11,11 +11,13 @@
 
   "Adverbs": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "inter-phrase", "pattern": "#Adverb", "tag": {"all": "av"}},
 
-  "Agents 1": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "inter-phrase", "pattern": "(#Person|#Determiner #Noun)", "tag": {"all": "Agent"}},
+  "Determiners": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "6", "type": "inter-phrase", "pattern": "(#Determiner|#Possessive)", "tag": {"all": "dt"}},
+
+  "Agents 1": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "7", "type": "inter-phrase", "pattern": "(#Person|#Actor)", "tag": {"all": "Agent"}},
 
   "Agents 2": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "8", "type": "intra-phrase", "pattern": "(#Pronoun && !#RelativePronoun)", "tag": {"all": "Agent"}},
 
-  "Proper Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "9", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Agent", "Nouns"]}},
+  "Proper Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "9", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Agent", "Person", "Nouns"]}},
 
   "Noun String": {"batch": "Disambiguation & Early Groupings", "batchOrder": "1", "order": "10", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": "Nouns"}},
 
