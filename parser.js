@@ -45,7 +45,7 @@ export default function parser(doc) {
           modTag = modTag.replace(' ', '-');
           modTag = `${termTag}:${modTag}`;
 
-          term.tag(modTag);
+          term.not(modifies).tag(modTag);
         }
 
         if (tag) {
