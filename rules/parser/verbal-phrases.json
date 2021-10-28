@@ -1,0 +1,17 @@
+{
+     "Gerund Infinitive Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "1", "type": "inter-phrase", "pattern": "#gd+ #iv+", "tag": {"on": {"term": "#iv+", "termTag": ["GerundPhrase", "nn"]}}, "untag": {"all": ["#vb", "#pp", "#dt", "#aj", "#av"]}, "modifier": {"term": "#iv+", "modifies": "#gd+", "termTag": "ObjectOfGerund"}},
+
+     "Gerund List": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "2", "type": "inter-phrase", "pattern": "#gd+ #CoordinatingConjunction #gd", "tag": {"all": ["GerundPhrase", "List", "nn"]}},
+
+     "Gerund Compound Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "3", "type": "inter-phrase", "pattern": "(#gd && !#Comma && !#List) #CoordinatingConjunction #gd", "tag": {"all": ["GerundPhrase", "CompoundPhrase", "nn"]}},
+
+     "Perfect Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #nn+", "tag": {"all": ["PerfectParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
+
+     "Past Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "5", "type": "intra-phrase", "pattern": "#PastParticiple+ #nn+", "tag": {"all": ["PastParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PastParticiple+", "termTag": "ObjectOfPastParticiple"}},
+
+     "Present Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "6", "type": "intra-phrase", "pattern": "#PresentParticiple+ #nn+", "tag": {"all": ["PresentParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PresentParticiple+", "termTag": "ObjectOfPresentParticiple"}},
+
+     "#Participle Phrase #Adverb": {"batch": "Verbal Phrases", "batchOrder": "8", "order": "7", "type": "intra-phrase", "pattern": "#ptpc+ #av+", "modifier": {"term": "#av+", "modifies": "#ptpc+"}},
+
+     "#Participle Phrase #Proposition": {"batch": "Verbal Phrases", "batchOrder": "8", "order": "8", "type": "intra-phrase", "pattern": "#ptpc+ #pp+", "modifier": {"term": "#pp+", "modifies": "#ptpc+"}}
+}

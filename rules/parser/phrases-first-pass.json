@@ -9,7 +9,13 @@
 
     "Simple Relative Noun Clauses": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "5", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
-    "Gerund Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "#Gerund #nn+", "tag": {"all": "GerundPhrase"}, "modifier": {"term": "(#nn+ && !#Gerund)", "modifies": "#Gerund", "termTag": "#ObjectOfGerund"}},
+    "Gerund Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "#Gerund #nn+", "tag": {"all": ["GerundPhrase", "gd"]}, "modifier": {"term": "(#nn+ && !#Gerund)", "modifies": "#Gerund", "termTag": "#ObjectOfGerund"}},
 
-    "Prepositional Phrases 1": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #nn+", "tag": {"all": "PrepositionalPhrase"}, "modifier": {"term": "#nn+", "modifies": "#Preposition", "termTag": "#ObjectOfPreposition"}, "untag": {"on": {"term": "#nn+", "termUnTag": "#nn"}}}
+    "Prepositional Phrases 1": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "modifier": {"term": "#nn+", "modifies": "#Preposition", "termTag": "#ObjectOfPreposition"}, "untag": {"on": {"term": "#nn+", "termUnTag": "#nn"}}},
+
+    "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "5",  "order": "8", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#pp+)", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+
+    "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "5",  "order": "9", "type": "intra-phrase", "pattern": "#aj+ #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#PrepositionalPhrase+", "modifies": "#aj+", "termTag": "Adverbial"}},
+
+    "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "5",  "order": "10", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}}
 }

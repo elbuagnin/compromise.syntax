@@ -1,17 +1,31 @@
 {
-      "#Verbal #Adverb": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "1", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) #av+", "tag": {"all": "vl"}, "modifier": {"term": "#av+", "modifies": "#Verbal+"}},
+    "Prepositional Phrase as Adverb 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "1", "type": "intra-phrase", "pattern": "#vb #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#PrepositionalPhrase+)", "tag": {"all": ["InfinitivePhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+|#PrepositionalPhrase+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+    "Prepositional Phrase as Adverb 2": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "2", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+|#Nouns)", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+|#PrepositionalPhrase+)", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+    "Prepositional Phrase as Adverb 3": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #nn+", "tag": {"all": ["PerfectParticiplePhrase", "aj"]}, "untag": {"all": ["#nn", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
+    "Prepositional Phrase as Adverb 4": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "4", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "5", "type": "intra-phrase", "pattern": "#vl+ #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "modifier": {"term": "#PrepositionalPhrase+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+    "Prepositional Phrase as Adjective 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "4", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-      "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
+    "Prepositional Phrase as Adjective 2": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "5", "type": "intra-phrase", "pattern": "#nn+ (#pp+ && !#av)", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-      "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#aj+ #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#PrepositionalPhrase+", "modifies": "#aj+", "termTag": "Adverbial"}},
+    "Infinitive Phrase as as Subject": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#iv+ #vb+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "#aj+ #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#InfinitivePhrase+", "modifies": "#aj+", "termTag": "Adverbial"}}
+    "Infinitive Phrase as as Direct Object": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#vb+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+
+    "Infinitive Phrase as as Subject Complement nn": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "(#Copula|#Linking|#Stative) #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+
+    "Infinitive Phrase as as aj": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "9", "type": "intra-phrase", "pattern": "#nn+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}},
+
+    "Infinitive Phrase as as av 1": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "10", "type": "intra-phrase", "pattern": "#Past #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}},
+
+    "Infinitive Phrase as as av 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "11", "type": "intra-phrase", "pattern": "(who|whom) #Present #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}},
+
+    "Infinitive Phrase as as av 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "12", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}},
+
+    "Infinitive Phrase after Gerund": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "13", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}, "modifier": {"term": "#iv+", "modifies": "#gd+", "termTag": "ObjectOfGerund"}},
+
+    "Infinitive Phrase after Pariciple": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "14", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}}
 }
