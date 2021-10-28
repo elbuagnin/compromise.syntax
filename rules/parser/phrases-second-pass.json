@@ -1,17 +1,17 @@
 {
-      "Noun Phrase with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "1", "type": "intra-phrase", "pattern": "(#Noun|#NounPhrase+) #PrepositionalPhrase+", "tag": {"all": ["NounPhrase", "nn"]}},
+      "#Verbal #Adverb": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "1", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) #av+", "tag": {"all": "vl"}, "modifier": {"term": "#av+", "modifies": "#Verbal+"}},
 
-      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#InfinitivePhrase+ (#NounPhrase+|#PrepositionalPhrase+)", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#nn"}},
+      "Infinitive Phrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#PrepositionalPhrase+)", "tag": {"all": ["InfinitivePhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+|#PrepositionalPhrase+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
+      "VerbalPhrase 1": {"batch": "Phrases, 2nd Pass", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "(#Verbal && !#Infinitive) (#PrepositionalPhrase+|#NounPhrase+|#Nouns)", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+|#PrepositionalPhrase+)", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
 
-      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #NounPhrase+", "tag": {"all": ["PerfectParticiplePhrase", "aj"]}, "untag": {"all": "#nn"}},
+      "Perfect Participle Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "4", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #nn+", "tag": {"all": ["PerfectParticiplePhrase", "aj"]}, "untag": {"all": ["#nn", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
 
-      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "5", "type": "intra-phrase", "pattern": "#Verbal #Adverb? #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
+      "VerbalPhrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "5", "type": "intra-phrase", "pattern": "#vl+ #PrepositionalPhrase+", "tag": {"all": "VerbalPhrase"}, "modifier": {"term": "#PrepositionalPhrase+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
 
       "VerbalPhrase 3": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#Possessive #Verbal #Pronoun (#NounPhrase+|#Noun?+ #Noun)", "tag": {"all": "VerbalPhrase"}, "untag": {"all": "#nn"}},
 
-      "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#Adjective #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#nn"}},
+      "Adjective Phrases with Preposition": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#aj+ #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#PrepositionalPhrase+", "modifies": "#aj+", "termTag": "Adverbial"}},
 
-      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "#Adjective #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "aj"]}}
+      "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "#aj+ #InfinitivePhrase+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#InfinitivePhrase+", "modifies": "#aj+", "termTag": "Adverbial"}}
 }

@@ -1,19 +1,21 @@
 {
-  "Perfect Participle Active": {"batch": "Verbals", "batchOrder": "3", "order": "1", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active", "aj"]}},
+  "Perfect Participle Active": {"batch": "Verbals", "batchOrder": "3", "order": "1", "type": "intra-phrase", "pattern": "having #PastTense", "tag": {"all": ["PerfectParticiple", "Active"]}, "untag": {"all": ["#Verbs", "#vb"]}},
 
-  "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "3", "order": "2", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive", "aj"]}},
+  "Perfect Participle Passive": {"batch": "Verbals", "batchOrder": "3", "order": "2", "type": "intra-phrase", "pattern": "having been #PastTense", "tag": {"all": ["PerfectParticiple", "Passive"]}, "untag": {"all": ["#Verbs", "#vb"]}},
 
-  "Past Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": ["#PastParticiple", "aj"]}}},
+  "Past Participle 1": {"batch": "Verbals", "batchOrder": "3", "order": "3", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "#Participle", "termTag": "#PastParticiple"}}},
 
-  "Past Participle 2": {"batch": "Verbals", "batchOrder": "3", "order": "4", "type": "intra-phrase", "pattern": "^#PastTense (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}},
+  "Past Participle 2": {"batch": "Verbals", "batchOrder": "3", "order": "4", "type": "intra-phrase", "pattern": "^#PastTense (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"all": "vb"}},
 
-  "Past Participle 3": {"batch": "Verbals", "batchOrder": "3", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
+  "Past Participle 3": {"batch": "Verbals", "batchOrder": "3", "order": "5", "type": "intra-phrase", "pattern": "^(#PastTense && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
 
-  "Infinitive Phrase 2": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "#ObjectOfInfinitive"}},
+  "Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "6", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": "InfinitivePhrase"}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "#ObjectOfInfinitive"}},
 
   "Gerund": {"batch":"Verbals", "batchOrder": "3",  "order": "7", "type": "intra-phrase", "pattern": "(#Verbal && !#Participle && !#Infinitive)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "nn"]}}},
 
-  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "8", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": "PastSimple"}}},
+  "Tag #vl": {"batch": "Verbals", "batchOrder": "3", "order": "8", "type": "intra-phrase", "pattern": "#Verbal", "tag": {"all": "vl"}},
 
-  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "9", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": "PresentSimple"}}}
+  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "9", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": "PastSimple"}}},
+
+  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "10", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": "PresentSimple"}}}
 }

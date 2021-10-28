@@ -1,19 +1,15 @@
 {
     "Adjective Phrases": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
-    "Adjective Gerund": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#aj+ #Gerund", "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "#Gerund"}},
+    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#aj+ #nn+","tag": {"all": ["NounPhrase", "nn"]}, "untag": {"all": "#aj"}, "modifier": {"term": "#aj+", "modifies": "#nn+"}},
 
-    "Gerund Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "#Gerund (#Determiner #Noun|#Plural)", "tag": {"all": ["GerundPhrase", "nn"]}, "modifier": {"term": "#nn+", "modifies": "#Gerund", "termTag": "#ObjectOfGerund"}},
+    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}},
 
-    "Adjective GerundPhrase": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "#aj+ #GerundPhrase+", "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "#GerundPhrase+"}},
+    "Head Noun": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Noun Phrases 1": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "5", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive) #aj?+ #nn+","tag": {"all": ["NounPhrase", "nn"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#aj"}},
+    "Simple Relative Noun Clauses": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "5", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
-    "Noun Phrases 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "(#Determiner|#Possessive)? #aj+ #nn+", "tag": {"all": ["NounPhrase", "nn"], "on": {"term": "#Noun", "termTag": "HeadNoun"}}, "untag": {"all": "#aj"}},
+    "Gerund Phrase": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "#Gerund #nn+", "tag": {"all": "GerundPhrase"}, "modifier": {"term": "(#nn+ && !#Gerund)", "modifies": "#Gerund", "termTag": "#ObjectOfGerund"}},
 
-    "Simple Relative Noun Clauses": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
-
-    "Prepositional Phrases 1": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "8", "type": "intra-phrase", "pattern": "#Preposition #aj?+ #nn+", "tag": {"all": "PrepositionalPhrase"}, "modifier": {"term": "#nn+", "modifies": "#Preposition", "termTag": "#ObjectOfPreposition"}},
-
-    "Prepositional Phrase with Gerund as Object 2": {"batch":"Phrases, 1st Pass", "batchOrder": "5",  "order": "9", "type": "intra-phrase", "pattern": "#Preposition #Gerund #nn+", "tag": {"all": "PrepositionalPhrase"}, "modifier": {"term": "#GerundPhrase+", "modifies": "#Preposition", "termTag": "#ObjectOfPreposition"}}
+    "Prepositional Phrases 1": {"batch": "Phrases, 1st Pass", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #nn+", "tag": {"all": "PrepositionalPhrase"}, "modifier": {"term": "#nn+", "modifies": "#Preposition", "termTag": "#ObjectOfPreposition"}, "untag": {"on": {"term": "#nn+", "termUnTag": "#nn"}}}
 }
