@@ -1,19 +1,19 @@
 {
-  "Double Relative Clause": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "1", "type": "inter-phrase", "pattern": "!#Nominal !#Verbial !#Nominal? #RelativePronoun * #RelativePronoun", "replace": {"first": {"term": "#RelativePronoun", "termUnTag": ["#RelativePronoun", "#Restrictive", "NonRestrictive"], "termTag": "Determiner"}}},
+  "Double Relative Clause": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "1", "type": "inter-phrase", "pattern": "!#nn !#vb !#nn? #RelativePronoun * #RelativePronoun", "replace": {"first": {"term": "#RelativePronoun", "termUnTag": ["#RelativePronoun", "#Restrictive", "NonRestrictive"], "termTag": "Determiner"}}},
 
-  "Relative Clause 1": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun #Nominal+ #Verbial+ #Nominal+", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 1": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun #nn+ #vb+ #nn+", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 2": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun (#Verbial+ && !#Interrogative) (#Adjectival+|#Nominal+)", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 2": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun (#vb+ && !#Interrogative) (#aj+|#nn+)", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 3": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "3", "type": "intra-phrase", "pattern": "#RelativePronoun (#Verbial+ && !#Interrogative) Nominal+", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 3": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "3", "type": "intra-phrase", "pattern": "#RelativePronoun (#vb+ && !#Interrogative) nn+", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 4": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "4", "type": "intra-phrase", "pattern": "#RelativePronoun (#Verbial+ && !#Interrogative) #PrepositionalPhrase+", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 4": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "4", "type": "intra-phrase", "pattern": "#RelativePronoun (#vb+ && !#Interrogative) #PrepositionalPhrase+", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 5": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "5", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) (#Verbial+ && !#Interrogative)+ (#Verbial?|#Adverb?|#Preposition?|#Date?)?", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 5": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "5", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) (#vb+ && !#Interrogative)+ (#vb?|#Adverb?|#Preposition?|#Date?)?", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 6": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "5", "type": "intra-phrase", "pattern": "#RelativePronoun (#Verbial+ && !#Interrogative)+ #Verbial?", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 6": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "5", "type": "intra-phrase", "pattern": "#RelativePronoun (#vb+ && !#Interrogative)+ #vb?", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 7": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "6", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) (#Verbial+ && !#Interrogative) #Nominal+ #Verbial?+ #Preposition?", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}},
+  "Relative Clause 7": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "6", "type": "intra-phrase", "pattern": "#RelativePronoun (#Pronoun|#Person) (#vb+ && !#Interrogative) #nn+ #vb?+ #Preposition?", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
-  "Relative Clause 8": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "7", "type": "intra-phrase", "pattern": "#RelativePronoun (#Verbial+ && !#Interrogative) #VerbalPhrase+", "tag": {"all": ["RelativeClause", "Adjectival"]}, "untag": {"all": ["#Nominal", "#Verbial"]}}
+  "Relative Clause 8": {"batch":"Relative Clauses", "batchOrder": "14",  "order": "7", "type": "intra-phrase", "pattern": "#RelativePronoun (#vb+ && !#Interrogative) #VerbalPhrase+", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}}
 }

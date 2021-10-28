@@ -91,9 +91,9 @@
 
   "Subjunctive Interrogative 3": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "45", "type": "inter-phrase", "pattern": "^#QuestionWord #Noun #Modal #Agent #Present * #QuestionMark", "tag": {"on": {"term": "#Verb", "termTag": ["Interrogative", "Information"]}}},
 
-  "Tag Question Phrase 1": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Comma", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#Nominal", "#Verbial", "#Adjectival", "#Adverbial"]}},
+  "Tag Question Phrase 1": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Comma", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#nn", "#vb", "#aj", "#av"]}},
 
-  "Tag Question Phrase 2": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Interrogative", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#Nominal", "#Verbial", "#Adjectival", "#Adverbial"]}},
+  "Tag Question Phrase 2": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "46", "type": "inter-phrase", "pattern": "#QuestionWord * #Interrogative", "tag": {"all": "QuestionPhrase"}, "untag": {"all": ["#nn", "#vb", "#aj", "#av"]}},
 
   "Remove Restrictive, etc. from #RelativePronoun": {"batch": "Interrogative verbs", "batchOrder": "8", "order": "47", "type": "inter-phrase", "pattern": "#RelativePronoun #Interrogative", "untag": {"on": {"term": "#RelativePronoun", "termUnTag": ["#Restrictive", "#NonRestrictive"]}}}
 }
