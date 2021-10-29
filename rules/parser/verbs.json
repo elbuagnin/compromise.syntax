@@ -49,5 +49,9 @@
 
   "Linking Verbs": {"batch":"Verbs", "batchOrder": "2",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Copula", "tag": {"all": "Linking"}},
 
-  "Verb Phrases with Adverbs": {"batch":"Verbs", "batchOrder": "2",  "order": "26", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"all": "VerbPhrase"}, "modifier": {"term": "#av+", "modifies": "#vb+"}}
+  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "2",  "order": "26", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": "PastSimple"}}},
+
+  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "2",  "order": "27", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": "PresentSimple"}}},
+
+  "Verb Phrases with Adverbs": {"batch":"Verbs", "batchOrder": "2",  "order": "28", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"all": "VerbPhrase"}, "modifier": {"term": "#av+", "modifies": "#vb+"}}
 }
