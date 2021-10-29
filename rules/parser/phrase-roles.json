@@ -1,0 +1,31 @@
+{
+    "Prepositional Phrase as Adverb 1": {"batch": "Phrase Roles", "batchOrder": "6", "order": "1", "type": "intra-phrase", "pattern": "#vb #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Prepositional Phrase as Adverb 2": {"batch": "Phrase Roles", "batchOrder": "6", "order": "2", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Prepositional Phrase as Adverb 3": {"batch": "Phrase Roles", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Prepositional Phrase as Adverb 4": {"batch": "Phrase Roles", "batchOrder": "6", "order": "4", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Prepositional Phrase as Adjective 1": {"batch": "Phrase Roles", "batchOrder": "6", "order": "4", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#nn"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+
+    "Prepositional Phrase as Adjective 2": {"batch": "Phrase Roles", "batchOrder": "6", "order": "5", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+
+    "Infinitive Phrase as as Subject": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "6", "type": "intra-phrase", "pattern": "#iv+ #vb+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+
+    "Infinitive Phrase as as Direct Object": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "7", "type": "intra-phrase", "pattern": "#vb+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+
+    "Infinitive Phrase as as Subject Complement nn": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "8", "type": "intra-phrase", "pattern": "(#Copula|#Linking|#Stative) #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+
+    "Infinitive Phrase as as aj": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "9", "type": "intra-phrase", "pattern": "#nn+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}, "modifier": {"term": "#iv+", "modifies": "#nn+", "termTag": "Adjectival"}},
+
+    "Infinitive Phrase as as av 1": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "10", "type": "intra-phrase", "pattern": "#Past #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Infinitive Phrase as as av 2": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "11", "type": "intra-phrase", "pattern": "(who|whom) #Present #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Infinitive Phrase as as av 3": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "12", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Infinitive Phrase after Gerund": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "13", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}, "modifier": {"term": "#iv+", "modifies": "#gd+", "termTag": "ObjectOfGerund"}},
+
+    "Infinitive Phrase after Pariciple": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "14", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}}
+}

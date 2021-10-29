@@ -17,15 +17,23 @@
 
   "Present Participle 4": {"batch": "Verbals", "batchOrder": "3", "order": "9", "type": "intra-phrase", "pattern": "#nn+ (#Verbal && /ing$/) #nn+", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
 
-  "Present Participle 5": {"batch": "Verbals", "batchOrder": "3", "order": "10", "type": "intra-phrase", "pattern": "#aj+ (#Verbal && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
+  "Present Participle 5": {"batch": "Verbals", "batchOrder": "3", "order": "10", "type": "intra-phrase", "pattern": "#av+ (#Verbal && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
 
-  "Gerund": {"batch":"Verbals", "batchOrder": "3",  "order": "11", "type": "intra-phrase", "pattern": "(#Verbal && !#Participle && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
+  "Present Participle 6": {"batch": "Verbals", "batchOrder": "3", "order": "11", "type": "inter-phrase", "pattern": "#nn+ (#Verbal && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
 
-  "Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "12", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "#ObjectOfInfinitive"}},
+  "Gerund 1": {"batch":"Verbals", "batchOrder": "3",  "order": "12", "type": "intra-phrase", "pattern": "(#Verbal && !#Participle && /ing$/) #vb+", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
 
-  "Tag #vl": {"batch": "Verbals", "batchOrder": "3", "order": "13", "type": "intra-phrase", "pattern": "#Verbal", "tag": {"all": "vl"}},
+  "Gerund 2": {"batch":"Verbals", "batchOrder": "3",  "order": "13", "type": "intra-phrase", "pattern": "#aj+ (#Verbal && !#Participle && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
 
-  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "14", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": "PastSimple"}}},
+  "Gerund 3": {"batch":"Verbals", "batchOrder": "3",  "order": "14", "type": "intra-phrase", "pattern": "#Preposition+ (#Verbal && !#Participle && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
 
-  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "15", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": "PresentSimple"}}}
+  "Gerund 4": {"batch":"Verbals", "batchOrder": "3",  "order": "15", "type": "intra-phrase", "pattern": "(#Verbal && !#Participle && /ing$/)", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
+
+  "Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "3",  "order": "16", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "#ObjectOfInfinitive"}},
+
+  "Tag #vl": {"batch": "Verbals", "batchOrder": "3", "order": "17", "type": "intra-phrase", "pattern": "#Verbal", "tag": {"all": "vl"}},
+
+  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "18", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": "PastSimple"}}},
+
+  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "19", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": "PresentSimple"}}}
 }
