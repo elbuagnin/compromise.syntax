@@ -1,0 +1,7 @@
+{
+    "Adjective": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#aj+ #nn+", "modifier": {"term": "#aj+", "modifies": "#nn+"}},
+
+    "Adverb of Adjective": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#av+ #aj+", "modifier": {"term": "#av+", "modifies": "#aj+"}},
+
+    "Adverb of Verb": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#vb+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+"}}
+}
