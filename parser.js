@@ -42,7 +42,7 @@ export default function parser(doc) {
           }
 
           let modTag = modifies.text();
-          modTag = modTag.replace(' ', '-');
+          modTag = modTag.replace(/ /g, '-');
           modTag = `${termTag}:${modTag}`;
 
           term.not(modifies).tag(modTag);
