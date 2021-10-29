@@ -13,7 +13,6 @@
   "even if": {"batchOrder": "4", "term": "even if", "pattern": "even if", "tag": "SubordinatingConjunction"},
   "even though": {"batchOrder": "4", "term": "even though", "pattern": "even though", "tag": "SubordinatingConjunction"},
   "even while": {"batchOrder": "4", "term": "even while", "pattern": "even while", "tag": "SubordinatingConjunction"},
-  "having been": {"batchOrder": "4", "term": "having been", "pattern": "having been", "tag": "PerfectParticiple"},
   "in case": {"batchOrder": "4", "term": "in case", "pattern": "in case", "tag": "SubordinatingConjunction"},
   "if only": {"batchOrder": "4", "term": "if only", "pattern": "if only", "tag": ["Condition", "SubordinatingConjunction"]},
   "in the event that": {"batchOrder": "4", "term": "in the event that", "pattern": "in the event that", "tag": "SubordinatingConjunction"},
