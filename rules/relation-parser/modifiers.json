@@ -1,5 +1,5 @@
 {
-    "Adjective": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#aj+ #nn+", "modifier": {"term": "#aj+", "modifies": "#nn+"}},
+    "Adjective of Nominal": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#aj+ #nn+", "modifier": {"term": "#aj+", "modifies": "#nn+"}},
 
     "Adverb of Adjective": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#av+ #aj+", "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
