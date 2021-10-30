@@ -1,24 +1,45 @@
 import * as mfs from './lib/filesystem.js';
 
 export default function parser(doc) {
-  function remove(term, untag) {
-    if (typeof untag === 'string') {
-      if (term.match(untag).found) {
-        term.untag(untag);
-      }
-    } else if (untag.constructor === Array) {
-      untag.forEach((oneTag) => {
-        if (term.match(oneTag).found) {
-          term.untag(oneTag);
-        }
-      });
-    }
+  // Relationship rules
+  function loadRelationRules(file) {
+    const rulesPath = './rules/relation-parser/';
+    const fileType = '.json';
+    const filePath = rulesPath + file + fileType;
+    const rules = [];
+    const rulesData = JSON.parse(mfs.loadJSONFile(filePath));
+
+    Object.values(rulesData).forEach((rule) => {
+      rules.push(rule);
+    });
+
+    return rules;
   }
+
+  const nominalRules = loadRelationRules('nominals');
+  const verbialRules = loadRelationRules('verbials');
+  const modifierRules = loadRelationRules('modifiers');
+  const verbalRules = loadRelationRules('verbals');
+  const prepositionalRules = loadRelationRules('prepositional');
 
   function tagMatch(sentence, rule) {
     const {
       pattern, tag, untag, demark, tagID, replace, modifier,
     } = rule;
+
+    function remove(removeTerm, removeTag) {
+      if (typeof removeTag === 'string') {
+        if (removeTerm.match(removeTag).found) {
+          removeTerm.untag(removeTag);
+        }
+      } else if (removeTag.constructor === Array) {
+        removeTag.forEach((oneTag) => {
+          if (removeTerm.match(oneTag).found) {
+            removeTerm.untag(oneTag);
+          }
+        });
+      }
+    }
 
     if (pattern) {
       if (sentence.has(pattern)) {
@@ -29,7 +50,7 @@ export default function parser(doc) {
         console.log('\n');
         console.log(matchedPattern.text());
         console.log('\n');
-        console.log(`${('Tag: ' && JSON.stringify(tag)) || ''}\n${('Untag: ' && JSON.stringify(untag)) || ''}\n${('Demark: ' && JSON.stringify(demark)) || ''}\n${('Replace: ' && JSON.stringify(replace)) || ''}\n${('Modified: ' && JSON.stringify(modifier)) || ''}`);
+        console.log(`${('Tag: ' && JSON.stringify(tag)) || ''}\n${('Untag: ' && JSON.stringify(untag)) || ''}\n${('Demark: ' && JSON.stringify(demark)) || ''}\n${('Replace: ' && JSON.stringify(replace)) || ''}\n${('Modifier: ' && JSON.stringify(modifier)) || ''}`);
         console.log('\n');
 
         if (modifier) {
@@ -251,11 +272,103 @@ export default function parser(doc) {
     }
   }
 
+  function arrayCompare(arr1, arr2) {
+    if (arr1.toString() === arr2.toString()) {
+      return true;
+    }
+    return false;
+  }
+
+  function differentElements(arr1, arr2) {
+    const changes = [];
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        changes.push(arr2[i]);
+      } else {
+        changes.push('same');
+      }
+    }
+
+    return changes;
+  }
+
+  function getPosRoles(sentence) {
+    const roles = [];
+    sentence.terms().forEach((term) => {
+      let tags = term.json({
+        text: false, terms: { text: false, tags: true, whitespace: false },
+      })[0].terms;
+      tags = tags[0].tags;
+
+      let role = 'none';
+      tags = tags.filter((tag) => (
+        tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
+        || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
+        || tag === 'Pp'
+      ));
+
+      role = tags[tags.length - 1];
+
+      roles.push(role);
+    });
+    return roles;
+  }
+
+  function parseRule(sentence, rule) {
+    console.log(`@#@#@#@#@# ${rule.batch} : #${rule.order} @#@#@#@#@#@`);
+    if (rule.type === 'intra-phrase') {
+      let chunks = sentence;
+      if (sentence.has('#Comma')) {
+        const commas = sentence.match('#Comma');
+        commas.forEach((comma) => {
+          if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
+            chunks = chunks.splitAfter(comma);
+          }
+        });
+      }
+      chunks.forEach((chunk) => {
+        tagMatch(chunk, rule);
+      });
+    } else {
+      tagMatch(sentence, rule);
+    }
+  }
+
+  function relationships(sentence, changes) {
+    function check(rules) {
+      rules.forEach((rule) => {
+        parseRule(sentence, rule);
+      });
+    }
+
+    changes.forEach((change) => {
+      switch (change) {
+        case 'Nn':
+          check(nominalRules);
+          break;
+        case 'Vb':
+          check(verbialRules);
+          break;
+        case 'Aj' || 'Av':
+          check(modifierRules);
+          break;
+        case 'Vl' || 'Iv' || 'Gd' || 'Pt':
+          check(verbalRules);
+          break;
+        case 'Pp':
+          check(prepositionalRules);
+          break;
+        default:
+          break;
+      }
+    });
+  }
+
   // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
-  const rulePath = './rules/parser/';
+  const posPath = './rules/pos-parser/';
   const list = true;
-  const ruleSets = mfs.loadJSONDir(rulePath, list);
+  const ruleSets = mfs.loadJSONDir(posPath, list);
   const orderedRules = [];
   Object.values(ruleSets).forEach((ruleSet) => {
     Object.values(ruleSet).forEach((rule) => {
@@ -275,23 +388,22 @@ export default function parser(doc) {
     console.log(sentence.debug());
 
     orderedRules.forEach((rule) => {
-      if (rule.type === 'intra-phrase') {
-        let chunks = sentence;
-        if (sentence.has('#Comma')) {
-          const commas = sentence.match('#Comma');
-          commas.forEach((comma) => {
-            if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
-              chunks = chunks.splitAfter(comma);
-            }
-          });
-        }
-        chunks.forEach((chunk) => {
-          tagMatch(chunk, rule);
-        });
-      } else {
-        tagMatch(sentence, rule);
+      const rolesBefore = getPosRoles(sentence);
+
+      parseRule(sentence, rule);
+
+      const rolesAfter = getPosRoles(sentence);
+
+      if (arrayCompare(rolesBefore, rolesAfter) === false) {
+        const changedElements = differentElements(rolesBefore, rolesAfter);
+        console.log('Checking relationships of changed elements.');
+        relationships(sentence, changedElements);
+        console.log(changedElements);
+        console.log(rolesBefore);
+        console.log(rolesAfter);
       }
     });
+
     console.log('Sentence post parser:\n');
     console.log(sentence.text());
     console.log(sentence.debug());

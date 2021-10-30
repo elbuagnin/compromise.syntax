@@ -1,5 +1,0 @@
-{
-  "Preposition whom": {"batch": "Relative Pronouns", "batchOrder": "10", "order": "1", "type": "intra-phrase", "pattern": "#Preposition whom (#Noun|#Pronoun|#Possessive|#Determiner)", "tag": {"on": {"term": "whom", "termTag": ["RelativePronoun", "Restrictive"]}}, "untag": {"on": {"term": "whom", "termUnTag": "#QuestionWord"}}},
-
-  "which": {"batch": "Relative Pronouns", "batchOrder": "10", "order": "2", "type": "intra-phrase", "pattern": "which #Present", "tag": {"on": "which", "termTag": ["RelativePronoun", "Restrictive"]}, "untag": {"on": {"term": "which", "termUnTag": "#QuestionWord"}}}
-}

@@ -1,3 +1,0 @@
-{
-    "Compound Verbal Phrase": {"batch":"Complex Compound Phrases", "batchOrder": "14",  "order": "1", "type": "intra-phrase", "pattern": "(#VerbalPhrase+ && !#List && !#Comma) #CoordinatingConjunction #VerbalPhrase+", "tag": {"all": "CompoundPhrase"}}
-}
