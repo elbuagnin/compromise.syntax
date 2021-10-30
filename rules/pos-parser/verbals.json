@@ -1,63 +1,37 @@
 {
-  "Possible Past Participle": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "(#PastSimple|having #PastSimple|having been #PastSimple)", "tag": {"all": "Possible-PastParticiple"}},
+  "Current Infinitives": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "#Infinitive", "tag": {"all": "VerbalCandidate"}},
 
-  "Past Participle 1": {"batch": "Verbals", "batchOrder": "7", "order": "2", "type": "intra-phrase", "pattern": "#Participle", "tag": {"on": {"term": "(#Participle && !#PerfectParticiple)", "termTag": "#PastParticiple"}}},
+  "Current Participles": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "#Participle", "tag": {"all":["PastParticipleCandidate", "VerbalCandidate"]}},
 
-  "Past Participle 2": {"batch": "Verbals", "batchOrder": "7", "order": "3", "type": "intra-phrase", "pattern": "^(#Possible-PastParticiple && #Comma)", "tag": {"on": {"term": "#PastTense", "termTag": ["#PastParticiple", "aj"]}}, "untag": {"on": {"term": "#PastParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
+  "Potential Verbal": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "/ed$|d$|t$|en$|n$/", "tag": {"all": ["PastParticipleCandidate", "VerbalCandidate"]}},
 
-  "Past Participle 3": {"batch": "Verbals", "batchOrder": "7", "order": "4", "type": "intra-phrase", "pattern": "^#Possible-PastParticiple (* && !#vb) #Comma", "tag": {"on": {"term": "#PastTense", "termTag": "#PastParticiple"}}, "untag": {"all": "vb"}},
+  "Potential Progressive Verbals": {"batch": "Verbals", "batchOrder": "7", "order": "2", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/)", "tag": {"all": ["Progressive-Verbal-Candidate", "VerbalCandidate"]}},
 
-  "Past Participle 4": {"batch": "Verbals", "batchOrder": "7", "order": "5", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Possible-PastParticiple (* && !#vb) #Comma", "tag": {"on": {"term": "#Verbal", "termTag": "#PastParticiple"}}},
+  "Verbal 1": {"batch":"Verbals", "batchOrder": "7",  "order": "23", "type": "intra-phrase", "pattern": "#VerbalCandidate #vb+", "tag": {"all": "VerbalPhrase"}},
 
-  "Past Participle 5": {"batch": "Verbals", "batchOrder": "7", "order": "6", "type": "intra-phrase", "pattern": "#dt #Possible-PastParticiple #nn+", "tag": {"on": {"term": "#Verbal", "termTag": "#PastParticiple"}}},
+  "Verbal 2": {"batch":"Verbals", "batchOrder": "7",  "order": "24", "type": "intra-phrase", "pattern": "#VerbalCandidate #pp+ #vb+", "tag": {"all": "VerbalPhrase"}},
 
-  "Past Participle 6": {"batch": "Verbals", "batchOrder": "7", "order": "7", "type": "intra-phrase", "pattern": "#nn+ #Possible-PastParticiple #nn+", "tag": {"on": {"term": "#Verbal", "termTag": "#PastParticiple"}}},
+  "Verbal 3": {"batch":"Verbals", "batchOrder": "7",  "order": "25", "type": "intra-phrase", "pattern": "#vb+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Past Participle 7": {"batch": "Verbals", "batchOrder": "7", "order": "8", "type": "intra-phrase", "pattern": "#av+ #Possible-PastParticiple", "tag": {"on": {"term": "#Verbal", "termTag": "#PastParticiple"}}},
+  "Verbal 4": {"batch":"Verbals", "batchOrder": "7",  "order": "26", "type": "intra-phrase", "pattern": "#aj+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Past Participle 8": {"batch": "Verbals", "batchOrder": "7", "order": "9", "type": "intra-phrase", "pattern": "#nn+ #Possible-PastParticiple #iv+", "tag": {"on": {"term": "#Verbal", "termTag": "#PastParticiple"}}},
+  "Verbal 5": {"batch":"Verbals", "batchOrder": "7",  "order": "27", "type": "intra-phrase", "pattern": "#Preposition+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Past Participle 9": {"batch": "Verbals", "batchOrder": "7", "order": "10", "type": "intra-phrase", "pattern": "#nn+ #Possible-PastParticiple #pp+", "tag": {"on": {"term": "#Verbal", "termTag": "#PastParticiple"}}},
+  "Verbal 6": {"batch":"Verbals", "batchOrder": "7",  "order": "28", "type": "intra-phrase", "pattern": "#Infinitive+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Unset Possible Past Participles": {"batch": "Verbals", "batchOrder": "7", "order": "11", "type": "inter-phrase", "pattern": "#Possible-PastParticiple", "untag": {"on": {"term": "#Possible-PastParticiple", "termUnTag": "#Possible-PastParticiple"}}},
+  "Verbal 8": {"batch": "Verbals", "batchOrder": "7", "order": "3", "type": "intra-phrase", "pattern": "^(#VerbalCandidate && #Comma)", "tag": {"all": "VerbalPhrase"}},
 
-  "Possible Present Participle": {"batch": "Verbals", "batchOrder": "7", "order": "12", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/)", "tag": {"all": "Possible-PresentParticiple"}},
+  "Verbal 9": {"batch": "Verbals", "batchOrder": "7", "order": "4", "type": "intra-phrase", "pattern": "^#VerbalCandidate (* && !#vb) #Comma", "tag": {"all": "VerbalPhrase"}},
 
-  "Present Participle 1": {"batch": "Verbals", "batchOrder": "7", "order": "13", "type": "intra-phrase", "pattern": "^(#Possible-PresentParticiple && #Comma)", "tag": {"on": {"term": "#Verbal", "termTag": ["#PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#PresentParticiple", "termUnTag": ["#Verbs", "#vb"]}}},
+  "Verbal 10": {"batch": "Verbals", "batchOrder": "7", "order": "5", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #VerbalCandidate (* && !#vb) #Comma", "tag": {"all": "VerbalPhrase"}},
 
-  "Present Participle 2": {"batch": "Verbals", "batchOrder": "7", "order": "14", "type": "intra-phrase", "pattern": "^#Possible-PresentParticiple (* && !#vb) #Comma", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}, "untag": {"all": "vb"}},
+  "Verbal 11": {"batch": "Verbals", "batchOrder": "7", "order": "6", "type": "intra-phrase", "pattern": "#dt #VerbalCandidate #nn+", "tag": {"all": "VerbalPhrase"}},
 
-  "Present Participle 3": {"batch": "Verbals", "batchOrder": "7", "order": "15", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Possible-PresentParticiple (* && !#vb) #Comma", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
+  "Verbal 12": {"batch": "Verbals", "batchOrder": "7", "order": "7", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #nn+", "tag": {"all": "VerbalPhrase"}},
 
-  "Present Participle 4": {"batch": "Verbals", "batchOrder": "7", "order": "16", "type": "intra-phrase", "pattern": "#dt #Possible-PresentParticiple #nn+", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
+  "Verbal 13": {"batch": "Verbals", "batchOrder": "7", "order": "8", "type": "intra-phrase", "pattern": "#av+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Present Participle 5": {"batch": "Verbals", "batchOrder": "7", "order": "17", "type": "intra-phrase", "pattern": "#nn+ #Possible-PresentParticiple #nn+", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
+  "Verbal 14": {"batch": "Verbals", "batchOrder": "7", "order": "9", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #iv+", "tag": {"all": "VerbalPhrase"}},
 
-  "Present Participle 6": {"batch": "Verbals", "batchOrder": "7", "order": "18", "type": "intra-phrase", "pattern": "#av+ #Possible-PresentParticiple", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
-
-  "Present Participle 7": {"batch": "Verbals", "batchOrder": "7", "order": "19", "type": "intra-phrase", "pattern": "#nn+ #Possible-PresentParticiple #iv+", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
-
-  "Present Participle 8": {"batch": "Verbals", "batchOrder": "7", "order": "20", "type": "intra-phrase", "pattern": "#nn+ #Possible-PresentParticiple #pp+", "tag": {"on": {"term": "#Verbal", "termTag": "#PresentParticiple"}}},
-
-  "Unset Possible Present Participles": {"batch": "Verbals", "batchOrder": "7", "order": "21", "type": "inter-phrase", "pattern": "#Possible-PresentParticiple", "untag": {"on": {"term": "#Possible-PresentParticiple", "termUnTag": "#Possible-PresentParticiple"}}},
-
-  "Possible Gerund": {"batch": "Verbals", "batchOrder": "7", "order": "22", "type": "inter-phrase", "pattern": "(#Verbal && !#Participle && /ing$/)", "tag": {"all": "Possible-Gerund"}},
-
-  "Gerund 1": {"batch":"Verbals", "batchOrder": "7",  "order": "23", "type": "intra-phrase", "pattern": "#Possible-Gerund #vb+", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
-
-  "Gerund 2": {"batch":"Verbals", "batchOrder": "7",  "order": "24", "type": "intra-phrase", "pattern": "#Possible-Gerund #pp+ #vb+", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
-
-  "Gerund 3": {"batch":"Verbals", "batchOrder": "7",  "order": "25", "type": "intra-phrase", "pattern": "#vb+ #Possible-Gerund", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
-
-  "Gerund 4": {"batch":"Verbals", "batchOrder": "7",  "order": "26", "type": "intra-phrase", "pattern": "#aj+ #Possible-Gerund", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
-
-  "Gerund 5": {"batch":"Verbals", "batchOrder": "7",  "order": "27", "type": "intra-phrase", "pattern": "#Preposition+ #Possible-Gerund", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
-
-  "Gerund 6": {"batch":"Verbals", "batchOrder": "7",  "order": "28", "type": "intra-phrase", "pattern": "#Infinitive+ #Possible-Gerund", "tag": {"on": {"term": "#Verbal", "termTag": ["Gerund", "gd", "nn"]}}},
-
-  "Unset Possible Gerund": {"batch": "Verbals", "batchOrder": "7", "order": "29", "type": "inter-phrase", "pattern": "#Possible-Gerund", "untag": {"on": {"term": "#Possible-Gerund", "termUnTag": "#Possible-Gerund"}}},
-
-  "Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "7",  "order": "30", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}},
-
-  "Tag #vl": {"batch": "Verbals", "batchOrder": "7", "order": "31", "type": "intra-phrase", "pattern": "#Verbal", "tag": {"all": "vl"}}
+  "Verbal 15": {"batch": "Verbals", "batchOrder": "7", "order": "10", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #pp+", "tag": {"all": "VerbalPhrase"}}
 }
