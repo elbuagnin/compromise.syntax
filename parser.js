@@ -315,8 +315,11 @@ export default function parser(doc) {
       }
 
       const rolesAfter = getPosRoles(sentence);
-      console.log(rolesBefore);
-      console.log(rolesAfter);
+
+      if (rolesBefore !== rolesAfter) {
+        console.log(rolesBefore);
+        console.log(rolesAfter);
+      }
     });
 
     console.log('Sentence post parser:\n');
