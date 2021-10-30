@@ -1,6 +1,25 @@
 import * as mfs from './lib/filesystem.js';
 
 export default function parser(doc) {
+  // Relationship rules
+  const nominalRules = [];
+  const nominalRulesPath = './rules/relation-parser/nominals.json';
+  const nominalData = JSON.parse(mfs.loadJSONFile(nominalRulesPath));
+
+  Object.values(nominalData).forEach((rule) => {
+    nominalRules.push(rule);
+  });
+
+  const modifierRules = [];
+  const modifierRulesPath = './rules/relation-parser/modifiers.json';
+  const modifierData = mfs.loadJSONFile(modifierRulesPath);
+
+  Object.values(modifierData).forEach((rule) => {
+    modifierRules.push(rule);
+  });
+
+  console.log(nominalRules);
+
   function remove(term, untag) {
     if (typeof untag === 'string') {
       if (term.match(untag).found) {
@@ -29,7 +48,7 @@ export default function parser(doc) {
         console.log('\n');
         console.log(matchedPattern.text());
         console.log('\n');
-        console.log(`${('Tag: ' && JSON.stringify(tag)) || ''}\n${('Untag: ' && JSON.stringify(untag)) || ''}\n${('Demark: ' && JSON.stringify(demark)) || ''}\n${('Replace: ' && JSON.stringify(replace)) || ''}\n${('Modified: ' && JSON.stringify(modifier)) || ''}`);
+        console.log(`${('Tag: ' && JSON.stringify(tag)) || ''}\n${('Untag: ' && JSON.stringify(untag)) || ''}\n${('Demark: ' && JSON.stringify(demark)) || ''}\n${('Replace: ' && JSON.stringify(replace)) || ''}\n${('Modifier: ' && JSON.stringify(modifier)) || ''}`);
         console.log('\n');
 
         if (modifier) {
@@ -271,11 +290,52 @@ export default function parser(doc) {
     return roles;
   }
 
+  function arrayCompare(arr1, arr2) {
+    if (arr1.toString() === arr2.toString()) {
+      return true;
+    }
+    return false;
+  }
+
+  function differentElements(arr1, arr2) {
+    const changes = [];
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        changes.push(arr2[i]);
+      } else {
+        changes.push('same');
+      }
+    }
+
+    return changes;
+  }
+
+  function relationships(sentence, changes) {
+    changes.forEach((change) => {
+      switch (change) {
+        case 'Nn':
+          tagMatch(sentence, nominalRules);
+          break;
+        case 'Vb':
+          // tagMatch(sentence, verbialRules);
+          break;
+        case 'Aj':
+          tagMatch(sentence, modifierRules);
+          break;
+        case 'Av':
+          tagMatch(sentence, modifierRules);
+          break;
+        default:
+          break;
+      }
+    });
+  }
+
   // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
-  const rulePath = './rules/pos-parser/';
+  const posPath = './rules/pos-parser/';
   const list = true;
-  const ruleSets = mfs.loadJSONDir(rulePath, list);
+  const ruleSets = mfs.loadJSONDir(posPath, list);
   const orderedRules = [];
   Object.values(ruleSets).forEach((ruleSet) => {
     Object.values(ruleSet).forEach((rule) => {
@@ -316,7 +376,11 @@ export default function parser(doc) {
 
       const rolesAfter = getPosRoles(sentence);
 
-      if (rolesBefore !== rolesAfter) {
+      if (arrayCompare(rolesBefore, rolesAfter) === false) {
+        const changedElements = differentElements(rolesBefore, rolesAfter);
+        console.log('Checking relationships of changed elements.');
+        relationships(sentence, changedElements);
+        console.log(changedElements);
         console.log(rolesBefore);
         console.log(rolesAfter);
       }
