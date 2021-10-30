@@ -25,7 +25,7 @@
 
     "Infinitive Phrase as as av 3": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "12", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-    "Infinitive Phrase after Gerund": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "13", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}, "modifier": {"term": "#iv+", "modifies": "#gd+", "termTag": "ObjectOfGerund"}},
+    "Infinitive Phrase after Gerund": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "13", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
     "Infinitive Phrase after Pariciple": {"batch":"Phrase Roles", "batchOrder": "6",  "order": "14", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}}
 }

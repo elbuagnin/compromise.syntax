@@ -57,7 +57,7 @@
 
   "Unset Possible Gerund": {"batch": "Verbals", "batchOrder": "8", "order": "29", "type": "inter-phrase", "pattern": "#Possible-Gerund", "untag": {"on": {"term": "#Possible-Gerund", "termUnTag": "#Possible-Gerund"}}},
 
-  "Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "8",  "order": "30", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "#ObjectOfInfinitive"}},
+  "Infinitive Phrase": {"batch":"Phrases, 2nd Pass", "batchOrder": "8",  "order": "30", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}},
 
   "Tag #vl": {"batch": "Verbals", "batchOrder": "8", "order": "31", "type": "intra-phrase", "pattern": "#Verbal", "tag": {"all": "vl"}}
 }
