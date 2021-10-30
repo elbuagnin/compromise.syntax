@@ -1,7 +1,7 @@
 {
-    "Adjective Phrases": {"batch":"Phrases", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
+    "Adjective Phrases": {"batch":"Phrases", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"all": ["AdjectivePhrase", "aj"]}},
 
-    "Noun Phrases 1": {"batch":"Phrases", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#aj+ #nn+","tag": {"all": ["NounPhrase", "nn"]}, "untag": {"all": "#aj"}, "modifier": {"term": "#aj+", "modifies": "#nn+"}},
+    "Noun Phrases 1": {"batch":"Phrases", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#aj+ #nn+","tag": {"all": ["NounPhrase", "nn"]}, "untag": {"all": "#aj"}},
 
     "Noun Phrases 2": {"batch":"Phrases", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}},
 
