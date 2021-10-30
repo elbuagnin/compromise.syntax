@@ -1,0 +1,3 @@
+{
+  "Adverb of Verb": {"batch":"Verbials", "type": "intra-phrase", "pattern": "#vb+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+"}}
+}
