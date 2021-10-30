@@ -314,16 +314,25 @@ export default function parser(doc) {
     changes.forEach((change) => {
       switch (change) {
         case 'Nn':
-          tagMatch(sentence, nominalRules);
+          console.log('checking nouns');
+          nominalRules.forEach((rule) => {
+            tagMatch(sentence, rule);
+          });
           break;
         case 'Vb':
           // tagMatch(sentence, verbialRules);
           break;
         case 'Aj':
-          tagMatch(sentence, modifierRules);
+          console.log('checking adjectives');
+          modifierRules.forEach((rule) => {
+            tagMatch(sentence, rule);
+          });
           break;
         case 'Av':
-          tagMatch(sentence, modifierRules);
+          console.log('checking adverbs');
+          modifierRules.forEach((rule) => {
+            tagMatch(sentence, rule);
+          });
           break;
         default:
           break;
