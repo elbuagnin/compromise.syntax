@@ -251,6 +251,26 @@ export default function parser(doc) {
     }
   }
 
+  function getPosRoles(sentence) {
+    const roles = [];
+    sentence.terms().forEach((term) => {
+      let tags = term.json({
+        text: false, terms: { text: false, tags: true, whitespace: false },
+      })[0].terms;
+      tags = tags[0].tags;
+
+      let role = 'none';
+      tags = tags.filter((tag) => (
+        tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
+      ));
+
+      role = tags[tags.length - 1];
+
+      roles.push(role);
+    });
+    return roles;
+  }
+
   // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
   const rulePath = './rules/pos-parser/';
@@ -275,6 +295,8 @@ export default function parser(doc) {
     console.log(sentence.debug());
 
     orderedRules.forEach((rule) => {
+      const rolesBefore = getPosRoles(sentence);
+
       if (rule.type === 'intra-phrase') {
         let chunks = sentence;
         if (sentence.has('#Comma')) {
@@ -291,7 +313,12 @@ export default function parser(doc) {
       } else {
         tagMatch(sentence, rule);
       }
+
+      const rolesAfter = getPosRoles(sentence);
+      console.log(rolesBefore);
+      console.log(rolesAfter);
     });
+
     console.log('Sentence post parser:\n');
     console.log(sentence.text());
     console.log(sentence.debug());
