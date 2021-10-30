@@ -314,10 +314,30 @@ export default function parser(doc) {
     return roles;
   }
 
+  function parseRule(sentence, rule) {
+    console.log(`@#@#@#@#@# ${rule.batch} : #${rule.order} @#@#@#@#@#@`);
+    if (rule.type === 'intra-phrase') {
+      let chunks = sentence;
+      if (sentence.has('#Comma')) {
+        const commas = sentence.match('#Comma');
+        commas.forEach((comma) => {
+          if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
+            chunks = chunks.splitAfter(comma);
+          }
+        });
+      }
+      chunks.forEach((chunk) => {
+        tagMatch(chunk, rule);
+      });
+    } else {
+      tagMatch(sentence, rule);
+    }
+  }
+
   function relationships(sentence, changes) {
     function check(rules) {
       rules.forEach((rule) => {
-        tagMatch(sentence, rule);
+        parseRule(sentence, rule);
       });
     }
 
@@ -370,22 +390,7 @@ export default function parser(doc) {
     orderedRules.forEach((rule) => {
       const rolesBefore = getPosRoles(sentence);
 
-      if (rule.type === 'intra-phrase') {
-        let chunks = sentence;
-        if (sentence.has('#Comma')) {
-          const commas = sentence.match('#Comma');
-          commas.forEach((comma) => {
-            if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
-              chunks = chunks.splitAfter(comma);
-            }
-          });
-        }
-        chunks.forEach((chunk) => {
-          tagMatch(chunk, rule);
-        });
-      } else {
-        tagMatch(sentence, rule);
-      }
+      parseRule(sentence, rule);
 
       const rolesAfter = getPosRoles(sentence);
 
