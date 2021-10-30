@@ -2,42 +2,44 @@ import * as mfs from './lib/filesystem.js';
 
 export default function parser(doc) {
   // Relationship rules
-  const nominalRules = [];
-  const nominalRulesPath = './rules/relation-parser/nominals.json';
-  const nominalData = JSON.parse(mfs.loadJSONFile(nominalRulesPath));
+  function loadRelationRules(file) {
+    const rulesPath = './rules/relation-parser/';
+    const fileType = '.json';
+    const filePath = rulesPath + file + fileType;
+    const rules = [];
+    const rulesData = JSON.parse(mfs.loadJSONFile(filePath));
 
-  Object.values(nominalData).forEach((rule) => {
-    nominalRules.push(rule);
-  });
+    Object.values(rulesData).forEach((rule) => {
+      rules.push(rule);
+    });
 
-  const modifierRules = [];
-  const modifierRulesPath = './rules/relation-parser/modifiers.json';
-  const modifierData = mfs.loadJSONFile(modifierRulesPath);
-
-  Object.values(modifierData).forEach((rule) => {
-    modifierRules.push(rule);
-  });
-
-  console.log(nominalRules);
-
-  function remove(term, untag) {
-    if (typeof untag === 'string') {
-      if (term.match(untag).found) {
-        term.untag(untag);
-      }
-    } else if (untag.constructor === Array) {
-      untag.forEach((oneTag) => {
-        if (term.match(oneTag).found) {
-          term.untag(oneTag);
-        }
-      });
-    }
+    return rules;
   }
+
+  const nominalRules = loadRelationRules('nominals');
+  const verbialRules = loadRelationRules('verbials');
+  const modifierRules = loadRelationRules('modifiers');
+  const verbalRules = loadRelationRules('verbals');
+  const prepositionalRules = loadRelationRules('prepositional');
 
   function tagMatch(sentence, rule) {
     const {
       pattern, tag, untag, demark, tagID, replace, modifier,
     } = rule;
+
+    function remove(removeTerm, removeTag) {
+      if (typeof removeTag === 'string') {
+        if (removeTerm.match(removeTag).found) {
+          removeTerm.untag(removeTag);
+        }
+      } else if (removeTag.constructor === Array) {
+        removeTag.forEach((oneTag) => {
+          if (removeTerm.match(oneTag).found) {
+            removeTerm.untag(oneTag);
+          }
+        });
+      }
+    }
 
     if (pattern) {
       if (sentence.has(pattern)) {
@@ -270,26 +272,6 @@ export default function parser(doc) {
     }
   }
 
-  function getPosRoles(sentence) {
-    const roles = [];
-    sentence.terms().forEach((term) => {
-      let tags = term.json({
-        text: false, terms: { text: false, tags: true, whitespace: false },
-      })[0].terms;
-      tags = tags[0].tags;
-
-      let role = 'none';
-      tags = tags.filter((tag) => (
-        tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
-      ));
-
-      role = tags[tags.length - 1];
-
-      roles.push(role);
-    });
-    return roles;
-  }
-
   function arrayCompare(arr1, arr2) {
     if (arr1.toString() === arr2.toString()) {
       return true;
@@ -310,29 +292,51 @@ export default function parser(doc) {
     return changes;
   }
 
+  function getPosRoles(sentence) {
+    const roles = [];
+    sentence.terms().forEach((term) => {
+      let tags = term.json({
+        text: false, terms: { text: false, tags: true, whitespace: false },
+      })[0].terms;
+      tags = tags[0].tags;
+
+      let role = 'none';
+      tags = tags.filter((tag) => (
+        tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
+        || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
+        || tag === 'Pp'
+      ));
+
+      role = tags[tags.length - 1];
+
+      roles.push(role);
+    });
+    return roles;
+  }
+
   function relationships(sentence, changes) {
+    function check(rules) {
+      rules.forEach((rule) => {
+        tagMatch(sentence, rule);
+      });
+    }
+
     changes.forEach((change) => {
       switch (change) {
         case 'Nn':
-          console.log('checking nouns');
-          nominalRules.forEach((rule) => {
-            tagMatch(sentence, rule);
-          });
+          check(nominalRules);
           break;
         case 'Vb':
-          // tagMatch(sentence, verbialRules);
+          check(verbialRules);
           break;
-        case 'Aj':
-          console.log('checking adjectives');
-          modifierRules.forEach((rule) => {
-            tagMatch(sentence, rule);
-          });
+        case 'Aj' || 'Av':
+          check(modifierRules);
           break;
-        case 'Av':
-          console.log('checking adverbs');
-          modifierRules.forEach((rule) => {
-            tagMatch(sentence, rule);
-          });
+        case 'Vl' || 'Iv' || 'Gd' || 'Pt':
+          check(verbalRules);
+          break;
+        case 'Pp':
+          check(prepositionalRules);
           break;
         default:
           break;
