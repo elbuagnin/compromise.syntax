@@ -1,3 +1,17 @@
 {
-  
+  "Object of Infinitive": {"batch":"Prepositions", "order": "1", "type": "intra-phrase", "pattern": "#Infinitive+ #pp+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+
+  "Prepositional Phrase as Adjective 1": {"batch": "Prepositions", "order": "2", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+
+  "Prepositional Phrase as Adjective 2": {"batch": "Prepositions", "order": "3", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+
+  "Prepositional Phrase as Adverb to Adjective": {"batch":"Prepositions", "order": "4", "type": "intra-phrase", "pattern": "#aj+ #Preposition #pp+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#aj+", "termTag": "Adverbial"}},
+
+  "Prepositional Phrase as Adverb 1": {"batch": "Prepositions", "order": "5", "type": "intra-phrase", "pattern": "#vb #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+  "Prepositional Phrase as Adverb 2": {"batch": "Prepositions", "order": "6", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+  "Prepositional Phrase as Adverb 3": {"batch": "Prepositions", "order": "7", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+  "Prepositional Phrase as Adverb 4": {"batch": "Prepositions", "order": "8", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}}
 }

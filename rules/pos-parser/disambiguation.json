@@ -1,3 +1,3 @@
 {
-  "#BaseVerb is #Noun": {"batch":"Disambiguation & Early Groupings", "batchOrder": "2",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "BaseVerb"}}}
+  "#BaseVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "BaseVerb"}}}
 }

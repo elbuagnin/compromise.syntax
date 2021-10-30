@@ -11,11 +11,5 @@
 
     "Gerund Phrase": {"batch":"Phrases", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "#Gerund #nn+", "tag": {"all": ["GerundPhrase", "gd"]}},
 
-    "Prepositional Phrases 1": {"batch": "Phrases", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"on": {"term": "#nn+", "termUnTag": "#nn"}}},
-
-    "Infinitive Phrase 3": {"batch":"Phrases", "batchOrder": "5",  "order": "8", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#pp+)", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#pp"]}, "modifier": {"term": "#pp+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
-
-    "Adjective Phrases with Preposition": {"batch":"Phrases", "batchOrder": "5",  "order": "9", "type": "intra-phrase", "pattern": "#aj+ #Preposition #PrepositionalPhrase?+ #PrepositionalPhrase", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#PrepositionalPhrase+", "modifies": "#aj+", "termTag": "Adverbial"}},
-
-    "Adjective Phrases with Infinitive Phrase": {"batch":"Phrases", "batchOrder": "5",  "order": "10", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}}
+    "Prepositional Phrases 1": {"batch": "Phrases", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"on": {"term": "#nn+", "termUnTag": "#nn"}}}
 }

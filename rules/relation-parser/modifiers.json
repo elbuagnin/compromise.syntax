@@ -1,7 +1,13 @@
 {
-    "Adjective of Nominal": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#aj+ #nn+", "modifier": {"term": "#aj+", "modifies": "#nn+"}},
+    "Adjective of Nominal": {"batch":"Modifiers", "order": "1", "type": "intra-phrase", "pattern": "#aj+ #nn+", "tag": {"on":{"term": "#aj+", "termTag": "nn"}}, "untag": {"on": {"term": "#aj+", "termUnTag": "aj"}}, "modifier": {"term": "#aj+", "modifies": "#nn+"}},
 
-    "Adverb of Adjective": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#av+ #aj+", "modifier": {"term": "#av+", "modifies": "#aj+"}},
+    "Adverb of Adjective": {"batch":"Modifiers", "order": "2", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
-    "Adverb of Verb": {"batch":"Modifiers", "type": "intra-phrase", "pattern": "#vb+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+"}}
+    "Prepositional Phrase as Adverb to Adjective": {"batch":"Prepositions", "order": "3", "type": "intra-phrase", "pattern": "#aj+ #Preposition #pp+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#aj+", "termTag": "Adverbial"}},
+
+    "Infinitive Phrase as Adverb to Adjective": {"batch":"Modifiers", "order": "4", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#iv+"}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
+
+    "Adverb of Verb": {"batch":"Modifiers", "order": "5", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"on":{"term": "#av+", "termTag": "vb"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
+
+    "Prepositional Phrase as Adverb to Verb": {"batch": "Modifiers", "order": "6", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}}
 }

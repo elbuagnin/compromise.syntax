@@ -1,17 +1,29 @@
 {
-  "Object of Infinitive": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "1", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Object of Preposition": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
+  "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "2", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Object of Verbal": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#Verbal+ (#nn+ &&!#gd && !#iv)", "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfGerund"}},
+  "Object of Infinitive": {"batch":"Nominals", "order": "3", "type": "intra-phrase", "pattern": "#Infinitive+ #nn+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Subject": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#nn+ #vb+", "tag": {"on": {"term": "#nn+", "termTag": "Subject"}}},
+  "Object of Preposition": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
-  "Subject Compliment": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+  "Object of Verbal": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#Verbal+ (#nn+ &&!#gd && !#iv)", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
 
-  "Direct Object": {"batch":"Nominals", "type": "intra-phrase", "pattern": "(#vb+ && !#Linking) #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}},
+  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "6", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Direct & Indirect Objects 1": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"each": [{"term": "#nn+", "termTag": "DirectObject"}, {"term": "#Agent+", "termTag": "IndirectObject"}]}},
+  "Prepositional Phrase as Adverb 2": {"batch": "Nominals", "order": "7", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Direct & Indirect Objects 2": {"batch":"Nominals", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"each": [{"term": "#nn+", "termTag": "DirectObject"}, {"term": "#Agent+", "termTag": "IndirectObject"}]}}
+  "Subject": {"batch":"Nominals", "order": "8", "type": "intra-phrase", "pattern": "#nn+ #vb+", "tag": {"on": {"term": "#nn+", "termTag": ["Subject", "sbj"]}}, "untag": {"all": "#nn"}},
+
+  "Subject Compliment": {"batch":"Nominals", "order": "9", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"all": "SubjectCompliment"}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+
+  "Direct w/ Indirect Objects 1": {"batch":"Nominals", "order": "10", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+
+  "Indirect Objects 1": {"batch":"Nominals", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "untag": {"all": "#nn"}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+
+  "Direct w/ Indirect Objects 1": {"batch":"Nominals", "order": "12", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "untag": {"all": "#nn"}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+
+  "Indirect Objects 1": {"batch":"Nominals", "order": "13", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "untag": {"all": "#nn"}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+
+  "Direct Object": {"batch":"Nominals", "order": "14", "type": "intra-phrase", "pattern": "#vb+ (#nn+ && !#iobj && !#dobj)", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}}
 }
