@@ -1,37 +1,35 @@
 {
   "Current Infinitives": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "#Infinitive", "tag": {"all": "VerbalCandidate"}},
 
-  "Current Participles": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "#Participle", "tag": {"all":["PastParticipleCandidate", "VerbalCandidate"]}},
+  "Current Participles": {"batch": "Verbals", "batchOrder": "7", "order": "2", "type": "inter-phrase", "pattern": "#Participle", "tag": {"all":["PastParticipleCandidate", "VerbalCandidate"]}},
 
-  "Potential Verbal": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "/ed$|d$|t$|en$|n$/", "tag": {"all": ["PastParticipleCandidate", "VerbalCandidate"]}},
+  "Potential Progressive Verbals": {"batch": "Verbals", "batchOrder": "7", "order": "4", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/)", "tag": {"all": ["Progressive-Verbal-Candidate", "VerbalCandidate"]}},
 
-  "Potential Progressive Verbals": {"batch": "Verbals", "batchOrder": "7", "order": "2", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/)", "tag": {"all": ["Progressive-Verbal-Candidate", "VerbalCandidate"]}},
+  "Verbal 1": {"batch":"Verbals", "batchOrder": "7",  "order": "5", "type": "intra-phrase", "pattern": "#VerbalCandidate #vb+", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 1": {"batch":"Verbals", "batchOrder": "7",  "order": "23", "type": "intra-phrase", "pattern": "#VerbalCandidate #vb+", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 2": {"batch":"Verbals", "batchOrder": "7",  "order": "6", "type": "intra-phrase", "pattern": "#VerbalCandidate #pp+ #vb+", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 2": {"batch":"Verbals", "batchOrder": "7",  "order": "24", "type": "intra-phrase", "pattern": "#VerbalCandidate #pp+ #vb+", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 3": {"batch":"Verbals", "batchOrder": "7",  "order": "7", "type": "intra-phrase", "pattern": "#vb+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 3": {"batch":"Verbals", "batchOrder": "7",  "order": "25", "type": "intra-phrase", "pattern": "#vb+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 4": {"batch":"Verbals", "batchOrder": "7",  "order": "8", "type": "intra-phrase", "pattern": "#aj+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 4": {"batch":"Verbals", "batchOrder": "7",  "order": "26", "type": "intra-phrase", "pattern": "#aj+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 5": {"batch":"Verbals", "batchOrder": "7",  "order": "9", "type": "intra-phrase", "pattern": "#Preposition+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 5": {"batch":"Verbals", "batchOrder": "7",  "order": "27", "type": "intra-phrase", "pattern": "#Preposition+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 6": {"batch":"Verbals", "batchOrder": "7",  "order": "10", "type": "intra-phrase", "pattern": "#Infinitive+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 6": {"batch":"Verbals", "batchOrder": "7",  "order": "28", "type": "intra-phrase", "pattern": "#Infinitive+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 8": {"batch": "Verbals", "batchOrder": "7", "order": "11", "type": "intra-phrase", "pattern": "^(#VerbalCandidate && #Comma)", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 8": {"batch": "Verbals", "batchOrder": "7", "order": "3", "type": "intra-phrase", "pattern": "^(#VerbalCandidate && #Comma)", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 9": {"batch": "Verbals", "batchOrder": "7", "order": "12", "type": "intra-phrase", "pattern": "^#VerbalCandidate (* && !#vb) #Comma", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 9": {"batch": "Verbals", "batchOrder": "7", "order": "4", "type": "intra-phrase", "pattern": "^#VerbalCandidate (* && !#vb) #Comma", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 10": {"batch": "Verbals", "batchOrder": "7", "order": "13", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #VerbalCandidate (* && !#vb) #Comma", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 10": {"batch": "Verbals", "batchOrder": "7", "order": "5", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #VerbalCandidate (* && !#vb) #Comma", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 11": {"batch": "Verbals", "batchOrder": "7", "order": "14", "type": "intra-phrase", "pattern": "#dt #VerbalCandidate #nn+", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 11": {"batch": "Verbals", "batchOrder": "7", "order": "6", "type": "intra-phrase", "pattern": "#dt #VerbalCandidate #nn+", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 12": {"batch": "Verbals", "batchOrder": "7", "order": "15", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #nn+", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 12": {"batch": "Verbals", "batchOrder": "7", "order": "7", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #nn+", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 13": {"batch": "Verbals", "batchOrder": "7", "order": "16", "type": "intra-phrase", "pattern": "#av+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 13": {"batch": "Verbals", "batchOrder": "7", "order": "8", "type": "intra-phrase", "pattern": "#av+ #VerbalCandidate", "tag": {"all": "VerbalPhrase"}},
+  "Verbal 14": {"batch": "Verbals", "batchOrder": "7", "order": "17", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #iv+", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 14": {"batch": "Verbals", "batchOrder": "7", "order": "9", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #iv+", "tag": {"all": "VerbalPhrase"}},
-
-  "Verbal 15": {"batch": "Verbals", "batchOrder": "7", "order": "10", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #pp+", "tag": {"all": "VerbalPhrase"}}
+  "Verbal 15": {"batch": "Verbals", "batchOrder": "7", "order": "18", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #pp+", "tag": {"all": "VerbalPhrase"}}
 }

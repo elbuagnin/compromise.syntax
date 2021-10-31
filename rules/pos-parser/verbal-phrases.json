@@ -1,35 +1,35 @@
 {
-     "Verbal Verbal Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "1", "type": "inter-phrase", "pattern": "#vl+ #iv+", "tag": {"on": {"term": "#iv+", "termTag": ["GerundPhrase", "nn"]}}, "untag": {"all": ["#vb", "#pp", "#dt", "#aj", "#av"]}, "modifier": {"term": "#iv+", "modifies": "#vl+", "termTag": "ObjectOfGerund"}},
+     "Gerund Infinitive Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "1", "type": "inter-phrase", "pattern": "#gd+ #iv+", "tag": {"on": {"term": "#iv+", "termTag": ["GerundPhrase", "nn"]}}, "untag": {"all": ["#vb", "#pp", "#dt", "#aj", "#av"]}},
 
-     "Verbal List": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "2", "type": "inter-phrase", "pattern": "#vl+ #CoordinatingConjunction #vl", "tag": {"all": ["GerundPhrase", "List", "nn"]}},
+     "Gerund List": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "2", "type": "inter-phrase", "pattern": "#gd+ #CoordinatingConjunction #gd", "tag": {"all": ["GerundPhrase", "List", "nn"]}},
 
-     "Verbal Compound Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "3", "type": "inter-phrase", "pattern": "(#vl && !#Comma && !#List) #CoordinatingConjunction #vl", "tag": {"all": ["GerundPhrase", "CompoundPhrase", "nn"]}},
+     "Gerund Compound Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "3", "type": "inter-phrase", "pattern": "(#gd && !#Comma && !#List) #CoordinatingConjunction #gd", "tag": {"all": ["GerundPhrase", "CompoundPhrase", "nn"]}},
 
-     "Verbal Phrase 1": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "4", "type": "intra-phrase", "pattern": "^(#Verbal && #Comma)", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 1": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "4", "type": "intra-phrase", "pattern": "^(#Participle && #Comma)", "tag": {"all": "ptpc"}},
 
-     "Verbal Phrase 2": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "5", "type": "intra-phrase", "pattern": "^#Verbal (* && !#vb) #Comma", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 2": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "5", "type": "intra-phrase", "pattern": "^#Participle (* && !#vb) #Comma", "tag": {"all": "ptpc"}},
 
-     "Verbal Phrase 3": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "6", "type": "intra-phrase", "pattern": "^(#Verbal && #Comma)", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 3": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "6", "type": "intra-phrase", "pattern": "^(#Participle && #Comma)", "tag": {"all": "ptpc"}},
 
-     "Verbal Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "7", "type": "intra-phrase", "pattern": "#Verbal #nn+", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "7", "type": "intra-phrase", "pattern": "#Participle #nn+", "tag": {"all": "ptpc"}},
 
-     "Verbal Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "8", "type": "intra-phrase", "pattern": "#Verbal #av+", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "8", "type": "intra-phrase", "pattern": "#Participle #av+", "tag": {"all": "ptpc"}},
 
-     "Verbal Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "9", "type": "intra-phrase", "pattern": "#av+ #Verbal", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "9", "type": "intra-phrase", "pattern": "#av+ #Participle", "tag": {"all": "ptpc"}},
 
-     "Verbal Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "10", "type": "intra-phrase", "pattern": "#Verbal #nn+", "tag": {"all": "vl-ph"}},
+     "Participle Phrase 4": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "10", "type": "intra-phrase", "pattern": "#Participle #nn+", "tag": {"all": "ptpc"}},
 
-     "Perfect Verbal Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "11", "type": "intra-phrase", "pattern": "#Verbal+ #vl-ph+", "tag": {"all": ["VerbalPhrase", "vl-ph", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+     "Perfect Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "11", "type": "intra-phrase", "pattern": "#PerfectParticiple+ #ptpc+", "tag": {"all": ["PerfectParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
 
-     "Past Verbal Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "12", "type": "intra-phrase", "pattern": "#Verbal+ #vl-ph+", "tag": {"all": ["VerbalPhrase", "vl-ph", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+     "Past Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "12", "type": "intra-phrase", "pattern": "#PastParticiple+ #ptpc+", "tag": {"all": ["PastParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
 
-     "Present Verbal Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "13", "type": "intra-phrase", "pattern": "#PresentParticiple+ #vl-ph+", "tag": {"all": ["VerbalPhrase", "vl-ph", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+     "Present Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "13", "type": "intra-phrase", "pattern": "#PresentParticiple+ #ptpc+", "tag": {"all": ["PerfectParticiplePhrase", "ptpc", "aj"]}, "untag": {"all": ["#nn", "#pp", "#dt", "#aj", "#av", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#PerfectParticiple+", "termTag": "ObjectOfPerfectParticiple"}},
 
-     "#Verbal Phrase #Adverb": {"batch": "Verbal Phrases", "batchOrder": "8", "order": "14", "type": "intra-phrase", "pattern": "#vl-ph+ #av+", "modifier": {"term": "#av+", "modifies": "#vl-ph+"}},
+     "#Participle Phrase #Adverb": {"batch": "Verbal Phrases", "batchOrder": "9", "order": "14", "type": "intra-phrase", "pattern": "#ptpc+ #av+", "modifier": {"term": "#av+", "modifies": "#ptpc+"}},
 
-     "#Verbal Phrase #Proposition": {"batch": "Verbal Phrases", "batchOrder": "8", "order": "15", "type": "intra-phrase", "pattern": "#vl-ph+ #pp+", "modifier": {"term": "#pp+", "modifies": "#vl-ph+"}},
+     "#Participle Phrase #Proposition": {"batch": "Verbal Phrases", "batchOrder": "9", "order": "15", "type": "intra-phrase", "pattern": "#ptpc+ #pp+", "modifier": {"term": "#pp+", "modifies": "#ptpc+"}},
 
-     "Perfect Verbal Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "16", "type": "inter-phrase", "pattern": "(#VerbalPhrase+ && #Comma) #nn+", "modifier": {"term": "#VerbalPhrase+", "modifies": "#nn+", "termTag": "Adjectival"}},
+     "Perfect Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "16", "type": "inter-phrase", "pattern": "(#PerfectParticiplePhrase+ && #Comma) #nn+", "modifier": {"term": "#PerfectParticiplePhrase+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-     "Perfect Verbal Phrase": {"batch":"Verbal Phrases", "batchOrder": "8",  "order": "17", "type": "intra-phrase", "pattern": "(#VerbalPhrase+ && #Comma) #nn+", "modifier": {"term": "#VerbalPhrase+", "modifies": "#nn+", "termTag": "Adjectival"}}
+     "Perfect Participle Phrase": {"batch":"Verbal Phrases", "batchOrder": "9",  "order": "17", "type": "intra-phrase", "pattern": "(#PerfectParticiplePhrase+ && #Comma) #nn+", "modifier": {"term": "#PerfectParticiplePhrase+", "modifies": "#nn+", "termTag": "Adjectival"}}
 }
