@@ -66,7 +66,11 @@ export default function parser(doc) {
           modTag = modTag.replace(/ /g, '-');
           modTag = `${termTag}:${modTag}`;
 
-          term.not(modifies).tag(modTag);
+          if (modifies.ifNo(term)) {
+            term.not(modifies).tag(modTag);
+          } else {
+            throw new Error('Term attempting to tag `modifies` on itself. Check for role tags not removed.');
+          }
         }
 
         if (tag) {
