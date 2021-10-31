@@ -1,15 +1,7 @@
 {
-    "Adjective Phrases": {"batch":"Phrases", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"all": ["AdjectivePhrase", "aj"]}},
+    "Noun Phrases 2": {"batch":"Phrases", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
 
-    "Noun Phrases 1": {"batch":"Phrases", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#aj+ #nn+","tag": {"all": ["NounPhrase", "nn"]}, "untag": {"all": "#aj"}},
+    "Head Noun": {"batch":"Phrases", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Noun Phrases 2": {"batch":"Phrases", "batchOrder": "5",  "order": "3", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}},
-
-    "Head Noun": {"batch":"Phrases", "batchOrder": "5",  "order": "4", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
-
-    "Simple Relative Noun Clauses": {"batch": "Phrases", "batchOrder": "5", "order": "5", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
-
-    "Gerund Phrase": {"batch":"Phrases", "batchOrder": "5",  "order": "6", "type": "intra-phrase", "pattern": "#Gerund #nn+", "tag": {"all": ["GerundPhrase", "gd"]}},
-
-    "Prepositional Phrases 1": {"batch": "Phrases", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "#Preposition #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"on": {"term": "#nn+", "termUnTag": "#nn"}}}
+    "Simple Relative Noun Clauses": {"batch": "Phrases", "batchOrder": "5", "order": "3", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}}
 }
