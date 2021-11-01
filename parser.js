@@ -301,7 +301,7 @@ export default function parser(doc) {
     return changes;
   }
 
-  function getPosRoles(sentence, clearOld = false) {
+  function getOrClearPOSRoles(sentence, clearOld = false) {
     const roles = [];
     sentence.terms().forEach((term) => {
       let tags = term.json({
@@ -358,7 +358,7 @@ export default function parser(doc) {
     function check(rules) {
       rules.forEach((rule) => {
         const clearOld = true;
-        getPosRoles(sentence, clearOld);
+        getOrClearPOSRoles(sentence, clearOld);
         parseRule(sentence, rule);
       });
     }
@@ -411,11 +411,11 @@ export default function parser(doc) {
 
     orderedRules.forEach((rule) => {
       const clearOld = true;
-      const rolesBefore = getPosRoles(sentence, clearOld);
+      const rolesBefore = getOrClearPOSRoles(sentence, clearOld);
 
       parseRule(sentence, rule);
 
-      const rolesAfter = getPosRoles(sentence);
+      const rolesAfter = getOrClearPOSRoles(sentence);
 
       if (arrayCompare(rolesBefore, rolesAfter) === false) {
         const changedElements = differentElements(rolesBefore, rolesAfter);
