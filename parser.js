@@ -72,12 +72,7 @@ export default function parser(doc) {
           modTag = `${termTag}:${modTag}`;
 
           term = term.not(modifies);
-
-          if (modifies.match(term).found || term.match(modifies).found) {
-            console.log('Tagging undefined terms. Skipping tagging.');
-          } else {
-            term.tag(modTag);
-          }
+          term.tag(modTag);
         }
 
         if (tag) {
