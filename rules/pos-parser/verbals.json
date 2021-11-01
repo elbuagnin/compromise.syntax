@@ -31,5 +31,7 @@
 
   "Verbal 14": {"batch": "Verbals", "batchOrder": "7", "order": "17", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #iv+", "tag": {"all": "VerbalPhrase"}},
 
-  "Verbal 15": {"batch": "Verbals", "batchOrder": "7", "order": "18", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #pp+", "tag": {"all": "VerbalPhrase"}}
+  "Verbal 15": {"batch": "Verbals", "batchOrder": "7", "order": "18", "type": "intra-phrase", "pattern": "#nn+ #VerbalCandidate #pp+", "tag": {"all": "VerbalPhrase"}},
+
+  "Gerunds": {"batch": "Verbals", "batchOrder": "7", "order": "19", "type": "intra-phrase", "pattern": "( && /ing$/ && #nn)", "tag": {"on": {"term": "VerbalPhrase", "termTag": "Gerund"}}}
 }
