@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-global.term = {
+export const terminal = {
   reset: '\x1b[0m',
   bright: '\x1b[1m',
   dim: '\x1b[2m',
@@ -34,42 +34,38 @@ global.term = {
 };
 
 global.startMarker = function () {
-  console.log(`${term.bg.red}                                                         ${term.reset}`);
+  console.log(`${terminal.bg.red}                                                         ${terminal.reset}`);
 };
 
 global.display = function (v, name = '', devInfoOn = false) {
   if (devInfoOn) {
-    console.log(`\n${term.bright}`);
+    console.log(`\n${terminal.bright}`);
     if (name) {
       console.log(`${name}: `);
     }
-    console.log(term.fg.magenta + String(v));
-    console.log(term.reset);
+    console.log(terminal.fg.magenta + String(v));
+    console.log(terminal.reset);
   }
 };
 
 global.devBlock = function (name, devInfoOn = false) {
   if (devInfoOn) {
     console.log('\n');
-    console.log(`${term.bg.magenta + term.fg.white}Function Call:                                           ${term.reset}`);
-    console.log(term.bright + name + term.reset);
+    console.log(`${terminal.bg.magenta + terminal.fg.white}Function Call:                                           ${terminal.reset}`);
+    console.log(terminal.bright + name + terminal.reset);
   }
 };
 
 global.devInfo = function (v, name = 'unknown', devInfoOn = false, devBlockName = '') { // eslint-disable-line
   if (devInfoOn === true) {
     console.log('\n');
-    console.log(`${term.bg.blue + term.fg.white}Info on Variable:                                        ${term.reset}`);
+    console.log(`${terminal.bg.blue + terminal.fg.white}Info on Variable:                                        ${terminal.reset}`);
 
-    // if (devBlockName) {
-    //     console.log(term.fg.blue + 'Block: ' + term.reset + term.bright + devBlockName + term.reset);
-    // }
-
-    console.log(`${term.fg.blue + term.bright}Name: ${term.reset}${term.bright}${name}${term.reset}`);
+    console.log(`${terminal.fg.blue + terminal.bright}Name: ${terminal.reset}${terminal.bright}${name}${terminal.reset}`);
     if (v) {
-      console.log(`${term.fg.blue}Type: ${term.reset}${typeof v}`);
-      console.log(`${term.fg.blue}Object Constructor: ${term.reset}${v.constructor.name}`);
-      console.log(`${term.fg.blue}Contents: ${term.reset}${JSON.stringify(v)}`);
+      console.log(`${terminal.fg.blue}Type: ${terminal.reset}${typeof v}`);
+      console.log(`${terminal.fg.blue}Object Constructor: ${terminal.reset}${v.constructor.name}`);
+      console.log(`${terminal.fg.blue}Contents: ${terminal.reset}${JSON.stringify(v)}`);
 
       switch (v.constructor.name) {
         case 'sentence':
@@ -94,7 +90,7 @@ global.devInfo = function (v, name = 'unknown', devInfoOn = false, devBlockName 
     } else {
       console.log('Undefined');
     }
-    console.log(`${term.bg.cyan + term.fg.white}---------------------------------------------------------${term.reset}`);
+    console.log(`${terminal.bg.cyan + terminal.fg.white}---------------------------------------------------------${terminal.reset}`);
   }
 };
 /* eslint-enable no-undef */
