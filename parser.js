@@ -46,6 +46,7 @@ export default function parser(doc) {
         const matchedPattern = sentence.match(pattern);
 
         console.log('we have a match:\n');
+        console.log(`@#@#@#@#@# ${rule.batch} : #${rule.order} @#@#@#@#@#@`);
         console.log(JSON.stringify(rule));
         console.log('\n');
         console.log(matchedPattern.text());
@@ -307,9 +308,8 @@ export default function parser(doc) {
       let tags = term.json({
         text: false, terms: { text: false, tags: true, whitespace: false },
       })[0].terms;
-      console.log(JSON.stringify(`{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}${tags}`));
+
       tags = tags[0].tags;
-      console.log(JSON.stringify(`}}}}}}}}}}}}}}}}}}}${tags}`));
 
       let role = 'none';
       tags = tags.filter((tag) => (
@@ -317,14 +317,13 @@ export default function parser(doc) {
         || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
         || tag === 'Pp'
       ));
-      console.log(`${term.text()}^^^^^^^^^^^^^^^^^^^^${tags}`);
+
       role = tags[tags.length - 1];
 
       roles.push(role);
 
       if (clearOld === true) {
         tags.forEach((tag) => {
-          console.log(`+++++++++++++++++++++++++ ${term.text()}: ${tag}`);
           term.untag(tag);
         });
         term.tag(role);
@@ -335,7 +334,6 @@ export default function parser(doc) {
   }
 
   function parseRule(sentence, rule) {
-    console.log(`@#@#@#@#@# ${rule.batch} : #${rule.order} @#@#@#@#@#@`);
     if (rule.type === 'intra-phrase') {
       let chunks = sentence;
       if (sentence.has('#Comma')) {
