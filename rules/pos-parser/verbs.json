@@ -49,7 +49,7 @@
 
   "Linking Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Copula", "tag": {"all": "Linking"}},
 
-  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": "VerbalCandidate"}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
+  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastParticiple", "vl"]}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
 
   "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "27", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": "PresentSimple"}}}
 }
