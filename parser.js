@@ -1,4 +1,5 @@
 import * as mfs from './lib/filesystem.js';
+import * as config from './local-config.js';
 
 export default function parser(doc) {
   // Relationship rules
@@ -45,14 +46,17 @@ export default function parser(doc) {
       if (sentence.has(pattern)) {
         const matchedPattern = sentence.match(pattern);
 
-        console.log('we have a match:\n');
-        console.log(`@#@#@#@#@# ${rule.batch} : #${rule.order} @#@#@#@#@#@`);
-        console.log(JSON.stringify(rule));
-        console.log('\n');
-        console.log(matchedPattern.text());
-        console.log('\n');
-        console.log(`${('Tag: ' && JSON.stringify(tag)) || ''}\n${('Untag: ' && JSON.stringify(untag)) || ''}\n${('Demark: ' && JSON.stringify(demark)) || ''}\n${('Replace: ' && JSON.stringify(replace)) || ''}\n${('Modifier: ' && JSON.stringify(modifier)) || ''}`);
-        console.log('\n');
+        console.log('!!!!!!!!!!!!!!!!!!!!!!!');
+        console.log(`${config.terminal.bright}Batch:${config.terminal.reset} ${rule.batch} : ${config.terminal.bright}Order#${config.terminal.reset} ${rule.order}`);
+        console.log(`${config.terminal.bright}Rule:${config.terminal.reset} ${JSON.stringify(rule)}`);
+        console.log(`${config.terminal.bright}Matched Pattern:${config.terminal.reset} ${matchedPattern.text()}`);
+
+        if (tag) console.log(`${config.terminal.bright}Tag:${config.terminal.reset} ${JSON.stringify(tag)}`);
+        if (untag) console.log(`${config.terminal.bright}Untag:${config.terminal.reset} ${JSON.stringify(untag)}`);
+        if (demark) console.log(`${config.terminal.bright}Demark:${config.terminal.reset} ${JSON.stringify(demark)}`);
+        if (replace) console.log(`${config.terminal.bright}Replace:${config.terminal.reset} ${JSON.stringify(replace)}`);
+        if (modifier) console.log(`${config.terminal.bright}Modifier:${config.terminal.reset} ${JSON.stringify(modifier)}`);
+        console.log('!!!!!!!!!!!!!!!!!!!!!!!\n\n');
 
         if (modifier) {
           let term = matchedPattern.match(modifier.term);
@@ -66,12 +70,9 @@ export default function parser(doc) {
           let modTag = modifies.text();
           modTag = modTag.replace(/ /g, '-');
           modTag = `${termTag}:${modTag}`;
-          console.log(`Term: ${JSON.stringify(term)}`);
-          console.log(`Modifies(pre): ${JSON.stringify(modifies)}`);
 
           term = term.not(modifies);
 
-          console.log(modifies.match(term));
           if (modifies.match(term).found || term.match(modifies).found) {
             console.log('Tagging undefined terms. Skipping tagging.');
           } else {
@@ -417,11 +418,7 @@ export default function parser(doc) {
 
       if (arrayCompare(rolesBefore, rolesAfter) === false) {
         const changedElements = differentElements(rolesBefore, rolesAfter);
-        console.log('Checking relationships of changed elements.');
         relationships(sentence, changedElements);
-        console.log(changedElements);
-        console.log(rolesBefore);
-        console.log(rolesAfter);
       }
     });
 
