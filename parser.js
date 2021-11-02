@@ -411,15 +411,20 @@ export default function parser(doc) {
 
     orderedRules.forEach((rule) => {
       const clearOld = true;
-      const rolesBefore = getOrClearPOSRoles(sentence, clearOld);
+      let rolesBefore = getOrClearPOSRoles(sentence, clearOld);
 
       parseRule(sentence, rule);
 
-      const rolesAfter = getOrClearPOSRoles(sentence);
+      let rolesAfter = getOrClearPOSRoles(sentence);
+      let changedElements = differentElements(rolesBefore, rolesAfter);
 
       if (arrayCompare(rolesBefore, rolesAfter) === false) {
-        const changedElements = differentElements(rolesBefore, rolesAfter);
-        relationships(sentence, changedElements);
+        while (arrayCompare(rolesBefore, rolesAfter) === false) {
+          rolesBefore = getOrClearPOSRoles(sentence, clearOld);
+          relationships(sentence, changedElements);
+          rolesAfter = getOrClearPOSRoles(sentence);
+          changedElements = differentElements(rolesBefore, rolesAfter);
+        }
       }
     });
 
