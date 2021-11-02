@@ -7,5 +7,9 @@
 
   "Prepositional Phrase as Adverb 3": {"batch": "Verbials", "order": "4", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb 4": {"batch": "Verbials", "order": "5", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}}
+  "Prepositional Phrase as Adverb 4": {"batch": "Verbials", "order": "5", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+  "Noun Subject Compliment": {"batch":"Verbials", "order": "6", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+
+  "Adjective Subject Compliment": {"batch":"Verbials", "order": "7", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "#aj+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#aj+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}}
 }

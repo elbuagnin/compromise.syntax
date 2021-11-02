@@ -9,5 +9,7 @@
 
     "Adverb of Verb": {"batch":"Modifiers", "order": "5", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"on":{"term": "#av+", "termTag": "vb"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
 
-    "Prepositional Phrase as Adverb to Verb": {"batch": "Modifiers", "order": "6", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}}
+    "Prepositional Phrase as Adverb to Verb": {"batch": "Modifiers", "order": "6", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Adjective Subject Compliment": {"batch":"Modifiers", "order": "7", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectCompliment"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectCompliment"}}
 }
