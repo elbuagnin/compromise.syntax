@@ -1,9 +1,9 @@
 {
-  "Current Participles": {"batch": "Verbals", "batchOrder": "7", "order": "1", "type": "inter-phrase", "pattern": "#Participle", "tag": {"all":["PastParticiple", "vl"]}},
+  "Current Participles": {"batch": "Verbals", "batchOrder": "4", "order": "1", "type": "inter-phrase", "pattern": "#Participle", "tag": {"all":["PastParticiple", "vl"]}},
 
-  "Unknown Type Progressive Verbals": {"batch": "Verbals", "batchOrder": "7", "order": "2", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/)", "tag": {"all": ["Progressive-Verbal-Candidate", "verbal", "vl"]}},
+  "Unknown Type Progressive Verbals": {"batch": "Verbals", "batchOrder": "4", "order": "2", "type": "inter-phrase", "pattern": "(#Verbal && /ing$/)", "tag": {"all": ["Progressive-Verbal-Candidate", "verbal", "vl"]}},
 
-  "Perfect Participles": {"batch": "Verbals", "batchOrder": "7", "order": "3", "type": "inter-phrase", "pattern": "having #PastParticipleCandidate", "tag": {"all":["PerfectParticiple", "Active", "vl"]}, "untag": {"term": "#PastParticipleCandidate", "termTag": "#PastParticipleCandidate"}},
+  "Perfect Participles": {"batch": "Verbals", "batchOrder": "4", "order": "3", "type": "inter-phrase", "pattern": "having #PastParticipleCandidate", "tag": {"all":["PerfectParticiple", "Active", "vl"]}, "untag": {"term": "#PastParticipleCandidate", "termTag": "#PastParticipleCandidate"}},
 
-  "Perfect Participles": {"batch": "Verbals", "batchOrder": "7", "order": "4", "type": "inter-phrase", "pattern": "having been #PastParticipleCandidate", "tag": {"all":["PerfectParticiple", "Passive", "vl"]}, "untag": {"term": "#PastParticipleCandidate", "termTag": "#PastParticipleCandidate"}}
+  "Perfect Participles": {"batch": "Verbals", "batchOrder": "4", "order": "4", "type": "inter-phrase", "pattern": "having been #PastParticipleCandidate", "tag": {"all":["PerfectParticiple", "Passive", "vl"]}, "untag": {"term": "#PastParticipleCandidate", "termTag": "#PastParticipleCandidate"}}
 }

@@ -1,7 +1,7 @@
 {
-    "Noun Phrases 2": {"batch":"Phrases", "batchOrder": "5",  "order": "1", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
+    "Noun Phrases 2": {"batch":"Phrases", "batchOrder": "6",  "order": "1", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
 
-    "Head Noun": {"batch":"Phrases", "batchOrder": "5",  "order": "2", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
+    "Head Noun": {"batch":"Phrases", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-    "Simple Relative Noun Clauses": {"batch": "Phrases", "batchOrder": "5", "order": "3", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}}
+    "Simple Relative Noun Clauses": {"batch": "Phrases", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}}
 }

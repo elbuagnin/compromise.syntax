@@ -7,7 +7,7 @@
 
   "Object of Preposition": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
-  "Object of Verbal": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#Verbal+ (#nn+ &&!#gd && !#iv)", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+  "Object of Verbal": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#Verbal+ #nn+", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
 
   "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "6", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
