@@ -49,6 +49,7 @@ export default function parser(doc) {
         console.log('!!!!!!!!!!!!!!!!!!!!!!!');
         console.log(`${config.terminal.bright}Batch:${config.terminal.reset} ${rule.batch} : ${config.terminal.bright}Order#${config.terminal.reset} ${rule.order}`);
         console.log(`${config.terminal.bright}Rule:${config.terminal.reset} ${JSON.stringify(rule)}`);
+        console.log(`${config.terminal.bright}Pattern:${config.terminal.reset} ${JSON.stringify(pattern)}`);
         console.log(`${config.terminal.bright}Matched Pattern:${config.terminal.reset} ${matchedPattern.text()}`);
 
         if (tag) console.log(`${config.terminal.bright}Tag:${config.terminal.reset} ${JSON.stringify(tag)}`);
@@ -356,22 +357,27 @@ export default function parser(doc) {
         parseRule(sentence, rule);
       });
     }
-
+    console.log(JSON.stringify(changes));
     changes.forEach((change) => {
       switch (change) {
         case 'Nn':
+          console.log('Rechecking Nominals');
           check(nominalRules);
           break;
         case 'Vb':
+          console.log('Rechecking Verbials');
           check(verbialRules);
           break;
         case 'Aj' || 'Av':
+          console.log('Rechecking Modifiers');
           check(modifierRules);
           break;
         case 'Vl' || 'Iv' || 'Gd' || 'Pt':
+          console.log('Rechecking Verbals');
           check(verbalRules);
           break;
         case 'Pp':
+          console.log('Rechecking Prepositions');
           check(prepositionalRules);
           break;
         default:
