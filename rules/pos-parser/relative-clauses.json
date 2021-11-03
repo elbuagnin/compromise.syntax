@@ -1,5 +1,5 @@
 {
-  "Double Relative Clause": {"batch":"Relative Clauses", "batchOrder": "8",  "order": "1", "type": "inter-phrase", "pattern": "!#nn !#vb !#nn? #RelativePronoun * #RelativePronoun", "replace": {"first": {"term": "#RelativePronoun", "termUnTag": ["#RelativePronoun", "#Restrictive", "NonRestrictive"], "termTag": ["Determiner", "dt"]}}},
+  "Double Relative Clause": {"batch":"Relative Clauses", "batchOrder": "8",  "order": "1", "type": "inter-phrase", "pattern": "!#nn !#vb !#nn? #RelativePronoun .{1,} #RelativePronoun", "replace": {"first": {"term": "#RelativePronoun", "termUnTag": ["#RelativePronoun", "#Restrictive", "NonRestrictive"], "termTag": ["Determiner", "dt"]}}},
 
   "Relative Clause 1": {"batch":"Relative Clauses", "batchOrder": "8",  "order": "2", "type": "intra-phrase", "pattern": "#RelativePronoun #nn+ #vb+ #nn+", "tag": {"all": ["RelativeClause", "aj"]}, "untag": {"all": ["#nn", "#vb"]}},
 
