@@ -35,7 +35,7 @@
 
   "which #Verb": {"batchOrder": "1", "term": "#PresentTense", "pattern": "which (#Verb && !(do|does|did) && !#Copula && !#Modal && !#Auxiliary)", "tag": "#Noun"},
 
-  "linking verbs": {"batchOrder": "3", "term": "#Verb", "pattern": "#modal? (be|am|is|are|was|were|will be|was being|has been|had been)", "tag": "#Linking"},
+  "linking verbs": {"batchOrder": "1", "term": "#Verb", "pattern": "#modal? (be|am|is|are|was|were|will be|was being|has been|had been)", "tag": "#Linking"},
 
-  "Action verbs": {"batchOrder": "3", "term": "#Verb", "pattern": "#modal? !#Linking", "tag": "#Action"}
+  "Action verbs": {"batchOrder": "1", "term": "#Verb", "pattern": "#modal? !#Linking", "tag": "#Action"}
 }
