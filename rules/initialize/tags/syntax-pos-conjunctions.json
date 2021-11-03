@@ -14,5 +14,10 @@
   "CompoundConjunction": {
       "isA": "CoordinatingConjunction",
       "notA": ""
+  },
+  "RelativePronoun": {
+    "isA": "",
+    "notA": "",
+    "color": ""
   }
 }

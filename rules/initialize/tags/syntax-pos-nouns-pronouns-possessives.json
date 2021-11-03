@@ -14,11 +14,6 @@
     "notA": "Noun",
     "color": "blue"
   },
-  "RelativePronoun": {
-    "isA": "Pronoun",
-    "notA": "",
-    "color": "blue"
-  },
   "Agent": {
     "isA": "",
     "notA": "",
