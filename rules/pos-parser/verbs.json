@@ -47,7 +47,9 @@
 
   "#Negative #VerbPhrase": {"batch": "Verbs", "batchOrder": "3", "order": "24", "type": "intra-phrase", "pattern": "#Verb #Negative (#Verb|#Verbal)+", "tag": {"all": "#Negative"}, "on": {"term": "#Negative", "termTag": "vb"}},
 
-  "Linking Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Copula", "tag": {"all": "Linking"}},
+  "Linking Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Linking", "tag": {"all": "Linking"}},
+
+  "Action Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
 
   "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastParticiple", "vl"]}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
 
