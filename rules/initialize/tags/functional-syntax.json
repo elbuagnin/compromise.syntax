@@ -2,26 +2,26 @@
     "Subject": {
         "isA": "",
         "notA": ["Object", "Predicate"],
-        "color": "blue"
+        "color": "yellow"
     },
     "Object": {
         "isA": "",
         "notA": "Subject",
-        "color": "blue"
+        "color": "yellow"
     },
     "DirectObject": {
         "isA": "Object",
         "notA": "IndirectObject",
-        "color": "blue"
+        "color": "yellow"
     },
     "IndirectObject": {
         "isA": "Object",
         "notA": "DirectObject",
-        "color": "blue"
+        "color": "yellow"
     },
     "Predicate": {
         "isA": "",
         "notA": ["Subject", "Object"],
-        "color": "green"
+        "color": "yellow"
     }
 }
