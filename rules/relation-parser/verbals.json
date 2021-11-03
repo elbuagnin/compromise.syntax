@@ -25,9 +25,9 @@
 
   "Verbal as Subject 2": {"order": "13", "type": "intra-phrase", "pattern": "#vl+ #pp+ #vb+", "tag": {"on": {"term": "#vl+", "termTag": "nn"}}},
 
-  "Verbal as Verb Object or Adverb": {"order": "14", "type": "intra-phrase", "pattern": "#vb+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "NnOrAv"}}},
+  "Verbal as Verb Object": {"order": "14", "type": "intra-phrase", "pattern": "#vb+ Progressive-Verbal-Candidate", "tag": {"on": {"term": "#Progressive-Verbal-Candidate+", "termTag": "Nn"}}},
 
-  "Verbal as Adjective to Noun 1": {"order": "15", "type": "intra-phrase", "pattern": "#aj+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjective to Noun 1": {"order": "15", "type": "intra-phrase", "pattern": "#nn+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
   "Verbal as Adjective to Noun 2": {"batch": "Verbals", "order": "16", "type": "intra-phrase", "pattern": "#dt #vl+ #nn+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
@@ -43,11 +43,11 @@
 
   "Present Participles": {"batch": "Verbals", "order": "22", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #aj)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
 
-  "Infinitive Phrase as Adverb to Adjective": {"order": "23", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#iv+"}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as Adverb to Adjective": {"order": "23", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
 
   "Infinitive Phrase as as Subject": { "order": "24", "type": "intra-phrase", "pattern": "#iv+ #vb+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as Direct Object": { "order": "25", "type": "intra-phrase", "pattern": "#vb+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase as as Direct Object": { "order": "25", "type": "intra-phrase", "pattern": "(#vb+ && !#Linking) #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
   "Infinitive Phrase as as Subject Complement nn": { "order": "26", "type": "intra-phrase", "pattern": "(#Copula|#Linking|#Stative) #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
