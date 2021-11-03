@@ -5,7 +5,7 @@
 
   "Object of Participle": {"batch": "Verbals", "order": "3", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
-  "Object of Verbal": {"batch": "Verbals", "order": "4", "type": "intra-phrase", "pattern": "#Verbal+ (#nn+|#pp+)", "tag": {"all": ["VerbalPhrase", "vl"]}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Verbal+", "termTag": "ObjectOfVerbal"}},
+  "Object of Verbal": {"batch": "Verbals", "order": "4", "type": "intra-phrase", "pattern": "#Verbal+ (#nn+|#pp+)", "tag": {"all": "vl"}},
 
   "Verbal as Object of Preposition ": {"batch": "Verbals", "order": "5", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
@@ -47,9 +47,9 @@
 
   "Infinitive Phrase as as Subject": { "order": "24", "type": "intra-phrase", "pattern": "#iv+ #vb+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as Direct Object": { "order": "25", "type": "intra-phrase", "pattern": "(#vb+ && !#Linking) #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase as as Direct Object": { "order": "25", "type": "intra-phrase", "pattern": "#Action #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as Subject Complement nn": { "order": "26", "type": "intra-phrase", "pattern": "(#Copula|#Linking|#Stative) #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase as as Subject Complement nn": { "order": "26", "type": "intra-phrase", "pattern": "#Linking #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
   "Infinitive Phrase as as aj": { "order": "27", "type": "intra-phrase", "pattern": "#nn+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}, "modifier": {"term": "#iv+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
