@@ -11,7 +11,7 @@
 
   "Object of Verbal": {"batch":"Nominals", "order": "6", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ #nnNotVl+", "tag": {"all":["vl", "VerbalPhrase"]}},
 
-  "Object of Infinitive": {"batch":"Nominals", "order": "7", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Object of Infinitive": {"batch":"Nominals", "order": "7", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl", "#UnPhrasedVerbal"]}, "modifier": {"term": "#nnNotIv+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
   "Object of Gerund": {"batch":"Nominals", "order": "8", "type": "intra-phrase", "pattern": "#Gerund (#nn+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"all": "#vl"}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
 

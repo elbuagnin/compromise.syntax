@@ -11,7 +11,7 @@
 
   "Object of Participle": {"batch": "Verbals", "order": "6", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+|#iv+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
-  "Object of Verbal": {"batch": "Verbals", "order": "7", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ (#nn+|#pp+)", "tag": {"all":["vl", "VerbalPhrase"]}},
+  "Object of Verbal": {"batch": "Verbals", "order": "7", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ (#nn+|#pp+|#iv+)", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}},
 
   "Verbal as Object of Preposition ": {"batch": "Verbals", "order": "8", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
