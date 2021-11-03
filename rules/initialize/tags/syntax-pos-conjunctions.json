@@ -16,8 +16,8 @@
       "notA": ""
   },
   "RelativePronoun": {
-    "isA": "",
-    "notA": "",
+    "isA": "SubordinatingConjunction",
+    "notA": ["Preposition", "Determiner"],
     "color": ""
   }
 }
