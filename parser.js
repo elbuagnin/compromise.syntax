@@ -312,7 +312,7 @@ export default function parser(doc) {
       tags = tags.filter((tag) => (
         tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
         || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
-        || tag === 'Pp'
+        || tag === 'Pp' || tag === 'dobj' || tag === 'iobj'
       ));
 
       role = tags[tags.length - 1];
