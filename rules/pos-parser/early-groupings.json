@@ -1,5 +1,5 @@
 {
-  "Not to": {"batch":"Early Groupings", "batchOrder": "2",  "order": "1", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "iv", "Negative"]}},
+  "Not to Infinitive": {"batch":"Early Groupings", "batchOrder": "2",  "order": "1", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "iv", "Negative"]}},
 
   "Infinitives": {"batch":"Early Groupings", "batchOrder": "2",  "order": "2", "type": "intra-phrase", "pattern": "#Infinitive+", "tag": {"all": ["Infinitive", "iv"]}},
 
