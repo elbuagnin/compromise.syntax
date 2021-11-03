@@ -1,45 +1,45 @@
 {
   "Assign UnPhrasedVerbal": {"batch":"Nominals", "order": "1", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "UnPhrasedVerbal"}},
 
-  "Assign NonVerbal nn": {"batch":"Nominals", "order": "1", "type": "intra-phrase", "pattern": "(#nn+ && !#Verbal)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotVl"}}},
+  "Assign NonVerbal nn": {"batch":"Nominals", "order": "2", "type": "intra-phrase", "pattern": "(#nn+ && !#Verbal)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotVl"}}},
 
-  "Assign NonInfinitive nn": {"batch":"Nominals", "order": "2", "type": "intra-phrase", "pattern": "(#nn+ && !#Infinitive)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotIv"}}},
+  "Assign NonInfinitive nn": {"batch":"Nominals", "order": "3", "type": "intra-phrase", "pattern": "(#nn+ && !#Infinitive)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotIv"}}},
 
-  "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "3", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "4", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "4", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "5", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Object of Verbal": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ #nnNotVl+", "tag": {"all":["vl", "VerbalPhrase"]}},
+  "Object of Verbal": {"batch":"Nominals", "order": "6", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ #nnNotVl+", "tag": {"all":["vl", "VerbalPhrase"]}},
 
-  "Object of Infinitive": {"batch":"Nominals", "order": "6", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Object of Infinitive": {"batch":"Nominals", "order": "7", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl"]}, "modifier": {"term": "#nn+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Object of Gerund": {"batch":"Nominals", "order": "7", "type": "intra-phrase", "pattern": "#Gerund (#nn+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"all": "#vl"}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
+  "Object of Gerund": {"batch":"Nominals", "order": "8", "type": "intra-phrase", "pattern": "#Gerund (#nn+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"all": "#vl"}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
 
-  "Object of Participle": {"batch":"Nominals", "order": "8", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
+  "Object of Participle": {"batch":"Nominals", "order": "9", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
-  "Object of Preposition": {"batch":"Nominals", "order": "9", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
+  "Object of Preposition": {"batch":"Nominals", "order": "10", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
-  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "10", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb 2": {"batch": "Nominals", "order": "11", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb 2": {"batch": "Nominals", "order": "12", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Subject": {"batch":"Nominals", "order": "12", "type": "intra-phrase", "pattern": "#nn+ #aj+? #vb+", "tag": {"on": {"term": "#nn+ #aj+?", "termTag": ["Subject", "sbj"]}}},
+  "Subject": {"batch":"Nominals", "order": "13", "type": "intra-phrase", "pattern": "#nn+ #aj+? #vb+", "tag": {"on": {"term": "#nn+ #aj+?", "termTag": ["Subject", "sbj"]}}},
 
-  "Subject Compliment": {"batch":"Nominals", "order": "13", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+  "Subject Compliment": {"batch":"Nominals", "order": "14", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
 
-  "Direct w/ Indirect Objects 1": {"batch":"Nominals", "order": "14", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+  "Direct w/ Indirect Objects 1": {"batch":"Nominals", "order": "15", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Indirect Objects 1": {"batch":"Nominals", "order": "15", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+  "Indirect Objects 1": {"batch":"Nominals", "order": "16", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
 
-  "Direct w/ Indirect Objects 1": {"batch":"Nominals", "order": "16", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+  "Direct w/ Indirect Objects 1": {"batch":"Nominals", "order": "17", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Indirect Objects 1": {"batch":"Nominals", "order": "17", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+  "Indirect Objects 1": {"batch":"Nominals", "order": "18", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
 
-  "Direct Object": {"batch":"Nominals", "order": "18", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
+  "Direct Object": {"batch":"Nominals", "order": "19", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Reset NonVerbal nn": {"batch":"Nominals", "order": "19", "type": "intra-phrase", "pattern": "#nnNotVl+", "untag": {"on": {"term": "#nnNotVl+", "termUnTag": "#nnNotVl"}}},
+  "Reset NonVerbal nn": {"batch":"Nominals", "order": "20", "type": "intra-phrase", "pattern": "#nnNotVl+", "untag": {"on": {"term": "#nnNotVl+", "termUnTag": "#nnNotVl"}}},
 
-  "Reset NonInfinitive nn": {"batch":"Nominals", "order": "20", "type": "intra-phrase", "pattern": "#nnNotIv+", "untag": {"on": {"term": "#nnNotIv+", "termUnTag": "#nnNotIv"}}},
+  "Reset NonInfinitive nn": {"batch":"Nominals", "order": "21", "type": "intra-phrase", "pattern": "#nnNotIv+", "untag": {"on": {"term": "#nnNotIv+", "termUnTag": "#nnNotIv"}}},
 
-  "Reset #UnPhrasedVerbals": {"batch":"Nominals", "order": "37", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}}
+  "Reset #UnPhrasedVerbals": {"batch":"Nominals", "order": "22", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}}
 }
