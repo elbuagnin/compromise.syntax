@@ -1,5 +1,5 @@
 {
-    "Noun Phrases 2": {"batch":"Phrases", "batchOrder": "6",  "order": "1", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
+    
 
     "Head Noun": {"batch":"Phrases", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 

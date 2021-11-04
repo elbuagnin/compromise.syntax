@@ -5,6 +5,8 @@
 
   "Assign NonInfinitive nn": {"batch":"Nominals", "order": "3", "type": "intra-phrase", "pattern": "(#nn+ && !#Infinitive)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotIv"}}},
 
+  "Determiner Noun": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
+
   "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "4", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
   "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "5", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},

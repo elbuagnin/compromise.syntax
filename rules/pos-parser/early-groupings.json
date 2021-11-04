@@ -3,15 +3,15 @@
 
   "Infinitives": {"batch":"Early Groupings", "batchOrder": "2",  "order": "2", "type": "intra-phrase", "pattern": "#Infinitive+", "tag": {"all": ["Infinitive", "iv"]}},
 
-  "Nouns": {"batch": "Early Groupings", "batchOrder": "2", "order": "3", "type": "inter-phrase", "pattern": "(#Noun|#Pronoun|#Gerund)", "tag": {"all": "nn"}},
+  "Determiners": {"batch": "Early Groupings", "batchOrder": "2", "order": "3", "type": "inter-phrase", "pattern": "(#Determiner|#Possessive)", "tag": {"all": "dt"}},
 
-  "Verbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "4", "type": "inter-phrase", "pattern": "#Verb", "tag": {"all": "vb"}},
+  "Nouns": {"batch": "Early Groupings", "batchOrder": "2", "order": "4", "type": "inter-phrase", "pattern": "(#Noun|#Pronoun|#Gerund)", "tag": {"all": "nn"}},
 
-  "Adjectives": {"batch": "Early Groupings", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "aj"}},
+  "Verbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "#Verb", "tag": {"all": "vb"}},
 
-  "Adverbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "6", "type": "inter-phrase", "pattern": "#Adverb", "tag": {"all": "av"}},
+  "Adjectives": {"batch": "Early Groupings", "batchOrder": "2", "order": "6", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "aj"}},
 
-  "Determiners": {"batch": "Early Groupings", "batchOrder": "2", "order": "7", "type": "inter-phrase", "pattern": "(#Determiner|#Possessive)", "tag": {"all": "dt"}},
+  "Adverbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "7", "type": "inter-phrase", "pattern": "#Adverb", "tag": {"all": "av"}},
 
   "Prepositions": {"batch": "Early Groupings", "batchOrder": "2", "order": "8", "type": "inter-phrase", "pattern": "#Preposition", "tag": {"all": "pp"}},
 
