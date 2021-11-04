@@ -22,6 +22,7 @@ export default function parser(doc) {
   const modifierRules = loadRelationRules('modifiers');
   const verbalRules = loadRelationRules('verbals');
   const prepositionalRules = loadRelationRules('prepositional');
+  const clauseRules = loadRelationRules('clauses');
 
   function tagMatch(sentence, rule) {
     const {
@@ -312,7 +313,8 @@ export default function parser(doc) {
       tags = tags.filter((tag) => (
         tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
         || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
-        || tag === 'Pp' || tag === 'dobj' || tag === 'iobj'
+        || tag === 'Pp' || tag === 'Sbj' || tag === 'Dobj' || tag === 'Iobj'
+        || tag === 'Subcls' || tag === 'Relcls'
       ));
 
       role = tags[tags.length - 1];
@@ -395,6 +397,14 @@ export default function parser(doc) {
         case 'Pp':
           console.log('Rechecking Prepositions');
           check(prepositionalRules);
+          break;
+        case 'Subcls':
+          console.log('Rechecking Clauses');
+          check(clauseRules);
+          break;
+        case 'Relcls':
+          console.log('Rechecking Clauses');
+          check(clauseRules);
           break;
         default:
           break;
