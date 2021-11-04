@@ -1,83 +1,85 @@
 {
   "Assign UnPhrasedVerbal Test": {"batch":"Verbals", "order": "1", "type": "intra-phrase", "pattern": "/^#ObjectOfInfinitive/", "tag": {"all": "Test"}},
 
-  "Assign UnPhrasedVerbal": {"batch":"Verbals", "order": "1", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "UnPhrasedVerbal"}},
+  "Assign UnPhrasedVerbal": {"batch":"Verbals", "order": "2", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "UnPhrasedVerbal"}},
 
-  "Assign NonInfinitive vl": {"batch":"Verbals", "order": "2", "type": "intra-phrase", "pattern": "(#vl+ && !#Infinitive)", "tag": {"on": {"term": "#vl+", "termTag": "VlNotIv"}}},
+  "Assign NonInfinitive vl": {"batch":"Verbals", "order": "3", "type": "intra-phrase", "pattern": "(#vl+ && !#Infinitive)", "tag": {"on": {"term": "#vl+", "termTag": "VlNotIv"}}},
 
-  "Assign NonGerund nn": {"batch":"Verbls", "order": "3", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
+  "Assign NonGerund nn": {"batch":"Verbls", "order": "4", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
 
-  "Object of Infinitive": {"batch": "Verbals", "order": "4", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#pp+)", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Object of Infinitive": {"batch": "Verbals", "order": "5", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#pp+)", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Object of Gerund": {"batch": "Verbals", "order": "5", "type": "intra-phrase", "pattern": "#Gerund (#nnNotGd+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
+  "Object of Gerund": {"batch": "Verbals", "order": "6", "type": "intra-phrase", "pattern": "#Gerund (#nnNotGd+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
 
-  "Object of Participle": {"batch": "Verbals", "order": "6", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+|#iv+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
+  "Object of Participle": {"batch": "Verbals", "order": "7", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+|#iv+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
-  "Object of Verbal": {"batch": "Verbals", "order": "7", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ (#nn+|#pp+|#iv+)", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}},
+  "Object of Verbal": {"batch": "Verbals", "order": "8", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ (#nn+|#pp+|#iv+)", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}},
 
-  "Progressive Infinitive Object": {"batch": "Verbals", "order": "7", "type": "intra-phrase", "pattern": "#Progressive-Verbal-Candidate+ #iv+", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#iv+", "modifies": "#Progressive-Verbal-Candidate+", "termTag": "ObjectOfVerbal"}},
+  "Progressive Infinitive Object": {"batch": "Verbals", "order": "9", "type": "intra-phrase", "pattern": "#Progressive-Verbal-Candidate+ #iv+", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#iv+", "modifies": "#Progressive-Verbal-Candidate+", "termTag": "ObjectOfVerbal"}},
 
-  "Verbal as Object of Preposition ": {"batch": "Verbals", "order": "8", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
+  "Verbal as Object of Preposition ": {"batch": "Verbals", "order": "10", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
-  "Verbal as Object of Infinitive": {"batch": "Verbals", "order": "9", "type": "intra-phrase", "pattern": "#Infinitive+ #VlNotIv+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#vl+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Verbal as Object of Infinitive": {"batch": "Verbals", "order": "11", "type": "intra-phrase", "pattern": "#Infinitive+ #VlNotIv+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#vl+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Verbal as Participle Opening": {"batch": "Verbals", "order": "10", "type": "intra-phrase", "pattern": "^(#Verbal+ && #Comma)", "tag": {"all": ["Participle", "aj"]}},
+  "Verbal as Participle Opening": {"batch": "Verbals", "order": "12", "type": "intra-phrase", "pattern": "^(#Verbal+ && #Comma)", "tag": {"all": ["Participle", "aj"]}},
 
-  "Verbal as Participle Opening Phrase": {"batch": "Verbals", "order": "11", "type": "intra-phrase", "pattern": "^#Verbal+ (* && !#vb) #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
+  "Verbal as Participle Opening Phrase": {"batch": "Verbals", "order": "13", "type": "intra-phrase", "pattern": "^#Verbal+ (* && !#vb) #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "Verbal as Participle Middle Phrase": {"batch": "Verbals", "order": "12", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ (* && !#vb) #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
+  "Verbal as Participle Middle Phrase": {"batch": "Verbals", "order": "14", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ (* && !#vb) #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "Verbal as Subject 1": {"order": "13", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
+  "Verbal as Subject 1": {"order": "15", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
-  "Verbal as Subject 2": {"order": "14", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #pp+ #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
+  "Verbal as Subject 2": {"order": "16", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #pp+ #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
-  "Progressive Verbal as Verb Object": {"order": "15", "type": "intra-phrase", "pattern": "#vb+ Progressive-Verbal-Candidate", "tag": {"on": {"term": "#Progressive-Verbal-Candidate+", "termTag": "Nn"}}},
+  "Progressive Verbal as Verb Object": {"order": "17", "type": "intra-phrase", "pattern": "#vb+ Progressive-Verbal-Candidate", "tag": {"on": {"term": "#Progressive-Verbal-Candidate+", "termTag": "Nn"}}},
 
-  "Verbal as Adjective to Noun 1": {"order": "16", "type": "intra-phrase", "pattern": "#nn+ (#vl+|#iv+)", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjective to Noun 1": {"order": "18", "type": "intra-phrase", "pattern": "#nn+ (#vl+|#iv+)", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjective to Noun 2": {"batch": "Verbals", "order": "17", "type": "intra-phrase", "pattern": "#dt #vl+ #nn+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjective to Noun 2": {"batch": "Verbals", "order": "19", "type": "intra-phrase", "pattern": "#dt #vl+ #nn+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjectival Phrase to Noun 1": {"batch": "Verbals", "order": "18", "type": "intra-phrase", "pattern": "#nn+ #vl+ #nn+", "tag": {"on": {"term": "#vl+ #nn+", "termTag": "aj"}}},
+  "Verbal as Adjectival Phrase to Noun 1": {"batch": "Verbals", "order": "20", "type": "intra-phrase", "pattern": "#nn+ #vl+ #nn+", "tag": {"on": {"term": "#vl+ #nn+", "termTag": "aj"}}},
 
-  "Verbal as Adjective": {"batch": "Verbals", "order": "19", "type": "intra-phrase", "pattern": "#av+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjective": {"batch": "Verbals", "order": "21", "type": "intra-phrase", "pattern": "#av+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjectival Phrase to Noun 2": {"batch": "Verbals", "order": "20", "type": "intra-phrase", "pattern": "#nn+ #vl+ #iv+", "tag": {"on": {"term": "#vl+ #iv+", "termTag": ["VerbalPhrase", "aj"]}}},
+  "Verbal as Adjectival Phrase to Noun 2": {"batch": "Verbals", "order": "22", "type": "intra-phrase", "pattern": "#nn+ #vl+ #iv+", "tag": {"on": {"term": "#vl+ #iv+", "termTag": ["VerbalPhrase", "aj"]}}},
 
-  "Verbal as Adjectival Phrase to Noun 3": {"batch": "Verbals", "order": "21", "type": "intra-phrase", "pattern": "#nn+ #vl+ #pp+", "tag": {"on": {"term": "#vl+ #pp+", "termTag": ["VerbalPhrase", "aj"]}}},
+  "Verbal as Adjectival Phrase to Noun 3": {"batch": "Verbals", "order": "23", "type": "intra-phrase", "pattern": "#nn+ #vl+ #pp+", "tag": {"on": {"term": "#vl+ #pp+", "termTag": ["VerbalPhrase", "aj"]}}},
 
-  "Gerunds": {"batch": "Verbals", "order": "22", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #nn)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
+  "Gerunds": {"batch": "Verbals", "order": "24", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #nn)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
 
-  "Present Participles": {"batch": "Verbals", "order": "23", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #aj)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
+  "Present Participles": {"batch": "Verbals", "order": "25", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #aj)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
 
-  "Infinitive Phrase as Adverb to Adjective": {"order": "24", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as Adverb to Adjective": {"order": "26", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
 
-  "Infinitive Phrase as as Direct Object": { "order": "25", "type": "intra-phrase", "pattern": "#Action #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase as as Direct Object": { "order": "27", "type": "intra-phrase", "pattern": "#Action #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as Subject Complement nn": { "order": "26", "type": "intra-phrase", "pattern": "#Linking #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase as as Subject Complement nn": { "order": "28", "type": "intra-phrase", "pattern": "#Linking #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as aj": { "order": "27", "type": "intra-phrase", "pattern": "#nn+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}, "modifier": {"term": "#iv+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Infinitive Phrase as as aj": { "order": "29", "type": "intra-phrase", "pattern": "#nn+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}, "modifier": {"term": "#iv+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Infinitive Phrase as as av 1": { "order": "28", "type": "intra-phrase", "pattern": "#Past #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as av 1": { "order": "30", "type": "intra-phrase", "pattern": "#Past #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Infinitive Phrase as as av 2": { "order": "29", "type": "intra-phrase", "pattern": "(who|whom) #Present #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as av 2": { "order": "31", "type": "intra-phrase", "pattern": "(who|whom) #Present #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Infinitive Phrase as as av 3": { "order": "30", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as av 3": { "order": "32", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Infinitive Phrase after Gerund": { "order": "31", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase after Gerund": { "order": "33", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase after Participle": { "order": "32", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}},
+  "Infinitive Phrase after Participle": { "order": "34", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adjective 1": {"batch": "Verbals", "order": "33", "type": "intra-phrase", "pattern": "#vl+ #pp+", "tag": {"each": [{"term": "#vl+", "termTag": "nn"}, {"term": "#pp+", "termTag": "aj"}]}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 1": {"batch": "Verbals", "order": "35", "type": "intra-phrase", "pattern": "#vl+ #pp+", "tag": {"each": [{"term": "#vl+", "termTag": "nn"}, {"term": "#pp+", "termTag": "aj"}]}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adjective 2": {"batch": "Verbals", "order": "34", "type": "intra-phrase", "pattern": "#Gerund #Noun? #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 2": {"batch": "Verbals", "order": "36", "type": "intra-phrase", "pattern": "#Gerund #Noun? #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adverb": {"batch": "Verbals", "order": "35", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb": {"batch": "Verbals", "order": "37", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb": {"batch": "Verbals", "order": "35", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Verbal Phrase as Subordinate Clause": {"batch": "Verbals", "order": "38", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#Progressive-Verbal-Candidate+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#Progressive-Verbal-Candidate+", "termUnTag": "#Progressive-Verbal-Candidate"}]}},
 
-  "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "36", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
+  "RelativeClause modifies Subject": { "order": "39", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
-  "Reset NonInfinitive vl": {"batch":"Verbals", "order": "37", "type": "intra-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+  "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "40", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
 
-  "Reset NonGerund nn": {"batch":"Verbals", "order": "38", "type": "intra-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
+  "Reset NonInfinitive vl": {"batch":"Verbals", "order": "41", "type": "intra-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+
+  "Reset NonGerund nn": {"batch":"Verbals", "order": "42", "type": "intra-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
 }
