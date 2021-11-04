@@ -75,11 +75,15 @@
 
   "Verbal Phrase as Subordinate Clause": {"batch": "Verbals", "order": "38", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#Progressive-Verbal-Candidate+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#Progressive-Verbal-Candidate+", "termUnTag": "#Progressive-Verbal-Candidate"}]}},
 
-  "RelativeClause modifies Subject": { "order": "39", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
+  "Participial Phrase": {"batch": "Verbals", "order": "39", "type": "intra-phrase", "pattern": "^(#PastParticiple && #Comma)", "tag": {"all": "ParticipialPhrase"}, "untag": {"all": ["#aj", "#Action"]}},
 
-  "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "40", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
+  "RelativeClause modifies Subject": { "order": "40", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
-  "Reset NonInfinitive vl": {"batch":"Verbals", "order": "41", "type": "intra-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+  "Participial Phrase modifies Subject": { "order": "41", "type": "inter-phrase", "pattern": "#ParticipialPhrase+ #sbj+", "modifier": {"term": "#ParticipialPhrase+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
-  "Reset NonGerund nn": {"batch":"Verbals", "order": "42", "type": "intra-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
+  "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "42", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
+
+  "Reset NonInfinitive vl": {"batch":"Verbals", "order": "43", "type": "intra-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+
+  "Reset NonGerund nn": {"batch":"Verbals", "order": "44", "type": "intra-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
 }

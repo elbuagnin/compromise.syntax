@@ -1,5 +1,5 @@
 {
   "Subordinate Clause": {"batch":"Clauses", "order": "1", "type": "intra-phrase", "pattern": "#SubordinatingConjunction+ * #Comma", "tag": {"all": ["SubordinateClause", "Subcls"]}},
 
-  "Main Clause": {"batch":"Clauses", "order": "1", "type": "inter-phrase", "pattern": "(#Sbj && !#Relcls && !#Subcls) (#Pred && !#Relcls && !#Subcls)", "tag": {"all": ["MainClause", "Mncls"]}}
+  "Main Clause": {"batch":"Clauses", "order": "2", "type": "inter-phrase", "pattern": "(#Sbj && !#Relcls && !#Subcls) (#Pred && !#Relcls && !#Subcls)", "tag": {"all": ["MainClause", "Mncls"]}}
 }
