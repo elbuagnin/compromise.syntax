@@ -1,0 +1,15 @@
+{
+  "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "1", "type": "intra-phrase", "pattern": "#nn * #vb", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
+
+  "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "2", "type": "intra-phrase", "pattern": "#sbj #vb *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
+
+  "Main Clause step 1": {"batch":"Structure", "batchOrder": "13", "order": "3", "type": "intra-phrase", "pattern": "(!#subcls && !#relcls)+", "tag": {"all": "MainClauseCandidate"}},
+
+  "Main Clause step 2": {"batch":"Structure", "batchOrder": "13", "order": "4", "type": "intra-phrase", "pattern": "#sbj+ #pred+", "tag": {"all": "CompleteClause"}},
+
+  "Main Clause step 3": {"batch":"Structure", "batchOrder": "13", "order": "5", "type": "intra-phrase", "pattern": "(#MainClauseCandidate+ && #CompleteClause+)", "tag": {"all": "MainClause"}},
+
+  "Main Clause step 4": {"batch":"Structure", "batchOrder": "13", "order": "6", "type": "intra-phrase", "pattern": "#MainClauseCandidate+", "untag": {"all": "#MainClauseCandidate"}},
+
+  "Main Clause step 5": {"batch":"Structure", "batchOrder": "13", "order": "6", "type": "intra-phrase", "pattern": "#CompleteClause+", "untag": {"all": "#CompleteClause"}}
+}
