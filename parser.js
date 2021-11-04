@@ -368,11 +368,27 @@ export default function parser(doc) {
           console.log('Rechecking Verbials');
           check(verbialRules);
           break;
-        case 'Aj' || 'Av':
+        case 'Aj':
           console.log('Rechecking Modifiers');
           check(modifierRules);
           break;
-        case 'Vl' || 'Iv' || 'Gd' || 'Pt':
+        case 'Av':
+          console.log('Rechecking Modifiers');
+          check(modifierRules);
+          break;
+        case 'Vl':
+          console.log('Rechecking Verbals');
+          check(verbalRules);
+          break;
+        case 'Iv':
+          console.log('Rechecking Verbals');
+          check(verbalRules);
+          break;
+        case 'Gd':
+          console.log('Rechecking Verbals');
+          check(verbalRules);
+          break;
+        case 'Pt':
           console.log('Rechecking Verbals');
           check(verbalRules);
           break;
