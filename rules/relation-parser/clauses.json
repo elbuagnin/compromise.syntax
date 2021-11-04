@@ -1,0 +1,2 @@
+{
+  "Subordinate Clause": {"batch":"Clauses", "order": "1", "type": "intra-phrase", "pattern": "#SubordinatingConjunction+ * #Comma", "tag": {"all": "SubordinateClause"}}} 
