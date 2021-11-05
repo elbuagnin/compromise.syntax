@@ -7,7 +7,7 @@
 
   "Nouns": {"batch": "Early Groupings", "batchOrder": "2", "order": "4", "type": "inter-phrase", "pattern": "(#Noun|#Pronoun|#Gerund)", "tag": {"all": "nn"}},
 
-  "Verbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "#Verb", "tag": {"all": "vb"}},
+  "Verbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "#Verb", "tag": {"all": "pvb"}},
 
   "Adjectives": {"batch": "Early Groupings", "batchOrder": "2", "order": "6", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "aj"}},
 

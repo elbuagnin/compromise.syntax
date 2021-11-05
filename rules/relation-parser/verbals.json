@@ -75,11 +75,11 @@
 
   "Verbal Phrase as Subordinate Clause": {"batch": "Verbals", "order": "38", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#Progressive-Verbal-Candidate+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#Progressive-Verbal-Candidate+", "termUnTag": "#Progressive-Verbal-Candidate"}]}},
 
-  "Participial Phrase": {"batch": "Verbals", "order": "39", "type": "intra-phrase", "pattern": "^(#PastParticiple && #Comma)", "tag": {"all": "ParticipialPhrase"}, "untag": {"all": ["#aj", "#Action"]}},
+  "Participial Phrase": {"batch": "Verbals", "order": "39", "type": "intra-phrase", "pattern": "^(#PastParticiple && #Comma)", "tag": {"all": "ParticiplePhrase"}, "untag": {"all": ["#aj", "#Action"]}},
 
-  "RelativeClause modifies Subject": { "order": "40", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
+  "RelativeClause modifies Subject": {"batch":"Verbals",  "order": "40", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
-  "Participial Phrase modifies Subject": { "order": "41", "type": "inter-phrase", "pattern": "#ParticipialPhrase+ #sbj+", "modifier": {"term": "#ParticipialPhrase+", "modifies": "#sbj+", "termTag": "Adjectival"}},
+  "Participial Phrase modifies Subject": {"batch":"Verbals",  "order": "41", "type": "inter-phrase", "pattern": "#ParticiplePhrase+ #sbj+", "modifier": {"term": "#ParticiplePhrase+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
   "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "42", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
 
