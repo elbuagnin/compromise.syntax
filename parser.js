@@ -61,7 +61,7 @@ export default function parser(doc) {
         console.log('!!!!!!!!!!!!!!!!!!!!!!!\n\n');
 
         if (modifier) {
-          let term = matchedPattern.match(modifier.term);
+          const terms = matchedPattern.match(modifier.term);
           const modifies = matchedPattern.match(modifier.modifies);
 
           let termTag = 'Modifies';
@@ -69,12 +69,14 @@ export default function parser(doc) {
             termTag = modifier.termTag;
           }
 
-          let modTag = modifies.text();
-          modTag = modTag.replace(/ /g, '-');
-          modTag = `${termTag}:${modTag}`;
+          terms.forEach((term, i) => {
+            let modTag = modifies.eq(i).text();
+            modTag = modTag.replace(/ /g, '-');
+            modTag = `${termTag}:${modTag}`;
 
-          term = term.not(modifies);
-          term.tag(modTag);
+            const adjTerm = term.not(modifies);
+            adjTerm.tag(modTag);
+          });
         }
 
         if (tag) {
