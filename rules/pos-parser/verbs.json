@@ -49,11 +49,11 @@
 
   "Linking Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Linking", "tag": {"all": "Linking"}},
 
-  "Action Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
+  "Action Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
 
-  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastParticiple", "vl"]}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
+  "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "27", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastParticiple", "vl"]}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
 
-  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "27", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "vb"]}}},
+  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "28", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "vb"]}}},
 
-  "Confirm Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "28", "type": "inter-phrase", "pattern": "#vb", "untag": {"all": "#pvb"}}
+  "Confirm Verbs": {"batch":"Verbs", "batchOrder": "3",  "order": "29", "type": "inter-phrase", "pattern": "#vb", "untag": {"all": "#pvb"}}
 }
