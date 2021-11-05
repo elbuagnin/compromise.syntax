@@ -7,6 +7,8 @@
 
   "Determiner Noun": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
 
+  "Head Noun": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
+
   "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "5", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
   "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "6", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
@@ -24,6 +26,8 @@
   "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "12", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adverb 2": {"batch": "Nominals", "order": "13", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+  "Simple Relative Noun Clauses": {"batch": "Nominals", "order": "14", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
   "Subject": {"batch":"Nominals", "order": "14", "type": "intra-phrase", "pattern": "#nn+ #aj+? #vb+", "tag": {"on": {"term": "#nn+ #aj+?", "termTag": ["Subject", "sbj"]}}},
 

@@ -1,7 +1,7 @@
 {
+
+
+
+
     
-
-    "Head Noun": {"batch":"Phrases", "batchOrder": "6",  "order": "2", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
-
-    "Simple Relative Noun Clauses": {"batch": "Phrases", "batchOrder": "6", "order": "3", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}}
 }

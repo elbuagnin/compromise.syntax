@@ -9,6 +9,8 @@
 
   "Prepositional Phrase as Adverb 4": {"batch": "Verbials", "order": "5", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
+  "Simple Relative Noun Clauses": {"batch": "Verbials", "order": "6", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
+
   "Subject": {"batch":"Verbials", "order": "6", "type": "intra-phrase", "pattern": "#nn+ #aj+? #vb+", "tag": {"on": {"term": "#nn+ #aj+?", "termTag": ["Subject", "sbj"]}}},
 
   "Noun Subject Compliment": {"batch":"Verbials", "order": "7", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
