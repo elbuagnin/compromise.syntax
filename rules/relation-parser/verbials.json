@@ -15,13 +15,13 @@
 
   "Adjective Subject Compliment": {"batch":"Verbials", "order": "8", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "#aj+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#aj+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
 
-  "Direct w/ Indirect Objects 1": {"batch":"Verbials", "order": "16", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+  "Direct w/ Indirect Objects 1": {"batch":"Verbials", "order": "9", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Indirect Objects 1": {"batch":"Verbials", "order": "17", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+  "Indirect Objects 1": {"batch":"Verbials", "order": "10", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
 
-  "Direct w/ Indirect Objects 1": {"batch":"Verbials", "order": "18", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+  "Direct w/ Indirect Objects 1": {"batch":"Verbials", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Indirect Objects 1": {"batch":"Verbials", "order": "19", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+  "Indirect Objects 1": {"batch":"Verbials", "order": "12", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
 
-  "Direct Object": {"batch":"Verbials", "order": "20", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}}
+  "Direct Object": {"batch":"Verbials", "order": "13", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}}
 }
