@@ -3,13 +3,29 @@
 
   "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "2", "type": "intra-phrase", "pattern": "#sbj #vb *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
 
-  "Main Clause step 1": {"batch":"Structure", "batchOrder": "13", "order": "3", "type": "intra-phrase", "pattern": "(!#subcls && !#relcls)+", "tag": {"all": "MainClauseCandidate"}},
+  "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "3", "type": "intra-phrase", "pattern": "#sbj #vb *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
 
-  "Main Clause step 2": {"batch":"Structure", "batchOrder": "13", "order": "4", "type": "intra-phrase", "pattern": "#sbj+ #pred+", "tag": {"all": "CompleteClause"}},
+  "Noun Subject Compliment": {"batch":"Structure", "order": "4", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
 
-  "Main Clause step 3": {"batch":"Structure", "batchOrder": "13", "order": "5", "type": "intra-phrase", "pattern": "(#MainClauseCandidate+ && #CompleteClause+)", "tag": {"all": "MainClause"}},
+  "Adjective Subject Compliment": {"batch":"Structure", "order": "5", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "#aj+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#aj+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
 
-  "Main Clause step 4": {"batch":"Structure", "batchOrder": "13", "order": "6", "type": "intra-phrase", "pattern": "#MainClauseCandidate+", "untag": {"all": "#MainClauseCandidate"}},
+  "Direct w/ Indirect Objects 1": {"batch":"Structure", "order": "6", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Main Clause step 5": {"batch":"Structure", "batchOrder": "13", "order": "6", "type": "intra-phrase", "pattern": "#CompleteClause+", "untag": {"all": "#CompleteClause"}}
+  "Indirect Objects 1": {"batch":"Structure", "order": "7", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+
+  "Direct w/ Indirect Objects 1": {"batch":"Structure", "order": "8", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
+
+  "Indirect Objects 1": {"batch":"Structure", "order": "9", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
+
+  "Direct Object": {"batch":"Structure", "order": "10", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
+
+  "Main Clause step 1": {"batch":"Structure", "batchOrder": "13", "order": "11", "type": "intra-phrase", "pattern": "(!#subcls && !#relcls)+", "tag": {"all": "MainClauseCandidate"}},
+
+  "Main Clause step 2": {"batch":"Structure", "batchOrder": "13", "order": "12", "type": "intra-phrase", "pattern": "#sbj+ #pred+", "tag": {"all": "CompleteClause"}},
+
+  "Main Clause step 3": {"batch":"Structure", "batchOrder": "13", "order": "13", "type": "intra-phrase", "pattern": "(#MainClauseCandidate+ && #CompleteClause+)", "tag": {"all": "MainClause"}},
+
+  "Main Clause step 4": {"batch":"Structure", "batchOrder": "13", "order": "14", "type": "intra-phrase", "pattern": "#MainClauseCandidate+", "untag": {"all": "#MainClauseCandidate"}},
+
+  "Main Clause step 5": {"batch":"Structure", "batchOrder": "13", "order": "15", "type": "intra-phrase", "pattern": "#CompleteClause+", "untag": {"all": "#CompleteClause"}}
 }
