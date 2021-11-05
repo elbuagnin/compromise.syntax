@@ -23,9 +23,9 @@
 
   "Verbal as Participle Opening": {"batch": "Verbals", "order": "12", "type": "intra-phrase", "pattern": "^(#Verbal+ && #Comma)", "tag": {"all": ["Participle", "aj"]}},
 
-  "Verbal as Participle Opening Phrase": {"batch": "Verbals", "order": "13", "type": "intra-phrase", "pattern": "^#Verbal+ (* && !#vb) #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
+  "Verbal as Participle Opening Phrase": {"batch": "Verbals", "order": "13", "type": "intra-phrase", "pattern": "^#Verbal+ #VerbalPhrase+ #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "Verbal as Participle Middle Phrase": {"batch": "Verbals", "order": "14", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ (* && !#vb) #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
+  "Verbal as Participle Middle Phrase": {"batch": "Verbals", "order": "14", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ #VerbalPhrase+ #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
   "Verbal as Subject 1": {"order": "15", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
