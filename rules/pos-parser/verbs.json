@@ -47,13 +47,15 @@
 
   "#Negative #VerbPhrase": {"batch": "Verbs", "batchOrder": "3", "order": "24", "type": "intra-phrase", "pattern": "#Verb #Negative (#Verb|#Verbal)+", "tag": {"all": "#Negative"}, "on": {"term": "#Negative", "termTag": "vb"}},
 
-  "Linking Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? #Linking", "tag": {"all": "Linking"}},
+  "Linking Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "25", "type": "intra-phrase", "pattern": "(#Modal+|#Auxiliary+)? #Linking", "tag": {"all": "Linking"}},
 
-  "Action Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "intra-phrase", "pattern": "(#Model+|#Auxiliary+)? (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
+  "Action Verb Group": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "intra-phrase", "pattern": "(#Modal+|#Auxiliary+)? (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
+
+  "#Modal": {"batch": "Verbs", "batchOrder": "3", "order": "29", "type": "intra-phrase", "pattern": "#Modal+", "tag": {"all": "vb"}},
 
   "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "3",  "order": "27", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastParticiple", "vl"]}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
 
   "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "3",  "order": "28", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "vb"]}}},
 
-  "Non-verb Clean Up 1": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "intra-phrase", "pattern": "!#vb", "untag": {"all": ["#Action", "#Linking", "#Stative"]}}
+  "Non-verb Clean Up": {"batch":"Verbs", "batchOrder": "3",  "order": "26", "type": "intra-phrase", "pattern": "!#vb", "untag": {"all": ["#Action", "#Linking", "#Stative"]}}
 }
