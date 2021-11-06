@@ -362,55 +362,62 @@ export default function parser(doc) {
       });
     }
     console.log(JSON.stringify(changes));
+    let lastChange = 'same';
     changes.forEach((change) => {
-      switch (change) {
-        case 'Nn':
-          console.log('Rechecking Nominals');
-          check(nominalRules);
-          break;
-        case 'Vb':
-          console.log('Rechecking Verbials');
-          check(verbialRules);
-          break;
-        case 'Aj':
-          console.log('Rechecking Modifiers');
-          check(modifierRules);
-          break;
-        case 'Av':
-          console.log('Rechecking Modifiers');
-          check(modifierRules);
-          break;
-        case 'Vl':
-          console.log('Rechecking Verbals');
-          check(verbalRules);
-          break;
-        case 'Iv':
-          console.log('Rechecking Verbals');
-          check(verbalRules);
-          break;
-        case 'Gd':
-          console.log('Rechecking Verbals');
-          check(verbalRules);
-          break;
-        case 'Pt':
-          console.log('Rechecking Verbals');
-          check(verbalRules);
-          break;
-        case 'Pp':
-          console.log('Rechecking Prepositions');
-          check(prepositionalRules);
-          break;
-        case 'Subcls':
-          console.log('Rechecking Clauses');
-          check(clauseRules);
-          break;
-        case 'Relcls':
-          console.log('Rechecking Clauses');
-          check(clauseRules);
-          break;
-        default:
-          break;
+      console.log(`last change = ${lastChange}`);
+      console.log(`change= ${change}`);
+
+      if ((change !== lastChange) && (change !== 'same')) {
+        switch (change) {
+          case 'Nn':
+            console.log('Rechecking Nominals');
+            check(nominalRules);
+            break;
+          case 'Vb':
+            console.log('Rechecking Verbials');
+            check(verbialRules);
+            break;
+          case 'Aj':
+            console.log('Rechecking Modifiers');
+            check(modifierRules);
+            break;
+          case 'Av':
+            console.log('Rechecking Modifiers');
+            check(modifierRules);
+            break;
+          case 'Vl':
+            console.log('Rechecking Verbals');
+            check(verbalRules);
+            break;
+          case 'Iv':
+            console.log('Rechecking Verbals');
+            check(verbalRules);
+            break;
+          case 'Gd':
+            console.log('Rechecking Verbals');
+            check(verbalRules);
+            break;
+          case 'Pt':
+            console.log('Rechecking Verbals');
+            check(verbalRules);
+            break;
+          case 'Pp':
+            console.log('Rechecking Prepositions');
+            check(prepositionalRules);
+            break;
+          case 'Subcls':
+            console.log('Rechecking Clauses');
+            check(clauseRules);
+            break;
+          case 'Relcls':
+            console.log('Rechecking Clauses');
+            check(clauseRules);
+            break;
+          default:
+            break;
+        }
       }
+      lastChange = change;
     });
   }
 
