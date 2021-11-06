@@ -414,6 +414,18 @@ export default function parser(doc) {
     });
   }
 
+  function InfinitePattern(history) {
+    const infinite = false;
+    const iterations = history.length;
+    console.log(`&&&&&&&&&&&&&&&&&&&&&&&&&&&  ${iterations}`);
+
+    if (iterations < 4) return false;
+
+    history.forEach((snapshot) => {
+      console.log(snapshot);
+    });
+  }
+
   // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
   const posPath = './rules/sequencial-parser/';
@@ -447,11 +459,17 @@ export default function parser(doc) {
       let changedElements = differentElements(rolesBefore, rolesAfter);
 
       if (arrayCompare(rolesBefore, rolesAfter) === false) {
+        const history = [];
+        history.push(changedElements);
+
         while (arrayCompare(rolesBefore, rolesAfter) === false) {
+          if (InfinitePattern(history)) { break; }
           rolesBefore = getOrClearPOSRoles(sentence, clearOld);
           relationships(sentence, changedElements);
           rolesAfter = getOrClearPOSRoles(sentence);
           changedElements = differentElements(rolesBefore, rolesAfter);
+
+          history.push(changedElements);
         }
       }
     });
