@@ -23,7 +23,7 @@
 
   "Main Clause step 2": {"batch":"Structure", "batchOrder": "11", "order": "12", "type": "intra-phrase", "pattern": "#sbj+ #pred+", "tag": {"all": "CompleteClause"}},
 
-  "Main Clause step 3": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "(#MainClauseCandidate+ && #CompleteClause+)", "tag": {"all": "MainClause"}},
+  "Main Clause step 3": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "(#MainClauseCandidate+ && #CompleteClause+)", "tag": {"all": ["MainClause", "final"]}},
 
   "Main Clause step 4": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "intra-phrase", "pattern": "#MainClauseCandidate+", "untag": {"all": "#MainClauseCandidate"}},
 
