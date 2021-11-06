@@ -415,15 +415,25 @@ export default function parser(doc) {
   }
 
   function InfinitePattern(history) {
-    const infinite = false;
+    let infinite = false;
     const iterations = history.length;
-    console.log(`&&&&&&&&&&&&&&&&&&&&&&&&&&&  ${iterations}`);
 
-    if (iterations < 4) return false;
+    if (iterations < 6) return false;
+    const maxRepeatSize = iterations / 2;
 
-    history.forEach((snapshot) => {
-      console.log(snapshot);
-    });
+    if (maxRepeatSize % 2 === 0) {
+      const group1 = [];
+      const group2 = [];
+      for (let i = 2; i < maxRepeatSize; i++) {
+        group1.push(history[iterations + 1 - i]);
+        group2.push(history[maxRepeatSize + 1 - i]);
+
+        if (arrayCompare(group1, group2) === true) {
+          infinite = true;
+        }
+      }
+    }
+    return infinite;
   }
 
   // Load the parsing rules and sort them by batch and within batch.
@@ -463,7 +473,10 @@ export default function parser(doc) {
         history.push(changedElements);
 
         while (arrayCompare(rolesBefore, rolesAfter) === false) {
-          if (InfinitePattern(history)) { break; }
+          if (InfinitePattern(history) === true) {
+            console.log('hit infinite repeating pattern');
+            break;
+          }
           rolesBefore = getOrClearPOSRoles(sentence, clearOld);
           relationships(sentence, changedElements);
           rolesAfter = getOrClearPOSRoles(sentence);
