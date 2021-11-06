@@ -159,14 +159,19 @@
         "notA": "PastParticipleClause",
         "color": "magenta"
     },
-    "SubordinateClause": {
-        "isA": "Clause",
-        "notA": "",
-        "color": "yellow"
-    },
     "RelativeClause": {
         "isA": "Clause",
         "notA": "",
         "color": "magenta"
+    },
+    "MainClause": {
+        "isA": "Clause",
+        "notA": "SubordinateClause",
+        "color": "yellow"
+    },
+    "SubordinateClause": {
+        "isA": "Clause",
+        "notA": "MainClause",
+        "color": "yellow"
     }
 }
