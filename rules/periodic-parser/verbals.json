@@ -81,9 +81,9 @@
 
   "Participle Phrase modifies Subject 2": {"batch":"Verbals",  "order": "41", "type": "inter-phrase", "pattern": "#nn?+ #CommaNoun #ParticiplePhrase+ #vb+", "tag":{"before": {"term": "#vb?+", "termTag": "#sbj"}}, "modifier": {"term": "#ParticiplePhrase+", "modifies": "#nn?+ #CommaNoun", "termTag": "Adjectival"}},
 
-  "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "41", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
+  "Reset #UnPhrasedVerbals": {"batch":"Verbals", "order": "42", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
 
-  "Reset NonInfinitive vl": {"batch":"Verbals", "order": "42", "type": "intra-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+  "Reset NonInfinitive vl": {"batch":"Verbals", "order": "43", "type": "intra-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
 
-  "Reset NonGerund nn": {"batch":"Verbals", "order": "43", "type": "intra-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
+  "Reset NonGerund nn": {"batch":"Verbals", "order": "44", "type": "intra-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
 }
