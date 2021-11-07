@@ -1,11 +1,11 @@
 {
-  "Assign UnPhrasedVerbal Test": {"batch":"Verbals", "order": "1", "type": "intra-phrase", "pattern": "/^#ObjectOfInfinitive/", "tag": {"all": "Test"}},
+  "Assign UnPhrasedVerbal": {"batch":"Verbals", "order": "1", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "UnPhrasedVerbal"}},
 
-  "Assign UnPhrasedVerbal": {"batch":"Verbals", "order": "2", "type": "intra-phrase", "pattern": "(#Verbal+ && !#VerbalPhrase)", "tag": {"all": "UnPhrasedVerbal"}},
+  "Assign NonInfinitive vl": {"batch":"Verbals", "order": "2", "type": "intra-phrase", "pattern": "(#vl+ && !#Infinitive)", "tag": {"on": {"term": "#vl+", "termTag": "VlNotIv"}}},
 
-  "Assign NonInfinitive vl": {"batch":"Verbals", "order": "3", "type": "intra-phrase", "pattern": "(#vl+ && !#Infinitive)", "tag": {"on": {"term": "#vl+", "termTag": "VlNotIv"}}},
+  "Assign NonGerund nn": {"batch":"Verbals", "order": "3", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
 
-  "Assign NonGerund nn": {"batch":"Verbals", "order": "4", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
+  "Assign NonVerbal nn": {"batch":"Verbals", "order": "4", "type": "intra-phrase", "pattern": "(#nn+ && !#Verbal)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotVl"}}},
 
   "Object of Infinitive": {"batch": "Verbals", "order": "5", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#pp+)", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
