@@ -19,7 +19,9 @@
 
   "Past Simple negative": {"batch": "Verbs", "batchOrder": "3", "order": "10", "type": "intra-phrase", "pattern": "(did not|never did) #PresentTense", "tag": {"all": ["PastSimple", "vb"]}},
 
-  "Past Simple": {"batch": "Verbs", "batchOrder": "3", "order": "11", "type": "intra-phrase", "pattern": "!#Verb #PastTense !#Verb?", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
+  "Past Simple 1": {"batch": "Verbs", "batchOrder": "3", "order": "11", "type": "intra-phrase", "pattern": "!#Verb #PastTense !#Verb?", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
+
+  "Past Simple 2": {"batch": "Verbs", "batchOrder": "3", "order": "11", "type": "intra-phrase", "pattern": "^#PastTense !#Verb?", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
 
   "Present Simple negative": {"batch": "Verbs", "batchOrder": "3", "order": "12", "type": "intra-phrase", "pattern": "(do not|never) #PresentTense", "tag": {"all": ["PresentSimple", "vb"]}},
 
