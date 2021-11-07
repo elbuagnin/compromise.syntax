@@ -9,6 +9,8 @@
 
   "Adjective Subject Compliment": {"batch":"Structure", "order": "5", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "#aj+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#aj+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
 
+  "Subject": {"batch":"Structure", "batchOrder": "11", "order": "6", "type": "inter-phrase", "pattern": "#sbj+", "tag": {"all": ["Subject", "Final"]}},
+
   "Direct w/ Indirect Objects 1": {"batch":"Structure", "order": "6", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}},
 
   "Indirect Objects 1": {"batch":"Structure", "order": "7", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
@@ -27,5 +29,9 @@
 
   "Main Clause step 4": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "intra-phrase", "pattern": "#MainClauseCandidate+", "untag": {"all": "#MainClauseCandidate"}},
 
-  "Main Clause step 5": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "intra-phrase", "pattern": "#CompleteClause+", "untag": {"all": "#CompleteClause"}}
+  "Main Clause step 5": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "intra-phrase", "pattern": "#CompleteClause+", "untag": {"all": "#CompleteClause"}},
+
+  "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "11", "order": "16", "type": "inter-phrase", "pattern": "#Subject+ #vb+ #DirectObject?+", "tag": { "on": {"term": "#vb+ #DirectObject?+", "termTag": ["#Predicate", "Final"]}}},
+
+  "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "17", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": "CompleteSentence"}}
 }
