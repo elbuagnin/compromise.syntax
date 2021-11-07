@@ -3,7 +3,9 @@
 
     "all As Determiner": {"batchOrder": "3", "term": "all", "pattern": "all #Adjective?+ #Noun", "tag": "Determiner"},
 
-    "all As Noun": {"batchOrder": "3", "term": "all", "pattern": "all #Verb", "tag": ["Noun", "Plural"]},
+    "all As Noun 1": {"batchOrder": "3", "term": "all", "pattern": "all #Verb", "tag": ["Noun", "Plural"]},
+
+    "all As Noun 2": {"batchOrder": "3", "term": "all", "pattern": "#Preposition all !#Noun?", "tag": ["Noun", "Plural"]},
 
     "as if Is Expression": {"batchOrder": "3", "term": "as if", "pattern": "^as if$", "tag": "Expression"},
 

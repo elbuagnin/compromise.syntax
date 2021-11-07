@@ -11,6 +11,8 @@
 
   "Adjectives": {"batch": "Early Groupings", "batchOrder": "2", "order": "6", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "aj"}},
 
+  "Comma Adjectives": {"batch": "Early Groupings", "batchOrder": "2", "order": "6", "type": "inter-phrase", "pattern": "(#Adjective && #Comma)", "tag": {"all": "CommaAdjective"}},
+
   "Adverbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "7", "type": "inter-phrase", "pattern": "#Adverb", "tag": {"all": "av"}},
 
   "Prepositions": {"batch": "Early Groupings", "batchOrder": "2", "order": "8", "type": "inter-phrase", "pattern": "#Preposition", "tag": {"all": "pp"}},
