@@ -20,7 +20,7 @@ function verbVerbalCorrecter(doc) {
   // Gerunds turned into Auxiliary Verbs, but need to be Verbals
   const gerunds = doc.match('(#Auxiliary && #Verb && /ing$/)');
 
-  gerunds.tag('#Verbal');
+  gerunds.tag(['#ProgressiveVerbal', '#Verbal']);
 }
 
 export default function initialize(doc) {
