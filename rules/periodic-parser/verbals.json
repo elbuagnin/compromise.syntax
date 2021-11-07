@@ -15,7 +15,7 @@
 
   "Object of Verbal": {"batch": "Verbals", "order": "8", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+ (#nn+|#pp+|#iv+)", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}},
 
-  "Progressive Infinitive Object": {"batch": "Verbals", "order": "9", "type": "intra-phrase", "pattern": "#Progressive-Verbal-Candidate+ #iv+", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#iv+", "modifies": "#Progressive-Verbal-Candidate+", "termTag": "ObjectOfVerbal"}},
+  "Progressive Infinitive Object": {"batch": "Verbals", "order": "9", "type": "intra-phrase", "pattern": "#ProgressiveVerbal+ #iv+", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#iv+", "modifies": "#ProgressiveVerbal+", "termTag": "ObjectOfVerbal"}},
 
   "Verbal as Object of Preposition ": {"batch": "Verbals", "order": "10", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
@@ -27,13 +27,13 @@
 
   "Verbal as Participle Middle Phrase": {"batch": "Verbals", "order": "14", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ #VerbalPhrase+ #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "having been": {"batch": "Verbals", "order": "15", "type": "intra-phrase", "pattern": "(having && #Progressive-Verbal-Candidate) been", "tag": {"all": ["PerfectParticiple", "Passive"]}, "untag": {"all": ["#Progressive-Verbal-Candidate", "#verb", "#PastSimple", "#Past", "#Simple", "#action"]}},
+  "having been": {"batch": "Verbals", "order": "15", "type": "intra-phrase", "pattern": "(having && #ProgressiveVerbal) been", "tag": {"all": ["PerfectParticiple", "Passive"]}, "untag": {"all": ["#ProgressiveVerbal", "#verb", "#PastSimple", "#Past", "#Simple", "#action"]}},
 
   "Verbal as Subject 1": {"batch": "Verbals", "order": "16", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
   "Verbal as Subject 2": {"batch": "Verbals", "order": "17", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #pp+ #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
-  "Progressive Verbal as Verb Object": {"batch": "Verbals", "order": "18", "type": "intra-phrase", "pattern": "#vb+ #Progressive-Verbal-Candidate", "tag": {"on": {"term": "#Progressive-Verbal-Candidate+", "termTag": "Nn"}}},
+  "Progressive Verbal as Verb Object": {"batch": "Verbals", "order": "18", "type": "intra-phrase", "pattern": "#vb+ #ProgressiveVerbal", "tag": {"on": {"term": "#ProgressiveVerbal+", "termTag": "Nn"}}},
 
   "Verbal as Adjective to Noun 1": {"batch": "Verbals", "order": "19", "type": "intra-phrase", "pattern": "#nn+ (#vl+|#iv+)", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
@@ -47,9 +47,9 @@
 
   "Verbal as Adjectival Phrase to Noun 3": {"batch": "Verbals", "order": "24", "type": "intra-phrase", "pattern": "#nn+ #vl+ #pp+", "tag": {"on": {"term": "#vl+ #pp+", "termTag": ["VerbalPhrase", "aj"]}}},
 
-  "Gerunds": {"batch": "Verbals", "order": "25", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #nn)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
+  "Gerunds": {"batch": "Verbals", "order": "25", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #nn)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
 
-  "Present Participles": {"batch": "Verbals", "order": "26", "type": "intra-phrase", "pattern": "(#Progressive-Verbal-Candidate && #aj)", "tag": {"on": {"term": "#Progressive-Verbal-Candidate", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#Progressive-Verbal-Candidate", "termUnTag": "#Progressive-Verbal-Candidate"}}},
+  "Present Participles": {"batch": "Verbals", "order": "26", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #aj)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
 
   "Infinitive Phrase as Adverb to Adjective": {"batch": "Verbals", "order": "27", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
 
@@ -75,7 +75,7 @@
 
   "Prepositional Phrase as Adverb": {"batch": "Verbals", "order": "38", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Verbal Phrase as Subordinate Clause": {"batch": "Verbals", "order": "39", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#Progressive-Verbal-Candidate+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#Progressive-Verbal-Candidate+", "termUnTag": "#Progressive-Verbal-Candidate"}]}},
+  "Verbal Phrase as Subordinate Clause": {"batch": "Verbals", "order": "39", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#ProgressiveVerbal+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#ProgressiveVerbal+", "termUnTag": "#ProgressiveVerbal"}]}},
 
   "Participle Phrase": {"batch": "Verbals", "order": "40", "type": "intra-phrase", "pattern": "^(#PastParticiple && #Comma)", "tag": {"all": ["ParticiplePhrase", "final"]}, "untag": {"all": ["#aj", "#Action"]}},
 
