@@ -7,6 +7,8 @@
 
   "Nouns": {"batch": "Early Groupings", "batchOrder": "2", "order": "4", "type": "inter-phrase", "pattern": "(#Noun|#Pronoun|#Gerund)", "tag": {"all": "nn"}},
 
+  "Comma Nouns": {"batch": "Early Groupings", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "(#Noun && #Comma)", "tag": {"all": "CommaNoun"}},
+
   "Adjectives": {"batch": "Early Groupings", "batchOrder": "2", "order": "5", "type": "inter-phrase", "pattern": "#Adjective", "tag": {"all": "aj"}},
 
   "Adverbs": {"batch": "Early Groupings", "batchOrder": "2", "order": "6", "type": "inter-phrase", "pattern": "#Adverb", "tag": {"all": "av"}},
