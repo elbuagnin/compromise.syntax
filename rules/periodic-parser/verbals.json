@@ -27,8 +27,6 @@
 
   "Verbal as Participle Middle Phrase": {"batch": "Verbals", "order": "14", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ #VerbalPhrase+ #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "having been": {"batch": "Verbals", "order": "15", "type": "intra-phrase", "pattern": "(having && #ProgressiveVerbal) been", "tag": {"all": ["PerfectParticiple", "Passive"]}, "untag": {"all": ["#ProgressiveVerbal", "#verb", "#PastSimple", "#Past", "#Simple", "#action"]}},
-
   "Verbal as Subject 1": {"batch": "Verbals", "order": "16", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
   "Verbal as Subject 2": {"batch": "Verbals", "order": "17", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #pp+ #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},

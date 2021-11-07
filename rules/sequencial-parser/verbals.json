@@ -3,7 +3,9 @@
 
   "Unknown Type Progressive Verbals": {"batch": "Verbals", "batchOrder": "4", "order": "2", "type": "inter-phrase", "pattern": "#ProgressiveVerbal", "tag": {"all": ["verbal", "vl"]}},
 
-  "Perfect Participles": {"batch": "Verbals", "batchOrder": "4", "order": "3", "type": "inter-phrase", "pattern": "having #PastParticipleCandidate", "tag": {"all":["PerfectParticiple", "Active", "vl"]}, "untag": {"term": "#PastParticipleCandidate", "termTag": "#PastParticipleCandidate"}},
+  "Perfect Participles": {"batch": "Verbals", "batchOrder": "4", "order": "3", "type": "inter-phrase", "pattern": "having #PastParticiple", "tag": {"all":["PerfectParticiple", "Active", "vl"]}, "untag": {"term": "#PastParticiple", "termTag": "#PastParticiple"}},
 
-  "Perfect Participles": {"batch": "Verbals", "batchOrder": "4", "order": "4", "type": "inter-phrase", "pattern": "having been #PastParticipleCandidate", "tag": {"all":["PerfectParticiple", "Passive", "vl"]}, "untag": {"term": "#PastParticipleCandidate", "termTag": "#PastParticipleCandidate"}}
+  "Perfect Participles": {"batch": "Verbals", "batchOrder": "4", "order": "4", "type": "inter-phrase", "pattern": "having been #PastParticiple", "tag": {"all":["PerfectParticiple", "Passive", "vl"]}, "untag": {"term": "#PastParticiple", "termTag": "#PastParticiple"}},
+
+  "Nominal Clause": {"batch": "Verbals", "batchOrder": "4","order": "5", "type": "intra-phrase", "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #vb+ (#nn+|#aj+|#av+)", "tag": {"after": {"term": "#ProgressiveVerbal+", "termTag": ["NominalClause", "nn"]}}}
 }
