@@ -23,5 +23,10 @@
         "isA": "",
         "notA": ["Subject", "Object"],
         "color": "yellow"
+    },
+    "CompleteSentence": {
+        "isA": "",
+        "notA": "",
+        "color": "yellow"
     }
 }
