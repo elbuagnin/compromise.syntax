@@ -1,3 +1,11 @@
 {
-  "#BaseVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "BaseVerb"}}}
+  "#BaseVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "#BaseVerb"}}},
+
+  "having": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "pattern": "having", "replace": {"on": {"term": "having", "termTag": "PresentParticiple", "termUnTag": "#Gerund"}}},
+
+  "having #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "pattern": "having #PastTense", "replace": {"on": {"term": "having #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
+
+  "having been": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "pattern": "having been", "replace": {"on": {"term": "having been", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
+
+  "having been #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "pattern": "having been #PastTense", "replace": {"on": {"term": "having been #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}}
 }
