@@ -5,7 +5,7 @@
 
   "Assign NonInfinitive vl": {"batch":"Verbals", "order": "3", "type": "intra-phrase", "pattern": "(#vl+ && !#Infinitive)", "tag": {"on": {"term": "#vl+", "termTag": "VlNotIv"}}},
 
-  "Assign NonGerund nn": {"batch":"Verbls", "order": "4", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
+  "Assign NonGerund nn": {"batch":"Verbals", "order": "4", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
 
   "Object of Infinitive": {"batch": "Verbals", "order": "5", "type": "intra-phrase", "pattern": "#Infinitive+ (#nn+|#pp+)", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
