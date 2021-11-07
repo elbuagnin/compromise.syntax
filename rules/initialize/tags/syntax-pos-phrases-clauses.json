@@ -99,11 +99,6 @@
         "notA": "CoordinatingAdjectives",
         "color": "magenta"
     },
-    "ajPhrase": {
-        "isA": "Phrase",
-        "notA": "",
-        "color": "magenta"
-    },
     "VerbalPhrase": {
         "isA": "Phrase",
         "notA": "VerbPhrase",
