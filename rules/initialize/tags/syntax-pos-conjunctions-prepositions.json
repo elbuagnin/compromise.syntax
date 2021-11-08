@@ -22,22 +22,22 @@
   },
   "Where": {
     "isA": "",
-    "notA": ["Whom", "What"],
+    "notA": "",
     "color": "cyan"
   },
   "When": {
     "isA": "",
-    "notA": ["Whom", "What"],
+    "notA": "",
     "color": "cyan"
   },
   "What": {
     "isA": "",
-    "notA": ["When", "Where"],
+    "notA": "",
     "color": "cyan"
   },
   "Whom": {
     "isA": "",
-    "notA": ["When", "Where"],
+    "notA": "",
     "color": "cyan"
   }
 }
