@@ -1,12 +1,12 @@
 {
   "above": ["Preposition", "Where"],
   "across": ["Preposition", "Where"],
-  "after": ["Preposition", "When", "Where"],
+  "after": ["Preposition", "Where", "When"],
   "along": ["Preposition", "Where"],
   "among": ["Preposition", "Where"],
-  "around": ["Preposition", "When", "Where"],
-  "at": ["Preposition", "When", "Where"],
-  "before": ["Preposition", "When", "Where"],
+  "around": ["Preposition", "Where", "When"],
+  "at": ["Preposition", "Where", "When"],
+  "before": ["Preposition", "Where", "When"],
   "behind": ["Preposition", "Where"],
   "below": ["Preposition", "Where"],
   "beneath": ["Preposition", "Where"],
@@ -14,12 +14,12 @@
   "between": ["Preposition", "Where"],
   "beyond": ["Preposition", "Where"],
   "down": ["Preposition", "Where"],
-  "in": ["Preposition", "When", "Where"],
+  "in": ["Preposition", "Where", "When"],
   "inside": ["Preposition", "Where"],
   "into": ["Preposition", "Where"],
   "near": ["Preposition", "Where"],
   "off": ["Preposition", "Where"],
-  "on": ["Preposition", "When", "Where"],
+  "on": ["Preposition", "Where", "When"],
   "toward": ["Preposition", "Where"],
   "through": ["Preposition", "Where"],
   "under": ["Preposition", "Where"],
@@ -34,5 +34,5 @@
   "for": ["Preposition", "What", "Whom"],
   "like": ["Preposition", "What", "Whom"],
   "of": ["Preposition", "What", "Whom"],
-  "by": ["Preposition", "What", "Whom", "When", "Where"]
+  "by": ["Preposition", "What", "Where", "When", "Whom"]
 }
