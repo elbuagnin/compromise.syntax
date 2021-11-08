@@ -23,9 +23,9 @@
 
   "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "11", "order": "12", "type": "inter-phrase", "pattern": "#Subject+ #vb+ #DirectObject?+", "tag": { "on": {"term": "#vb+ #DirectObject?+", "termTag": ["#Predicate", "Final"]}}},
 
-  "Independent Clause": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": "IndependentClause"}},
+  "Independent Clause": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": ["IndependentClause", "Final"]}},
 
-  "Compound Sentence": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+ #CoordinatingConjunction #Subject+ #Predicate+", "tag": {"all": "#CompoundSentence"}},
+  "Compound Sentence": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+ #CoordinatingConjunction #Subject+ #Predicate+", "tag": {"all": ["#CompoundSentence", "Final"]}},
 
-  "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "inter-phrase", "pattern": "* #IndependentClause+ *", "tag": {"all": "CompleteSentence"}}
+  "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "inter-phrase", "pattern": "* #IndependentClause+ *", "tag": {"all": ["CompleteSentence", "Final"]}}
 }
