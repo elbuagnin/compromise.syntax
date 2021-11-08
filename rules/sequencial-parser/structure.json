@@ -21,7 +21,7 @@
 
   "Direct Object": {"batch":"Structure", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "12", "order": "12", "type": "inter-phrase", "pattern": "#Subject+ #vb+ #DirectObject?+", "tag": { "on": {"term": "#vb+ #DirectObject?+", "termTag": ["#Predicate", "Final"]}}},
+  "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "12", "order": "12", "type": "inter-phrase", "pattern": "#Subject+ #vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+)? #AdverbialPhrase?+", "tag": { "after": {"term": "#Subject+", "termTag": ["#Predicate", "Final"]}}},
 
   "Independent Clause": {"batch":"Structure", "batchOrder": "12", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": ["IndependentClause", "Final"]}},
 
