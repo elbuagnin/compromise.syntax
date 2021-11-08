@@ -39,7 +39,7 @@
 
   "Indirect Objects 1": {"batch":"Nominals", "order": "20", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
 
-  "Direct Object": {"batch":"Nominals", "order": "21", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
+  "Direct Object": {"batch":"Nominals", "order": "21", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
 
   "Reset NonVerbal nn": {"batch":"Nominals", "order": "22", "type": "intra-phrase", "pattern": "#nnNotVl+", "untag": {"on": {"term": "#nnNotVl+", "termUnTag": "#nnNotVl"}}},
 
