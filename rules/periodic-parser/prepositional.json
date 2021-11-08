@@ -7,7 +7,7 @@
 
   "Prepositional Phrase as Adjective 1": {"batch": "Prepositions", "order": "4", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adjective 2": {"batch": "Prepositions", "order": "5", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 2": {"batch": "Prepositions", "order": "5", "type": "intra-phrase", "pattern": "#nn+ #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
   "Prepositional Phrase as Adverb to Adjective": {"batch":"Prepositions", "order": "6", "type": "intra-phrase", "pattern": "#aj+ #Preposition #pp+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#aj+", "termTag": "Adverbial"}},
 

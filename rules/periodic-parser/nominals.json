@@ -9,9 +9,11 @@
 
   "Head Noun": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
+  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "5", "type": "intra-phrase", "pattern": "#vb+ #nn+ (with|on|by) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
   "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "6", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "7", "type": "intra-phrase", "pattern": "#nn+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 2": {"batch": "Nominals", "order": "7", "type": "intra-phrase", "pattern": "#nn+ #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
   "Object of Infinitive": {"batch":"Nominals", "order": "8", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl", "#UnPhrasedVerbal"]}, "modifier": {"term": "#nnNotIv+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
@@ -20,8 +22,6 @@
   "Object of Participle": {"batch":"Nominals", "order": "10", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "modifier": {"term": "(#nn+|#pp+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
   "Object of Preposition": {"batch":"Nominals", "order": "11", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
-
-  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "12", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adverb 2": {"batch": "Nominals", "order": "13", "type": "intra-phrase", "pattern": "#VerbedPresentParticiple #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
