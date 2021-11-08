@@ -1,7 +1,12 @@
 import * as mfs from './lib/filesystem.js';
 import * as config from './local-config.js';
 
+let parseCount = 0;
+let parseTakeActionCount = 0;
+
 export default function parser(doc) {
+  const wordCount = doc.wordCount();
+
   // Relationship rules
   function loadRelationRules(file) {
     const rulesPath = './rules/periodic-parser/';
@@ -25,6 +30,8 @@ export default function parser(doc) {
   const clauseRules = loadRelationRules('clauses');
 
   function tagMatch(sentence, rule) {
+    parseCount++;
+
     const {
       pattern, tag, untag, demark, tagID, replace, modifier,
     } = rule;
@@ -45,6 +52,8 @@ export default function parser(doc) {
 
     if (pattern) {
       if (sentence.has(pattern)) {
+        parseTakeActionCount++;
+
         const matchedPattern = sentence.match(pattern);
 
         console.log('!!!!!!!!!!!!!!!!!!!!!!!');
@@ -505,5 +514,11 @@ export default function parser(doc) {
     console.log('Sentence post parser:\n');
     console.log(sentence.text());
     console.log(sentence.debug());
+    console.log(`Word Count = ${wordCount}`);
+    console.log(`Parse Count = ${parseCount}`);
+    console.log(`Parse Actions = ${parseTakeActionCount}`);
+    console.log(`\nParses per word = ${parseCount / wordCount}`);
+    console.log(`Actions per word = ${parseTakeActionCount / wordCount}`);
+    console.log(`Parses per Action = ${parseCount / parseTakeActionCount}`);
   });
 }
