@@ -23,7 +23,7 @@
 
   "Agents 3": {"batch": "Early Groupings", "batchOrder": "2", "order": "11", "type": "inter-phrase", "pattern": "(person|people)", "tag": {"all": "Agent"}},
 
-  "Proper Noun String": {"batch": "Early Groupings", "batchOrder": "2", "order": "12", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Agent", "Person", "Nouns"]}},
+  "Proper Noun String": {"batch": "Early Groupings", "batchOrder": "2", "order": "12", "type": "intra-phrase", "pattern": "#ProperNoun{2,}", "tag": {"all": ["Agent", "Nouns"]}},
 
   "Noun String": {"batch": "Early Groupings", "batchOrder": "2", "order": "13", "type": "intra-phrase", "pattern": "#Noun{2,}", "tag": {"all": "Nouns"}},
 
