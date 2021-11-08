@@ -1,11 +1,13 @@
 {
-    "Compound Adjective Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "1", "type": "intra-phrase", "pattern": "(#Adjective && !#Comma) #CoordinatingConjunction #Adjective", "tag": {"all": ["CompoundPhrase", "CompoundAdjectives", "aj"]}},
+    "No Comma Adjective": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "1", "type": "intra-phrase", "pattern": "(#Adjective && !#Comma)", "tag": {"all": "NoCommaAdjective"}},
 
-    "Coordinate Adjectives 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "2", "type": "inter-phrase", "pattern": "#Adjective (#Adjective && #Comma)+ (#Adjective && !#Comma)", "tag": {"all": ["CoordinatingAdjectives", "aj"]}},
+    "Compound Adjective Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "1", "type": "intra-phrase", "pattern": "#NoCommaAdjective #CoordinatingConjunction #Adjective", "tag": {"all": ["CompoundPhrase", "CompoundAdjectives", "aj"]}},
 
-    "Coordinate Adjectives 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "3", "type": "inter-phrase", "pattern": "#Adjective (#Adjective && #Comma)+ (and|but) (#Adjective && !#Comma)", "tag": {"all": ["CoordinatingAdjectives", "aj"]}},
+    "Coordinate Adjectives 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "2", "type": "inter-phrase", "pattern": "#Adjective #CommaAdjective+ #NoCommaAdjective", "tag": {"all": ["CoordinatingAdjectives", "aj"]}},
 
-    "Cumulative Adjectives": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "4", "type": "inter-phrase", "pattern": "(#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)+ (#Adjective && !#CoordinatingAdjectives && !#CompoundPhrase && !#Comma)", "tag": {"all": ["CumulativeAdjectives", "aj"]}},
+    "Coordinate Adjectives 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "3", "type": "inter-phrase", "pattern": "#Adjective #CommaAdjective+ (and|but) #NoCommaAdjective", "tag": {"all": ["CoordinatingAdjectives", "aj"]}},
+
+    "Cumulative Adjectives": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "4", "type": "inter-phrase", "pattern": "(#NoCommaAdjective && !#CoordinatingAdjectives && !#CompoundPhrase){2,}", "tag": {"all": ["CumulativeAdjectives", "aj"]}},
 
     "Noun Lists 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "5", "type": "inter-phrase", "pattern": "#CommaNoun+ #CoordinatingConjunction #Noun+", "tag": {"all": ["List", "nn"]}},
 
@@ -15,10 +17,6 @@
 
     "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun+ && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun+", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "nn"]}, "untag": {"on": {"term": "#aj", "termUnTag": "#aj"}}},
 
-    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "vb"]}},
-
-    "Compound Sentence Conjunction 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4", "order": "14", "type": "inter-phrase", "pattern": "(* && !#List) #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
-
-    "Compound Sentence Conjunction 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4", "order": "15", "type": "inter-phrase", "pattern": "(* && !#List) #Comma #CoordinatingConjunction{2,2} *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}}
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "4",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "vb"]}}
 
 }
