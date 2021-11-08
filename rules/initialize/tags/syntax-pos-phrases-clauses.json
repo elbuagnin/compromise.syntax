@@ -79,6 +79,11 @@
         "notA": "",
         "color": "green"
     },
+    "AdverbialPhrase": {
+        "isA": "Phrase",
+        "notA": "",
+        "color": "green"
+    },
     "AdjectivePhrase": {
         "isA": "Phrase",
         "notA": "",
