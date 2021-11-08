@@ -23,13 +23,13 @@
 
   "CommaAdjectives": {"batch":"Clean Up", "batchOrder": "12", "order": "12", "type": "inter-phrase", "pattern": "#CommaAdjective", "untag": {"all": "#CommaAdjective"}},
 
-  "Nouns": {"batch":"Nominals", "batchOrder": "12", "order": "13", "type": "inter-phrase", "pattern": "#Nouns+", "untag": {"all": "#Nouns"}},
+  "Nouns": {"batch":"Clean Up", "batchOrder": "12", "order": "13", "type": "inter-phrase", "pattern": "#Nouns+", "untag": {"all": "#Nouns"}},
 
-  "Verbs": {"batch":"Nominals", "batchOrder": "12", "order": "14", "type": "inter-phrase", "pattern": "#Verbs+", "untag": {"all": "#Verbs"}},
+  "Verbs": {"batch":"Clean Up", "batchOrder": "12", "order": "14", "type": "inter-phrase", "pattern": "#Verbs+", "untag": {"all": "#Verbs"}},
 
-  "Adjectives": {"batch":"Nominals", "batchOrder": "12", "order": "15", "type": "inter-phrase", "pattern": "#Adjectives+", "untag": {"all": "#Adjectives"}},
+  "Adjectives": {"batch":"Clean Up", "batchOrder": "12", "order": "15", "type": "inter-phrase", "pattern": "#Adjectives+", "untag": {"all": "#Adjectives"}},
 
-  "Adverbs": {"batch":"Nominals", "batchOrder": "12", "order": "16", "type": "inter-phrase", "pattern": "#Adverbs+", "untag": {"all": "#Adverbs"}},
+  "Adverbs": {"batch":"Clean Up", "batchOrder": "12", "order": "16", "type": "inter-phrase", "pattern": "#Adverbs+", "untag": {"all": "#Adverbs"}},
 
-  "Final": {"batch":"Nominals", "batchOrder": "12", "order": "17", "type": "inter-phrase", "pattern": "#Final+", "untag": {"all": "#Final"}}
+  "Final": {"batch":"Clean Up", "batchOrder": "12", "order": "17", "type": "inter-phrase", "pattern": "#Final+", "untag": {"all": "#Final"}}
 }
