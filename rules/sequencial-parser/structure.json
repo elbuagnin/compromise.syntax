@@ -27,5 +27,7 @@
 
   "Compound Sentence": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+ #CoordinatingConjunction #Subject+ #Predicate+", "tag": {"all": ["#CompoundSentence", "Final"]}},
 
-  "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "inter-phrase", "pattern": "* #IndependentClause+ *", "tag": {"all": ["CompleteSentence", "Final"]}}
+  "Complete Sentence 1": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "inter-phrase", "pattern": "#IndependentClause+", "tag": {"all": ["CompleteSentence", "Final"]}, "untag": {"all": "#Clause"}},
+
+  "Complete Sentence 2": {"batch":"Structure", "batchOrder": "11", "order": "16", "type": "inter-phrase", "pattern": "* #IndependentClause+ *", "tag": {"all": ["CompleteSentence", "Final"]}}
 }
