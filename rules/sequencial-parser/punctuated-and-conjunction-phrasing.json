@@ -23,12 +23,10 @@
 
     "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "nn"]}, "untag": {"on": {"term": "#aj", "termUnTag": "#aj"}}},
 
-    "Implied Noun in Compound Noun Phrase": {"batch": "Punctuated and Conjunction Phrasing", "batchOrder": "5", "order": "13", "type": "intra-phrase", "pattern": "#Determiner #Adjective #CoordinatingConjunction #Determiner? #Adjective (#Noun|one)", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "nn"]}, "untag": {"on": {"term": "#aj", "termUnTag": "#aj"}}},
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "vb"]}},
 
-    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5",  "order": "14", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "vb"]}},
+    "Compound Sentence Conjunction 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5", "order": "14", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
 
-    "Compound Sentence Conjunction 1": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5", "order": "15", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}},
-
-    "Compound Sentence Conjunction 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5", "order": "16", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction{2,2} *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}}
+    "Compound Sentence Conjunction 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "5", "order": "15", "type": "inter-phrase", "pattern": "[* && !#List] #Comma #CoordinatingConjunction{2,2} *", "tag": {"on": {"term": "#CoordinatingConjunction", "termTag": "#CompoundConjunction"}}}
 
 }
