@@ -21,22 +21,27 @@
     },
     "Active": {
         "isA": "",
-        "notA": ["Passive", "Stative"],
+        "notA": "Passive",
         "color": "green"
     },
     "Passive": {
         "isA": "",
-        "notA": ["Active", "Stative"],
+        "notA": "Active",
+        "color": "green"
+    },
+    "Action": {
+        "isA": "",
+        "notA": ["Stative", "Linking"],
         "color": "green"
     },
     "Stative": {
         "isA": "",
-        "notA": ["Active", "Passive"],
+        "notA": "Action",
         "color": "green"
     },
     "Linking": {
         "isA": "",
-        "notA": ["Active", "Passive"],
+        "notA": "Action",
         "color": "green"
     },
     "Interrogative": {
