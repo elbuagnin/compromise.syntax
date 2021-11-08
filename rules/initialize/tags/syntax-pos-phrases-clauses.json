@@ -159,6 +159,11 @@
         "notA": "",
         "color": "magenta"
     },
+    "IndependentClause": {
+        "isA": "Clause",
+        "notA": "SubordinateClause",
+        "color": "yellow"
+    },
     "MainClause": {
         "isA": "Clause",
         "notA": "SubordinateClause",
