@@ -15,9 +15,5 @@
 
     "to Is Preposition 2": {"batchOrder": "3", "term": "to", "pattern": "to$", "tag": "Preposition", "untag": "Conjunction"},
 
-    "one as Pronoun 1": {"batchOrder": "3", "term": "one", "pattern": "(#Pronoun|#Person) #Copula #Article one", "tag": "#Pronoun"},
-
-    "one as Pronoun 2": {"batchOrder": "3", "term": "one", "pattern": "#Article one #Adjective? (who|whom)", "tag": "#Pronoun"},
-
     "to tick": {"batchOrder": "3", "term": "to tick", "pattern": "to tick", "tag": "#Infinitive"}
 }
