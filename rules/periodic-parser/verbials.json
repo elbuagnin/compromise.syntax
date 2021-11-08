@@ -27,5 +27,5 @@
 
   "Indirect Objects 1": {"batch":"Verbials", "order": "14", "type": "intra-phrase", "pattern": "#vb+ #dobj+ #Whom #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}},
 
-  "Direct Object": {"batch":"Verbials", "order": "15", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}}
+  "Direct Object": {"batch":"Verbials", "order": "15", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}}
 }
