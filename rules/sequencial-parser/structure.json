@@ -21,17 +21,11 @@
 
   "Direct Object": {"batch":"Structure", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}},
 
-  "Main Clause step 1": {"batch":"Structure", "batchOrder": "11", "order": "12", "type": "intra-phrase", "pattern": "(!#subcls && !#relcls)+", "tag": {"all": "MainClauseCandidate"}},
+  "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "11", "order": "12", "type": "inter-phrase", "pattern": "#Subject+ #vb+ #DirectObject?+", "tag": { "on": {"term": "#vb+ #DirectObject?+", "termTag": ["#Predicate", "Final"]}}},
 
-  "Main Clause step 2": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "#sbj+ #pred+", "tag": {"all": "CompleteClause"}},
+  "Independent Clause": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": "IndependentClause"}},
 
-  "Main Clause step 3": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "intra-phrase", "pattern": "(#MainClauseCandidate+ && #CompleteClause+)", "tag": {"all": ["MainClause", "final"]}},
+  "Compound Sentence": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "inter-phrase", "pattern": "#IndependentClause+ #CoordinatingConjunction #IndependentClause+", "tag": {"all": "#CompoundSentence"}},
 
-  "Main Clause step 4": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "intra-phrase", "pattern": "#MainClauseCandidate+", "untag": {"all": "#MainClauseCandidate"}},
-
-  "Main Clause step 5": {"batch":"Structure", "batchOrder": "11", "order": "16", "type": "intra-phrase", "pattern": "#CompleteClause+", "untag": {"all": "#CompleteClause"}},
-
-  "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "11", "order": "17", "type": "inter-phrase", "pattern": "#Subject+ #vb+ #DirectObject?+", "tag": { "on": {"term": "#vb+ #DirectObject?+", "termTag": ["#Predicate", "Final"]}}},
-
-  "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "18", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": "CompleteSentence"}}
+  "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "inter-phrase", "pattern": "* #IndependentClause+ *", "tag": {"all": "CompleteSentence"}}
 }
