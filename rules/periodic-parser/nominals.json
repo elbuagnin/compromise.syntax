@@ -9,7 +9,7 @@
 
   "Head Noun": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "6", "type": "intra-phrase", "pattern": "#vb+ (#dobj+|#iobj) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb 1": {"batch": "Nominals", "order": "6", "type": "intra-phrase", "pattern": "#vb+ (#dobj+|#iobj) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adjective 1": {"batch": "Nominals", "order": "7", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
