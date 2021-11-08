@@ -405,6 +405,14 @@ export default function parser(doc) {
             console.log('Rechecking Prepositions');
             check(prepositionalRules);
             break;
+          case 'Dobj':
+            console.log('Rechecking Nominals');
+            check(nominalRules);
+            break;
+          case 'Iobj':
+            console.log('Rechecking Nominals');
+            check(nominalRules);
+            break;
           case 'Subcls':
             console.log('Rechecking Clauses');
             check(clauseRules);
