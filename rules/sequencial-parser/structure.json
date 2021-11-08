@@ -25,7 +25,7 @@
 
   "Independent Clause": {"batch":"Structure", "batchOrder": "11", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": "IndependentClause"}},
 
-  "Compound Sentence": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "inter-phrase", "pattern": "#IndependentClause+ #CoordinatingConjunction #IndependentClause+", "tag": {"all": "#CompoundSentence"}},
+  "Compound Sentence": {"batch":"Structure", "batchOrder": "11", "order": "14", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+ #CoordinatingConjunction #Subject+ #Predicate+", "tag": {"all": "#CompoundSentence"}},
 
   "Complete Sentence": {"batch":"Structure", "batchOrder": "11", "order": "15", "type": "inter-phrase", "pattern": "* #IndependentClause+ *", "tag": {"all": "CompleteSentence"}}
 }
