@@ -316,7 +316,7 @@ export default function parser(doc) {
         tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
         || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
         || tag === 'Pp' || tag === 'Sbj' || tag === 'Dobj' || tag === 'Iobj'
-        || tag === 'Subcls' || tag === 'Relcls' || tag === 'Final'
+        || tag === 'Pred' || tag === 'Subcls' || tag === 'Relcls' || tag === 'Final'
       ));
 
       role = tags[tags.length - 1];
