@@ -19,5 +19,20 @@
     "isA": "SubordinatingConjunction",
     "notA": ["Preposition", "Determiner"],
     "color": ""
+  },
+  "Where": {
+    "isA": "",
+    "notA": ["When", "What"],
+    "color": "cyan"
+  },
+  "When": {
+    "isA": "",
+    "notA": ["Where", "What"],
+    "color": "cyan"
+  },
+  "What": {
+    "isA": "",
+    "notA": ["When", "Where"],
+    "color": "cyan"
   }
 }
