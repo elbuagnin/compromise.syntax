@@ -1,5 +1,5 @@
 {
-    "Adjective of Nominal": {"batch":"Modifiers", "order": "1", "type": "intra-phrase", "pattern": "#aj+ #nn+", "tag": {"on":{"term": "#aj+", "termTag": "nn"}}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "#nn+"}},
+    "Adjective of Nominal": {"batch":"Modifiers", "order": "1", "type": "intra-phrase", "pattern": "#aj+ #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "#nn+"}},
 
     "Adverb of Adjective": {"batch":"Modifiers", "order": "2", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
