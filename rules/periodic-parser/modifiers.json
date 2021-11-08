@@ -1,7 +1,9 @@
 {
-    "Adjective of Nominal": {"batch":"Modifiers", "order": "1", "type": "intra-phrase", "pattern": "#aj+ #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "#nn+"}},
+    
 
-    "Adverb of Adjective": {"batch":"Modifiers", "order": "2", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
+    "Adjective of Nominal 2": {"batch":"Modifiers", "order": "2", "type": "intra-phrase", "pattern": "(#aj+|#av+)? (#nn+|#sbj+) (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
+
+    "Adverb of Adjective": {"batch":"Modifiers", "order": "3", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
     "Prepositional Phrase as Adverb to Adjective": {"batch":"Prepositions", "order": "3", "type": "intra-phrase", "pattern": "#aj+ #Preposition #pp+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#aj+", "termTag": "Adverbial"}},
 

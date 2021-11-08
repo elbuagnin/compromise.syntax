@@ -27,7 +27,7 @@
 
   "Simple Relative Noun Clauses": {"batch": "Nominals", "order": "14", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
-  "Subject": {"batch":"Nominals", "order": "15", "type": "intra-phrase", "pattern": "#nn+ #aj+? #vb+", "tag": {"on": {"term": "#nn+ #aj+?", "termTag": ["Subject", "sbj"]}}},
+  "Subject": {"batch":"Nominals", "order": "15", "type": "intra-phrase", "pattern": "(#aj+|#av+)? #nn+ (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
 
   "Subject Compliment": {"batch":"Nominals", "order": "16", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
 
