@@ -1,6 +1,8 @@
 {
   "Adverb of Verb": {"batch":"Verbials", "order": "1", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"all": "VerbPhrase"}, "untag": {"all": "#av"},"modifier": {"term": "#av+", "modifies": "#vb+"}},
 
+  "Gerund": {"batch":"Verbials", "order": "1", "type": "intra-phrase", "pattern": "#vb+ #ProgressiveVerbal+", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
+
   "Prepositional Phrase as Adverb 1": {"batch": "Verbials", "order": "2", "type": "intra-phrase", "pattern": "#vb+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adverb 2": {"batch": "Verbials", "order": "3", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
