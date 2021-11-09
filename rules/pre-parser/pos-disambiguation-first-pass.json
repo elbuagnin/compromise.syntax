@@ -23,8 +23,6 @@
 
   "a #Ordinal #Noun": {"batchOrder": "1", "term": "a", "pattern": "a #Ordinal #Noun", "tag": "#Determiner"},
 
-  "Solitary Present Participle": {"batchOrder": "1", "term": "#Verbal", "pattern": "(^#Verbal && #Comma)", "tag": "#PresentParticiple"},
-
   "#Preposition #Verb": {"batchOrder": "1", "term": "#Verb", "pattern": "(#Preposition && !which) #Verb", "tag": "#Noun"},
 
   "#Verb #Noun #Verb 1": {"batchOrder": "1", "term": "#Noun", "pattern": "(is|am|are) (#Noun && !#Pronoun) #Verb", "tag": "#Adverb"},
