@@ -5,7 +5,7 @@
 
   "Assign NonInfinitive nn": {"batch":"Nominals", "order": "3", "type": "intra-phrase", "pattern": "(#nn+ && !#Infinitive)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotIv"}}},
 
-  "Determiner Noun": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#dt #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
+  "Noun Phrase": {"batch":"Nominals", "order": "4", "type": "intra-phrase", "pattern": "#dt? #aj?+ #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
 
   "Head Noun": {"batch":"Nominals", "order": "5", "type": "intra-phrase", "pattern": "#nn+", "tag": {"on": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
