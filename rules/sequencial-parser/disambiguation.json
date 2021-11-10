@@ -7,5 +7,9 @@
 
   "having been": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "pattern": "having been", "replace": {"on": {"term": "having been", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
 
-  "having been #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "pattern": "having been #PastTense", "replace": {"on": {"term": "having been #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}}
+  "having been #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "pattern": "having been #PastTense", "replace": {"on": {"term": "having been #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
+
+  "Potential Past Participles 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "6", "pattern": "#Participle", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "7", "pattern": "(#PastTense && (/ed$/|/en$/|/ne$/|/lt$/))", "termTag": {"all": "#PotentialPastParticiple"}}
 }
