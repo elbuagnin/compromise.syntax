@@ -5,10 +5,12 @@ import * as mfs from './lib/filesystem.js';
 function preTagCorrecter(doc) {
   // Adverbs mixed with Verbs are marked Auxiliary which interferes with Verbal tags.
   const adverbs = doc.match('(#Auxiliary && #Adverb)');
-  console.log(`AAAAAAAAAAAAAAAAAAAA ${JSON.stringify(adverbs.tags())}`);
 
-  adverbs.untag('#Auxiliary');
-  console.log(`AAAAAAAAAAAAAAAAAAAA${JSON.stringify(adverbs.tags())}`);
+  if (adverbs) {
+    console.log(`AAAAAAAAAAAAAAAAAAAA ${JSON.stringify(adverbs.json('tags'))}`);
+    adverbs.untag('#Auxiliary');
+    console.log(`AAAAAAAAAAAAAAAAAAAA ${JSON.stringify(adverbs.json('tags'))}`);
+  }
 }
 
 function postTagCorrecter(doc) {
