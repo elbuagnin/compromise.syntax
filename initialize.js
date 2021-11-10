@@ -2,7 +2,16 @@ import './compromise-extensions.js';
 import preParser from './pre-parser.js';
 import * as mfs from './lib/filesystem.js';
 
-function verbVerbalCorrecter(doc) {
+function preTagCorrecter(doc) {
+  // Adverbs mixed with Verbs are marked Auxiliary which interferes with Verbal tags.
+  const adverbs = doc.match('(#Auxiliary && #Adverb)');
+  console.log(`AAAAAAAAAAAAAAAAAAAA ${JSON.stringify(adverbs.tags())}`);
+
+  adverbs.untag('#Auxiliary');
+  console.log(`AAAAAAAAAAAAAAAAAAAA${JSON.stringify(adverbs.tags())}`);
+}
+
+function postTagCorrecter(doc) {
   // This module uses custom tags that run counter to some of Compromise's tags.
   // As such, some custom tags can confuse Compromise's internal tagger.
   // This subroutine fixes these tags after the custom tags are applied.
@@ -33,9 +42,10 @@ export default function initialize(doc) {
 
   console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
   console.log('$$ Initialization');
+  preTagCorrecter(doc);
   doc.addCustomTags(tags);
   doc.addCustomWords(words);
-  verbVerbalCorrecter(doc);
+  postTagCorrecter(doc);
 
   console.log('Doc, post-Initialization');
   console.log(doc.debug());
