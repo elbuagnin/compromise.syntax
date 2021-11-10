@@ -21,7 +21,7 @@
     },
     "Predicate": {
         "isA": "",
-        "notA": ["Subject", "Object"],
+        "notA": "Subject",
         "color": "yellow"
     },
     "CompleteSentence": {
