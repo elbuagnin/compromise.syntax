@@ -1,31 +1,31 @@
 {
-  "Past Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "1", "type": "intra-phrase", "pattern": "had #Negative? #PastTense", "tag": {"all": ["PastPerfect", "vb"]}},
+  "Past Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "1", "type": "intra-phrase", "pattern": "had #Negative? #Adverb?+ #PastTense", "tag": {"all": ["PastPerfect", "vb"]}},
 
-  "Past Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "2", "type": "intra-phrase", "pattern": "(was|were) #Negative? #ProgressiveVerbal", "tag": {"all": ["PastProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Past Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "2", "type": "intra-phrase", "pattern": "(was|were) #Negative? #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PastProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
-  "Past Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "3", "type": "intra-phrase", "pattern": "had #Negative? been #ProgressiveVerbal", "tag": {"all": ["PastPerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Past Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "3", "type": "intra-phrase", "pattern": "had #Negative? been  #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PastPerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
-  "Present Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "4", "type": "intra-phrase", "pattern": "(have|has) #Negative? #PastTense", "tag": {"all": ["PresentPerfect", "vb"], "on": {"term": "#Participle", "termTag": ["VerbedPastParticiple", "vb"]}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
+  "Present Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "4", "type": "intra-phrase", "pattern": "(have|has) #Negative? #Adverb?+ #PastTense", "tag": {"all": ["PresentPerfect", "vb"], "on": {"term": "#Participle", "termTag": ["VerbedPastParticiple", "vb"]}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
 
-  "Present Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "5", "type": "intra-phrase", "pattern": "(am|is|are) #Negative? #ProgressiveVerbal", "tag": {"all": ["PresentProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Present Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "5", "type": "intra-phrase", "pattern": "(am|is|are) #Negative? #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PresentProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
-  "Present Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "6", "type": "intra-phrase", "pattern": "(has|have) #Negative? been #ProgressiveVerbal", "tag": {"all": ["PresentPerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Present Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "6", "type": "intra-phrase", "pattern": "(has|have) #Negative? been  #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PresentPerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
-  "Future Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "will #Negative? have (#PastTense|#PresentPerfect)", "untag": {"all": "PresentPerfect"}, "tag": {"all": ["FuturePerfect", "vb"]}},
+  "Future Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "7", "type": "intra-phrase", "pattern": "will #Negative? have  #Adverb?+ (#PastTense|#PresentPerfect)", "untag": {"all": "PresentPerfect"}, "tag": {"all": ["FuturePerfect", "vb"]}},
 
-  "Future Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "8", "type": "intra-phrase", "pattern": "will #Negative? be #ProgressiveVerbal", "tag": {"all": ["FutureProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Future Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "8", "type": "intra-phrase", "pattern": "will #Negative? be #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["FutureProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
-  "Future Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "9", "type": "intra-phrase", "pattern": "will #Negative? have #Negative? been #VerbedPresentParticiple", "tag": {"all": ["FuturePerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Future Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "9", "type": "intra-phrase", "pattern": "will #Negative? have #Negative? #Adverb?+ been #VerbedPresentParticiple", "tag": {"all": ["FuturePerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": ["VerbedPresentParticiple", "vb"]}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
-  "Past Simple negative": {"batch": "Verbs", "batchOrder": "5", "order": "10", "type": "intra-phrase", "pattern": "(did not|never did) #PresentTense", "tag": {"all": ["PastSimple", "vb"]}},
+  "Past Simple negative": {"batch": "Verbs", "batchOrder": "5", "order": "10", "type": "intra-phrase", "pattern": "(did not|never did)  #Adverb?+ #PresentTense", "tag": {"all": ["PastSimple", "vb"]}},
 
-  "Past Simple 1": {"batch": "Verbs", "batchOrder": "5", "order": "11", "type": "intra-phrase", "pattern": "!#Verb #PastTense !#Verb?", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
+  "Past Simple 1": {"batch": "Verbs", "batchOrder": "5", "order": "11", "type": "intra-phrase", "pattern": "!#Verb  #Adverb?+ #PastTense !#Verb?", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
 
   "Past Simple 2": {"batch": "Verbs", "batchOrder": "5", "order": "12", "type": "intra-phrase", "pattern": "^#PastTense !#Verb", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
 
   "Past Simple 3": {"batch": "Verbs", "batchOrder": "5", "order": "13", "type": "intra-phrase", "pattern": "!#Verb #PastTense$", "tag": {"on": {"term": "#Verb", "termTag": ["PastSimple", "vb"]}}},
 
-  "Present Simple negative": {"batch": "Verbs", "batchOrder": "5", "order": "14", "type": "intra-phrase", "pattern": "(do not|never) #PresentTense", "tag": {"all": ["PresentSimple", "vb"]}},
+  "Present Simple negative": {"batch": "Verbs", "batchOrder": "5", "order": "14", "type": "intra-phrase", "pattern": "(do not|never) #Adverb?+ #PresentTense", "tag": {"all": ["PresentSimple", "vb"]}},
 
   "Present Simple 1": {"batch": "Verbs", "batchOrder": "5", "order": "15", "type": "intra-phrase", "pattern": "!#Verb #PresentTense !#Verb?", "tag": {"on": {"term": "#Verb", "termTag": ["PresentSimple", "vb"]}}},
 
@@ -33,31 +33,31 @@
 
   "Present Simple 3": {"batch": "Verbs", "batchOrder": "5", "order": "17", "type": "intra-phrase", "pattern": "!#Verb #PresentTense$", "tag": {"on": {"term": "#Verb", "termTag": ["PresentSimple", "vb"]}}},
 
-  "Future Simple": {"batch": "Verbs", "batchOrder": "5", "order": "18", "type": "intra-phrase", "pattern": "will #Negative? (#PresentTense|#PresentSimple)", "untag": {"on": {"term": "#PresentTense", "termUnTag": "#PresentTense"}}, "tag": {"all": ["#FutureSimple", "vb"]}},
+  "Future Simple": {"batch": "Verbs", "batchOrder": "5", "order": "18", "type": "intra-phrase", "pattern": "will #Negative? #Adverb?+ (#PresentTense|#PresentSimple)", "untag": {"on": {"term": "#PresentTense", "termUnTag": "#PresentTense"}}, "tag": {"all": ["#FutureSimple", "vb"]}},
 
-  "Past Stative": {"batch": "Verbs", "batchOrder": "5", "order": "19", "type": "intra-phrase", "pattern": "(was|were) #Negative? !(#Verb|#Verbal)?", "tag": {"on":{"term": "#Verb", "termTag": ["Stative", "Past", "vb"]}}},
+  "Past Stative": {"batch": "Verbs", "batchOrder": "5", "order": "19", "type": "intra-phrase", "pattern": "(was|were) #Negative? #Adverb?+ !(#Verb|#Verbal)?", "tag": {"on":{"term": "#Verb", "termTag": ["Stative", "Past", "vb"]}}},
 
-  "Present Stative": {"batch": "Verbs", "batchOrder": "5", "order": "20", "type": "intra-phrase", "pattern": "(am|is|are) #Negative? !(#Verb|#Verbal)?", "tag": {"on":{"term": "#Verb", "termTag": ["Stative", "Present", "vb"]}}},
+  "Present Stative": {"batch": "Verbs", "batchOrder": "5", "order": "20", "type": "intra-phrase", "pattern": "(am|is|are) #Negative? #Adverb?+ !(#Verb|#Verbal)?", "tag": {"on":{"term": "#Verb", "termTag": ["Stative", "Present", "vb"]}}},
 
-  "Future Stative": {"batch": "Verbs", "batchOrder": "5", "order": "21", "type": "intra-phrase", "pattern": "will #Negative? be !(#Verb|#Verbal)?", "tag": {"on":{"term": "#Verb", "termTag": ["Stative", "Future", "vb"]}}},
+  "Future Stative": {"batch": "Verbs", "batchOrder": "5", "order": "21", "type": "intra-phrase", "pattern": "will #Negative? be #Adverb?+ !(#Verb|#Verbal)?", "tag": {"on":{"term": "#Verb", "termTag": ["Stative", "Future", "vb"]}}},
 
-  "Past Passive": {"batch": "Verbs", "batchOrder": "5", "order": "22", "type": "intra-phrase", "pattern": "(was|were) #Negative? (#Participle|#PastTense)", "tag": {"all": "vb", "on":{"term": "#Verb", "termTag": ["Passive", "PastSimple"]}}},
+  "Past Passive": {"batch": "Verbs", "batchOrder": "5", "order": "22", "type": "intra-phrase", "pattern": "(was|were) #Negative? #Adverb?+ (#Participle|#PastTense)", "tag": {"all": "vb", "on":{"term": "#Verb", "termTag": ["Passive", "PastSimple"]}}},
 
-  "Past Perfect Passive": {"batch": "Verbs", "batchOrder": "5", "order": "23", "type": "intra-phrase", "pattern": "had #Negative? been #Participle", "tag": {"all": ["PastPerfect", "Passive", "vb"], "on": {"term": "#Participle", "termTag": ["VerbedPastParticiple", "vb"]}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
+  "Past Perfect Passive": {"batch": "Verbs", "batchOrder": "5", "order": "23", "type": "intra-phrase", "pattern": "had #Negative? been #Adverb?+ #Participle", "tag": {"all": ["PastPerfect", "Passive", "vb"], "on": {"term": "#Participle", "termTag": ["VerbedPastParticiple", "vb"]}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
 
-  "Present Passive": {"batch": "Verbs", "batchOrder": "5", "order": "24", "type": "intra-phrase", "pattern": "(am|is|are) #Negative? #Participle", "tag": {"all": "vb", "each": [{"term": "#Verb", "termTag": ["Passive", "Present", "Simple"]}, {"term": "#Participle", "termTag": "VerbedPastParticiple"}]}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
+  "Present Passive": {"batch": "Verbs", "batchOrder": "5", "order": "24", "type": "intra-phrase", "pattern": "(am|is|are) #Negative? #Adverb?+ #Participle", "tag": {"all": "vb", "each": [{"term": "#Verb", "termTag": ["Passive", "Present", "Simple"]}, {"term": "#Participle", "termTag": "VerbedPastParticiple"}]}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
 
-  "Present Perfect Passive": {"batch": "Verbs", "batchOrder": "5", "order": "25", "type": "intra-phrase", "pattern": "(have|has) #Negative? been #Participle", "tag": {"all": ["PresentPerfect", "Passive", "vb"], "on": {"term": "#Participle", "termTag": "VerbedPastParticiple"}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
+  "Present Perfect Passive": {"batch": "Verbs", "batchOrder": "5", "order": "25", "type": "intra-phrase", "pattern": "(have|has) #Negative? been #Adverb?+ #Participle", "tag": {"all": ["PresentPerfect", "Passive", "vb"], "on": {"term": "#Participle", "termTag": "VerbedPastParticiple"}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
 
-  "Future Passive": {"batch": "Verbs", "batchOrder": "5", "order": "26", "type": "intra-phrase", "pattern": "will not? be #Participle", "tag": {"all": "vb", "each":[{"term": "#Verb", "termTag": ["Passive", "Future"]}, {"term": "#Participle", "termTag": "VerbedPastParticiple"}]}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
+  "Future Passive": {"batch": "Verbs", "batchOrder": "5", "order": "26", "type": "intra-phrase", "pattern": "will not? be #Adverb?+ #Participle", "tag": {"all": "vb", "each":[{"term": "#Verb", "termTag": ["Passive", "Future"]}, {"term": "#Participle", "termTag": "VerbedPastParticiple"}]}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
 
-  "Future Perfect Passive": {"batch": "Verbs", "batchOrder": "5", "order": "27", "type": "intra-phrase", "pattern": "will have #Negative? been #Participle", "tag": {"all": ["FuturePerfect", "Passive", "vb"], "on": {"term": "#Participle", "termTag": "VerbedPastParticiple"}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
+  "Future Perfect Passive": {"batch": "Verbs", "batchOrder": "5", "order": "27", "type": "intra-phrase", "pattern": "will have #Negative? been #Adverb?+ #Participle", "tag": {"all": ["FuturePerfect", "Passive", "vb"], "on": {"term": "#Participle", "termTag": "VerbedPastParticiple"}}, "untag": {"on": {"term": "#Participle", "termUnTag": "#Participle"}}},
 
-  "#Negative #VerbPhrase": {"batch": "Verbs", "batchOrder": "5", "order": "28", "type": "intra-phrase", "pattern": "#Verb #Negative (#Verb|#Verbal)+", "tag": {"all": "#Negative"}, "on": {"term": "#Negative", "termTag": "vb"}},
+  "#Negative #VerbPhrase": {"batch": "Verbs", "batchOrder": "5", "order": "28", "type": "intra-phrase", "pattern": "#Verb #Negative #Adverb?+ (#Verb|#Verbal)+", "tag": {"all": "#Negative"}, "on": {"term": "#Negative", "termTag": "vb"}},
 
-  "Linking Verb Group": {"batch":"Verbs", "batchOrder": "5",  "order": "29", "type": "intra-phrase", "pattern": "(#Modal+|#Auxiliary+)? #Linking", "tag": {"all": "Linking"}},
+  "Linking Verb Group": {"batch":"Verbs", "batchOrder": "5",  "order": "29", "type": "intra-phrase", "pattern": "(#Modal+|#Auxiliary+)? #Adverb?+ #Linking", "tag": {"all": "Linking"}},
 
-  "Action Verb Group": {"batch":"Verbs", "batchOrder": "5",  "order": "30", "type": "intra-phrase", "pattern": "(#Modal+|#Auxiliary+)? (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
+  "Action Verb Group": {"batch":"Verbs", "batchOrder": "5",  "order": "30", "type": "intra-phrase", "pattern": "(#Modal+|#Auxiliary+)? #Adverb?+ (#Verb && !#Linking && !#Stative)", "tag": {"all": "Action"}},
 
   "#Modal": {"batch": "Verbs", "batchOrder": "5", "order": "31", "type": "intra-phrase", "pattern": "#Modal+", "tag": {"all": "vb"}},
 
@@ -65,7 +65,7 @@
 
   "Uncaught Verbs 1": {"batch":"Verbs", "batchOrder": "5",  "order": "33", "type": "inter-phrase", "pattern": "#PastTense", "tag": {"on": {"term": "#PastTense", "termTag": ["PastParticiple", "vl"]}}, "untag": {"term": "#PastTense", "termUnTag": "#PastTense"}},
 
-  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "5",  "order": "34", "type": "inter-phrase", "pattern": "#PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "vb"]}}},
+  "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "5",  "order": "34", "type": "inter-phrase", "pattern": "#Adverb?+ #PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "vb"]}}},
 
   "Non-verb Clean Up": {"batch":"Verbs", "batchOrder": "5",  "order": "35", "type": "intra-phrase", "pattern": "!#vb", "untag": {"all": ["#Action", "#Linking", "#Stative", "#CompoundVerbs", "VerbPhrase"]}}
 }
