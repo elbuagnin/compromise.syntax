@@ -15,7 +15,9 @@
 
     "Introductory Adverb of Verb": {"batch":"Modifiers", "order": "8", "type": "inter-phrase", "pattern": "#CommaAdverb+ (#nn+|#sbj+) #vb+", "tag": {"on":{"term": "#av+", "termTag": "final"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
 
-    "Prepositional Phrase as Adverb to Verb": {"batch": "Modifiers", "order": "9", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+    "Prepositional Phrase as Adverb 1": {"batch": "Modifiers", "order": "9", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-    "Adjective Subject Compliment": {"batch":"Modifiers", "order": "10", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectCompliment"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectCompliment"}}
+    "Prepositional Phrase as Adverb to Verb 2": {"batch": "Modifiers", "order": "10", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+
+    "Adjective Subject Compliment": {"batch":"Modifiers", "order": "11", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectCompliment"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectCompliment"}}
 }

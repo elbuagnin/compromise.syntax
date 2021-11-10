@@ -13,7 +13,7 @@
 
   "Prepositional Phrase as Adverb 1": {"batch": "Prepositions", "order": "7", "type": "intra-phrase", "pattern": "#vb #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb 2": {"batch": "Prepositions", "order": "8", "type": "intra-phrase", "pattern": "#vb+ (#dobj+|#iobj+) (#Where|#When) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb 1": {"batch": "Prepositions", "order": "8", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adverb 3": {"batch": "Prepositions", "order": "9", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|(#Adjective && /ed$/)) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
