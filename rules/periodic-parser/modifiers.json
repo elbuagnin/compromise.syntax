@@ -1,7 +1,7 @@
 {
-    "Adjective of Nominal 1": {"batch":"Modifiers", "order": "1", "type": "intra-phrase", "pattern": "(#aj+|#av+) (#nn+|#sbj+) (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
+    "Adjective of Nominal 1": {"batch":"Modifiers", "order": "1", "type": "intra-phrase", "pattern": "#aj+ (#nn+|#sbj+) (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
-    "Adjective of Nominal 2": {"batch":"Modifiers", "order": "2", "type": "intra-phrase", "pattern": "(#aj+|#av+)? (#nn+|#sbj+) (#aj+|#av+) #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
+    "Adjective of Nominal 2": {"batch":"Modifiers", "order": "2", "type": "intra-phrase", "pattern": "#aj+? (#nn+|#sbj+) #aj+ #av?+ #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
     "Adjective of Nominal 3": {"batch":"Modifiers", "order": "3", "type": "intra-phrase", "pattern": "#AdjectivePhrase+ (#nn+|#sbj+|#dobj+|#iobj+)", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
