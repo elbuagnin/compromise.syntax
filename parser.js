@@ -22,12 +22,7 @@ export default function parser(doc) {
     return rules;
   }
 
-  const nominalRules = loadRelationRules('nominals');
-  const verbialRules = loadRelationRules('verbials');
-  const modifierRules = loadRelationRules('modifiers');
-  const verbalRules = loadRelationRules('verbals');
-  const prepositionalRules = loadRelationRules('prepositional');
-  const clauseRules = loadRelationRules('clauses');
+  const periodicRules = loadRelationRules('periodic-parser');
 
   function tagMatch(sentence, rule) {
     parseCount++;
@@ -377,62 +372,7 @@ export default function parser(doc) {
       console.log(`change= ${change}`);
 
       if ((change !== lastChange) && (change !== 'same')) {
-        switch (change) {
-          case 'Nn':
-            console.log('Rechecking Nominals');
-            check(nominalRules);
-            break;
-          case 'Vb':
-            console.log('Rechecking Verbials');
-            check(verbialRules);
-            break;
-          case 'Aj':
-            console.log('Rechecking Modifiers');
-            check(modifierRules);
-            break;
-          case 'Av':
-            console.log('Rechecking Modifiers');
-            check(modifierRules);
-            break;
-          case 'Vl':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Iv':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Gd':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Pt':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Pp':
-            console.log('Rechecking Prepositions');
-            check(prepositionalRules);
-            break;
-          case 'Dobj':
-            console.log('Rechecking Nominals');
-            check(nominalRules);
-            break;
-          case 'Iobj':
-            console.log('Rechecking Nominals');
-            check(nominalRules);
-            break;
-          case 'Subcls':
-            console.log('Rechecking Clauses');
-            check(clauseRules);
-            break;
-          case 'Relcls':
-            console.log('Rechecking Clauses');
-            check(clauseRules);
-            break;
-          default:
-            break;
-        }
+        check(periodicRules);
       }
       lastChange = change;
     });
