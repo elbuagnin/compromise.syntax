@@ -23,6 +23,8 @@
 
     "Compound Noun Phrases 2": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "3",  "order": "12", "type": "intra-phrase", "pattern": "#Adjective?+ (#Noun+ && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun+", "tag": {"all": ["CompoundPhrase", "CompoundNouns", "nn"]}, "untag": {"on": {"term": "#aj", "termUnTag": "#aj"}}},
 
-    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "3",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "vb"]}}
+    "Compound Verb Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "3",  "order": "13", "type": "intra-phrase", "pattern": "#Verb #CoordinatingConjunction #Verb", "tag": {"all": ["CompoundPhrase", "CompoundVerbs", "vb"]}},
+
+    "Compound Progressive Verbal Phrases": {"batch":"Punctuated and Conjunction Phrasing", "batchOrder": "3",  "order": "14", "type": "intra-phrase", "pattern": "#Adverb?+ #ProgressiveVerbal #CoordinatingConjunction #ProgressiveVerbal", "tag": {"all": ["CompoundPhrase", "CompoundVerbals", "vl"]}, "untag": {"on": {"term": "#av", "termUnTag": "#av"}}}
 
 }
