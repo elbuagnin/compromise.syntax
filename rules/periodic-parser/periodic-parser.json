@@ -7,7 +7,7 @@
 
   "Assign NonInfinitive vl": {"batch":"Verbals", "order": "4", "type": "intra-phrase", "pattern": "(#vl+ && !#Infinitive)", "tag": {"on": {"term": "#vl+", "termTag": "VlNotIv"}}},
 
-  "Assign NonGerund nn": {"batch":"Verbals", "order": "5", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund && !#CompoundVerbals)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
+  "Assign NonGerund nn": {"batch":"Verbals", "order": "5", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund && !#CompoundGerunds)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
 
   "Adjective of Nominal 1": {"batch":"Modifiers", "order": "6", "type": "intra-phrase", "pattern": "#aj+ (#nn+|#sbj+) (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
@@ -111,7 +111,9 @@
 
   "Object of Gerund": {"batch":"Nominals", "order": "62", "type": "intra-phrase", "pattern": "#Gerund (#nn+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"all": "#vl"}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
 
-  "Object of Gerund": {"batch": "Verbals", "order": "63", "type": "intra-phrase", "pattern": "#Gerund+ (#nnNotGd+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
+  "Object of Gerund": {"batch": "Verbals", "order": "63", "type": "intra-phrase", "pattern": "#Gerund+ (#nnNotGd+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
+
+  "Compound Gerunds": {"batch": "Verbals", "order": "64", "type": "intra-phrase", "pattern": "(#Gerund+ && #CompoundVerbals) #CoordinatingConjunction (#Gerund+ && #CompoundVerbals)", "tag": {"all": ["CompoundGerunds", "GerundPhrase", "nn"]}, "untag": {"on": {"term": "#CompoundVerbals+", "termUnTag": "#CompoundVerbals"}}},
 
   "Object of Participle": {"batch": "Verbals", "order": "64", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+|#iv+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
