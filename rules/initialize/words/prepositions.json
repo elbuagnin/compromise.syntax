@@ -25,6 +25,8 @@
   "under": ["Preposition", "Where"],
   "up": ["Preposition", "Where"],
   "upon": ["Preposition", "Where"],
+  "with": ["Preposition", "What", "Whom"],
+  "without": ["Preposition", "What", "Whom"],
   "within": ["Preposition", "Where"],
   "about": ["Preposition", "What"],
   "during": ["Preposition", "When"],
