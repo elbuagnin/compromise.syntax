@@ -1,11 +1,11 @@
 import * as mfs from './lib/filesystem.js';
 import * as config from './local-config.js';
 
-let parseCount = 0;
-let parseTakeActionCount = 0;
-
 export default function parser(doc) {
   const wordCount = doc.wordCount();
+  let parseCount = 0;
+  let parseTakeActionCount = 0;
+  const timestamp1 = new Date().getTime();
 
   // Relationship rules
   function loadRelationRules(file) {
@@ -460,5 +460,9 @@ export default function parser(doc) {
     console.log(`\nParses per word = ${parseCount / wordCount}`);
     console.log(`Actions per word = ${parseTakeActionCount / wordCount}`);
     console.log(`Parses per Action = ${parseCount / parseTakeActionCount}`);
+    const timestamp2 = new Date().getTime();
+    const duration = timestamp2 - timestamp1;
+    const seconds = duration / 1000;
+    console.log(`Run Time: ${seconds} seconds\n`);
   });
 }
