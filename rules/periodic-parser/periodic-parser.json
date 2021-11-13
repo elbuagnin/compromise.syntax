@@ -51,15 +51,17 @@
 
   "Prepositional Phrase as Adjective 4": {"batch": "Periodic", "order": "26", "type": "intra-phrase", "pattern": "(#nn+|#Sbj+) #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
+  "Prepositional Phrase as either Adjective or Adverb": {"batch": "Periodic", "order": "27", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #what #pp+", "modifier": {"term": "#pp+", "modifies": "#vb+ #DirectObject+"}},
+
   "Prepositional Phrase as Adverb to verb 1": {"batch": "Periodic", "order": "27", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adverb to Verb 2": {"batch": "Periodic", "order": "28", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|#PotentialPastParticiple) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb 1": {"batch": "Periodic", "order": "29", "type": "intra-phrase", "pattern": "#vb #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 3": {"batch": "Periodic", "order": "29", "type": "intra-phrase", "pattern": "#vb #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb 2": {"batch": "Periodic", "order": "30", "type": "inter-phrase", "pattern": "^#pp+ #Comma (#nn+|#Sbj+) (#vb+|#pred+)", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "final"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 4": {"batch": "Periodic", "order": "30", "type": "inter-phrase", "pattern": "^#pp+ #Comma (#nn+|#Sbj+) (#vb+|#pred+)", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "final"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb 3": {"batch": "Periodic", "order": "31", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 5": {"batch": "Periodic", "order": "31", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Simple Relative Noun Clauses": {"batch": "Periodic", "order": "32", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
