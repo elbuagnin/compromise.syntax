@@ -1,7 +1,7 @@
 {
   "Past Perfect": {"batch": "Verbs", "batchOrder": "5", "order": "1", "type": "intra-phrase", "pattern": "had #Negative? #Adverb?+ #PastTense", "tag": {"all": ["PastPerfect", "vb"]}},
 
-  "Past Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "2", "type": "intra-phrase", "pattern": "(was|were) #Negative? #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PastProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
+  "Past Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "2", "type": "intra-phrase", "pattern": "(was|were) #Negative? #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PastProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"each": [{"term": "#Verbal", "termUnTag": "#Verbal"}, {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}]}},
 
   "Past Perfect Progressive": {"batch": "Verbs", "batchOrder": "5", "order": "3", "type": "intra-phrase", "pattern": "had #Negative? been  #Adverb?+ #ProgressiveVerbal", "tag": {"all": ["PastPerfectProgressive", "vb"], "on": {"term": "#Verbal", "termTag": "VerbedPresentParticiple"}}, "untag": {"on": {"term": "#Verbal", "termUnTag": "#Verbal"}}},
 
