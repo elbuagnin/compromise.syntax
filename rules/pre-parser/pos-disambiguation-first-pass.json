@@ -1,7 +1,7 @@
 {
   "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": "#Gerund", "tag": ["#ProgressiveVerbal", "Verbal"]},
 
-  "Activity Is Verbal": {"batchOrder": "1", "term": "#Activity", "pattern": "(#Activity && /ing$/)", "tag": ["#ProgressiveVerbal", "Verbal"]},
+  "Activity Is Verbal": {"batchOrder": "1", "term": "#Activity", "pattern": "(#Activity && /ing$/)", "tag": ["#ProgressiveVerbal", "Verbal"], "untag": ["#Activity", "#Noun"]},
 
   "Nouns that are Verbs 2": {"batchOrder": "1", "term": "#Noun", "pattern": "(#Pronoun && !#Possessive) #Noun", "tag": ["Verb", "PresentTense"]},
 

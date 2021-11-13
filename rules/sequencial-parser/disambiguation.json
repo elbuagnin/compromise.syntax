@@ -11,5 +11,19 @@
 
   "Potential Past Participles 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "6", "pattern": "#Participle", "termTag": {"all": "#PotentialPastParticiple"}},
 
-  "Potential Past Participles 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "7", "pattern": "(#PastTense && (/ed$/|/en$/|/ne$/|/lt$/))", "termTag": {"all": "#PotentialPastParticiple"}}
+  "Potential Past Participles 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "7", "pattern": "(#PastTense && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 3": {"batch":"Disambiguation", "batchOrder": "1",  "order": "8", "pattern": "(#Adjective && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 4": {"batch":"Disambiguation", "batchOrder": "1",  "order": "9", "pattern": "(#PastTense && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 5": {"batch":"Disambiguation", "batchOrder": "1",  "order": "10", "pattern": "(#Adjective && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 6": {"batch":"Disambiguation", "batchOrder": "1",  "order": "11", "pattern": "(#PastTense && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 7": {"batch":"Disambiguation", "batchOrder": "1",  "order": "12", "pattern": "(#Adjective && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 8": {"batch":"Disambiguation", "batchOrder": "1",  "order": "13", "pattern": "(#PastTense && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 9": {"batch":"Disambiguation", "batchOrder": "1",  "order": "14", "pattern": "(#Adjective && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}}
 }

@@ -33,5 +33,10 @@
     "isA": "Participle",
     "notA": ["PresentParticiple", "PastParticiple"],
     "color": "magenta"
+  },
+  "CompoundGerunds": {
+      "isA": [""],
+      "notA": ["", ""],
+      "color": "blue"
   }
 }

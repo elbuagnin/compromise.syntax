@@ -4,6 +4,11 @@
         "notA": ["Object", "Predicate"],
         "color": "yellow"
     },
+    "SubjectCompliment": {
+        "isA": "",
+        "notA": "Object",
+        "color": "yellow"
+    },
     "Object": {
         "isA": "",
         "notA": "Subject",

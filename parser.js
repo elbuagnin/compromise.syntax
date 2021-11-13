@@ -1,11 +1,11 @@
 import * as mfs from './lib/filesystem.js';
 import * as config from './local-config.js';
 
-let parseCount = 0;
-let parseTakeActionCount = 0;
-
 export default function parser(doc) {
   const wordCount = doc.wordCount();
+  let parseCount = 0;
+  let parseTakeActionCount = 0;
+  const timestamp1 = new Date().getTime();
 
   // Relationship rules
   function loadRelationRules(file) {
@@ -22,15 +22,11 @@ export default function parser(doc) {
     return rules;
   }
 
-  const nominalRules = loadRelationRules('nominals');
-  const verbialRules = loadRelationRules('verbials');
-  const modifierRules = loadRelationRules('modifiers');
-  const verbalRules = loadRelationRules('verbals');
-  const prepositionalRules = loadRelationRules('prepositional');
-  const clauseRules = loadRelationRules('clauses');
+  const periodicRules = loadRelationRules('periodic-parser');
 
   function tagMatch(sentence, rule) {
     parseCount++;
+    let tookAction = false;
 
     const {
       pattern, tag, untag, demark, tagID, replace, modifier,
@@ -53,6 +49,7 @@ export default function parser(doc) {
     if (pattern) {
       if (sentence.has(pattern)) {
         parseTakeActionCount++;
+        tookAction = true;
 
         const matchedPattern = sentence.match(pattern);
 
@@ -289,35 +286,14 @@ export default function parser(doc) {
         console.log('\n\n');
       }
     }
+    return tookAction;
   }
 
-  function arrayCompare(arr1, arr2) {
-    if (arr1.toString() === arr2.toString()) {
-      return true;
-    }
-    return false;
-  }
-
-  function differentElements(arr1, arr2) {
-    const changes = [];
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        changes.push(arr2[i]);
-      } else {
-        changes.push('same');
-      }
-    }
-
-    return changes;
-  }
-
-  function getOrClearPOSRoles(sentence, clearOld = false) {
-    const roles = [];
+  function clearPOSRoles(sentence) {
     sentence.terms().forEach((term) => {
       let tags = term.json({
         text: false, terms: { text: false, tags: true, whitespace: false },
       })[0].terms;
-
       tags = tags[0].tags;
 
       let role = 'none';
@@ -329,21 +305,15 @@ export default function parser(doc) {
       ));
 
       role = tags[tags.length - 1];
-
-      roles.push(role);
-
-      if (clearOld === true) {
-        tags.forEach((tag) => {
-          term.untag(tag);
-        });
-        term.tag(role);
-      }
+      tags.forEach((tag) => {
+        term.untag(tag);
+      });
+      term.tag(role);
     });
-
-    return roles;
   }
 
   function parseRule(sentence, rule) {
+    let tookAction = false;
     if (rule.type === 'intra-phrase') {
       let chunks = sentence;
       if (sentence.has('#Comma')) {
@@ -355,109 +325,21 @@ export default function parser(doc) {
         });
       }
       chunks.forEach((chunk) => {
-        tagMatch(chunk, rule);
+        tookAction = tagMatch(chunk, rule);
       });
     } else {
-      tagMatch(sentence, rule);
+      tookAction = tagMatch(sentence, rule);
     }
+    return tookAction;
   }
 
-  function relationships(sentence, changes) {
-    function check(rules) {
-      rules.forEach((rule) => {
-        const clearOld = true;
-        getOrClearPOSRoles(sentence, clearOld);
-        parseRule(sentence, rule);
-      });
-    }
-    console.log(JSON.stringify(changes));
-    let lastChange = 'same';
-    changes.forEach((change) => {
-      console.log(`last change = ${lastChange}`);
-      console.log(`change= ${change}`);
-
-      if ((change !== lastChange) && (change !== 'same')) {
-        switch (change) {
-          case 'Nn':
-            console.log('Rechecking Nominals');
-            check(nominalRules);
-            break;
-          case 'Vb':
-            console.log('Rechecking Verbials');
-            check(verbialRules);
-            break;
-          case 'Aj':
-            console.log('Rechecking Modifiers');
-            check(modifierRules);
-            break;
-          case 'Av':
-            console.log('Rechecking Modifiers');
-            check(modifierRules);
-            break;
-          case 'Vl':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Iv':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Gd':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Pt':
-            console.log('Rechecking Verbals');
-            check(verbalRules);
-            break;
-          case 'Pp':
-            console.log('Rechecking Prepositions');
-            check(prepositionalRules);
-            break;
-          case 'Dobj':
-            console.log('Rechecking Nominals');
-            check(nominalRules);
-            break;
-          case 'Iobj':
-            console.log('Rechecking Nominals');
-            check(nominalRules);
-            break;
-          case 'Subcls':
-            console.log('Rechecking Clauses');
-            check(clauseRules);
-            break;
-          case 'Relcls':
-            console.log('Rechecking Clauses');
-            check(clauseRules);
-            break;
-          default:
-            break;
-        }
-      }
-      lastChange = change;
+  function relationships(sentence) {
+    let tookAction = false;
+    periodicRules.forEach((rule) => {
+      clearPOSRoles(sentence);
+      tookAction = parseRule(sentence, rule);
     });
-  }
-
-  function InfinitePattern(history) {
-    let infinite = false;
-    const iterations = history.length;
-
-    if (iterations < 6) return false;
-    const maxRepeatSize = iterations / 2;
-
-    if (maxRepeatSize % 2 === 0) {
-      const group1 = [];
-      const group2 = [];
-      for (let i = 2; i < maxRepeatSize; i++) {
-        group1.push(history[iterations + 1 - i]);
-        group2.push(history[maxRepeatSize + 1 - i]);
-
-        if (arrayCompare(group1, group2) === true) {
-          infinite = true;
-        }
-      }
-    }
-    return infinite;
+    return tookAction;
   }
 
   // Load the parsing rules and sort them by batch and within batch.
@@ -484,30 +366,10 @@ export default function parser(doc) {
     console.log(sentence.debug());
 
     orderedRules.forEach((rule) => {
-      const clearOld = true;
-      let rolesBefore = getOrClearPOSRoles(sentence, clearOld);
-
-      parseRule(sentence, rule);
-
-      let rolesAfter = getOrClearPOSRoles(sentence);
-      let changedElements = differentElements(rolesBefore, rolesAfter);
-
-      if (arrayCompare(rolesBefore, rolesAfter) === false) {
-        const history = [];
-        history.push(changedElements);
-
-        while (arrayCompare(rolesBefore, rolesAfter) === false) {
-          if (InfinitePattern(history) === true) {
-            console.log('hit infinite repeating pattern');
-            break;
-          }
-          rolesBefore = getOrClearPOSRoles(sentence, clearOld);
-          relationships(sentence, changedElements);
-          rolesAfter = getOrClearPOSRoles(sentence);
-          changedElements = differentElements(rolesBefore, rolesAfter);
-
-          history.push(changedElements);
-        }
+      const tookAction = parseRule(sentence, rule);
+      console.log(tookAction);
+      if (tookAction) {
+        relationships(sentence);
       }
     });
 
@@ -520,5 +382,9 @@ export default function parser(doc) {
     console.log(`\nParses per word = ${parseCount / wordCount}`);
     console.log(`Actions per word = ${parseTakeActionCount / wordCount}`);
     console.log(`Parses per Action = ${parseCount / parseTakeActionCount}`);
+    const timestamp2 = new Date().getTime();
+    const duration = timestamp2 - timestamp1;
+    const seconds = duration / 1000;
+    console.log(`Run Time: ${seconds} seconds\n`);
   });
 }
