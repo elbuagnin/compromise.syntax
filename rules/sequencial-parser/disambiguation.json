@@ -9,21 +9,27 @@
 
   "having been #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "pattern": "having been #PastTense", "replace": {"on": {"term": "having been #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
 
-  "Potential Past Participles 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "6", "pattern": "#Participle", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Linking Verbs 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "6", "pattern": "#PotentialLinking #Determiner", "replace": {"on": {"term": "#PotentialLinking", "termTag": "#Action", "termUnTag": "#PotentialLinking"}}},
 
-  "Potential Past Participles 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "7", "pattern": "(#PastTense && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Linking Verbs 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "7", "pattern": "#PotentialLinking (#Where|#When)", "replace": {"on": {"term": "#PotentialLinking", "termTag": "#Action", "termUnTag": "#PotentialLinking"}}},
 
-  "Potential Past Participles 3": {"batch":"Disambiguation", "batchOrder": "1",  "order": "8", "pattern": "(#Adjective && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Linking Verbs 3": {"batch":"Disambiguation", "batchOrder": "1",  "order": "8", "pattern": "#PotentialLinking (like|of)", "replace": {"on": {"term": "#PotentialLinking", "termTag": "#Linking", "termUnTag": "#PotentialLinking"}}},
 
-  "Potential Past Participles 4": {"batch":"Disambiguation", "batchOrder": "1",  "order": "9", "pattern": "(#PastTense && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Past Participles 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "9", "pattern": "#Participle", "termTag": {"all": "#PotentialPastParticiple"}},
 
-  "Potential Past Participles 5": {"batch":"Disambiguation", "batchOrder": "1",  "order": "10", "pattern": "(#Adjective && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Past Participles 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "10", "pattern": "(#PastTense && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
 
-  "Potential Past Participles 6": {"batch":"Disambiguation", "batchOrder": "1",  "order": "11", "pattern": "(#PastTense && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Past Participles 3": {"batch":"Disambiguation", "batchOrder": "1",  "order": "11", "pattern": "(#Adjective && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
 
-  "Potential Past Participles 7": {"batch":"Disambiguation", "batchOrder": "1",  "order": "12", "pattern": "(#Adjective && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Past Participles 4": {"batch":"Disambiguation", "batchOrder": "1",  "order": "12", "pattern": "(#PastTense && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
 
-  "Potential Past Participles 8": {"batch":"Disambiguation", "batchOrder": "1",  "order": "13", "pattern": "(#PastTense && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+  "Potential Past Participles 5": {"batch":"Disambiguation", "batchOrder": "1",  "order": "13", "pattern": "(#Adjective && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
 
-  "Potential Past Participles 9": {"batch":"Disambiguation", "batchOrder": "1",  "order": "14", "pattern": "(#Adjective && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}}
+  "Potential Past Participles 6": {"batch":"Disambiguation", "batchOrder": "1",  "order": "14", "pattern": "(#PastTense && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 7": {"batch":"Disambiguation", "batchOrder": "1",  "order": "15", "pattern": "(#Adjective && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 8": {"batch":"Disambiguation", "batchOrder": "1",  "order": "16", "pattern": "(#PastTense && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}},
+
+  "Potential Past Participles 9": {"batch":"Disambiguation", "batchOrder": "1",  "order": "17", "pattern": "(#Adjective && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}}
 }
