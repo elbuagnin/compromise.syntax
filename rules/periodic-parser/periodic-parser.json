@@ -31,11 +31,11 @@
 
   "Introductory Adverb of Verb": {"batch": "Periodic", "order": "16", "type": "inter-phrase", "pattern": "#CommaAdverb+ (#nn+|#sbj+) #vb+", "tag": {"on":{"term": "#av+", "termTag": "final"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
 
-  "Adjective Subject Compliment": {"batch": "Periodic", "order": "17", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectCompliment"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+  "Adjective Subject Compliment": {"batch": "Periodic", "order": "17", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectComplement"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
 
-  "Nominal Subject Compliment": {"batch": "Periodic", "order": "18", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "(#nn+ && !#sbj)", "termTag": "SubjectCompliment"}}, "modifier": {"term": "(#nn+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+  "Nominal Subject Compliment": {"batch": "Periodic", "order": "18", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "(#nn+ && !#sbj)", "termTag": "SubjectComplement"}}, "modifier": {"term": "(#nn+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
 
-  "Preposition Subject Compliment": {"batch": "Periodic", "order": "19", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "SubjectCompliment"}}, "modifier": {"term": "#pp+", "modifies": "#sbj+", "termTag": "SubjectCompliment"}},
+  "Preposition Subject Compliment": {"batch": "Periodic", "order": "19", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "SubjectComplement"}}, "modifier": {"term": "#pp+", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
 
   "Noun Phrase": {"batch": "Periodic", "order": "20", "type": "intra-phrase", "pattern": "#dt #Adjective?+ #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
 
