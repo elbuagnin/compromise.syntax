@@ -367,8 +367,6 @@ export default function parser(doc) {
 
     orderedRules.forEach((rule) => {
       const tookAction = parseRule(sentence, rule);
-      console.log(`Batch: ${rule.batchOrder} Order: ${rule.order}`);
-      console.log(tookAction);
       if (tookAction && (rule.batch !== 'Clean Up')) {
         relationships(sentence);
       }
