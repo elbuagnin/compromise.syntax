@@ -9,155 +9,159 @@
 
   "Assign NonGerund nn": {"batch": "Periodic", "order": "5", "type": "intra-phrase", "pattern": "(#nn+ && !#Gerund && !#CompoundGerunds)", "tag": {"on": {"term": "#nn+", "termTag": "nnNotGd"}}},
 
-  "Adjective of Nominal 1": {"batch": "Periodic", "order": "6", "type": "intra-phrase", "pattern": "#aj+ (#nn+|#sbj+) (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
+  "Assign NonSubject nn": {"batch": "Periodic", "order": "6", "type": "intra-phrase", "pattern": "(#nn+ && !#sbj)", "tag": {"on": {"term": "(#nn+ && !#sbj)", "termTag": "nnNotSbj"}}},
 
-  "Adjective of Nominal 2": {"batch": "Periodic", "order": "7", "type": "intra-phrase", "pattern": "#aj+? (#nn+|#sbj+) #AdjectivePhrase+ #av?+ #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
+  "Adjective of Nominal 1": {"batch": "Periodic", "order": "7", "type": "intra-phrase", "pattern": "#aj+ (#nn+|#sbj+) (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
-  "Adjective of Nominal 3": {"batch": "Periodic", "order": "8", "type": "intra-phrase", "pattern": "#AdjectivePhrase+ (#nn+|#sbj+|#dobj+|#iobj+)", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
+  "Adjective of Nominal 2": {"batch": "Periodic", "order": "8", "type": "intra-phrase", "pattern": "#aj+? (#nn+|#sbj+) #AdjectivePhrase+ #av?+ #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
-  "Adverb Phrase 1": {"batch": "Periodic", "order": "9", "type": "intra-phrase", "pattern": "#av+ #aj+ !#nn?", "tag": {"all": ["AdverbPhrase", "av"]}},
+  "Adjective of Nominal 3": {"batch": "Periodic", "order": "9", "type": "intra-phrase", "pattern": "#AdjectivePhrase+ (#nn+|#sbj+|#dobj+|#iobj+)", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#aj+", "termUnTag": "#aj"}}, "modifier": {"term": "#aj+", "modifies": "(#nn+|#sbj+)"}},
 
-  "Adverb Phrase 2": {"batch": "Periodic", "order": "10", "type": "intra-phrase", "pattern": "#av+ #aj$", "tag": {"all": ["AdverbPhrase", "av"]}},
+  "Adverb Phrase 1": {"batch": "Periodic", "order": "10", "type": "intra-phrase", "pattern": "#av+ #aj+ !#nn?", "tag": {"all": ["AdverbPhrase", "av"]}},
 
-  "Adverb Phrase of Verb": {"batch": "Periodic", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #nn+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+", "termTag": "AdverbPhraseOf"}},
+  "Adverb Phrase 2": {"batch": "Periodic", "order": "11", "type": "intra-phrase", "pattern": "#av+ #aj$", "tag": {"all": ["AdverbPhrase", "av"]}},
 
-  "Adverb of Adjective": {"batch": "Periodic", "order": "12", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
+  "Adverb Phrase of Verb": {"batch": "Periodic", "order": "12", "type": "intra-phrase", "pattern": "#vb+ #nn+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+", "termTag": "AdverbPhraseOf"}},
 
-  "Prepositional Phrase as Adverb to Adjective": {"batch": "Periodic", "order": "13", "type": "intra-phrase", "pattern": "#aj+ #Preposition #pp+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#aj+", "termTag": "Adverbial"}},
+  "Adverb of Adjective": {"batch": "Periodic", "order": "13", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
-  "Infinitive Phrase as Adverb to Adjective": {"batch": "Periodic", "order": "14", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#iv+"}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Adjective": {"batch": "Periodic", "order": "14", "type": "intra-phrase", "pattern": "#aj+ #Preposition #pp+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#aj+", "termTag": "Adverbial"}},
 
-  "Adverb of Verb": {"batch": "Periodic", "order": "15", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"on":{"term": "#av+", "termTag": "vb"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
+  "Infinitive Phrase as Adverb to Adjective": {"batch": "Periodic", "order": "15", "type": "intra-phrase", "pattern": "#aj+ #iv+", "tag": {"all": ["AdjectivePhrase", "aj"]}, "untag": {"all": "#iv+"}, "modifier": {"term": "#iv+", "modifies": "#aj+", "termTag": "Adverbial"}},
 
-  "Introductory Adverb of Verb": {"batch": "Periodic", "order": "16", "type": "inter-phrase", "pattern": "#CommaAdverb+ (#nn+|#sbj+) #vb+", "tag": {"on":{"term": "#av+", "termTag": "final"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
+  "Adverb of Verb": {"batch": "Periodic", "order": "16", "type": "intra-phrase", "pattern": "#vb+ #av+", "tag": {"on":{"term": "#av+", "termTag": "vb"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
 
-  "Adjective Subject Compliment": {"batch": "Periodic", "order": "17", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectComplement"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
+  "Introductory Adverb of Verb": {"batch": "Periodic", "order": "17", "type": "inter-phrase", "pattern": "#CommaAdverb+ (#nn+|#sbj+) #vb+", "tag": {"on":{"term": "#av+", "termTag": "final"}}, "modifier": {"term": "#av+", "modifies": "#vb+"}},
 
-  "Nominal Subject Compliment": {"batch": "Periodic", "order": "18", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "(#nn+ && !#sbj)+", "termTag": "SubjectComplement"}}, "modifier": {"term": "(#nn+ && !#sbj)+", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
+  "Adjective Subject Compliment": {"batch": "Periodic", "order": "18", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #aj+", "tag": {"on": {"term": "(#aj+ && !#sbj)", "termTag": "SubjectComplement"}}, "modifier": {"term": "(#aj+ && !#sbj)", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
 
-  "Preposition Subject Compliment": {"batch": "Periodic", "order": "19", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "SubjectComplement"}}, "modifier": {"term": "#pp+", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
+  "Nominal Subject Compliment": {"batch": "Periodic", "order": "19", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nnNotSbj+", "tag": {"on": {"term": "#nnNotSbj+", "termTag": "SubjectComplement"}}, "modifier": {"term": "#nnNotSbj+", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
 
-  "Noun Phrase": {"batch": "Periodic", "order": "20", "type": "intra-phrase", "pattern": "#dt #Adjective?+ #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
+  "Preposition Subject Compliment": {"batch": "Periodic", "order": "20", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "SubjectComplement"}}, "modifier": {"term": "#pp+", "modifies": "#sbj+", "termTag": "SubjectComplement"}},
 
-  "Head Noun": {"batch": "Periodic", "order": "21", "type": "intra-phrase", "pattern": "(#nn+ && #NounPhrase+)", "tag": {"last": {"term": "#Noun", "termTag": "HeadNoun"}}},
+  "Noun Phrase": {"batch": "Periodic", "order": "21", "type": "intra-phrase", "pattern": "#dt #Adjective?+ #nn+", "tag": {"all": ["NounPhrase", "nn"]}, "untag": {"on": {"term": "#dt", "termUnTag": "#dt"}}},
 
-  "Infinitive Phrase as Adverb 1": {"batch": "Periodic", "order": "22", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #iv+", "tag": {"on": {"term": "#iv+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#iv+", "termUnTag": "#iv"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Head Noun": {"batch": "Periodic", "order": "22", "type": "intra-phrase", "pattern": "(#nn+ && #NounPhrase+)", "tag": {"last": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-  "Object of Preposition": {"batch": "Periodic", "order": "23", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
+  "Infinitive Phrase as Adverb 1": {"batch": "Periodic", "order": "23", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #iv+", "tag": {"on": {"term": "#iv+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#iv+", "termUnTag": "#iv"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adjective 1": {"batch": "Periodic", "order": "24", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Object of Preposition": {"batch": "Periodic", "order": "24", "type": "intra-phrase", "pattern": "#Preposition+ #nn+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
-  "Prepositional Phrase as Adjective 2": {"batch": "Periodic", "order": "25", "type": "intra-phrase", "pattern": "#nn+ #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 1": {"batch": "Periodic", "order": "25", "type": "intra-phrase", "pattern": "#Gerund #Noun #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adjective 3": {"batch": "Periodic", "order": "26", "type": "intra-phrase", "pattern": "#vl+ #pp+", "tag": {"each": [{"term": "#vl+", "termTag": "nn"}, {"term": "#pp+", "termTag": "aj"}]}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 2": {"batch": "Periodic", "order": "26", "type": "intra-phrase", "pattern": "#nn+ #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adjective 4": {"batch": "Periodic", "order": "27", "type": "intra-phrase", "pattern": "(#nn+|#Sbj+) #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Prepositional Phrase as Adjective 3": {"batch": "Periodic", "order": "27", "type": "intra-phrase", "pattern": "#vl+ #pp+", "tag": {"each": [{"term": "#vl+", "termTag": "nn"}, {"term": "#pp+", "termTag": "aj"}]}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as either Adjective or Adverb": {"batch": "Periodic", "order": "28", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #what #pp+", "modifier": {"term": "#pp+", "modifies": "#vb+ #DirectObject+"}},
+  "Prepositional Phrase as Adjective 4": {"batch": "Periodic", "order": "28", "type": "intra-phrase", "pattern": "(#nn+|#Sbj+) #pp+ #vb+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Prepositional Phrase as Adverb to verb 1": {"batch": "Periodic", "order": "29", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as either Adjective or Adverb": {"batch": "Periodic", "order": "29", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #what #pp+", "modifier": {"term": "#pp+", "modifies": "#vb+ #DirectObject+"}},
 
-  "Prepositional Phrase as Adverb to Verb 2": {"batch": "Periodic", "order": "30", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|#PotentialPastParticiple) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to verb 1": {"batch": "Periodic", "order": "30", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) (#where|#when) #pp+", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb to Verb 3": {"batch": "Periodic", "order": "31", "type": "intra-phrase", "pattern": "#Action #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 2": {"batch": "Periodic", "order": "31", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|#PotentialPastParticiple) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb to Verb 4": {"batch": "Periodic", "order": "32", "type": "inter-phrase", "pattern": "#pp+ #Comma (#nn+|#Sbj+) (#vb+|#pred+)", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "final"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 3": {"batch": "Periodic", "order": "32", "type": "intra-phrase", "pattern": "#Action #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb to Verb 5": {"batch": "Periodic", "order": "33", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 4": {"batch": "Periodic", "order": "33", "type": "inter-phrase", "pattern": "#pp+ #Comma (#nn+|#Sbj+) (#vb+|#pred+)", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "final"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Simple Relative Noun Clauses": {"batch": "Periodic", "order": "34", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
+  "Prepositional Phrase as Adverb to Verb 5": {"batch": "Periodic", "order": "34", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Subject": {"batch": "Periodic", "order": "35", "type": "intra-phrase", "pattern": "(#aj+|#av+)? #nn+ (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
+  "Simple Relative Noun Clauses": {"batch": "Periodic", "order": "35", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
-  "Direct w/ Indirect Objects 1": {"batch": "Periodic", "order": "36", "type": "intra-phrase", "pattern": "#Action+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#Action+", "termTag": "DirectObject"}},
+  "Subject": {"batch": "Periodic", "order": "36", "type": "intra-phrase", "pattern": "(#aj+|#av+)? #nn+ (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
 
-  "Indirect Objects 1": {"batch": "Periodic", "order": "37", "type": "intra-phrase", "pattern": "#Action+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#Action+", "termTag": "IndirectObject"}},
+  "Direct w/ Indirect Objects 1": {"batch": "Periodic", "order": "37", "type": "intra-phrase", "pattern": "#Action+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#Action+", "termTag": "DirectObject"}},
 
-  "Direct w/ Indirect Objects 2": {"batch": "Periodic", "order": "38", "type": "intra-phrase", "pattern": "#Action+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#Action+", "termTag": "DirectObject"}},
+  "Indirect Objects 1": {"batch": "Periodic", "order": "38", "type": "intra-phrase", "pattern": "#Action+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#Action+", "termTag": "IndirectObject"}},
 
-  "Indirect Objects 2": {"batch": "Periodic", "order": "39", "type": "intra-phrase", "pattern": "#Action+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#Action+", "termTag": "IndirectObject"}},
+  "Direct w/ Indirect Objects 2": {"batch": "Periodic", "order": "39", "type": "intra-phrase", "pattern": "#Action+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#Action+", "termTag": "DirectObject"}},
 
-  "Direct Object": {"batch": "Periodic", "order": "40", "type": "intra-phrase", "pattern": "#Action+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "#nn+", "modifies": "#Action+", "termTag": "DirectObject"}},
+  "Indirect Objects 2": {"batch": "Periodic", "order": "40", "type": "intra-phrase", "pattern": "#Action+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"term": "#Agent+", "modifies": "#Action+", "termTag": "IndirectObject"}},
 
-  "Progressive Infinitive Object": {"batch": "Periodic", "order": "41", "type": "intra-phrase", "pattern": "#ProgressiveVerbal+ #iv+", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#iv+", "modifies": "#ProgressiveVerbal+", "termTag": "ObjectOfVerbal"}},
+  "Direct Object": {"batch": "Periodic", "order": "41", "type": "intra-phrase", "pattern": "#Action+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "#nn+", "modifies": "#Action+", "termTag": "DirectObject"}},
 
-  "Verbal as Object of Preposition": {"batch": "Periodic", "order": "42", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
+  "Progressive Infinitive Object": {"batch": "Periodic", "order": "42", "type": "intra-phrase", "pattern": "#ProgressiveVerbal+ #iv+", "tag": {"all":["vl", "VerbalPhrase"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#iv+", "modifies": "#ProgressiveVerbal+", "termTag": "ObjectOfVerbal"}},
 
-  "Verbal as Object of Infinitive 1": {"batch": "Periodic", "order": "43", "type": "intra-phrase", "pattern": "#Infinitive+ #VlNotIv+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#vl+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Verbal as Object of Preposition": {"batch": "Periodic", "order": "43", "type": "intra-phrase", "pattern": "#Preposition+ (#vl+|#iv+)", "modifier": {"term": "(#vl+|#iv+)", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
-  "Verbal as Participle Opening": {"batch": "Periodic", "order": "44", "type": "intra-phrase", "pattern": "^(#Verbal+ && #Comma)", "tag": {"all": ["Participle", "aj"]}},
+  "Verbal as Object of Infinitive 1": {"batch": "Periodic", "order": "44", "type": "intra-phrase", "pattern": "#Infinitive+ #VlNotIv+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#vl+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Verbal as Participle Opening Phrase": {"batch": "Periodic", "order": "45", "type": "intra-phrase", "pattern": "^#Verbal+ #VerbalPhrase+ #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
+  "Verbal as Participle Opening": {"batch": "Periodic", "order": "45", "type": "intra-phrase", "pattern": "^(#Verbal+ && #Comma)", "tag": {"all": ["Participle", "aj"]}},
 
-  "Verbal as Participle Middle Phrase": {"batch": "Periodic", "order": "46", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ #VerbalPhrase+ #Comma", "tag": {"after": {"term": "(#nn+ && #Comma)", "termTag": ["ParticiplePhrase", "aj"]}}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
+  "Verbal as Participle Opening Phrase": {"batch": "Periodic", "order": "46", "type": "intra-phrase", "pattern": "^#Verbal+ #VerbalPhrase+ #Comma", "tag": {"all": ["ParticiplePhrase", "aj"]}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "Verbal as Subject 1": {"batch": "Periodic", "order": "47", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
+  "Verbal as Participle Middle Phrase": {"batch": "Periodic", "order": "47", "type": "inter-phrase", "pattern": "(#nn+ && #Comma) #Verbal+ #VerbalPhrase+ #Comma", "tag": {"after": {"term": "(#nn+ && #Comma)", "termTag": ["ParticiplePhrase", "aj"]}}, "on": {"term": "#Verbal", "termTag": "#Participle"}},
 
-  "Verbal as Subject 2": {"batch": "Periodic", "order": "48", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #pp+ #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
+  "Verbal as Subject 1": {"batch": "Periodic", "order": "48", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
-  "Verbal as Adjective to Noun 1": {"batch": "Periodic", "order": "49", "type": "intra-phrase", "pattern": "#nn+ (#vl+|#iv+)", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Subject 2": {"batch": "Periodic", "order": "49", "type": "intra-phrase", "pattern": "(#vl+|#iv+) #pp+ #vb+", "tag": {"on": {"term": "(#vl+|#iv+)", "termTag": "nn"}}},
 
-  "Verbal as Adjective to Noun 2": {"batch": "Periodic", "order": "50", "type": "intra-phrase", "pattern": "#dt #vl+ #nn+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjective to Noun 1": {"batch": "Periodic", "order": "50", "type": "intra-phrase", "pattern": "#nn+ (#vl+|#iv+)", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjectival Phrase to Noun 1": {"batch": "Periodic", "order": "51", "type": "intra-phrase", "pattern": "#nn+ #vl+ #nn+", "tag": {"on": {"term": "#vl+ #nn+", "termTag": "aj"}}},
+  "Verbal as Adjective to Noun 2": {"batch": "Periodic", "order": "51", "type": "intra-phrase", "pattern": "#dt #vl+ #nn+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjective": {"batch": "Periodic", "order": "52", "type": "intra-phrase", "pattern": "#av+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjectival Phrase to Noun 1": {"batch": "Periodic", "order": "52", "type": "intra-phrase", "pattern": "#nn+ #vl+ #nn+", "tag": {"on": {"term": "#vl+ #nn+", "termTag": "aj"}}},
 
-  "Verbal as Adjectival Phrase to Noun 2": {"batch": "Periodic", "order": "53", "type": "intra-phrase", "pattern": "#nn+ #vl+ #iv+", "tag": {"on": {"term": "#vl+ #iv+", "termTag": ["VerbalPhrase", "aj"]}}},
+  "Verbal as Adjective": {"batch": "Periodic", "order": "53", "type": "intra-phrase", "pattern": "#av+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Gerunds 1": {"batch": "Periodic", "order": "54", "type": "intra-phrase", "pattern": "#vb+ #ProgressiveVerbal+", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
+  "Verbal as Adjectival Phrase to Noun 2": {"batch": "Periodic", "order": "54", "type": "intra-phrase", "pattern": "#nn+ #vl+ #iv+", "tag": {"on": {"term": "#vl+ #iv+", "termTag": ["VerbalPhrase", "aj"]}}},
 
-  "Gerunds 2": {"batch": "Periodic", "order": "55", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #nn)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
+  "Gerunds 1": {"batch": "Periodic", "order": "55", "type": "intra-phrase", "pattern": "#vb+ #ProgressiveVerbal+", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
 
-  "Present Participles": {"batch": "Periodic", "order": "56", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #aj)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
+  "Gerunds 2": {"batch": "Periodic", "order": "56", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #nn)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "nn"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
 
-  "Object of Verbal Candidate": {"batch": "Periodic", "order": "57", "type": "intra-phrase", "pattern": "#VerbalCandidate+ #pp+", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#VerbalCandidate+", "termTag": "ObjectOfVerbal"}},
+  "Present Participles": {"batch": "Periodic", "order": "57", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #aj)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["PresentParticiple", "aj"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
 
-  "Object of Infinitive 2": {"batch": "Periodic", "order": "58", "type": "intra-phrase", "pattern": "#Infinitive+ #pp+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#pp+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Object of Verbal Candidate": {"batch": "Periodic", "order": "58", "type": "intra-phrase", "pattern": "#VerbalCandidate+ #pp+", "tag": {"all": ["VerbalPhrase", "vl"]}, "untag": {"all": "#pp"}, "modifier": {"term": "#pp+", "modifies": "#VerbalCandidate+", "termTag": "ObjectOfVerbal"}},
 
-  "Object of Infinitive 3": {"batch": "Periodic", "order": "59", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl", "#UnPhrasedVerbal"]}, "modifier": {"term": "#nnNotIv+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
+  "Object of Infinitive 2": {"batch": "Periodic", "order": "59", "type": "intra-phrase", "pattern": "#Infinitive+ #pp+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "#pp+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Object of Gerund": {"batch": "Periodic", "order": "60", "type": "intra-phrase", "pattern": "#Gerund (#nn+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"all": "#vl"}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
+  "Object of Infinitive 3": {"batch": "Periodic", "order": "60", "type": "intra-phrase", "pattern": "#Infinitive+ #nnNotIv+", "tag": {"all": ["InfinitivePhrase", "iv"]}, "untag": {"all": ["#nn", "#vl", "#UnPhrasedVerbal"]}, "modifier": {"term": "#nnNotIv+", "modifies": "#Infinitive+", "termTag": "ObjectOfInfinitive"}},
 
-  "Object of Gerund": {"batch": "Periodic", "order": "61", "type": "intra-phrase", "pattern": "#Gerund+ (#nnNotGd+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
+  "Object of Gerund": {"batch": "Periodic", "order": "61", "type": "intra-phrase", "pattern": "#Gerund (#nn+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"all": "#vl"}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
 
-  "Compound Gerunds": {"batch": "Periodic", "order": "62", "type": "intra-phrase", "pattern": "(#Gerund+ && #CompoundVerbals) #CoordinatingConjunction (#Gerund+ && #CompoundVerbals)", "tag": {"all": ["CompoundGerunds", "GerundPhrase", "nn"]}, "untag": {"on": {"term": "#CompoundVerbals+", "termUnTag": "#CompoundVerbals"}}},
+  "Object of Gerund": {"batch": "Periodic", "order": "62", "type": "intra-phrase", "pattern": "#Gerund+ (#nnNotGd+|#pp+|#iv+)", "tag": {"all": ["GerundPhrase", "nn"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Gerund", "termTag": "ObjectOfGerund"}},
 
-  "Object of Participle": {"batch": "Periodic", "order": "63", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+|#iv+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
+  "Compound Gerunds": {"batch": "Periodic", "order": "63", "type": "intra-phrase", "pattern": "(#Gerund+ && #CompoundVerbals) #CoordinatingConjunction (#Gerund+ && #CompoundVerbals)", "tag": {"all": ["CompoundGerunds", "GerundPhrase", "nn"]}, "untag": {"on": {"term": "#CompoundVerbals+", "termUnTag": "#CompoundVerbals"}}},
 
-  "Infinitive Phrase as as Direct Object": {"batch": "Periodic", "order": "64", "type": "intra-phrase", "pattern": "#Action #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Object of Participle": {"batch": "Periodic", "order": "64", "type": "intra-phrase", "pattern": "#Participle+ (#nn+|#pp+|#iv+)", "tag": {"all": ["ParticiplePhrase", "aj"]}, "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal+"}}, "modifier": {"term": "(#nn+|#pp+|#iv+)", "modifies": "#Participle+", "termTag": "ObjectOfParticiple"}},
 
-  "Infinitive Phrase as as Subject Complement nn": {"batch": "Periodic", "order": "65", "type": "intra-phrase", "pattern": "#Linking #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
+  "Infinitive Phrase as as Direct Object": {"batch": "Periodic", "order": "65", "type": "intra-phrase", "pattern": "#Action #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as aj": {"batch": "Periodic", "order": "66", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}, "modifier": {"term": "#iv+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Infinitive Phrase as as Subject Complement nn": {"batch": "Periodic", "order": "66", "type": "intra-phrase", "pattern": "#Linking #av?+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "nn"}}},
 
-  "Infinitive Phrase as as av 1": {"batch": "Periodic", "order": "67", "type": "intra-phrase", "pattern": "#Past #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as aj": {"batch": "Periodic", "order": "67", "type": "intra-phrase", "pattern": "#gd+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "aj"}}, "modifier": {"term": "#iv+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Infinitive Phrase as as av 2": {"batch": "Periodic", "order": "68", "type": "intra-phrase", "pattern": "(who|whom) #Present #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as av 1": {"batch": "Periodic", "order": "68", "type": "intra-phrase", "pattern": "#Past #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Infinitive Phrase as as av 3": {"batch": "Periodic", "order": "69", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as av 2": {"batch": "Periodic", "order": "69", "type": "intra-phrase", "pattern": "(who|whom) #Present #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Infinitive Phrase after Participle": {"batch": "Periodic", "order": "70", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as as av 3": {"batch": "Periodic", "order": "70", "type": "intra-phrase", "pattern": "#Past #NounPhrase+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adjective 3": {"batch": "Periodic", "order": "71", "type": "intra-phrase", "pattern": "#Gerund #Noun? #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
+  "Infinitive Phrase after Participle": {"batch": "Periodic", "order": "71", "type": "intra-phrase", "pattern": "#Participle+ #iv+", "tag": {"on":{"term": "#iv+", "termTag": "av"}}, "modifier": {"term": "#iv+", "modifies": "#Participle+", "termTag": "Adverbial"}},
 
-  "Verbal Phrase as Subordinate Clause": {"batch": "Periodic", "order": "72", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#ProgressiveVerbal+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#ProgressiveVerbal+", "termUnTag": "#ProgressiveVerbal"}]}},
+  "Prepositional Phrase as Adjective 3": {"batch": "Periodic", "order": "72", "type": "intra-phrase", "pattern": "#Gerund #Noun? #pp+", "tag": {"on": {"term": "#pp+", "termTag": "aj"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#nn+", "termTag": "Adjectival"}},
 
-  "Participle Phrase": {"batch": "Periodic", "order": "73", "type": "intra-phrase", "pattern": "^(#PastParticiple && #Comma)", "tag": {"all": ["ParticiplePhrase", "final"]}, "untag": {"all": ["#aj", "#Action"]}},
+  "Verbal Phrase as Subordinate Clause": {"batch": "Periodic", "order": "73", "type": "intra-phrase", "pattern": "^#vl+ #SubordinatingConjunction+", "tag": {"each": [{"term": "#vl+", "termTag": ["RelativeClause", "relcls"]}, {"term": "#ProgressiveVerbal+", "termTag": "PresentParticiple"}]}, "untag": {"each": [{"term": "#vl+", "termUnTag": "#vl"}, {"term": "#ProgressiveVerbal+", "termUnTag": "#ProgressiveVerbal"}]}},
 
-  "RelativeClause modifies Subject": {"batch": "Periodic",  "order": "74", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
+  "Participle Phrase": {"batch": "Periodic", "order": "74", "type": "intra-phrase", "pattern": "^(#PastParticiple && #Comma)", "tag": {"all": ["ParticiplePhrase", "final"]}, "untag": {"all": ["#aj", "#Action"]}},
 
-  "Participle Phrase modifies Subject 1": {"batch": "Periodic",  "order": "75", "type": "inter-phrase", "pattern": "#ParticiplePhrase+ #sbj+", "tag":{"on": {"term": "#ParticiplePhrase+", "termTag": "Final"} }, "modifier": {"term": "#ParticiplePhrase+", "modifies": "#sbj+", "termTag": "Adjectival"}},
+  "RelativeClause modifies Subject": {"batch": "Periodic",  "order": "75", "type": "inter-phrase", "pattern": "#RelativeClause+ * #sbj+", "modifier": {"term": "#RelativeClause+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
-  "Participle Phrase modifies Subject 2": {"batch": "Periodic",  "order": "76", "type": "inter-phrase", "pattern": "#nn?+ #CommaNoun #ParticiplePhrase+ #vb+", "tag":{"before": {"term": "#vb?+", "termTag": "#sbj"}}, "modifier": {"term": "#ParticiplePhrase+", "modifies": "#nn?+ #CommaNoun", "termTag": "Adjectival"}},
+  "Participle Phrase modifies Subject 1": {"batch": "Periodic",  "order": "76", "type": "inter-phrase", "pattern": "#ParticiplePhrase+ #sbj+", "tag":{"on": {"term": "#ParticiplePhrase+", "termTag": "Final"} }, "modifier": {"term": "#ParticiplePhrase+", "modifies": "#sbj+", "termTag": "Adjectival"}},
 
-  "Reset NonVerbal nn": {"batch": "Periodic", "order": "77", "type": "intra-phrase", "pattern": "#nnNotVl+", "untag": {"on": {"term": "#nnNotVl+", "termUnTag": "#nnNotVl"}}},
+  "Participle Phrase modifies Subject 2": {"batch": "Periodic",  "order": "77", "type": "inter-phrase", "pattern": "#nn?+ #CommaNoun #ParticiplePhrase+ #vb+", "tag":{"before": {"term": "#vb?+", "termTag": "#sbj"}}, "modifier": {"term": "#ParticiplePhrase+", "modifies": "#nn?+ #CommaNoun", "termTag": "Adjectival"}},
 
-  "Reset NonInfinitive nn": {"batch": "Periodic", "order": "78", "type": "intra-phrase", "pattern": "#nnNotIv+", "untag": {"on": {"term": "#nnNotIv+", "termUnTag": "#nnNotIv"}}},
+  "Reset NonVerbal nn": {"batch": "Periodic", "order": "78", "type": "intra-phrase", "pattern": "#nnNotVl+", "untag": {"on": {"term": "#nnNotVl+", "termUnTag": "#nnNotVl"}}},
 
-  "Reset #UnPhrasedVerbals": {"batch": "Periodic", "order": "79", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
+  "Reset NonInfinitive nn": {"batch": "Periodic", "order": "79", "type": "intra-phrase", "pattern": "#nnNotIv+", "untag": {"on": {"term": "#nnNotIv+", "termUnTag": "#nnNotIv"}}},
 
-  "Reset NonInfinitive vl": {"batch": "Periodic", "order": "80", "type": "inter-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+  "Reset #UnPhrasedVerbals": {"batch": "Periodic", "order": "80", "type": "intra-phrase", "pattern": "#UnPhrasedVerbal+", "untag": {"on": {"term": "#UnPhrasedVerbal+", "termUnTag": "#UnPhrasedVerbal"}}},
 
-  "Reset NonGerund nn": {"batch": "Periodic", "order": "81", "type": "inter-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}}
+  "Reset NonInfinitive vl": {"batch": "Periodic", "order": "81", "type": "inter-phrase", "pattern": "#VlNotIv+", "untag": {"on": {"term": "#VlNotIv+", "termUnTag": "#VlNotIv"}}},
+
+  "Reset NonGerund nn": {"batch": "Periodic", "order": "82", "type": "inter-phrase", "pattern": "#nnNotGd+", "untag": {"on": {"term": "#nnNotGd+", "termUnTag": "#nnNotGd"}}},
+
+  "Reset NonSubject nn": {"batch": "Periodic", "order": "83", "type": "inter-phrase", "pattern": "#nnNotSbj+", "untag": {"on": {"term": "#nnNotSbj+", "termUnTag": "#nnNotSbj"}}}
 }
