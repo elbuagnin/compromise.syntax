@@ -23,15 +23,15 @@
 
   "Inter-Phrased Subject Predicate": {"batch":"Structure", "batchOrder": "12", "order": "12", "type": "inter-phrase", "pattern": "#Subject+ #vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+)? #AdverbialPhrase?+", "tag": { "after": {"term": "#Subject+", "termTag": ["#Predicate", "Final"]}}},
 
-  "Independent Clause": {"batch":"Structure", "batchOrder": "12", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": ["IndependentClause", "Final"]}},
+  "Clause": {"batch":"Structure", "batchOrder": "12", "order": "13", "type": "intra-phrase", "pattern": "#Subject+ #Predicate+", "tag": {"all": ["Clause", "Final"]}},
 
-  "Compound Sentence": {"batch":"Structure", "batchOrder": "12", "order": "14", "type": "inter-phrase", "pattern": "#Subject+ #Predicate+ #CoordinatingConjunction #Subject+ #Predicate+", "tag": {"all": ["#CompoundSentence", "Final"]}},
+  "Compound Sentence": {"batch":"Structure", "batchOrder": "12", "order": "14", "type": "inter-phrase", "pattern": "* #Clause+ *  #CoordinatingConjunction * #Clause+ *", "tag": {"all": ["#CompoundSentence", "Final"]}},
 
-  "Complete Sentence 1": {"batch":"Structure", "batchOrder": "12", "order": "15", "type": "inter-phrase", "pattern": "#IndependentClause+", "tag": {"all": ["CompleteSentence", "Final"]}, "untag": {"all": "#Clause"}},
+  "Complete Sentence 1": {"batch":"Structure", "batchOrder": "12", "order": "15", "type": "inter-phrase", "pattern": "#Clause+", "tag": {"all": ["CompleteSentence", "Final"]}, "untag": {"all": "#Clause"}},
 
-  "Complete Sentence 2": {"batch":"Structure", "batchOrder": "12", "order": "16", "type": "inter-phrase", "pattern": "#Final?+ #IndependentClause+ #Final?+", "tag": {"all": ["CompleteSentence", "Final"]}},
+  "Complete Sentence 2": {"batch":"Structure", "batchOrder": "12", "order": "16", "type": "inter-phrase", "pattern": "#Final?+ #Clause+ #Final?+", "tag": {"all": ["CompleteSentence", "Final"]}},
 
-  "Complete Sentence 3": {"batch":"Structure", "batchOrder": "12", "order": "17", "type": "inter-phrase", "pattern": "* #IndependentClause+", "tag": {"all": ["CompleteSentence", "Final"]}},
+  "Complete Sentence 3": {"batch":"Structure", "batchOrder": "12", "order": "17", "type": "inter-phrase", "pattern": "* #Clause+", "tag": {"all": ["CompleteSentence", "Final"]}},
 
-  "Complete Sentence 4": {"batch":"Structure", "batchOrder": "12", "order": "18", "type": "inter-phrase", "pattern": "#IndependentClause+ *", "tag": {"all": ["CompleteSentence", "Final"]}}
+  "Complete Sentence 4": {"batch":"Structure", "batchOrder": "12", "order": "18", "type": "inter-phrase", "pattern": "#Clause+ *", "tag": {"all": ["CompleteSentence", "Final"]}}
 }
