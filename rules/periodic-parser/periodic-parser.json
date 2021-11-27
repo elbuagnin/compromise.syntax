@@ -69,7 +69,7 @@
 
   "Simple Relative Noun Clauses": {"batch": "Periodic", "order": "35", "type": "intra-phrase", "pattern": "#QuestionWord #Pronoun #Past", "tag": {"all": ["RelativeClause", "nn"], "on": {"term": "#QuestionWord", "termTag": "RelativePronoun"}}, "untag": {"on": {"term": "#QuestionWord", "termUnTag": "#QuestionWord"}}},
 
-  "Subject": {"batch": "Periodic", "order": "36", "type": "intra-phrase", "pattern": "(#aj+|#av+)? #nn+ (#aj+|#av+)? #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
+  "Subject": {"batch": "Periodic", "order": "36", "type": "intra-phrase", "pattern": "#aj?+ #nn+ #aj?+ #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
 
   "Direct w/ Indirect Objects 1": {"batch": "Periodic", "order": "37", "type": "intra-phrase", "pattern": "#Action+ #Agent+ #nn+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"term": "(#nn+ && !#Agent)", "modifies": "#Action+", "termTag": "DirectObject"}},
 
