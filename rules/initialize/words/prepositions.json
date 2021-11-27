@@ -34,7 +34,6 @@
   "until": ["Preposition", "When"],
   "except": ["Preposition", "What", "Whom"],
   "for": ["Preposition", "What", "Whom"],
-  "like": ["Preposition", "What", "Whom"],
   "of": ["Preposition", "What", "Whom"],
   "by": ["Preposition", "What", "Where", "When", "Whom"]
 }
