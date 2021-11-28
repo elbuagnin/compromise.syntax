@@ -105,9 +105,9 @@
 
   "Verbal as Adjective to Noun 1": {"batch": "Periodic", "order": "53", "type": "intra-phrase", "pattern": "#nn+ (#vl+|#iv+)", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjective to Noun 2": {"batch": "Periodic", "order": "54", "type": "intra-phrase", "pattern": "#dt #vl+ #nn+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
+  "Verbal as Adjective to Noun 2": {"batch": "Periodic", "order": "54", "type": "intra-phrase", "pattern": "#dt #vl+ #Noun+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
-  "Verbal as Adjectival Phrase to Noun 1": {"batch": "Periodic", "order": "55", "type": "intra-phrase", "pattern": "#nn+ #vl+ #nn+", "tag": {"on": {"term": "#vl+ #nn+", "termTag": "aj"}}},
+  "Verbal as Adjectival Phrase to Noun 1": {"batch": "Periodic", "order": "55", "type": "intra-phrase", "pattern": "#nn+ #vl+ #Noun+", "tag": {"on": {"term": "#vl+ #nn+", "termTag": "aj"}}},
 
   "Verbal as Adjective": {"batch": "Periodic", "order": "56", "type": "intra-phrase", "pattern": "#av+ #vl+", "tag": {"on": {"term": "#vl+", "termTag": "aj"}}},
 
@@ -117,7 +117,7 @@
 
   "Gerunds 2": {"batch": "Periodic", "order": "59", "type": "intra-phrase", "pattern": "(#ProgressiveVerbal && #nn)", "tag": {"on": {"term": "#ProgressiveVerbal", "termTag": ["Gerund", "gd"]}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}},
 
-  "Object of Gerund": {"batch": "Periodic", "order": "60", "type": "intra-phrase", "pattern": "#Gerund+ #nn+", "tag": {"all": ["GerundPhrase", "gd"]}, "modifier": {"term": "#nn+", "modifies": "#Gerund+", "termTag": "ObjectOfGerund"}},
+  "Object of Gerund": {"batch": "Periodic", "order": "60", "type": "intra-phrase", "pattern": "#Gerund+ (#nn && !#CoordinatingConjunction)+", "tag": {"all": ["GerundPhrase", "gd"]}, "modifier": {"term": "#nn+", "modifies": "#Gerund+", "termTag": "ObjectOfGerund"}},
 
   "Compound Gerunds": {"batch": "Periodic", "order": "61", "type": "intra-phrase", "pattern": "(#Gerund+ && #CompoundVerbals) #CoordinatingConjunction (#Gerund+ && #CompoundVerbals)", "tag": {"all": ["CompoundGerunds", "GerundPhrase", "gd"]}, "untag": {"on": {"term": "#CompoundVerbals+", "termUnTag": "#CompoundVerbals"}}},
 
