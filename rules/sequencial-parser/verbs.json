@@ -67,5 +67,5 @@
 
   "Uncaught Verbs 2": {"batch":"Verbs", "batchOrder": "5",  "order": "34", "type": "inter-phrase", "pattern": "#Adverb?+ #PresentTense", "tag": {"on": {"term": "#PresentTense", "termTag": ["PresentSimple", "vb"]}}},
 
-  "Non-verb Clean Up": {"batch":"Verbs", "batchOrder": "5",  "order": "35", "type": "intra-phrase", "pattern": "!#vb", "untag": {"all": ["#Action", "#Linking", "#Stative", "#CompoundVerbs", "VerbPhrase"]}}
+  "Non-verb Clean Up": {"batch":"Verbs", "batchOrder": "5",  "order": "35", "type": "intra-phrase", "pattern": "(#Verb && !#vb)", "untag": {"all": ["#Action", "#Linking", "#Stative", "#CompoundVerbs", "VerbPhrase"]}}
 }
