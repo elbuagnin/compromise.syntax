@@ -23,7 +23,7 @@
 
   "Adverb Phrase 2": {"batch": "Periodic", "order": "12", "type": "intra-phrase", "pattern": "#av+ #aj$", "tag": {"all": ["AdverbPhrase", "av"]}},
 
-  "Adverb Phrase of Verb": {"batch": "Periodic", "order": "13", "type": "intra-phrase", "pattern": "#vb+ #nn+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+", "termTag": "AdverbPhraseOf"}},
+  "Adverb Phrase of Verb": {"batch": "Periodic", "order": "13", "type": "intra-phrase", "pattern": "#vb+ #nn+ #av+", "modifier": {"term": "#av+", "modifies": "#vb+"}},
 
   "Adverb of Adjective": {"batch": "Periodic", "order": "14", "type": "intra-phrase", "pattern": "#av+ #aj+", "tag": {"on":{"term": "#av+", "termTag": "aj"}}, "untag": {"on": {"term": "#av+", "termUnTag": "av"}}, "modifier": {"term": "#av+", "modifies": "#aj+"}},
 
@@ -47,7 +47,7 @@
 
   "Head Noun": {"batch": "Periodic", "order": "24", "type": "intra-phrase", "pattern": "(#nn+ && #NounPhrase+)", "tag": {"last": {"term": "#Noun", "termTag": "HeadNoun"}}},
 
-  "Infinitive Phrase as Adverb 1": {"batch": "Periodic", "order": "25", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #iv+", "tag": {"on": {"term": "#iv+", "termTag": ["AdverbialPhrase", "av"]}}, "untag": {"on": {"term": "#iv+", "termUnTag": "#iv"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Infinitive Phrase as Adverb 1": {"batch": "Periodic", "order": "25", "type": "intra-phrase", "pattern": "#vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+) #iv+", "tag": {"on": {"term": "#iv+", "termTag": "avl"}}, "untag": {"on": {"term": "#iv+", "termUnTag": "#iv"}}, "modifier": {"term": "#iv+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Object of Preposition": {"batch": "Periodic", "order": "26", "type": "intra-phrase", "pattern": "#Preposition+ #nnNotPp+", "tag": {"all": ["PrepositionalPhrase", "pp"]}, "untag": {"all": "#nn"}, "modifier": {"term": "#nn+", "modifies": "#Preposition+", "termTag": "ObjectOfPreposition"}},
 
@@ -65,9 +65,9 @@
 
   "Prepositional Phrase as Adverb to Verb 2": {"batch": "Periodic", "order": "33", "type": "intra-phrase", "pattern": "(#Linking|#Stative) (#Participle|#PotentialPastParticiple) #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb to Verb 3": {"batch": "Periodic", "order": "34", "type": "intra-phrase", "pattern": "#Action #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 3": {"batch": "Periodic", "order": "34", "type": "intra-phrase", "pattern": "(#vb && #Action)+ #pp+", "tag": {"on": {"term": "#pp+", "termTag": "avl"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
-  "Prepositional Phrase as Adverb to Verb 4": {"batch": "Periodic", "order": "35", "type": "inter-phrase", "pattern": "#pp+ #Comma (#nn+|#Sbj+) (#vb+|#pred+)", "tag": {"on": {"term": "#pp+", "termTag": ["AdverbialPhrase", "final"]}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
+  "Prepositional Phrase as Adverb to Verb 4": {"batch": "Periodic", "order": "35", "type": "inter-phrase", "pattern": "#pp+ #Comma (#nn+|#Sbj+) (#vb+|#pred+)", "tag": {"on": {"term": "#pp+", "termTag": "final"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
   "Prepositional Phrase as Adverb to Verb 5": {"batch": "Periodic", "order": "36", "type": "intra-phrase", "pattern": "#vb+ #NounPhrase+ with #pp+", "tag": {"on": {"term": "#pp+", "termTag": "av"}}, "untag": {"on": {"term": "#pp+", "termUnTag": "#pp"}}, "modifier": {"term": "#pp+", "modifies": "#vb+", "termTag": "Adverbial"}},
 
