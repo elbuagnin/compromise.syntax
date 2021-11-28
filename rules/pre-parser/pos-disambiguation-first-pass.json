@@ -1,5 +1,5 @@
 {
-  "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": "#Gerund", "tag": ["#ProgressiveVerbal", "Verbal"]},
+  "Unset #Gerunds": {"batchOrder": "1", "term": "#Gerund", "pattern": "#Gerund", "untag": ["#Gerund", "#Noun"], "tag": ["#ProgressiveVerbal", "Verbal"]},
 
   "Activity Is Verbal": {"batchOrder": "1", "term": "#Activity", "pattern": "(#Activity && /ing$/)", "tag": ["#ProgressiveVerbal", "Verbal"], "untag": ["#Activity", "#Noun"]},
 
