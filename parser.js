@@ -85,6 +85,27 @@ export default function parser(doc) {
               adjTerm.tag(modTag);
             });
           }
+
+          if (modifier.each) {
+            modifier.each.forEach((item) => {
+              const terms = matchedPattern.match(item.term);
+              const modifies = matchedPattern.match(item.modifies);
+
+              let termTag = 'Modifies';
+              if (item.termTag) {
+                termTag = item.termTag;
+              }
+
+              terms.forEach((term, i) => {
+                let modTag = modifies.eq(i).text();
+                modTag = modTag.replace(/ /g, '-');
+                modTag = `${termTag}:${modTag}`;
+
+                const adjTerm = term.not(modifies);
+                adjTerm.tag(modTag);
+              });
+            });
+          }
         }
 
         if (tag) {
