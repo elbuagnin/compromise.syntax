@@ -67,22 +67,24 @@ export default function parser(doc) {
         console.log('!!!!!!!!!!!!!!!!!!!!!!!\n\n');
 
         if (modifier) {
-          const terms = matchedPattern.match(modifier.term);
-          const modifies = matchedPattern.match(modifier.modifies);
+          if (modifier.on) {
+            const terms = matchedPattern.match(modifier.on.term);
+            const modifies = matchedPattern.match(modifier.on.modifies);
 
-          let termTag = 'Modifies';
-          if (modifier.termTag) {
-            termTag = modifier.termTag;
+            let termTag = 'Modifies';
+            if (modifier.on.termTag) {
+              termTag = modifier.on.termTag;
+            }
+
+            terms.forEach((term, i) => {
+              let modTag = modifies.eq(i).text();
+              modTag = modTag.replace(/ /g, '-');
+              modTag = `${termTag}:${modTag}`;
+
+              const adjTerm = term.not(modifies);
+              adjTerm.tag(modTag);
+            });
           }
-
-          terms.forEach((term, i) => {
-            let modTag = modifies.eq(i).text();
-            modTag = modTag.replace(/ /g, '-');
-            modTag = `${termTag}:${modTag}`;
-
-            const adjTerm = term.not(modifies);
-            adjTerm.tag(modTag);
-          });
         }
 
         if (tag) {
