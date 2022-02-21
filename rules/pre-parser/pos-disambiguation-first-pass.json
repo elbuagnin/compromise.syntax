@@ -21,6 +21,8 @@
 
   "a #Cardinal": {"batchOrder": "1", "term": "a", "pattern": "a #Cardinal", "tag": "#Determiner"},
 
+  "all #Copula": {"batchOrder": "1", "term": "all", "pattern": "all #Copula", "tag": "#Noun"},
+
   "a #Ordinal #Noun": {"batchOrder": "1", "term": "a", "pattern": "a #Ordinal #Noun", "tag": "#Determiner"},
 
   "#Preposition #Verb": {"batchOrder": "1", "term": "#Verb", "pattern": "(#Preposition && !which) #Verb", "tag": "#Noun"},
