@@ -3,8 +3,6 @@ import { readFile } from "fs";
 import nlp from "compromise";
 import * as syntax from "./index.js";
 
-nlp.extend(syntax);
-
 function test() {
   readFile("./sample.txt", "utf8", (err, data) => {
     if (err) {
