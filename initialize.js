@@ -1,19 +1,21 @@
-import './compromise-extensions.js';
-import * as mfs from './lib/filesystem.js';
+import nlp from "compromise";
+import * as disambiguation from "compromise.disambiguation";
+import "./compromise-extensions.js";
+import * as mfs from "./lib/filesystem.js";
 
 export default function initialize(doc) {
-  const baseDir = './rules/initialize/';
+  const baseDir = "./rules/initialize/";
   const tagDir = `${baseDir}tags/`;
   const wordDir = `${baseDir}words/`;
 
-  const tags = mfs.loadJSONDir(tagDir, 'tags');
-  const words = mfs.loadJSONDir(wordDir, 'words');
+  const tags = mfs.loadJSONDir(tagDir, "tags");
+  const words = mfs.loadJSONDir(wordDir, "words");
 
-  console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
-  console.log('$$ Initialization');
+  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+  console.log("$$ Initialization");
   doc.addCustomTags(tags);
   doc.addCustomWords(words);
 
-  console.log('Doc, post-Initialization');
+  console.log("Doc, post-Initialization");
   console.log(doc.debug());
 }
