@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/elbuagnin/compromise.syntax#readme",
   "dependencies": {
-    "compromise": "^13.11.4",
+    "compromise": "github:spencermountain/compromise",
+    "compromise.disambiguation": "github:elbuagnin/compromise.disambiguation",
     "lodash-es": "^4.17.21",
     "nodemon": "^2.0.13"
   },

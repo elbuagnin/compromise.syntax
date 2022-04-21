@@ -35,12 +35,12 @@ export default function parser(doc) {
     function remove(removeTerm, removeTag) {
       if (typeof removeTag === 'string') {
         if (removeTerm.match(removeTag).found) {
-          removeTerm.untag(removeTag);
+          removeTerm.unTag(removeTag);
         }
       } else if (removeTag.constructor === Array) {
         removeTag.forEach((oneTag) => {
           if (removeTerm.match(oneTag).found) {
-            removeTerm.untag(oneTag);
+            removeTerm.unTag(oneTag);
           }
         });
       }
@@ -330,7 +330,7 @@ export default function parser(doc) {
 
       role = tags[tags.length - 1];
       tags.forEach((tag) => {
-        term.untag(tag);
+        term.unTag(tag);
       });
       term.tag(role);
     });
