@@ -19,21 +19,6 @@
       "notA": "Independent",
       "color": "yellow"
   },
-    "ParenthesesGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "QuotationGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "DashGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
     "CompoundPhrase": {
         "isA": "Phrase",
         "notA": "",

@@ -5,19 +5,9 @@
       "color": "blue"
   },
   "Possessive": {
-      "isA": "Possessive",
+      "isA": "",
       "notA": ["Noun", "Pronoun"],
       "color": "blue"
-  },
-  "Pronoun": {
-    "isA": "Pronoun",
-    "notA": "Noun",
-    "color": "blue"
-  },
-  "IndifinitePronoun": {
-    "isA": "Pronoun",
-    "notA": "Noun",
-    "color": "blue"
   },
   "Agent": {
     "isA": "",
