@@ -1,14 +1,18 @@
 import http from "http";
 import { readFile } from "fs";
 import nlp from "compromise";
-import * as syntax from "./index.js";
+import syntax from "./index.js";
 
 function test() {
   readFile("./sample.txt", "utf8", (err, data) => {
     if (err) {
       throw new Error(err);
     }
-    nlp.plugin(syntax.syntaxPlugin);
+    nlp.plugin(syntax);
+
+    const primeTheEngine = nlp('prime');
+    primeTheEngine.syntax();
+
     const doc = nlp(data);
     doc.syntax();
   });

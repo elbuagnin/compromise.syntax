@@ -2,12 +2,13 @@ import "./local-config.js";
 import initialize from "./initialize.js";
 import parser from "./parser.js";
 
-export const syntaxPlugin = {
+const syntax = {
   api: View => {
     View.prototype.syntax = function() {
       initialize(this);
       parser(this);
-      return this;
     };
   }
 };
+
+export default syntax;
