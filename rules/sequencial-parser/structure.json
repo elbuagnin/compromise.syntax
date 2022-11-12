@@ -1,9 +1,9 @@
 {
-  "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "1", "type": "intra-phrase", "pattern": "#nn+ * #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
+  "Subject/Verb 1": {"batch":"Structure", "batchOrder": "13", "order": "1", "type": "intra-phrase", "pattern": "#nn+ * #vb+", "tag": {"before": {"term": "#vb+", "termTag": ["Subject", "sbj"]}}},
 
-  "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "2", "type": "intra-phrase", "pattern": "#sbj+ #vb+ *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
+  "Subject/Verb 2": {"batch":"Structure", "batchOrder": "13", "order": "2", "type": "intra-phrase", "pattern": "#sbj+ #vb+ *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
 
-  "Subject/Verb": {"batch":"Structure", "batchOrder": "13", "order": "3", "type": "intra-phrase", "pattern": "#sbj+ #vb+ *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
+  "Subject/Verb 3": {"batch":"Structure", "batchOrder": "13", "order": "3", "type": "intra-phrase", "pattern": "#sbj+ #vb+ *", "tag": {"after": {"term": "#sbj+", "termTag": ["Predicate", "pred"]}}},
 
   "Noun Subject Compliment": {"batch":"Structure", "batchOrder": "13", "order": "4", "type": "intra-phrase", "pattern": "#sbj+ #Linking+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "SubjectComplement"}}, "modifier": {"on": {"term": "#nn+", "modifies": "#sbj+", "termTag": "SubjectComplement"}}},
 
@@ -15,9 +15,9 @@
 
   "Indirect Objects 1": {"batch":"Structure", "batchOrder": "13", "order": "8", "type": "intra-phrase", "pattern": "#vb+ #Agent+ #dobj", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"on": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}}},
 
-  "Direct w/ Indirect Objects 1": {"batch":"Structure", "batchOrder": "13", "order": "9", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"on": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}}},
+  "Direct w/ Indirect Objects 2": {"batch":"Structure", "batchOrder": "13", "order": "9", "type": "intra-phrase", "pattern": "#vb+ #nn+ (to|for) #Agent+", "tag": {"on": {"term": "(#nn+ && !#Agent)", "termTag": ["DirectObject", "dobj"]}}, "modifier": {"on": {"term": "(#nn+ && !#Agent)", "modifies": "#vb+", "termTag": "DirectObject"}}},
 
-  "Indirect Objects 1": {"batch":"Structure", "batchOrder": "13", "order": "10", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"on": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}}},
+  "Indirect Objects 2": {"batch":"Structure", "batchOrder": "13", "order": "10", "type": "intra-phrase", "pattern": "#vb+ #dobj+ (to|for) #Agent+", "tag": {"on": {"term": "#Agent+", "termTag": ["IndirectObject", "iobj"]}}, "modifier": {"on": {"term": "#Agent+", "modifies": "#vb+", "termTag": "IndirectObject"}}},
 
   "Direct Object": {"batch":"Structure", "batchOrder": "13", "order": "11", "type": "intra-phrase", "pattern": "#vb+ #nn+", "tag": {"on": {"term": "#nn+", "termTag": "DirectObject"}}, "modifier": {"on": {"term": "#nn+", "modifies": "#vb+", "termTag": "DirectObject"}}},
 
