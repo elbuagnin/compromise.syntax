@@ -1,7 +1,0 @@
-{
-  "and": "CoordinatingConjunction",
-  "but": "CoordinatingConjunction",
-  "nor": ["CoordinatingConjunction", "Negative"],
-  "or": "CoordinatingConjunction",
-  "yet": "CoordinatingConjunction"
-}
