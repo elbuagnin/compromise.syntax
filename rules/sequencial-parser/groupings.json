@@ -1,8 +1,6 @@
 {
   "Not to Infinitive": {"batch":"Groupings", "batchOrder": "2",  "order": "1", "type": "intra-phrase", "pattern": "not to #Infinitive", "tag": {"all": ["Infinitive", "Negative"]}},
 
-  "Infinitives": {"batch":"Groupings", "batchOrder": "2",  "order": "2", "type": "intra-phrase", "pattern": "#Infinitive+", "tag": {"all": "Infinitive"}},
-
   "Comma Nouns 1": {"batch": "Groupings", "batchOrder": "2", "order": "3", "type": "inter-phrase", "pattern": "(#Noun && #Comma)", "tag": {"all": "CommaNoun"}},
 
   "Comma Nouns 2": {"batch": "Groupings", "batchOrder": "2", "order": "4", "type": "inter-phrase", "pattern": "(#Hyphenated && #Noun)(#Noun && #Comma)", "tag": {"all": "CommaNoun"}},

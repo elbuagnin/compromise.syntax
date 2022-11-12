@@ -1,9 +1,9 @@
 {
-    "Subordinate Clause 1": {"batch": "Subordinating Clauses", "batchOrder": "10",  "order": "1", "type": "intra-phrase", "pattern": "^#SubordinatingConjunction * #Comma", "tag": {"all": "#Subordinate"}},
+    "Subordinate Clause 1": {"batch": "Subordinating Clauses", "batchOrder": "11",  "order": "1", "type": "intra-phrase", "pattern": "^#SubordinatingConjunction * #Comma", "tag": {"all": "#Subordinate"}},
 
-    "Subordinate Clause 2": {"batch": "Subordinating Clauses", "batchOrder": "10",  "order": "2", "type": "intra-phrase", "pattern": "#SubordinatingConjunction * #Period$", "tag": {"all": "#Subordinate"}},
+    "Subordinate Clause 2": {"batch": "Subordinating Clauses", "batchOrder": "11",  "order": "2", "type": "intra-phrase", "pattern": "#SubordinatingConjunction * #Period$", "tag": {"all": "#Subordinate"}},
 
-    "Subordinate Clause 3": {"batch": "Subordinating Clauses", "batchOrder": "10",  "order": "3", "type": "intra-phrase", "pattern": "#SubordinatingConjunction * #Comma #Conjunction", "tag": {"all": "#Subordinate"}},
+    "Subordinate Clause 3": {"batch": "Subordinating Clauses", "batchOrder": "11",  "order": "3", "type": "intra-phrase", "pattern": "#SubordinatingConjunction * #Comma #Conjunction", "tag": {"all": "#Subordinate"}},
 
-    "Present Participle Clause": {"batch": "Subordinating Clauses", "batchOrder": "10",  "order": "4", "type": "intra-phrase", "pattern": "#ProgressiveVerbal * #Comma", "tag": {"all": "#Subordinate", "on": {"term": "#ProgressiveVerbal", "termTag": "#PresentParticiple"}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}}
+    "Present Participle Clause": {"batch": "Subordinating Clauses", "batchOrder": "11",  "order": "4", "type": "intra-phrase", "pattern": "#ProgressiveVerbal * #Comma", "tag": {"all": "#Subordinate", "on": {"term": "#ProgressiveVerbal", "termTag": "#PresentParticiple"}}, "untag": {"on": {"term": "#ProgressiveVerbal", "termUnTag": "#ProgressiveVerbal"}}}
 }
