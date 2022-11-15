@@ -1,7 +1,7 @@
 {
   "Double Relative Clause": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "1",
     "type": "inter-phrase",
     "pattern": "!#nn !#vb !#nn? #RelativePronoun+ .{1,} #RelativePronoun+",
@@ -22,7 +22,7 @@
   },
   "Relative Clause 1": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "2",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ #nn+ #vb+ #nn+",
@@ -38,7 +38,7 @@
   },
   "Relative Clause 2": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "3",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) (#aj+|#nn+)",
@@ -54,7 +54,7 @@
   },
   "Relative Clause 3": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "4",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) nn+",
@@ -70,7 +70,7 @@
   },
   "Relative Clause 4": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "5",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) #pp+",
@@ -86,7 +86,7 @@
   },
   "Relative Clause 5": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "6",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ #Agent+ (#vb+ && !#Interrogative)+ (#vb?|#Adverb?|#Preposition?|#Date?)?",
@@ -102,7 +102,7 @@
   },
   "Relative Clause 6": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "7",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative)+ #vb?",
@@ -118,7 +118,7 @@
   },
   "Relative Clause 7": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "8",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ #Agent+ (#vb+ && !#Interrogative) #nn+ #vb?+ #Preposition?",
@@ -134,7 +134,7 @@
   },
   "Relative Clause 8": {
     "batch": "Relative Clauses",
-    "batchOrder": "8",
+    "batchOrder": "9",
     "order": "9",
     "type": "intra-phrase",
     "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) #VerbalPhrase+",

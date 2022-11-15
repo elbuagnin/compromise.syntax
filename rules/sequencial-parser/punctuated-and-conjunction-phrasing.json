@@ -1,7 +1,7 @@
 {
     "No Comma Adjective": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "1",
         "type": "intra-phrase",
         "pattern": "(#Adjective && !#Comma)",
@@ -11,7 +11,7 @@
     },
     "Compound Adjective Phrases": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "2",
         "type": "intra-phrase",
         "pattern": "#NoCommaAdjective #CoordinatingConjunction #Adjective",
@@ -25,7 +25,7 @@
     },
     "Coordinate Adjectives 1": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "3",
         "type": "inter-phrase",
         "pattern": "#Adjective #CommaAdjective+ #NoCommaAdjective",
@@ -38,7 +38,7 @@
     },
     "Coordinate Adjectives 2": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "4",
         "type": "inter-phrase",
         "pattern": "#Adjective #CommaAdjective+ (and|but) #NoCommaAdjective",
@@ -51,7 +51,7 @@
     },
     "Remaining Unassigned Adjectives": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "5",
         "type": "inter-phrase",
         "pattern": "(#NoCommaAdjective && !#CompoundAdjectives && !#CoordinatingAdjectives)",
@@ -64,7 +64,7 @@
     },
     "Cumulative Adjectives": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "6",
         "type": "inter-phrase",
         "pattern": "#UnassignedAdjectives{2,}",
@@ -77,7 +77,7 @@
     },
     "Remove No Comma Adjective": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "7",
         "type": "intra-phrase",
         "pattern": "#NoCommaAdjective",
@@ -87,7 +87,7 @@
     },
     "Remove UnassignedAdjectives Adjective": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "8",
         "type": "intra-phrase",
         "pattern": "#UnassignedAdjectives",
@@ -97,7 +97,7 @@
     },
     "Noun Lists 1": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "9",
         "type": "inter-phrase",
         "pattern": "#CommaNoun+ #CoordinatingConjunction #Noun+",
@@ -110,7 +110,7 @@
     },
     "Noun Lists 2": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "10",
         "type": "inter-phrase",
         "pattern": "(#Adjective?+ #CommaNoun+)+ #CoordinatingConjunction #Adjective?+ #Noun+",
@@ -129,7 +129,7 @@
     },
     "Compound Noun Phrases 1": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "11",
         "type": "intra-phrase",
         "pattern": "(#Noun+ && !#List && !#Comma) #CoordinatingConjunction #Noun+",
@@ -149,7 +149,7 @@
     },
     "Compound Noun Phrases 2": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "12",
         "type": "intra-phrase",
         "pattern": "#Adjective?+ (#Noun+ && !#List && !#Comma) #CoordinatingConjunction #Adjective?+ #Noun+",
@@ -169,7 +169,7 @@
     },
     "Compound Verb Phrases": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "13",
         "type": "intra-phrase",
         "pattern": "#Verb #CoordinatingConjunction #Verb",
@@ -183,7 +183,7 @@
     },
     "Compound Progressive Verbal Phrases": {
         "batch": "Punctuated and Conjunction Phrasing",
-        "batchOrder": "2",
+        "batchOrder": "3",
         "order": "14",
         "type": "intra-phrase",
         "pattern": "#Adverb?+ #ProgressiveVerbal #CoordinatingConjunction #ProgressiveVerbal",

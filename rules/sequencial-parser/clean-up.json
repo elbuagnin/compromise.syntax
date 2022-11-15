@@ -1,7 +1,7 @@
 {
   "Commas": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "1",
     "type": "inter-phrase",
     "pattern": "#Comma",
@@ -11,7 +11,7 @@
   },
   "Periods": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "2",
     "type": "inter-phrase",
     "pattern": "#Period",
@@ -21,7 +21,7 @@
   },
   "ExclamationMark": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "3",
     "type": "inter-phrase",
     "pattern": "#ExclamationMark",
@@ -31,7 +31,7 @@
   },
   "QuestionMark": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "4",
     "type": "inter-phrase",
     "pattern": "#QuestionMark",
@@ -41,7 +41,7 @@
   },
   "Semicolon": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "5",
     "type": "inter-phrase",
     "pattern": "#Semicolon",
@@ -51,7 +51,7 @@
   },
   "BEGIN": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "6",
     "type": "inter-phrase",
     "pattern": "#BEGIN",
@@ -61,7 +61,7 @@
   },
   "END": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "7",
     "type": "inter-phrase",
     "pattern": "#END",
@@ -71,7 +71,7 @@
   },
   "parenthesesGroup": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "8",
     "type": "inter-phrase",
     "pattern": "#parenthesesGroup+",
@@ -81,7 +81,7 @@
   },
   "QuotationGroup": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "9",
     "type": "inter-phrase",
     "pattern": "#QuotationGroup+",
@@ -91,7 +91,7 @@
   },
   "DashGroup": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "10",
     "type": "inter-phrase",
     "pattern": "#DashGroup+",
@@ -101,7 +101,7 @@
   },
   "CommaNouns": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "11",
     "type": "inter-phrase",
     "pattern": "#CommaNoun",
@@ -111,7 +111,7 @@
   },
   "CommaAdjectives": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "12",
     "type": "inter-phrase",
     "pattern": "#CommaAdjective",
@@ -121,7 +121,7 @@
   },
   "CommaAdverbs": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "13",
     "type": "inter-phrase",
     "pattern": "#CommaAdverb",
@@ -131,7 +131,7 @@
   },
   "Nouns": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "14",
     "type": "inter-phrase",
     "pattern": "#Nouns+",
@@ -141,7 +141,7 @@
   },
   "Verbs": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "15",
     "type": "inter-phrase",
     "pattern": "#Verbs+",
@@ -151,7 +151,7 @@
   },
   "Adjectives": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "16",
     "type": "inter-phrase",
     "pattern": "#Adjectives+",
@@ -161,7 +161,7 @@
   },
   "Adverbs": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "17",
     "type": "inter-phrase",
     "pattern": "#Adverbs+",
@@ -171,7 +171,7 @@
   },
   "Final": {
     "batch": "Clean Up",
-    "batchOrder": "13",
+    "batchOrder": "14",
     "order": "18",
     "type": "inter-phrase",
     "pattern": "#Final+",

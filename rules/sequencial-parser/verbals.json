@@ -1,7 +1,7 @@
 {
   "Current Participles": {
     "batch": "Verbals",
-    "batchOrder": "5",
+    "batchOrder": "6",
     "order": "1",
     "type": "inter-phrase",
     "pattern": "(#Participle && !#PresentParticiple && !#PerfectParticiple)",
@@ -14,7 +14,7 @@
   },
   "Unknown Type Progressive Verbals": {
     "batch": "Verbals",
-    "batchOrder": "5",
+    "batchOrder": "6",
     "order": "2",
     "type": "inter-phrase",
     "pattern": "#ProgressiveVerbal",
@@ -27,7 +27,7 @@
   },
   "Nominal Clause": {
     "batch": "Verbals",
-    "batchOrder": "5",
+    "batchOrder": "6",
     "order": "3",
     "type": "intra-phrase",
     "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #vb+ (#nn+|#aj+|#av+)",
@@ -43,7 +43,7 @@
   },
   "Nominal Phrase": {
     "batch": "Verbals",
-    "batchOrder": "5",
+    "batchOrder": "6",
     "order": "4",
     "type": "intra-phrase",
     "pattern": "#ProgressiveVerbal+ #Agent+ #NounPhrase",

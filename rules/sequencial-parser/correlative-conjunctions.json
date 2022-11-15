@@ -1,7 +1,7 @@
 {
     "both and": {
         "batch": "Correlative Conjunctions",
-        "batchOrder": "9",
+        "batchOrder": "10",
         "order": "1",
         "type": "intra-phrase",
         "pattern": "both  #Noun?+ #Noun and  #Noun?+ #Noun",
@@ -29,7 +29,7 @@
     },
     "either or": {
         "batch": "Correlative Conjunctions",
-        "batchOrder": "9",
+        "batchOrder": "10",
         "order": "2",
         "type": "intra-phrase",
         "pattern": "either #Noun?+ #Noun or #Noun?+ #Noun",
@@ -57,7 +57,7 @@
     },
     "neither nor": {
         "batch": "Correlative Conjunctions",
-        "batchOrder": "9",
+        "batchOrder": "10",
         "order": "3",
         "type": "intra-phrase",
         "pattern": "neither #Noun?+ #Noun nor #Noun?+ #Noun",
@@ -85,7 +85,7 @@
     },
     "whether or (nouns)": {
         "batch": "Correlative Conjunctions",
-        "batchOrder": "9",
+        "batchOrder": "10",
         "order": "4",
         "type": "intra-phrase",
         "pattern": "whether #Noun?+ #Noun or not? #Noun?+ #Noun",
@@ -113,7 +113,7 @@
     },
     "whether or (verbs)": {
         "batch": "Correlative Conjunctions",
-        "batchOrder": "9",
+        "batchOrder": "10",
         "order": "5",
         "type": "intra-phrase",
         "pattern": "whether #Verb?+ #Verb or #Verb?+ #Verb",
@@ -141,7 +141,7 @@
     },
     "whether or not (verbs)": {
         "batch": "Correlative Conjunctions",
-        "batchOrder": "9",
+        "batchOrder": "10",
         "order": "6",
         "type": "intra-phrase",
         "pattern": "whether #Verb?+ #Verb or not #Verb?+ #Verb",

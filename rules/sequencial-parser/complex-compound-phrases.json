@@ -1,7 +1,7 @@
 {
     "Compound Verbal Phrase": {
         "batch": "Complex Compound Phrases",
-        "batchOrder": "11",
+        "batchOrder": "12",
         "order": "1",
         "type": "intra-phrase",
         "pattern": "(#VerbalPhrase+ && !#List && !#Comma) #CoordinatingConjunction #VerbalPhrase+",

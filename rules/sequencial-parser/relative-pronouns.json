@@ -1,7 +1,7 @@
 {
   "Preposition whom": {
     "batch": "Relative Pronouns",
-    "batchOrder": "6",
+    "batchOrder": "7",
     "order": "1",
     "type": "intra-phrase",
     "pattern": "#Preposition whom (#Noun|#Pronoun|#Possessive|#Determiner)",
@@ -23,7 +23,7 @@
   },
   "which": {
     "batch": "Relative Pronouns",
-    "batchOrder": "6",
+    "batchOrder": "7",
     "order": "2",
     "type": "intra-phrase",
     "pattern": "which #Present",
