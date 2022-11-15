@@ -607,6 +607,22 @@
       "all": "#Copula"
     }
   },
+  "Uncaught Verbs 1": {
+    "batch": "Verbs",
+    "batchOrder": "4",
+    "order": "1",
+    "type": "inter-phrase",
+    "pattern": "#Adverb?+ #PastTense",
+    "tag": {
+      "on": {
+        "term": "#PastTense",
+        "termTag": [
+          "PastSimple",
+          "vb"
+        ]
+      }
+    }
+  },
   "Uncaught Verbs 2": {
     "batch": "Verbs",
     "batchOrder": "4",
