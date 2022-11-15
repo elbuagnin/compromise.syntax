@@ -1,15 +1,72 @@
 {
-  "Determiners": {"batch": "non-verb-or-verbal-role-assignments", "batchOrder": "4", "order": "1", "type": "inter-phrase", "pattern": "(#Determiner|#Possessive)", "tag": {"all": "dt"}},
-
-  "Adjectives": {"batch": "non-verb-or-verbal-role-assignments", "batchOrder": "4", "order": "2", "type": "inter-phrase", "pattern": "(#Adjective+ && !#aj)", "tag": {"all": "aj"}},
-
-  "Nouns": {"batch": "non-verb-or-verbal-role-assignments", "batchOrder": "4", "order": "3", "type": "inter-phrase", "pattern": "(#Noun && !#nn)+", "tag": {"all": "nn"}},
-
-  "Pronouns": {"batch": "non-verb-or-verbal-role-assignments", "batchOrder": "4", "order": "4", "type": "inter-phrase", "pattern": "#Pronoun+", "tag": {"all": "nn"}},
-
-  "Prepositions": {"batch": "non-verb-or-verbal-role-assignments", "batchOrder": "4", "order": "5", "type": "inter-phrase", "pattern": "#Preposition+", "tag": {"all": "pp"}},
-
-  "Not to Infinitive": {"batch":"non-verb-or-verbal-role-assignments", "batchOrder": "4",  "order": "6", "type": "inter-phrase", "pattern": "#Infinitive+", "tag": {"all": "iv"}},
-
-  "Adverbs": {"batch": "non-verb-or-verbal-role-assignments", "batchOrder": "4", "order": "7", "type": "inter-phrase", "pattern": "#Adverb+", "tag": {"all": "av"}}
+  "Determiners": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "1",
+    "type": "inter-phrase",
+    "pattern": "(#Determiner|#Possessive)",
+    "tag": {
+      "all": "dt"
+    }
+  },
+  "Adjectives": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "2",
+    "type": "inter-phrase",
+    "pattern": "(#Adjective+ && !#aj)",
+    "tag": {
+      "all": "aj"
+    }
+  },
+  "Nouns": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "3",
+    "type": "inter-phrase",
+    "pattern": "(#Noun && !#nn)+",
+    "tag": {
+      "all": "nn"
+    }
+  },
+  "Pronouns": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "4",
+    "type": "inter-phrase",
+    "pattern": "#Pronoun+",
+    "tag": {
+      "all": "nn"
+    }
+  },
+  "Prepositions": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "5",
+    "type": "inter-phrase",
+    "pattern": "#Preposition+",
+    "tag": {
+      "all": "pp"
+    }
+  },
+  "Not to Infinitive": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "6",
+    "type": "inter-phrase",
+    "pattern": "#Infinitive+",
+    "tag": {
+      "all": "iv"
+    }
+  },
+  "Adverbs": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "3",
+    "order": "7",
+    "type": "inter-phrase",
+    "pattern": "#Adverb+",
+    "tag": {
+      "all": "av"
+    }
+  }
 }
