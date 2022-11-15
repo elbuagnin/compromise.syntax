@@ -1,21 +1,30 @@
 {
-  "Current Participles": {
+  "Compromise Participles": {
     "batch": "Verbals",
     "batchOrder": "6",
     "order": "1",
     "type": "inter-phrase",
     "pattern": "(#Participle && !#PresentParticiple && !#PerfectParticiple)",
     "tag": {
-      "all": [
-        "PastParticiple",
-        "vl"
-      ]
+      "all": "PastParticiple"
     }
   },
-  "Unknown Type Progressive Verbals": {
+
+  "Current Verbals": {
     "batch": "Verbals",
     "batchOrder": "6",
     "order": "2",
+    "type": "inter-phrase",
+    "pattern": "(#Verbal)",
+    "tag": {
+      "all": "vl"
+    }
+  },
+
+  "Unknown Type Progressive Verbals": {
+    "batch": "Verbals",
+    "batchOrder": "6",
+    "order": "3",
     "type": "inter-phrase",
     "pattern": "#ProgressiveVerbal",
     "tag": {
@@ -28,7 +37,7 @@
   "Nominal Clause": {
     "batch": "Verbals",
     "batchOrder": "6",
-    "order": "3",
+    "order": "4",
     "type": "intra-phrase",
     "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #vb+ (#nn+|#aj+|#av+)",
     "tag": {
@@ -44,7 +53,7 @@
   "Nominal Phrase": {
     "batch": "Verbals",
     "batchOrder": "6",
-    "order": "4",
+    "order": "5",
     "type": "intra-phrase",
     "pattern": "#ProgressiveVerbal+ #Agent+ #NounPhrase",
     "tag": {
