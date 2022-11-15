@@ -8,10 +8,6 @@ function test() {
     if (err) {
       throw new Error(err);
     }
-    nlp.plugin(syntax);
-
-    const primeTheEngine = nlp('prime');
-    primeTheEngine.syntax();
 
     const doc = nlp(data);
     doc.syntax();
@@ -23,6 +19,11 @@ function requestListener(req, res) {
   test();
   res.end("Hello, World!");
 }
+
+nlp.plugin(syntax);
+
+const primeTheEngine = nlp('prime');
+primeTheEngine.syntax();
 
 const server = http.createServer(requestListener);
 server.listen(8080);

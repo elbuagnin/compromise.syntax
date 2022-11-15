@@ -1,3 +1,7 @@
 npm-debug.log
 node_modules/
 .editorconfig
+app.js
+*.sh
+sample.txt
+nlp-doc.info.js
