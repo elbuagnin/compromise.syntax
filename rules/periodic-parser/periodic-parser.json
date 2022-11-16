@@ -413,7 +413,7 @@
     "batch": "Periodic",
     "order": "24",
     "type": "intra-phrase",
-    "pattern": "#dt #Adjective?+ #nn+",
+    "pattern": "#Determiner #Adjective?+ #Noun+",
     "tag": {
       "all": [
         "NounPhrase",
@@ -1201,12 +1201,12 @@
     "batch": "Periodic",
     "order": "64",
     "type": "intra-phrase",
-    "pattern": "(#ProgressiveVerbal && #aj)",
+    "pattern": "#Participle",
     "tag": {
       "on": {
-        "term": "#ProgressiveVerbal",
+        "term": "#Participle",
         "termTag": [
-          "PresentParticiple",
+          
           "aj"
         ]
       }

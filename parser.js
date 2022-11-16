@@ -338,17 +338,23 @@ export default function parser(doc) {
 
   function parseRule(sentence, rule) {
     let tookAction = false;
+
+    console.log(rule.batch);
+    console.log(rule.batchOrder);
+    console.log(rule.order);
+
     if (rule.type === 'intra-phrase') {
       let chunks = sentence;
-      if (sentence.has('#Comma')) {
-        const commas = sentence.match('#Comma');
-        commas.forEach((comma) => {
-          if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
-            chunks = chunks.splitAfter(comma);
+      if (sentence.has('#PhraseBreak')) {
+        const phraseBreaks = sentence.match('#PhraseBreak');
+        phraseBreaks.forEach((pbreak) => {
+          if (pbreak.ifNo('(#List|#CoordinatingAdjectives)').found) {
+            chunks = chunks.splitAfter(pbreak);
           }
         });
       }
       chunks.forEach((chunk) => {
+        chunk.debug();
         tookAction = tagMatch(chunk, rule);
       });
     } else {
