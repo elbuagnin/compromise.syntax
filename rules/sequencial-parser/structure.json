@@ -4,13 +4,13 @@
     "batchOrder": "13",
     "order": "1",
     "type": "intra-phrase",
-    "pattern": "#nn+ * #vb+",
+    "pattern": "#Nominal+ * #Verbs+",
     "tag": {
       "before": {
-        "term": "#vb+",
+        "term": "#Verbs+",
         "termTag": [
           "Subject",
-          "sbj"
+          "SubjectPhrase"
         ]
       }
     }
@@ -20,10 +20,10 @@
     "batchOrder": "13",
     "order": "2",
     "type": "intra-phrase",
-    "pattern": "#sbj+ #vb+ *",
+    "pattern": "#SubjectPhrase+ #Verbs+ *",
     "tag": {
       "after": {
-        "term": "#sbj+",
+        "term": "#SubjectPhrase+",
         "termTag": [
           "Predicate",
           "pred"
@@ -36,10 +36,10 @@
     "batchOrder": "13",
     "order": "3",
     "type": "intra-phrase",
-    "pattern": "#sbj+ #vb+ *",
+    "pattern": "#SubjectPhrase+ #Verbs+ *",
     "tag": {
       "after": {
-        "term": "#sbj+",
+        "term": "#SubjectPhrase+",
         "termTag": [
           "Predicate",
           "pred"
@@ -52,17 +52,17 @@
     "batchOrder": "13",
     "order": "4",
     "type": "intra-phrase",
-    "pattern": "#sbj+ #Linking+ #nn+",
+    "pattern": "#SubjectPhrase+ #Linking+ #Nominal+",
     "tag": {
       "on": {
-        "term": "#nn+",
+        "term": "#Nominal+",
         "termTag": "SubjectComplement"
       }
     },
     "modifier": {
       "on": {
-        "term": "#nn+",
-        "modifies": "#sbj+",
+        "term": "#Nominal+",
+        "modifies": "#SubjectPhrase+",
         "termTag": "SubjectComplement"
       }
     }
@@ -72,17 +72,17 @@
     "batchOrder": "13",
     "order": "5",
     "type": "intra-phrase",
-    "pattern": "#sbj+ #Linking+ #aj+",
+    "pattern": "#SubjectPhrase+ #Linking+ #Adjectival+",
     "tag": {
       "on": {
-        "term": "#aj+",
+        "term": "#Adjectival+",
         "termTag": "SubjectComplement"
       }
     },
     "modifier": {
       "on": {
-        "term": "#aj+",
-        "modifies": "#sbj+",
+        "term": "#Adjectival+",
+        "modifies": "#SubjectPhrase+",
         "termTag": "SubjectComplement"
       }
     }
@@ -92,7 +92,7 @@
     "batchOrder": "13",
     "order": "6",
     "type": "inter-phrase",
-    "pattern": "#sbj+",
+    "pattern": "#SubjectPhrase+",
     "tag": {
       "all": [
         "Subject",
@@ -105,20 +105,20 @@
     "batchOrder": "13",
     "order": "7",
     "type": "intra-phrase",
-    "pattern": "#vb+ #Agent+ #nn+",
+    "pattern": "#Verbs+ #Agent+ #Nominal+",
     "tag": {
       "on": {
-        "term": "(#nn+ && !#Agent)",
+        "term": "(#Nominal+ && !#Agent)",
         "termTag": [
           "DirectObject",
-          "dobj"
+          "DirectObject"
         ]
       }
     },
     "modifier": {
       "on": {
-        "term": "(#nn+ && !#Agent)",
-        "modifies": "#vb+",
+        "term": "(#Nominal+ && !#Agent)",
+        "modifies": "#Verbs+",
         "termTag": "DirectObject"
       }
     }
@@ -128,20 +128,20 @@
     "batchOrder": "13",
     "order": "8",
     "type": "intra-phrase",
-    "pattern": "#vb+ #Agent+ #dobj",
+    "pattern": "#Verbs+ #Agent+ #DirectObject",
     "tag": {
       "on": {
         "term": "#Agent+",
         "termTag": [
           "IndirectObject",
-          "iobj"
+          "IndirectObject"
         ]
       }
     },
     "modifier": {
       "on": {
         "term": "#Agent+",
-        "modifies": "#vb+",
+        "modifies": "#Verbs+",
         "termTag": "IndirectObject"
       }
     }
@@ -151,20 +151,20 @@
     "batchOrder": "13",
     "order": "9",
     "type": "intra-phrase",
-    "pattern": "#vb+ #nn+ (to|for) #Agent+",
+    "pattern": "#Verbs+ #Nominal+ (to|for) #Agent+",
     "tag": {
       "on": {
-        "term": "(#nn+ && !#Agent)",
+        "term": "(#Nominal+ && !#Agent)",
         "termTag": [
           "DirectObject",
-          "dobj"
+          "DirectObject"
         ]
       }
     },
     "modifier": {
       "on": {
-        "term": "(#nn+ && !#Agent)",
-        "modifies": "#vb+",
+        "term": "(#Nominal+ && !#Agent)",
+        "modifies": "#Verbs+",
         "termTag": "DirectObject"
       }
     }
@@ -174,20 +174,20 @@
     "batchOrder": "13",
     "order": "10",
     "type": "intra-phrase",
-    "pattern": "#vb+ #dobj+ (to|for) #Agent+",
+    "pattern": "#Verbs+ #DirectObject+ (to|for) #Agent+",
     "tag": {
       "on": {
         "term": "#Agent+",
         "termTag": [
           "IndirectObject",
-          "iobj"
+          "IndirectObject"
         ]
       }
     },
     "modifier": {
       "on": {
         "term": "#Agent+",
-        "modifies": "#vb+",
+        "modifies": "#Verbs+",
         "termTag": "IndirectObject"
       }
     }
@@ -197,17 +197,17 @@
     "batchOrder": "13",
     "order": "11",
     "type": "intra-phrase",
-    "pattern": "#vb+ #nn+",
+    "pattern": "#Verbs+ #Nominal+",
     "tag": {
       "on": {
-        "term": "#nn+",
+        "term": "#Nominal+",
         "termTag": "DirectObject"
       }
     },
     "modifier": {
       "on": {
-        "term": "#nn+",
-        "modifies": "#vb+",
+        "term": "#Nominal+",
+        "modifies": "#Verbs+",
         "termTag": "DirectObject"
       }
     }
@@ -217,7 +217,7 @@
     "batchOrder": "13",
     "order": "12",
     "type": "inter-phrase",
-    "pattern": "#Subject+ #vb+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+)? #AdverbialPhrase?+",
+    "pattern": "#Subject+ #Verbs+ (#DirectObject+|#DirectObject+ #IndirectObject+|#IndirectObject+ #DirectObject+)? #AdverbialPhrase?+",
     "tag": {
       "after": {
         "term": "#Subject+",

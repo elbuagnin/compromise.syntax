@@ -47,6 +47,8 @@ export default function parser(doc) {
     }
 
     if (pattern) {
+      console.log('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')
+      sentence.intersection(pattern).debug();
       if (sentence.has(pattern)) {
         parseTakeActionCount++;
         tookAction = true;
@@ -321,11 +323,11 @@ export default function parser(doc) {
 
       let role = 'none';
       tags = tags.filter((tag) => (
-        tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
-        || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
-        || tag === 'Pp' || tag === 'Sbj' || tag === 'Dobj' || tag === 'Iobj'
-        || tag === 'Pred' || tag === 'Subcls' || tag === 'Relcls'
-        || tag === 'Final' || tag === 'Avl' || tag === 'Ajl'
+        tag === 'Nominal' || tag === 'Verbs' || tag === 'Adjectival' || tag === 'Adverbial'
+        || tag === 'VerbalPhrase' || tag === 'InfinitivePhrase' || tag === 'GerundPhrase'
+        || tag === 'PrepositionalPhrase'
+        || tag === 'SubordinateClause' || tag === 'RelativeClause'
+        || tag === 'Final'
       ));
 
       role = tags[tags.length - 1];

@@ -6,7 +6,7 @@
     "type": "inter-phrase",
     "pattern": "(#Determiner|#Possessive)",
     "tag": {
-      "all": "dt"
+      "all": "#Determiner"
     }
   },
   "Adjectives": {
@@ -14,9 +14,9 @@
     "batchOrder": "4",
     "order": "2",
     "type": "inter-phrase",
-    "pattern": "(#Adjective+ && !#aj)",
+    "pattern": "(#Adjective+ && !#Adjectival)",
     "tag": {
-      "all": "aj"
+      "all": "#Adjectival"
     }
   },
   "Nouns": {
@@ -24,9 +24,9 @@
     "batchOrder": "4",
     "order": "3",
     "type": "inter-phrase",
-    "pattern": "(#Noun && !#nn)+",
+    "pattern": "(#Noun && !#Nominal)+",
     "tag": {
-      "all": "nn"
+      "all": "#Nominal"
     }
   },
   "Pronouns": {
@@ -36,7 +36,7 @@
     "type": "inter-phrase",
     "pattern": "#Pronoun+",
     "tag": {
-      "all": "nn"
+      "all": "#Nominal"
     }
   },
   "Prepositions": {
@@ -46,7 +46,7 @@
     "type": "inter-phrase",
     "pattern": "#Preposition+",
     "tag": {
-      "all": "pp"
+      "all": "PrepositionalPhrase"
     }
   },
   "Not to Infinitive": {
@@ -56,7 +56,7 @@
     "type": "inter-phrase",
     "pattern": "#Infinitive+",
     "tag": {
-      "all": "iv"
+      "all": "InfinitivePhrase"
     }
   },
   "Adverbs": {
@@ -66,7 +66,7 @@
     "type": "inter-phrase",
     "pattern": "#Adverb+",
     "tag": {
-      "all": "av"
+      "all": "Adverbial"
     }
   }
 }

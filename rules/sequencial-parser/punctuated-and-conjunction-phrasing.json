@@ -19,7 +19,7 @@
             "all": [
                 "CompoundPhrase",
                 "CompoundAdjectives",
-                "aj"
+                "Adjectival"
             ]
         }
     },
@@ -32,7 +32,7 @@
         "tag": {
             "all": [
                 "CoordinatingAdjectives",
-                "aj"
+                "Adjectival"
             ]
         }
     },
@@ -45,7 +45,7 @@
         "tag": {
             "all": [
                 "CoordinatingAdjectives",
-                "aj"
+                "Adjectival"
             ]
         }
     },
@@ -58,7 +58,7 @@
         "tag": {
             "all": [
                 "UnassignedAdjectives",
-                "aj"
+                "Adjectival"
             ]
         }
     },
@@ -71,7 +71,7 @@
         "tag": {
             "all": [
                 "CumulativeAdjectives",
-                "aj"
+                "Adjectival"
             ]
         }
     },
@@ -104,7 +104,7 @@
         "tag": {
             "all": [
                 "List",
-                "nn"
+                "Nominal"
             ]
         }
     },
@@ -117,13 +117,13 @@
         "tag": {
             "all": [
                 "List",
-                "nn"
+                "Nominal"
             ]
         },
         "untag": {
             "on": {
-                "term": "#aj",
-                "termUnTag": "#aj"
+                "term": "#Adjectival",
+                "termUnTag": "#Adjectival"
             }
         }
     },
@@ -137,13 +137,13 @@
             "all": [
                 "CompoundPhrase",
                 "CompoundNouns",
-                "nn"
+                "Nominal"
             ]
         },
         "untag": {
             "on": {
-                "term": "#aj",
-                "termUnTag": "#aj"
+                "term": "#Adjectival",
+                "termUnTag": "#Adjectival"
             }
         }
     },
@@ -157,13 +157,13 @@
             "all": [
                 "CompoundPhrase",
                 "CompoundNouns",
-                "nn"
+                "Nominal"
             ]
         },
         "untag": {
             "on": {
-                "term": "#aj",
-                "termUnTag": "#aj"
+                "term": "#Adjectival",
+                "termUnTag": "#Adjectival"
             }
         }
     },
@@ -177,7 +177,7 @@
             "all": [
                 "CompoundPhrase",
                 "CompoundVerbs",
-                "vb"
+                "Verbs"
             ]
         }
     },
@@ -191,13 +191,13 @@
             "all": [
                 "CompoundPhrase",
                 "CompoundVerbals",
-                "vl"
+                "VerbalPhrase"
             ]
         },
         "untag": {
             "on": {
-                "term": "#av",
-                "termUnTag": "#av"
+                "term": "#Adverbial",
+                "termUnTag": "#Adverbial"
             }
         }
     }

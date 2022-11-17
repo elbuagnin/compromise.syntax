@@ -8,7 +8,7 @@
     "tag": {
       "all": [
         "PastPerfect",
-        "vb"
+        "Verbs"
       ]
     }
   },
@@ -21,7 +21,7 @@
     "tag": {
       "all": [
         "PastProgressive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Verbal",
@@ -50,7 +50,7 @@
     "tag": {
       "all": [
         "PastPerfectProgressive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Verbal",
@@ -73,13 +73,13 @@
     "tag": {
       "all": [
         "PresentPerfect",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Participle",
         "termTag": [
           "VerbedPastParticiple",
-          "vb"
+          "Verbs"
         ]
       }
     },
@@ -99,13 +99,13 @@
     "tag": {
       "all": [
         "PresentProgressive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Verbal",
         "termTag": [
           "VerbedPresentParticiple",
-          "vb"
+          "Verbs"
         ]
       }
     },
@@ -125,13 +125,13 @@
     "tag": {
       "all": [
         "PresentPerfectProgressive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Verbal",
         "termTag": [
           "VerbedPresentParticiple",
-          "vb"
+          "Verbs"
         ]
       }
     },
@@ -154,7 +154,7 @@
     "tag": {
       "all": [
         "FuturePerfect",
-        "vb"
+        "Verbs"
       ]
     }
   },
@@ -167,13 +167,13 @@
     "tag": {
       "all": [
         "FutureProgressive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Verbal",
         "termTag": [
           "VerbedPresentParticiple",
-          "vb"
+          "Verbs"
         ]
       }
     },
@@ -193,13 +193,13 @@
     "tag": {
       "all": [
         "FuturePerfectProgressive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Verbal",
         "termTag": [
           "VerbedPresentParticiple",
-          "vb"
+          "Verbs"
         ]
       }
     },
@@ -219,7 +219,7 @@
     "tag": {
       "all": [
         "PastSimple",
-        "vb"
+        "Verbs"
       ]
     }
   },
@@ -234,7 +234,7 @@
         "term": "#Verb",
         "termTag": [
           "PastSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -250,7 +250,7 @@
         "term": "#Verb",
         "termTag": [
           "PastSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -266,7 +266,7 @@
         "term": "#Verb",
         "termTag": [
           "PastSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -280,7 +280,7 @@
     "tag": {
       "all": [
         "PresentSimple",
-        "vb"
+        "Verbs"
       ]
     }
   },
@@ -295,7 +295,7 @@
         "term": "#Verb",
         "termTag": [
           "PresentSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -311,7 +311,7 @@
         "term": "#Verb",
         "termTag": [
           "PresentSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -327,7 +327,7 @@
         "term": "#Verb",
         "termTag": [
           "PresentSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -347,7 +347,7 @@
     "tag": {
       "all": [
         "#FutureSimple",
-        "vb"
+        "Verbs"
       ]
     }
   },
@@ -363,7 +363,7 @@
         "termTag": [
           "Stative",
           "Past",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -380,7 +380,7 @@
         "termTag": [
           "Stative",
           "Present",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -397,7 +397,7 @@
         "termTag": [
           "Stative",
           "Future",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -409,7 +409,7 @@
     "type": "intra-phrase",
     "pattern": "(was|were) #Negative? #Adverb?+ (#Participle|#PastTense)",
     "tag": {
-      "all": "vb",
+      "all": "Verbs",
       "on": {
         "term": "#Verb",
         "termTag": [
@@ -429,13 +429,13 @@
       "all": [
         "PastPerfect",
         "Passive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Participle",
         "termTag": [
           "VerbedPastParticiple",
-          "vb"
+          "Verbs"
         ]
       }
     },
@@ -453,7 +453,7 @@
     "type": "intra-phrase",
     "pattern": "(am|is|are) #Negative? #Adverb?+ #Participle",
     "tag": {
-      "all": "vb",
+      "all": "Verbs",
       "each": [
         {
           "term": "#Verb",
@@ -486,7 +486,7 @@
       "all": [
         "PresentPerfect",
         "Passive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Participle",
@@ -507,7 +507,7 @@
     "type": "intra-phrase",
     "pattern": "will not? be #Adverb?+ #Participle",
     "tag": {
-      "all": "vb",
+      "all": "Verbs",
       "each": [
         {
           "term": "#Verb",
@@ -539,7 +539,7 @@
       "all": [
         "FuturePerfect",
         "Passive",
-        "vb"
+        "Verbs"
       ],
       "on": {
         "term": "#Participle",
@@ -564,7 +564,7 @@
     },
     "on": {
       "term": "#Negative",
-      "termTag": "vb"
+      "termTag": "Verbs"
     }
   },
   "Linking Verb Group": {
@@ -594,7 +594,7 @@
     "type": "intra-phrase",
     "pattern": "#Modal+",
     "tag": {
-      "all": "vb"
+      "all": "Verbs"
     }
   },
   "Untag Auxiliary Copulas": {
@@ -618,7 +618,7 @@
         "term": "#PastTense",
         "termTag": [
           "PastSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -634,7 +634,7 @@
         "term": "#PresentTense",
         "termTag": [
           "PresentSimple",
-          "vb"
+          "Verbs"
         ]
       }
     }
@@ -644,7 +644,7 @@
     "batchOrder": "5",
     "order": "1",
     "type": "intra-phrase",
-    "pattern": "(#Verb && !#vb)",
+    "pattern": "(#Verb && !#Verbs)",
     "untag": {
       "all": [
         "#Action",

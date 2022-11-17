@@ -4,7 +4,7 @@
     "batchOrder": "9",
     "order": "1",
     "type": "inter-phrase",
-    "pattern": "!#nn !#vb !#nn? #RelativePronoun+ .{1,} #RelativePronoun+",
+    "pattern": "!#Nominal !#Verbs !#Nominal? #RelativePronoun+ .{1,} #RelativePronoun+",
     "replace": {
       "first": {
         "term": "#RelativePronoun+",
@@ -15,7 +15,7 @@
         ],
         "termTag": [
           "Determiner",
-          "dt"
+          "Determiner"
         ]
       }
     }
@@ -25,14 +25,14 @@
     "batchOrder": "9",
     "order": "2",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ #nn+ #vb+ #nn+",
+    "pattern": "#RelativePronoun+ #Nominal+ #Verbs+ #Nominal+",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -41,14 +41,14 @@
     "batchOrder": "9",
     "order": "3",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) (#aj+|#nn+)",
+    "pattern": "#RelativePronoun+ (#Verbs+ && !#Interrogative) (#Adjectival+|#Nominal+)",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -57,14 +57,14 @@
     "batchOrder": "9",
     "order": "4",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) nn+",
+    "pattern": "#RelativePronoun+ (#Verbs+ && !#Interrogative) Nominal+",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -73,14 +73,14 @@
     "batchOrder": "9",
     "order": "5",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) #pp+",
+    "pattern": "#RelativePronoun+ (#Verbs+ && !#Interrogative) #PrepositionalPhrase+",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -89,14 +89,14 @@
     "batchOrder": "9",
     "order": "6",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ #Agent+ (#vb+ && !#Interrogative)+ (#vb?|#Adverb?|#Preposition?|#Date?)?",
+    "pattern": "#RelativePronoun+ #Agent+ (#Verbs+ && !#Interrogative)+ (#Verbs?|#Adverb?|#Preposition?|#Date?)?",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -105,14 +105,14 @@
     "batchOrder": "9",
     "order": "7",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative)+ #vb?",
+    "pattern": "#RelativePronoun+ (#Verbs+ && !#Interrogative)+ #Verbs?",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -121,14 +121,14 @@
     "batchOrder": "9",
     "order": "8",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ #Agent+ (#vb+ && !#Interrogative) #nn+ #vb?+ #Preposition?",
+    "pattern": "#RelativePronoun+ #Agent+ (#Verbs+ && !#Interrogative) #Nominal+ #Verbs?+ #Preposition?",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   },
@@ -137,14 +137,14 @@
     "batchOrder": "9",
     "order": "9",
     "type": "intra-phrase",
-    "pattern": "#RelativePronoun+ (#vb+ && !#Interrogative) #VerbalPhrase+",
+    "pattern": "#RelativePronoun+ (#Verbs+ && !#Interrogative) #VerbalPhrase+",
     "tag": {
       "all": "RelativeClause"
     },
     "untag": {
       "all": [
-        "#nn",
-        "#vb"
+        "#Nominal",
+        "#Verbs"
       ]
     }
   }

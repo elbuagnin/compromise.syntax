@@ -17,7 +17,7 @@
     "type": "inter-phrase",
     "pattern": "(#Verbal)",
     "tag": {
-      "all": "vl"
+      "all": "VerbalPhrase"
     }
   },
 
@@ -30,7 +30,7 @@
     "tag": {
       "all": [
         "verbal",
-        "vl"
+        "VerbalPhrase"
       ]
     }
   },
@@ -39,13 +39,13 @@
     "batchOrder": "6",
     "order": "4",
     "type": "intra-phrase",
-    "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #vb+ (#nn+|#aj+|#av+)",
+    "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #Verbs+ (#Nominal+|#Adjectival+|#Adverbial+)",
     "tag": {
       "after": {
         "term": "#ProgressiveVerbal+",
         "termTag": [
           "NominalClause",
-          "nn"
+          "Nominal"
         ]
       }
     }
@@ -59,7 +59,7 @@
     "tag": {
       "all": [
         "GerundPhrase",
-        "nn"
+        "Nominal"
       ],
       "on": {
         "term": "#ProgressiveVerbal+",
