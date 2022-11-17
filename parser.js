@@ -47,8 +47,6 @@ export default function parser(doc) {
     }
 
     if (pattern) {
-      console.log('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')
-      sentence.intersection(pattern).debug();
       if (sentence.has(pattern)) {
         parseTakeActionCount++;
         tookAction = true;
@@ -356,7 +354,6 @@ export default function parser(doc) {
         });
       }
       chunks.forEach((chunk) => {
-        chunk.debug();
         tookAction = tagMatch(chunk, rule);
       });
     } else {
