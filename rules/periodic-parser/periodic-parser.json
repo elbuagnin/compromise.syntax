@@ -72,10 +72,10 @@
     "batch": "Periodic",
     "order": "7",
     "type": "intra-phrase",
-    "pattern": "(#Nominal+ && !#SubjectPhrase)",
+    "pattern": "(#Nominal+ && !#Subject)",
     "tag": {
       "on": {
-        "term": "(#Nominal+ && !#SubjectPhrase)",
+        "term": "(#Nominal+ && !#Subject)",
         "termTag": "NotTaggedSubjectNominal"
       }
     }
@@ -108,7 +108,7 @@
     "batch": "Periodic",
     "order": "9",
     "type": "intra-phrase",
-    "pattern": "#Adjectival+ (#Nominal+|#SubjectPhrase+) (#Adjectival+|#Adverbial+)? #Verbs+",
+    "pattern": "#Adjectival+ (#Nominal+|#Subject+) (#Adjectival+|#Adverbial+)? #Verbs+",
     "tag": {
       "before": {
         "term": "#Verbs+",
@@ -127,7 +127,7 @@
     "modifier": {
       "on": {
         "term": "#Adjectival+",
-        "modifies": "(#Nominal+|#SubjectPhrase+)"
+        "modifies": "(#Nominal+|#Subject+)"
       }
     }
   },
@@ -135,7 +135,7 @@
     "batch": "Periodic",
     "order": "10",
     "type": "intra-phrase",
-    "pattern": "#Adjectival+? (#Nominal+|#SubjectPhrase+) #AdjectivePhrase+ #Adverbial?+ #Verbs+",
+    "pattern": "#Adjectival+? (#Nominal+|#Subject+) #AdjectivePhrase+ #Adverbial?+ #Verbs+",
     "tag": {
       "before": {
         "term": "#Verbs+",
@@ -154,7 +154,7 @@
     "modifier": {
       "on": {
         "term": "#Adjectival+",
-        "modifies": "(#Nominal+|#SubjectPhrase+)"
+        "modifies": "(#Nominal+|#Subject+)"
       }
     }
   },
@@ -162,7 +162,7 @@
     "batch": "Periodic",
     "order": "11",
     "type": "intra-phrase",
-    "pattern": "#AdjectivePhrase+ (#Nominal+|#SubjectPhrase+|#DirectObject+|#IndirectObject+)",
+    "pattern": "#AdjectivePhrase+ (#Nominal+|#Subject+|#DirectObject+|#IndirectObject+)",
     "tag": {
       "all": [
         "NounPhrase",
@@ -178,7 +178,7 @@
     "modifier": {
       "on": {
         "term": "#Adjectival+",
-        "modifies": "(#Nominal+|#SubjectPhrase+)"
+        "modifies": "(#Nominal+|#Subject+)"
       }
     }
   },
@@ -338,7 +338,7 @@
     "batch": "Periodic",
     "order": "20",
     "type": "inter-phrase",
-    "pattern": "#CommaAdverb+ (#Nominal+|#SubjectPhrase+) #Verbs+",
+    "pattern": "#CommaAdverb+ (#Nominal+|#Subject+) #Verbs+",
     "tag": {
       "on": {
         "term": "#Adverbial+",
@@ -356,17 +356,17 @@
     "batch": "Periodic",
     "order": "21",
     "type": "intra-phrase",
-    "pattern": "#SubjectPhrase+ #Linking+ #Adjectival+",
+    "pattern": "#Subject+ #Linking+ #Adjectival+",
     "tag": {
       "on": {
-        "term": "(#Adjectival+ && !#SubjectPhrase)",
+        "term": "(#Adjectival+ && !#Subject)",
         "termTag": "SubjectComplement"
       }
     },
     "modifier": {
       "on": {
-        "term": "(#Adjectival+ && !#SubjectPhrase)",
-        "modifies": "#SubjectPhrase+",
+        "term": "(#Adjectival+ && !#Subject)",
+        "modifies": "#Subject+",
         "termTag": "SubjectComplement"
       }
     }
@@ -375,7 +375,7 @@
     "batch": "Periodic",
     "order": "22",
     "type": "intra-phrase",
-    "pattern": "#SubjectPhrase+ #Linking+ #NotTaggedSubjectNominal+",
+    "pattern": "#Subject+ #Linking+ #NotTaggedSubjectNominal+",
     "tag": {
       "on": {
         "term": "#NotTaggedSubjectNominal+",
@@ -385,7 +385,7 @@
     "modifier": {
       "on": {
         "term": "#NotTaggedSubjectNominal+",
-        "modifies": "#SubjectPhrase+",
+        "modifies": "#Subject+",
         "termTag": "SubjectComplement"
       }
     }
@@ -394,7 +394,7 @@
     "batch": "Periodic",
     "order": "23",
     "type": "intra-phrase",
-    "pattern": "#SubjectPhrase+ #Linking+ #PrepositionalPhrase+",
+    "pattern": "#Subject+ #Linking+ #PrepositionalPhrase+",
     "tag": {
       "on": {
         "term": "#PrepositionalPhrase+",
@@ -404,7 +404,7 @@
     "modifier": {
       "on": {
         "term": "#PrepositionalPhrase+",
-        "modifies": "#SubjectPhrase+",
+        "modifies": "#Subject+",
         "termTag": "SubjectComplement"
       }
     }
@@ -419,12 +419,6 @@
         "NounPhrase",
         "Nominal"
       ]
-    },
-    "untag": {
-      "on": {
-        "term": "#Determiner",
-        "termUnTag": "#Determiner"
-      }
     }
   },
   "Head Noun": {
@@ -760,8 +754,7 @@
       "before": {
         "term": "#Verbs+",
         "termTag": [
-          "Subject",
-          "SubjectPhrase"
+          "Subject"
         ]
       }
     }
@@ -919,6 +912,9 @@
     "order": "47",
     "type": "intra-phrase",
     "pattern": "#Infinitive+ #NonVerbalNominal+",
+    "tag": {
+      "all": "#InfinitivePhrase"
+    },
     "untag": {
       "on": {
         "term": "#UnPhrasedVerbal+",
@@ -927,7 +923,7 @@
     },
     "modifier": {
       "on": {
-        "term": "#VerbalPhrase+",
+        "term": "#NonVerbalNominal+",
         "modifies": "#Infinitive+",
         "termTag": "ObjectOfInfinitive"
       }
@@ -1265,32 +1261,6 @@
       }
     }
   },
-  "Object of Infinitive 3": {
-    "batch": "Periodic",
-    "order": "67",
-    "type": "intra-phrase",
-    "pattern": "#Infinitive+ #NonInfinitiveNominal+",
-    "tag": {
-      "all": [
-        "InfinitivePhrase",
-        "InfinitivePhrase"
-      ]
-    },
-    "untag": {
-      "all": [
-        "#Nominal",
-        "#VerbalPhrase",
-        "#UnPhrasedVerbal"
-      ]
-    },
-    "modifier": {
-      "on": {
-        "term": "#NonInfinitiveNominal+",
-        "modifies": "#Infinitive+",
-        "termTag": "ObjectOfInfinitive"
-      }
-    }
-  },
   "Object of Participle": {
     "batch": "Periodic",
     "order": "68",
@@ -1490,11 +1460,11 @@
     "batch": "Periodic",
     "order": "78",
     "type": "inter-phrase",
-    "pattern": "#RelativeClause+ * #SubjectPhrase+",
+    "pattern": "#RelativeClause+ * #Subject+",
     "modifier": {
       "on": {
         "term": "#RelativeClause+",
-        "modifies": "#SubjectPhrase+",
+        "modifies": "#Subject+",
         "termTag": "Adjectival"
       }
     }
@@ -1503,7 +1473,7 @@
     "batch": "Periodic",
     "order": "79",
     "type": "inter-phrase",
-    "pattern": "#ParticiplePhrase+ #SubjectPhrase+",
+    "pattern": "#ParticiplePhrase+ #Subject+",
     "tag": {
       "on": {
         "term": "#ParticiplePhrase+",
@@ -1513,7 +1483,7 @@
     "modifier": {
       "on": {
         "term": "#ParticiplePhrase+",
-        "modifies": "#SubjectPhrase+",
+        "modifies": "#Subject+",
         "termTag": "Adjectival"
       }
     }
@@ -1526,7 +1496,7 @@
     "tag": {
       "before": {
         "term": "#Verbs?+",
-        "termTag": "#SubjectPhrase"
+        "termTag": "#Subject"
       }
     },
     "modifier": {

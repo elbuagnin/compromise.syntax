@@ -39,26 +39,6 @@
       "all": "#Nominal"
     }
   },
-  "Prepositions": {
-    "batch": "non-verb-or-verbal-role-assignments",
-    "batchOrder": "4",
-    "order": "5",
-    "type": "inter-phrase",
-    "pattern": "#Preposition+",
-    "tag": {
-      "all": "PrepositionalPhrase"
-    }
-  },
-  "Not to Infinitive": {
-    "batch": "non-verb-or-verbal-role-assignments",
-    "batchOrder": "4",
-    "order": "6",
-    "type": "inter-phrase",
-    "pattern": "#Infinitive+",
-    "tag": {
-      "all": "InfinitivePhrase"
-    }
-  },
   "Adverbs": {
     "batch": "non-verb-or-verbal-role-assignments",
     "batchOrder": "4",
