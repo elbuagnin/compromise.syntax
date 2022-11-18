@@ -169,6 +169,26 @@
       "all": "#Adverbs"
     }
   },
+  "Nominal": {
+    "batch": "Clean Up",
+    "batchOrder": "15",
+    "order": "17",
+    "type": "inter-phrase",
+    "pattern": "#Nominal+",
+    "untag": {
+      "all": "#Nominal"
+    }
+  },
+  "Adjectival": {
+    "batch": "Clean Up",
+    "batchOrder": "15",
+    "order": "17",
+    "type": "inter-phrase",
+    "pattern": "#Adjectival+",
+    "untag": {
+      "all": "#Adjectival"
+    }
+  },
   "Final": {
     "batch": "Clean Up",
     "batchOrder": "15",

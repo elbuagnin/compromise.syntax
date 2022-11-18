@@ -284,9 +284,6 @@
         "CompleteSentence",
         "Final"
       ]
-    },
-    "untag": {
-      "all": "#Clause"
     }
   },
   "Complete Sentence 2": {

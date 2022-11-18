@@ -50,71 +50,138 @@ export default function parser(doc) {
         tookAction = true;
 
         // Debugging
+        function ruleHasTag(rule, dbTag) {
+          function propertyHasTag(property, dbTag) {
+            if (Array.isArray(property) === true) {
+              property.forEach((element) => {
+                if (element === dbTag) {
+                  return true;
+                }
+              });
+            } else if (property === dbTag) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+
+          if (dbTag != "") {
+            if (rule.tag) {
+              // console.log(rule.tag);
+              if (rule.tag.all) {
+                if (propertyHasTag(rule.tag.all, dbTag)) {
+                  console.log(rule.tag.all);
+                  return true;
+                }
+              }
+
+              if (rule.tag.on) {
+                if (propertyHasTag(rule.tag.on.termTag, dbTag)) {
+                  return true;
+                }
+              }
+            }
+
+            if (rule.untag) {
+              if (rule.untag.all) {
+                if (propertyHasTag(rule.untag.all, dbTag)) {
+                  return true;
+                }
+              }
+
+              if (rule.untag.on) {
+                if (propertyHasTag(rule.untag.on.termUnTag, dbTag)) {
+                  return true;
+                }
+              }
+            }
+
+            if (rule.modifier) {
+              if (rule.modifier.on) {
+                if (propertyHasTag(rule.modifier.on.termTag, dbTag)) {
+                  return true;
+                }
+              }
+            }
+          }
+
+          return false;
+        }
+
+        const dbFocus = "thinking all was safe";
+        const dbTag = "SubordinateClause"; // Leave # sign off of tag.
         const dbWord = "";
         const parseTag = "Parse" + parseCount;
 
         const matchedPattern = sentence.match(pattern);
 
+        // Debugging
         if (dbWord != "" && matchedPattern.has(dbWord)) {
           matchedPattern.match(dbWord).tag(parseTag);
         }
 
-        console.log("!!!!!!!!!!!!!!!!!!!!!!!");
-        console.log(
-          `${config.terminal.bright}Parse:${
-            config.terminal.reset
-          } ${JSON.stringify(parseCount)}`
-        );
-        console.log(
-          `${config.terminal.bright}Batch:${config.terminal.reset} ${rule.batch} : ${config.terminal.bright}Order#${config.terminal.reset} ${rule.order}`
-        );
-        console.log(
-          `${config.terminal.bright}Rule:${
-            config.terminal.reset
-          } ${JSON.stringify(rule)}`
-        );
-        console.log(
-          `${config.terminal.bright}Pattern:${
-            config.terminal.reset
-          } ${JSON.stringify(pattern)}`
-        );
-        console.log(
-          `${config.terminal.bright}Matched Pattern:${
-            config.terminal.reset
-          } ${matchedPattern.text()}`
-        );
+        if (
+          (dbFocus != "" && matchedPattern.has(dbFocus)) ||
+          matchedPattern.has(dbWord) ||
+          ruleHasTag(rule, dbTag)
+        ) {
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!");
+          console.log(
+            `${config.terminal.bright}Parse:${
+              config.terminal.reset
+            } ${JSON.stringify(parseCount)}`
+          );
+          console.log(
+            `${config.terminal.bright}Batch:${config.terminal.reset} ${rule.batch} : ${config.terminal.bright}Order#${config.terminal.reset} ${rule.order}`
+          );
+          console.log(
+            `${config.terminal.bright}Rule:${
+              config.terminal.reset
+            } ${JSON.stringify(rule)}`
+          );
+          console.log(
+            `${config.terminal.bright}Pattern:${
+              config.terminal.reset
+            } ${JSON.stringify(pattern)}`
+          );
+          console.log(
+            `${config.terminal.bright}Matched Pattern:${
+              config.terminal.reset
+            } ${matchedPattern.text()}`
+          );
 
-        if (tag)
-          console.log(
-            `${config.terminal.bright}Tag:${
-              config.terminal.reset
-            } ${JSON.stringify(tag)}`
-          );
-        if (untag)
-          console.log(
-            `${config.terminal.bright}Untag:${
-              config.terminal.reset
-            } ${JSON.stringify(untag)}`
-          );
-        if (demark)
-          console.log(
-            `${config.terminal.bright}Demark:${
-              config.terminal.reset
-            } ${JSON.stringify(demark)}`
-          );
-        if (replace)
-          console.log(
-            `${config.terminal.bright}Replace:${
-              config.terminal.reset
-            } ${JSON.stringify(replace)}`
-          );
-        if (modifier)
-          console.log(
-            `${config.terminal.bright}Modifier:${
-              config.terminal.reset
-            } ${JSON.stringify(modifier)}`
-          );
-        console.log("!!!!!!!!!!!!!!!!!!!!!!!\n\n");
+          if (tag)
+            console.log(
+              `${config.terminal.bright}Tag:${
+                config.terminal.reset
+              } ${JSON.stringify(tag)}`
+            );
+          if (untag)
+            console.log(
+              `${config.terminal.bright}Untag:${
+                config.terminal.reset
+              } ${JSON.stringify(untag)}`
+            );
+          if (demark)
+            console.log(
+              `${config.terminal.bright}Demark:${
+                config.terminal.reset
+              } ${JSON.stringify(demark)}`
+            );
+          if (replace)
+            console.log(
+              `${config.terminal.bright}Replace:${
+                config.terminal.reset
+              } ${JSON.stringify(replace)}`
+            );
+          if (modifier)
+            console.log(
+              `${config.terminal.bright}Modifier:${
+                config.terminal.reset
+              } ${JSON.stringify(modifier)}`
+            );
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!\n\n");
+        }
 
         if (modifier) {
           if (modifier.on) {
@@ -357,8 +424,15 @@ export default function parser(doc) {
           }
         }
 
-        console.log(sentence.debug());
-        console.log("\n\n");
+        // Debugging
+        if (
+          (dbFocus != "" && matchedPattern.has(dbFocus)) ||
+          matchedPattern.has(dbWord) ||
+          ruleHasTag(rule, dbTag)
+        ) {
+          console.log(sentence.debug());
+          console.log("\n\n");
+        }
       }
     }
     return tookAction;

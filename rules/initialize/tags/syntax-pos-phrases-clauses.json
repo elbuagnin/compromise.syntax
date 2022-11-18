@@ -2,27 +2,27 @@
   "Phrase": {
       "isA": "",
       "notA": "",
-      "color": "yellow"
+      "color": ""
   },
   "Clause": {
       "isA": "",
       "notA": "",
-      "color": "yellow"
+      "color": ""
   },
   "Independent": {
       "isA": "",
       "notA": "Subordinate",
-      "color": "yellow"
+      "color": ""
   },
   "Subordinate": {
       "isA": "",
       "notA": "Independent",
-      "color": "yellow"
+      "color": ""
   },
     "CompoundPhrase": {
         "isA": "Phrase",
         "notA": "",
-        "color": "yellow"
+        "color": ""
     },
     "NounPhrase": {
         "isA": "Phrase",
@@ -92,12 +92,12 @@
     "VerbalPhrase": {
         "isA": "Phrase",
         "notA": "VerbPhrase",
-        "color": "yellow"
+        "color": ""
     },
     "InfinitivePhrase": {
         "isA": "VerbalPhrase",
         "notA": "",
-        "color": "yellow"
+        "color": ""
     },
     "GerundPhrase": {
         "isA": "VerbalPhrase",
@@ -127,7 +127,7 @@
     "VerbalClause": {
         "isA": "Clause",
         "notA": "",
-        "color": "yellow"
+        "color": ""
     },
     "ParticipleClause": {
         "isA": "VerbalClause",
@@ -152,16 +152,16 @@
     "IndependentClause": {
         "isA": "Clause",
         "notA": "SubordinateClause",
-        "color": "yellow"
+        "color": ""
     },
     "MainClause": {
         "isA": "Clause",
         "notA": "SubordinateClause",
-        "color": "yellow"
+        "color": ""
     },
     "SubordinateClause": {
         "isA": "Clause",
         "notA": "MainClause",
-        "color": "yellow"
+        "color": ""
     }
 }
