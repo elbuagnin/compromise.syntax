@@ -14,7 +14,7 @@
     "batchOrder": "13",
     "order": "1",
     "type": "intra-phrase",
-    "pattern": "#Participle+ #Clause+",
+    "pattern": "#Participle+ #Clause+ #PhraseBreak",
     "tag": {
       "all": ["ParticipleClause", "SubordinateClause","Adjectival"]
     },

@@ -108,8 +108,8 @@ export default function parser(doc) {
           return false;
         }
 
-        const dbFocus = "thinking all was safe";
-        const dbTag = "SubordinateClause"; // Leave # sign off of tag.
+        const dbFocus = "burdened";
+        const dbTag = ""; // Leave # sign off of tag.
         const dbWord = "";
         const parseTag = "Parse" + parseCount;
 

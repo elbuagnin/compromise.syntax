@@ -20,12 +20,12 @@
       "color": ""
   },
     "CompoundPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": ""
     },
     "NounPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "VerbPhrase",
         "color": "blue"
     },
@@ -40,12 +40,12 @@
         "color": "blue"
     },
     "PrepositionalPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "cyan"
     },
     "VerbPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "NounPhrase",
         "color": "green"
     },
@@ -55,22 +55,22 @@
         "color": "green"
     },
     "QuestionPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "green"
     },
     "AdverbPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "green"
     },
     "AdverbialPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "green"
     },
     "AdjectivePhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "magenta"
     },
@@ -90,7 +90,7 @@
         "color": "magenta"
     },
     "VerbalPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "VerbPhrase",
         "color": ""
     },
@@ -125,7 +125,7 @@
         "color": "magenta"
     },
     "VerbalClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "",
         "color": ""
     },
@@ -145,22 +145,22 @@
         "color": "magenta"
     },
     "RelativeClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "",
         "color": "magenta"
     },
     "IndependentClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "SubordinateClause",
         "color": ""
     },
     "MainClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "SubordinateClause",
         "color": ""
     },
     "SubordinateClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "MainClause",
         "color": ""
     }

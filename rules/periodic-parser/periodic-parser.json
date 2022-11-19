@@ -1265,7 +1265,7 @@
     "batch": "Periodic",
     "order": "68",
     "type": "intra-phrase",
-    "pattern": "#Participle+ (#Nominal+|#PrepositionalPhrase+|#InfinitivePhrase+)",
+    "pattern": "#Participle+ (#NounPhrase+|#PrepositionalPhrase+|#InfinitivePhrase+)",
     "tag": {
       "all": [
         "ParticiplePhrase",
@@ -1280,7 +1280,7 @@
     },
     "modifier": {
       "on": {
-        "term": "(#Nominal+|#PrepositionalPhrase+|#InfinitivePhrase+)",
+        "term": "(#NounPhrase+|#PrepositionalPhrase+|#InfinitivePhrase+)",
         "modifies": "#Participle+",
         "termTag": "ObjectOfParticiple"
       }
