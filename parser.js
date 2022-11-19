@@ -1,5 +1,5 @@
-import * as mfs from './lib/filesystem.js';
-import * as config from './local-config.js';
+import * as mfs from "./lib/filesystem.js";
+import * as config from "./local-config.js";
 
 export default function parser(doc) {
   const wordCount = doc.wordCount();
@@ -9,8 +9,8 @@ export default function parser(doc) {
 
   // Relationship rules
   function loadRelationRules(file) {
-    const rulesPath = './rules/periodic-parser/';
-    const fileType = '.json';
+    const rulesPath = "./rules/periodic-parser/";
+    const fileType = ".json";
     const filePath = rulesPath + file + fileType;
     const rules = [];
     const rulesData = JSON.parse(mfs.loadJSONFile(filePath));
@@ -22,18 +22,16 @@ export default function parser(doc) {
     return rules;
   }
 
-  const periodicRules = loadRelationRules('periodic-parser');
+  const periodicRules = loadRelationRules("periodic-parser");
 
   function tagMatch(sentence, rule) {
     parseCount++;
     let tookAction = false;
 
-    const {
-      pattern, tag, untag, demark, tagID, replace, modifier,
-    } = rule;
+    const { pattern, tag, untag, demark, tagID, replace, modifier } = rule;
 
     function remove(removeTerm, removeTag) {
-      if (typeof removeTag === 'string') {
+      if (typeof removeTag === "string") {
         if (removeTerm.match(removeTag).found) {
           removeTerm.unTag(removeTag);
         }
@@ -51,34 +49,153 @@ export default function parser(doc) {
         parseTakeActionCount++;
         tookAction = true;
 
+        // Debugging
+        function ruleHasTag(rule, dbTag) {
+          function propertyHasTag(property, dbTag) {
+            if (Array.isArray(property) === true) {
+              property.forEach((element) => {
+                if (element === dbTag) {
+                  return true;
+                }
+              });
+            } else if (property === dbTag) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+
+          if (dbTag != "") {
+            if (rule.tag) {
+              // console.log(rule.tag);
+              if (rule.tag.all) {
+                if (propertyHasTag(rule.tag.all, dbTag)) {
+                  console.log(rule.tag.all);
+                  return true;
+                }
+              }
+
+              if (rule.tag.on) {
+                if (propertyHasTag(rule.tag.on.termTag, dbTag)) {
+                  return true;
+                }
+              }
+            }
+
+            if (rule.untag) {
+              if (rule.untag.all) {
+                if (propertyHasTag(rule.untag.all, dbTag)) {
+                  return true;
+                }
+              }
+
+              if (rule.untag.on) {
+                if (propertyHasTag(rule.untag.on.termUnTag, dbTag)) {
+                  return true;
+                }
+              }
+            }
+
+            if (rule.modifier) {
+              if (rule.modifier.on) {
+                if (propertyHasTag(rule.modifier.on.termTag, dbTag)) {
+                  return true;
+                }
+              }
+            }
+          }
+
+          return false;
+        }
+
+        const dbFocus = "burdened";
+        const dbTag = ""; // Leave # sign off of tag.
+        const dbWord = "";
+        const parseTag = "Parse" + parseCount;
+
         const matchedPattern = sentence.match(pattern);
 
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!');
-        console.log(`${config.terminal.bright}Batch:${config.terminal.reset} ${rule.batch} : ${config.terminal.bright}Order#${config.terminal.reset} ${rule.order}`);
-        console.log(`${config.terminal.bright}Rule:${config.terminal.reset} ${JSON.stringify(rule)}`);
-        console.log(`${config.terminal.bright}Pattern:${config.terminal.reset} ${JSON.stringify(pattern)}`);
-        console.log(`${config.terminal.bright}Matched Pattern:${config.terminal.reset} ${matchedPattern.text()}`);
+        // Debugging
+        if (dbWord != "" && matchedPattern.has(dbWord)) {
+          matchedPattern.match(dbWord).tag(parseTag);
+        }
 
-        if (tag) console.log(`${config.terminal.bright}Tag:${config.terminal.reset} ${JSON.stringify(tag)}`);
-        if (untag) console.log(`${config.terminal.bright}Untag:${config.terminal.reset} ${JSON.stringify(untag)}`);
-        if (demark) console.log(`${config.terminal.bright}Demark:${config.terminal.reset} ${JSON.stringify(demark)}`);
-        if (replace) console.log(`${config.terminal.bright}Replace:${config.terminal.reset} ${JSON.stringify(replace)}`);
-        if (modifier) console.log(`${config.terminal.bright}Modifier:${config.terminal.reset} ${JSON.stringify(modifier)}`);
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!\n\n');
+        if (
+          (dbFocus != "" && matchedPattern.has(dbFocus)) ||
+          matchedPattern.has(dbWord) ||
+          ruleHasTag(rule, dbTag)
+        ) {
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!");
+          console.log(
+            `${config.terminal.bright}Parse:${
+              config.terminal.reset
+            } ${JSON.stringify(parseCount)}`
+          );
+          console.log(
+            `${config.terminal.bright}Batch:${config.terminal.reset} ${rule.batch} : ${config.terminal.bright}Order#${config.terminal.reset} ${rule.order}`
+          );
+          console.log(
+            `${config.terminal.bright}Rule:${
+              config.terminal.reset
+            } ${JSON.stringify(rule)}`
+          );
+          console.log(
+            `${config.terminal.bright}Pattern:${
+              config.terminal.reset
+            } ${JSON.stringify(pattern)}`
+          );
+          console.log(
+            `${config.terminal.bright}Matched Pattern:${
+              config.terminal.reset
+            } ${matchedPattern.text()}`
+          );
+
+          if (tag)
+            console.log(
+              `${config.terminal.bright}Tag:${
+                config.terminal.reset
+              } ${JSON.stringify(tag)}`
+            );
+          if (untag)
+            console.log(
+              `${config.terminal.bright}Untag:${
+                config.terminal.reset
+              } ${JSON.stringify(untag)}`
+            );
+          if (demark)
+            console.log(
+              `${config.terminal.bright}Demark:${
+                config.terminal.reset
+              } ${JSON.stringify(demark)}`
+            );
+          if (replace)
+            console.log(
+              `${config.terminal.bright}Replace:${
+                config.terminal.reset
+              } ${JSON.stringify(replace)}`
+            );
+          if (modifier)
+            console.log(
+              `${config.terminal.bright}Modifier:${
+                config.terminal.reset
+              } ${JSON.stringify(modifier)}`
+            );
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!\n\n");
+        }
 
         if (modifier) {
           if (modifier.on) {
             const terms = matchedPattern.match(modifier.on.term);
             const modifies = matchedPattern.match(modifier.on.modifies);
 
-            let termTag = 'Modifies';
+            let termTag = "Modifies";
             if (modifier.on.termTag) {
               termTag = modifier.on.termTag;
             }
 
             terms.forEach((term, i) => {
               let modTag = modifies.eq(i).text();
-              modTag = modTag.replace(/ /g, '-');
+              modTag = modTag.replace(/ /g, "-");
               modTag = `${termTag}:${modTag}`;
 
               const adjTerm = term.not(modifies);
@@ -91,14 +208,14 @@ export default function parser(doc) {
               const terms = matchedPattern.match(item.term);
               const modifies = matchedPattern.match(item.modifies);
 
-              let termTag = 'Modifies';
+              let termTag = "Modifies";
               if (item.termTag) {
                 termTag = item.termTag;
               }
 
               terms.forEach((term, i) => {
                 let modTag = modifies.eq(i).text();
-                modTag = modTag.replace(/ /g, '-');
+                modTag = modTag.replace(/ /g, "-");
                 modTag = `${termTag}:${modTag}`;
 
                 const adjTerm = term.not(modifies);
@@ -258,7 +375,9 @@ export default function parser(doc) {
             matchedTerm.tag(replace.on.termTag);
           }
           if (replace.first) {
-            const matchedTerm = matchedPattern.match(replace.first.term).first();
+            const matchedTerm = matchedPattern
+              .match(replace.first.term)
+              .first();
             remove(matchedTerm, replace.first.termUnTag);
             matchedTerm.tag(replace.first.termTag);
           }
@@ -305,8 +424,15 @@ export default function parser(doc) {
           }
         }
 
-        console.log(sentence.debug());
-        console.log('\n\n');
+        // Debugging
+        if (
+          (dbFocus != "" && matchedPattern.has(dbFocus)) ||
+          matchedPattern.has(dbWord) ||
+          ruleHasTag(rule, dbTag)
+        ) {
+          console.log(sentence.debug());
+          console.log("\n\n");
+        }
       }
     }
     return tookAction;
@@ -315,18 +441,25 @@ export default function parser(doc) {
   function clearPOSRoles(sentence) {
     sentence.terms().forEach((term) => {
       let tags = term.json({
-        text: false, terms: { text: false, tags: true, whitespace: false },
+        text: false,
+        terms: { text: false, tags: true, whitespace: false },
       })[0].terms;
       tags = tags[0].tags;
 
-      let role = 'none';
-      tags = tags.filter((tag) => (
-        tag === 'Nn' || tag === 'Vb' || tag === 'Aj' || tag === 'Av'
-        || tag === 'Vl' || tag === 'Iv' || tag === 'Gd' || tag === 'Pt'
-        || tag === 'Pp' || tag === 'Sbj' || tag === 'Dobj' || tag === 'Iobj'
-        || tag === 'Pred' || tag === 'Subcls' || tag === 'Relcls'
-        || tag === 'Final' || tag === 'Avl' || tag === 'Ajl'
-      ));
+      let role = "none";
+      tags = tags.filter(
+        (tag) =>
+          tag === "Nominal" ||
+          tag === "Verbs" ||
+          tag === "Adjectival" ||
+          tag === "Adverbial" ||
+          tag === "VerbalPhrase" ||
+          tag === "InfinitivePhrase" ||
+          tag === "GerundPhrase" ||
+          tag === "PrepositionalPhrase" ||
+          tag === "RelativeClause" ||
+          tag === "Final"
+      );
 
       role = tags[tags.length - 1];
       tags.forEach((tag) => {
@@ -338,13 +471,14 @@ export default function parser(doc) {
 
   function parseRule(sentence, rule) {
     let tookAction = false;
-    if (rule.type === 'intra-phrase') {
+
+    if (rule.type === "intra-phrase") {
       let chunks = sentence;
-      if (sentence.has('#Comma')) {
-        const commas = sentence.match('#Comma');
-        commas.forEach((comma) => {
-          if (comma.ifNo('(#List|#CoordinatingAdjectives)').found) {
-            chunks = chunks.splitAfter(comma);
+      if (sentence.has("#PhraseBreak")) {
+        const phraseBreaks = sentence.match("#PhraseBreak");
+        phraseBreaks.forEach((pbreak) => {
+          if (pbreak.ifNo("(#List|#CoordinatingAdjectives)").found) {
+            chunks = chunks.splitAfter(pbreak);
           }
         });
       }
@@ -368,7 +502,7 @@ export default function parser(doc) {
 
   // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
-  const posPath = './rules/sequencial-parser/';
+  const posPath = "./rules/sequencial-parser/";
   const list = true;
   const ruleSets = mfs.loadJSONDir(posPath, list);
   const orderedRules = [];
@@ -384,19 +518,19 @@ export default function parser(doc) {
   // Process by entire sentence for inter-phrase.
   const sentences = doc.sentences();
   sentences.forEach((sentence) => {
-    console.log('------------------------------------------------------------');
-    console.log('Sentence after pre-parser:\n');
+    console.log("------------------------------------------------------------");
+    console.log("Sentence after pre-parser:\n");
     console.log(sentence.text());
     console.log(sentence.debug());
 
     orderedRules.forEach((rule) => {
       const tookAction = parseRule(sentence, rule);
-      if (tookAction && (rule.batch !== 'Clean Up')) {
+      if (tookAction && rule.batch !== "Clean Up") {
         relationships(sentence);
       }
     });
 
-    console.log('Sentence post parser:\n');
+    console.log("Sentence post parser:\n");
     console.log(sentence.text());
     console.log(sentence.debug());
     console.log(`Word Count = ${wordCount}`);

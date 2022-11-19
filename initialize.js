@@ -1,9 +1,17 @@
 import nlp from "compromise";
-import * as disambiguation from "compromise.disambiguation";
+import disambiguation from "compromise.disambiguation";
 import "./compromise-extensions.js";
 import * as mfs from "./lib/filesystem.js";
 
 export default function initialize(doc) {
+
+  nlp.plugin(disambiguation);
+
+  // const primeTheEngine = nlp('prime');
+  // primeTheEngine.disambiguate();
+
+  doc.disambiguate();
+
   const baseDir = "./rules/initialize/";
   const tagDir = `${baseDir}tags/`;
   const wordDir = `${baseDir}words/`;

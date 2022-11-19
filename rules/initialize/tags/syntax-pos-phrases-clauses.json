@@ -2,45 +2,30 @@
   "Phrase": {
       "isA": "",
       "notA": "",
-      "color": "yellow"
+      "color": ""
   },
   "Clause": {
       "isA": "",
       "notA": "",
-      "color": "yellow"
+      "color": ""
   },
   "Independent": {
       "isA": "",
       "notA": "Subordinate",
-      "color": "yellow"
+      "color": ""
   },
   "Subordinate": {
       "isA": "",
       "notA": "Independent",
-      "color": "yellow"
+      "color": ""
   },
-    "ParenthesesGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "QuotationGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
-    "DashGroup": {
-        "isA": "",
-        "notA": "",
-        "color": "yellow"
-    },
     "CompoundPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
-        "color": "yellow"
+        "color": ""
     },
     "NounPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "VerbPhrase",
         "color": "blue"
     },
@@ -55,12 +40,12 @@
         "color": "blue"
     },
     "PrepositionalPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "cyan"
     },
     "VerbPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "NounPhrase",
         "color": "green"
     },
@@ -70,22 +55,22 @@
         "color": "green"
     },
     "QuestionPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "green"
     },
     "AdverbPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "green"
     },
     "AdverbialPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "green"
     },
     "AdjectivePhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "",
         "color": "magenta"
     },
@@ -105,14 +90,14 @@
         "color": "magenta"
     },
     "VerbalPhrase": {
-        "isA": "Phrase",
+        "isA": "",
         "notA": "VerbPhrase",
-        "color": "yellow"
+        "color": ""
     },
     "InfinitivePhrase": {
         "isA": "VerbalPhrase",
         "notA": "",
-        "color": "yellow"
+        "color": ""
     },
     "GerundPhrase": {
         "isA": "VerbalPhrase",
@@ -140,9 +125,9 @@
         "color": "magenta"
     },
     "VerbalClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "",
-        "color": "yellow"
+        "color": ""
     },
     "ParticipleClause": {
         "isA": "VerbalClause",
@@ -160,23 +145,23 @@
         "color": "magenta"
     },
     "RelativeClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "",
         "color": "magenta"
     },
     "IndependentClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "SubordinateClause",
-        "color": "yellow"
+        "color": ""
     },
     "MainClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "SubordinateClause",
-        "color": "yellow"
+        "color": ""
     },
     "SubordinateClause": {
-        "isA": "Clause",
+        "isA": "",
         "notA": "MainClause",
-        "color": "yellow"
+        "color": ""
     }
 }

@@ -19,16 +19,6 @@
         "notA": "Accusative",
         "color": "green"
     },
-    "Active": {
-        "isA": "",
-        "notA": "Passive",
-        "color": "green"
-    },
-    "Passive": {
-        "isA": "",
-        "notA": "Active",
-        "color": "green"
-    },
     "Action": {
         "isA": "",
         "notA": ["Stative", "Linking"],

@@ -1,14 +1,14 @@
 import http from "http";
 import { readFile } from "fs";
 import nlp from "compromise";
-import * as syntax from "./index.js";
+import syntax from "./index.js";
 
 function test() {
   readFile("./sample.txt", "utf8", (err, data) => {
     if (err) {
       throw new Error(err);
     }
-    nlp.plugin(syntax.syntaxPlugin);
+
     const doc = nlp(data);
     doc.syntax();
   });
@@ -19,6 +19,11 @@ function requestListener(req, res) {
   test();
   res.end("Hello, World!");
 }
+
+nlp.plugin(syntax);
+
+const primeTheEngine = nlp('prime');
+primeTheEngine.syntax();
 
 const server = http.createServer(requestListener);
 server.listen(8080);

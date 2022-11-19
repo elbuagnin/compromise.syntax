@@ -1,9 +1,90 @@
 {
-  "Current Participles": {"batch": "Verbals", "batchOrder": "6", "order": "1", "type": "inter-phrase", "pattern": "(#Participle && !#PresentParticiple && !#PerfectParticiple)", "tag": {"all":["PastParticiple", "vl"]}},
+  "Compromise Participles": {
+    "batch": "Verbals",
+    "batchOrder": "6",
+    "order": "1",
+    "type": "inter-phrase",
+    "pattern": "(#Participle && !#PresentParticiple && !#PerfectParticiple)",
+    "tag": {
+      "all": "PastParticiple"
+    }
+  },
 
-  "Unknown Type Progressive Verbals": {"batch": "Verbals", "batchOrder": "6", "order": "2", "type": "inter-phrase", "pattern": "#ProgressiveVerbal", "tag": {"all": ["verbal", "vl"]}},
+  "Current Verbals": {
+    "batch": "Verbals",
+    "batchOrder": "6",
+    "order": "2",
+    "type": "inter-phrase",
+    "pattern": "(#Verbal)",
+    "tag": {
+      "all": "VerbalPhrase"
+    }
+  },
 
-  "Nominal Clause": {"batch": "Verbals", "batchOrder": "6","order": "3", "type": "intra-phrase", "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #vb+ (#nn+|#aj+|#av+)", "tag": {"after": {"term": "#ProgressiveVerbal+", "termTag": ["NominalClause", "nn"]}}},
-
-  "Nominal Phrase": {"batch": "Verbals", "batchOrder": "6","order": "4", "type": "intra-phrase", "pattern": "#ProgressiveVerbal+ #Agent+ #NounPhrase", "tag": {"all": ["GerundPhrase", "nn"], "on": {"term": "#ProgressiveVerbal+", "termTag": "Gerund"}}, "untag": {"on": {"term": "#ProgressiveVerbal+", "termUnTag": "#ProgressiveVerbal"}}, "modifier": {"each": [{"term": "#Agent", "modifies": "#ProgressiveVerbal+", "termTag": "IndirectObjectOfGerund"}, {"term": "#NounPhrase", "modifies": "#ProgressiveVerbal+", "termTag": "DirectObjectOfGerund"}]}}
+  "Unknown Type Progressive Verbals": {
+    "batch": "Verbals",
+    "batchOrder": "6",
+    "order": "3",
+    "type": "inter-phrase",
+    "pattern": "#ProgressiveVerbal",
+    "tag": {
+      "all": [
+        "verbal",
+        "VerbalPhrase"
+      ]
+    }
+  },
+  "Nominal Clause": {
+    "batch": "Verbals",
+    "batchOrder": "6",
+    "order": "4",
+    "type": "intra-phrase",
+    "pattern": "#ProgressiveVerbal+ (#Noun|#Nouns|#NounPhrase) #Verbs+ (#Nominal+|#Adjectival+|#Adverbial+)",
+    "tag": {
+      "after": {
+        "term": "#ProgressiveVerbal+",
+        "termTag": [
+          "NominalClause",
+          "Nominal"
+        ]
+      }
+    }
+  },
+  "Nominal Phrase": {
+    "batch": "Verbals",
+    "batchOrder": "6",
+    "order": "5",
+    "type": "intra-phrase",
+    "pattern": "#ProgressiveVerbal+ #Agent+ #NounPhrase",
+    "tag": {
+      "all": [
+        "GerundPhrase",
+        "Nominal"
+      ],
+      "on": {
+        "term": "#ProgressiveVerbal+",
+        "termTag": "Gerund"
+      }
+    },
+    "untag": {
+      "on": {
+        "term": "#ProgressiveVerbal+",
+        "termUnTag": "#ProgressiveVerbal"
+      }
+    },
+    "modifier": {
+      "each": [
+        {
+          "term": "#Agent",
+          "modifies": "#ProgressiveVerbal+",
+          "termTag": "IndirectObjectOfGerund"
+        },
+        {
+          "term": "#NounPhrase",
+          "modifies": "#ProgressiveVerbal+",
+          "termTag": "DirectObjectOfGerund"
+        }
+      ]
+    }
+  }
 }

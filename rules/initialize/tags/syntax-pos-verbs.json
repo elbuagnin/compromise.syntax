@@ -1,9 +1,4 @@
 {
-    "BaseVerb": {
-        "isA": "Verb",
-        "notA": "Infinitive",
-        "color": "green"
-    },
     "VerbedPastParticiple": {
         "isA": "Verb",
         "notA": "VerbedPresentParticiple",
@@ -12,11 +7,6 @@
     "VerbedPresentParticiple": {
         "isA": "Verb",
         "notA": "VerbedPastParticiple",
-        "color": "green"
-    },
-    "Auxiliary": {
-        "isA": "Verb",
-        "notA": "BaseVerb",
         "color": "green"
     },
     "HeadVerb": {

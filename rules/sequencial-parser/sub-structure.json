@@ -1,0 +1,29 @@
+{
+  "Clauses": {
+    "batch": "Sub-Structure",
+    "batchOrder": "13",
+    "order": "1",
+    "type": "intra-phrase",
+    "pattern": "* #Noun+ * #Verbs+ *",
+    "tag": {
+      "all": "Clause"
+    }
+  },
+  "Participle Clause": {
+    "batch": "Sub-Structure",
+    "batchOrder": "13",
+    "order": "1",
+    "type": "intra-phrase",
+    "pattern": "#Participle+ #Clause+ #PhraseBreak",
+    "tag": {
+      "all": ["ParticipleClause", "SubordinateClause","Adjectival"]
+    },
+    "modifier": {
+      "on": {
+        "term": "*",
+        "modifies": "#Participle+",
+        "termTag": "ObjectOfParticiple"
+      }
+    }
+  }
+}

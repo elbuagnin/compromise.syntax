@@ -1,35 +1,53 @@
 {
-  "#BaseVerb is #Noun": {"batch":"Disambiguation", "batchOrder": "1",  "order": "1", "pattern": "to #BaseVerb #BaseVerb", "replace": {"ending": {"termTag": "Noun", "termUnTag": "#BaseVerb"}}},
-
-  "having": {"batch":"Disambiguation", "batchOrder": "1",  "order": "2", "pattern": "having", "replace": {"on": {"term": "having", "termTag": "PresentParticiple", "termUnTag": "#Gerund"}}},
-
-  "having #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "3", "pattern": "having #PastTense", "replace": {"on": {"term": "having #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
-
-  "having been": {"batch":"Disambiguation", "batchOrder": "1",  "order": "4", "pattern": "having been", "replace": {"on": {"term": "having been", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
-
-  "having been #PastTense": {"batch":"Disambiguation", "batchOrder": "1",  "order": "5", "pattern": "having been #PastTense", "replace": {"on": {"term": "having been #PastTense", "termTag": "PerfectParticiple", "termUnTag": ["#Gerund", "#Verb"]}}},
-
-  "Potential Linking Verbs 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "6", "pattern": "#PotentialLinking #Determiner", "replace": {"on": {"term": "#PotentialLinking", "termTag": "#Action", "termUnTag": "#PotentialLinking"}}},
-
-  "Potential Linking Verbs 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "7", "pattern": "#PotentialLinking (#Where|#When)", "replace": {"on": {"term": "#PotentialLinking", "termTag": "#Action", "termUnTag": "#PotentialLinking"}}},
-
-  "Potential Linking Verbs 3": {"batch":"Disambiguation", "batchOrder": "1",  "order": "8", "pattern": "#PotentialLinking (like|of)", "replace": {"on": {"term": "#PotentialLinking", "termTag": "#Linking", "termUnTag": "#PotentialLinking"}}},
-
-  "Potential Past Participles 1": {"batch":"Disambiguation", "batchOrder": "1",  "order": "9", "pattern": "#Participle", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 2": {"batch":"Disambiguation", "batchOrder": "1",  "order": "10", "pattern": "(#PastTense && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 3": {"batch":"Disambiguation", "batchOrder": "1",  "order": "11", "pattern": "(#Adjective && /ed$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 4": {"batch":"Disambiguation", "batchOrder": "1",  "order": "12", "pattern": "(#PastTense && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 5": {"batch":"Disambiguation", "batchOrder": "1",  "order": "13", "pattern": "(#Adjective && /en$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 6": {"batch":"Disambiguation", "batchOrder": "1",  "order": "14", "pattern": "(#PastTense && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 7": {"batch":"Disambiguation", "batchOrder": "1",  "order": "15", "pattern": "(#Adjective && /lt$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 8": {"batch":"Disambiguation", "batchOrder": "1",  "order": "16", "pattern": "(#PastTense && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}},
-
-  "Potential Past Participles 9": {"batch":"Disambiguation", "batchOrder": "1",  "order": "17", "pattern": "(#Adjective && /ne$/)", "termTag": {"all": "#PotentialPastParticiple"}}
+  "#BaseVerb is #Noun": {
+    "batch": "Disambiguation",
+    "batchOrder": "1",
+    "order": "1",
+    "pattern": "to #BaseVerb #BaseVerb",
+    "replace": {
+      "ending": {
+        "termTag": "Noun",
+        "termUnTag": "#BaseVerb"
+      }
+    }
+  },
+  "Potential Linking Verbs 1": {
+    "batch": "Disambiguation",
+    "batchOrder": "1",
+    "order": "2",
+    "pattern": "#PotentialLinking #Determiner",
+    "replace": {
+      "on": {
+        "term": "#PotentialLinking",
+        "termTag": "#Action",
+        "termUnTag": "#PotentialLinking"
+      }
+    }
+  },
+  "Potential Linking Verbs 2": {
+    "batch": "Disambiguation",
+    "batchOrder": "1",
+    "order": "3",
+    "pattern": "#PotentialLinking (#Where|#When)",
+    "replace": {
+      "on": {
+        "term": "#PotentialLinking",
+        "termTag": "#Action",
+        "termUnTag": "#PotentialLinking"
+      }
+    }
+  },
+  "Potential Linking Verbs 3": {
+    "batch": "Disambiguation",
+    "batchOrder": "1",
+    "order": "4",
+    "pattern": "#PotentialLinking (like|of)",
+    "replace": {
+      "on": {
+        "term": "#PotentialLinking",
+        "termTag": "#Linking",
+        "termUnTag": "#PotentialLinking"
+      }
+    }
+  }
 }
