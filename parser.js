@@ -1,4 +1,5 @@
 import * as mfs from "./lib/filesystem.js";
+import * as rulesPath from "./rules-path.js";
 import * as config from "./local-config.js";
 
 export default function parser(doc) {
@@ -9,9 +10,9 @@ export default function parser(doc) {
 
   // Relationship rules
   function loadRelationRules(file) {
-    const rulesPath = "./rules/periodic-parser/";
+    const parserPath = rulesPath.periodicParserDir;
     const fileType = ".json";
-    const filePath = rulesPath + file + fileType;
+    const filePath = parserPath + file + fileType;
     const rules = [];
     const rulesData = JSON.parse(mfs.loadJSONFile(filePath));
 
@@ -502,7 +503,7 @@ export default function parser(doc) {
 
   // Load the parsing rules and sort them by batch and within batch.
   // Rule order is critical for correct assignments.
-  const posPath = "./rules/sequencial-parser/";
+  const posPath = rulesPath.sequencialParserDir;
   const list = true;
   const ruleSets = mfs.loadJSONDir(posPath, list);
   const orderedRules = [];
