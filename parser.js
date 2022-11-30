@@ -201,6 +201,7 @@ export default function parser(doc) {
 
               const adjTerm = term.not(modifies);
               adjTerm.tag(modTag);
+              adjTerm.tag("#Modifier");
             });
           }
 
@@ -221,6 +222,7 @@ export default function parser(doc) {
 
                 const adjTerm = term.not(modifies);
                 adjTerm.tag(modTag);
+                adjTerm.tag("#Modifier");
               });
             });
           }
