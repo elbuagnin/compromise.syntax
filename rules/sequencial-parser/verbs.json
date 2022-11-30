@@ -647,11 +647,9 @@
     "pattern": "(#Verb && !#Verbs)",
     "untag": {
       "all": [
-        "#Action",
-        "#Linking",
         "#Stative",
         "#CompoundVerbs",
-        "VerbPhrase"
+        "#VerbPhrase"
       ]
     }
   }
