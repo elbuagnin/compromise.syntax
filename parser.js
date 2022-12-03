@@ -109,7 +109,7 @@ export default function parser(doc) {
           return false;
         }
 
-        const dbFocus = "burdened";
+        const dbFocus = "";
         const dbTag = ""; // Leave # sign off of tag.
         const dbWord = "";
         const parseTag = "Parse" + parseCount;

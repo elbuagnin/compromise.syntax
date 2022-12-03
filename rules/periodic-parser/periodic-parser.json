@@ -356,17 +356,17 @@
     "batch": "Periodic",
     "order": "21",
     "type": "intra-phrase",
-    "pattern": "[#Nominal+|#NounPhrase] [#stative+|#Stative] #Adjectival+",
+    "pattern": "#Nominal+ #Stative+ #Adjectival+",
     "tag": {
       "on": {
-        "term": "(#Adjectival+ && !#Subject)",
+        "term": "#Adjectival+",
         "termTag": "SubjectComplement"
       }
     },
     "modifier": {
       "on": {
-        "term": "(#Adjectival+ && !#Subject)",
-        "modifies": "#Subject+",
+        "term": "#Adjectival+",
+        "modifies": "#Nominal+",
         "termTag": "SubjectComplement"
       }
     }
@@ -375,7 +375,7 @@
     "batch": "Periodic",
     "order": "22",
     "type": "intra-phrase",
-    "pattern": "[#Nominal+|#NounPhrase] [#stative+|#Stative] #NotTaggedSubjectNominal+",
+    "pattern": "#Nominal+ #Stative+ #NotTaggedSubjectNominal+",
     "tag": {
       "on": {
         "term": "#NotTaggedSubjectNominal+",
@@ -385,7 +385,7 @@
     "modifier": {
       "on": {
         "term": "#NotTaggedSubjectNominal+",
-        "modifies": "#Subject+",
+        "modifies": "#Nominal+",
         "termTag": "SubjectComplement"
       }
     }
@@ -394,7 +394,7 @@
     "batch": "Periodic",
     "order": "23",
     "type": "intra-phrase",
-    "pattern": "#Subject+ #stative+ #PrepositionalPhrase+",
+    "pattern": "#Nominal+ #stative+ #PrepositionalPhrase+",
     "tag": {
       "on": {
         "term": "#PrepositionalPhrase+",
@@ -404,7 +404,7 @@
     "modifier": {
       "on": {
         "term": "#PrepositionalPhrase+",
-        "modifies": "#Subject+",
+        "modifies": "#Nominal+",
         "termTag": "SubjectComplement"
       }
     }

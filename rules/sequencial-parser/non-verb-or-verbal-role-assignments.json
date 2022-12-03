@@ -19,6 +19,16 @@
       "all": "#Adjectival"
     }
   },
+  "Adjective": {
+    "batch": "non-verb-or-verbal-role-assignments",
+    "batchOrder": "5",
+    "order": "2",
+    "type": "inter-phrase",
+    "pattern": "#Adjective",
+    "tag": {
+      "all": "#Adjectival"
+    }
+  },
   "Nouns": {
     "batch": "non-verb-or-verbal-role-assignments",
     "batchOrder": "4",
@@ -44,7 +54,7 @@
     "batchOrder": "4",
     "order": "7",
     "type": "inter-phrase",
-    "pattern": "#Adverb+",
+    "pattern": "[#Adverb|#Adverb+]",
     "tag": {
       "all": "Adverbial"
     }
