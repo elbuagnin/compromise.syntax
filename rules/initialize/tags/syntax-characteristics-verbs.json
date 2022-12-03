@@ -21,7 +21,7 @@
     },
     "Action": {
         "isA": "",
-        "notA": ["Stative", "Linking"],
+        "notA": ["Stative", "Stative"],
         "color": "green"
     },
     "Stative": {
@@ -29,7 +29,7 @@
         "notA": "Action",
         "color": "green"
     },
-    "Linking": {
+    "Stative": {
         "isA": "",
         "notA": "Action",
         "color": "green"

@@ -66,7 +66,7 @@
     "batchOrder": "14",
     "order": "4",
     "type": "intra-phrase",
-    "pattern": "#Subject+ #Linking+ #Nominal+",
+    "pattern": "#Subject+ #Stative+ #Nominal+",
     "tag": {
       "on": {
         "term": "#Nominal+",
@@ -86,7 +86,7 @@
     "batchOrder": "14",
     "order": "5",
     "type": "intra-phrase",
-    "pattern": "#Subject+ #Linking+ #Adjectival+",
+    "pattern": "#Subject+ #Stative+ #Adjectival+",
     "tag": {
       "on": {
         "term": "#Adjectival+",

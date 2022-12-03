@@ -11,42 +11,42 @@
       }
     }
   },
-  "Potential Linking Verbs 1": {
+  "Potential Stative Verbs 1": {
     "batch": "Disambiguation",
     "batchOrder": "1",
     "order": "2",
-    "pattern": "#PotentialLinking #Determiner",
+    "pattern": "#PotentialStative #Determiner",
     "replace": {
       "on": {
-        "term": "#PotentialLinking",
+        "term": "#PotentialStative",
         "termTag": "#Action",
-        "termUnTag": "#PotentialLinking"
+        "termUnTag": "#PotentialStative"
       }
     }
   },
-  "Potential Linking Verbs 2": {
+  "Potential Stative Verbs 2": {
     "batch": "Disambiguation",
     "batchOrder": "1",
     "order": "3",
-    "pattern": "#PotentialLinking (#Where|#When)",
+    "pattern": "#PotentialStative (#Where|#When)",
     "replace": {
       "on": {
-        "term": "#PotentialLinking",
+        "term": "#PotentialStative",
         "termTag": "#Action",
-        "termUnTag": "#PotentialLinking"
+        "termUnTag": "#PotentialStative"
       }
     }
   },
-  "Potential Linking Verbs 3": {
+  "Potential Stative Verbs 3": {
     "batch": "Disambiguation",
     "batchOrder": "1",
     "order": "4",
-    "pattern": "#PotentialLinking (like|of)",
+    "pattern": "#PotentialStative (like|of)",
     "replace": {
       "on": {
-        "term": "#PotentialLinking",
-        "termTag": "#Linking",
-        "termUnTag": "#PotentialLinking"
+        "term": "#PotentialStative",
+        "termTag": "#Stative",
+        "termUnTag": "#PotentialStative"
       }
     }
   }

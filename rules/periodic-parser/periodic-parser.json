@@ -356,7 +356,7 @@
     "batch": "Periodic",
     "order": "21",
     "type": "intra-phrase",
-    "pattern": "[#Nominal+|#NounPhrase] [#Linking+|#Stative] #Adjectival+",
+    "pattern": "[#Nominal+|#NounPhrase] [#stative+|#Stative] #Adjectival+",
     "tag": {
       "on": {
         "term": "(#Adjectival+ && !#Subject)",
@@ -375,7 +375,7 @@
     "batch": "Periodic",
     "order": "22",
     "type": "intra-phrase",
-    "pattern": "[#Nominal+|#NounPhrase] [#Linking+|#Stative] #NotTaggedSubjectNominal+",
+    "pattern": "[#Nominal+|#NounPhrase] [#stative+|#Stative] #NotTaggedSubjectNominal+",
     "tag": {
       "on": {
         "term": "#NotTaggedSubjectNominal+",
@@ -394,7 +394,7 @@
     "batch": "Periodic",
     "order": "23",
     "type": "intra-phrase",
-    "pattern": "#Subject+ #Linking+ #PrepositionalPhrase+",
+    "pattern": "#Subject+ #stative+ #PrepositionalPhrase+",
     "tag": {
       "on": {
         "term": "#PrepositionalPhrase+",
@@ -627,7 +627,7 @@
     "batch": "Periodic",
     "order": "34",
     "type": "intra-phrase",
-    "pattern": "(#Linking|#Stative) (#Participle|#PotentialPastParticiple) #PrepositionalPhrase+",
+    "pattern": "(#stative|#Stative) (#Participle|#PotentialPastParticiple) #PrepositionalPhrase+",
     "tag": {
       "on": {
         "term": "#PrepositionalPhrase+",
@@ -1302,7 +1302,7 @@
     "batch": "Periodic",
     "order": "70",
     "type": "intra-phrase",
-    "pattern": "#Linking #Adverbial?+ #InfinitivePhrase+",
+    "pattern": "#stative #Adverbial?+ #InfinitivePhrase+",
     "tag": {
       "on": {
         "term": "#InfinitivePhrase+",

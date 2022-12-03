@@ -567,22 +567,12 @@
       "termTag": "Verbs"
     }
   },
-  "Linking Verb Group": {
-    "batch": "Verbs",
-    "batchOrder": "5",
-    "order": "1",
-    "type": "intra-phrase",
-    "pattern": "(#Modal+|#Auxiliary+)? #Adverb?+ #Linking",
-    "tag": {
-      "all": "Linking"
-    }
-  },
   "Action Verb Group": {
     "batch": "Verbs",
     "batchOrder": "5",
     "order": "26",
     "type": "intra-phrase",
-    "pattern": "(#Modal+|#Auxiliary+)? #Adverb?+ (#Verb && !#Linking && !#Stative)",
+    "pattern": "(#Modal+|#Auxiliary+)? #Adverb?+ (#Verb && !#Stative)",
     "tag": {
       "all": "Action"
     }
@@ -597,32 +587,6 @@
       "all": "Verbs"
     }
   },
-  "#Linking": {
-      "batch": "Verbs",
-      "batchOrder": "5",
-      "order": "27",
-      "type": "intra-phrase",
-      "pattern": "[is|are|was|were] #Adverb? #Adjective !#Noun?",
-      "tag": {
-        "on": {
-          "term": "#Copula",
-          "termTag": "#Linking"
-        }
-      }
-  },
-  "#Linking 2": {
-    "batch": "Verbs",
-    "batchOrder": "5",
-    "order": "28",
-    "type": "intra-phrase",
-    "pattern": "[is|are|was|were] #NounPhrase+",
-    "tag": {
-      "on": {
-        "term": "#Copula",
-        "termTag": "#Linking"
-      }
-    }
-},
   "Untag Auxiliary Copulas": {
     "batch": "Verbs",
     "batchOrder": "5",
@@ -673,7 +637,6 @@
     "pattern": "(#Verb && !#Verbs)",
     "untag": {
       "all": [
-        "#Stative",
         "#CompoundVerbs",
         "#VerbPhrase"
       ]
