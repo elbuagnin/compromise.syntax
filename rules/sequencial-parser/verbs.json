@@ -597,6 +597,32 @@
       "all": "Verbs"
     }
   },
+  "#Linking": {
+      "batch": "Verbs",
+      "batchOrder": "5",
+      "order": "1",
+      "type": "intra-phrase",
+      "pattern": "[is|are|was|were] #Adverb? #Adjective !#Noun?",
+      "tag": {
+        "on": {
+          "term": "#Copula",
+          "termTag": "#Linking"
+        }
+      }
+  },
+  "#Linking 2": {
+    "batch": "Verbs",
+    "batchOrder": "5",
+    "order": "1",
+    "type": "intra-phrase",
+    "pattern": "[is|are|was|were] #NounPhrase+",
+    "tag": {
+      "on": {
+        "term": "#Copula",
+        "termTag": "#Linking"
+      }
+    }
+},
   "Untag Auxiliary Copulas": {
     "batch": "Verbs",
     "batchOrder": "5",
