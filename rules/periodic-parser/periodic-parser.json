@@ -356,7 +356,7 @@
     "batch": "Periodic",
     "order": "21",
     "type": "intra-phrase",
-    "pattern": "#Nominal+ #Stative+ #Adjectival+",
+    "pattern": "#Nominal+ #Stative+ #Adverb?+ #Adjectival+",
     "tag": {
       "on": {
         "term": "#Adjectival+",
