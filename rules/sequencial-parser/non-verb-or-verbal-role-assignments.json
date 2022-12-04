@@ -34,7 +34,7 @@
     "batchOrder": "4",
     "order": "3",
     "type": "inter-phrase",
-    "pattern": "(#Noun && !#Nominal)+",
+    "pattern": "#Noun+",
     "tag": {
       "all": "#Nominal"
     }
