@@ -385,7 +385,7 @@
     "modifier": {
       "on": {
         "term": "#NotTaggedSubjectNominal+",
-        "modifies": "#Nominal+",
+        "modifies": "(#Nominal+ && !#NotTaggedSubjectNominal+)",
         "termTag": "SubjectComplement"
       }
     }
